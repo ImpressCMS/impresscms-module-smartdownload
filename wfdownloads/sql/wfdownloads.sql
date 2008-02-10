@@ -133,7 +133,7 @@ CREATE TABLE wfdownloads_downloads (
 
 CREATE TABLE wfdownloads_indexpage (
   indeximage varchar(255) NOT NULL default 'blank.png',
-  indexheading varchar(255) NOT NULL default 'WF-Sections',
+  indexheading varchar(255) NOT NULL default 'WF-Downloads',
   indexheader text NOT NULL,
   indexfooter text NOT NULL,
   nohtml tinyint(8) NOT NULL default '1',
