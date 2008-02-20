@@ -125,11 +125,11 @@ switch ($op)
                 $category->setErrors(_AM_WFD_CCATEGORY_CHILDASPARENT);
             }
         }
-    
+
 		// added - start - March 4 2006 - jpc
         $formulize_fid = (isset($_POST["formulize_fid"])) ? intval($_POST["formulize_fid"]) : 0;
 		// added - end - March 4 2006 - jpc
-        
+
         $category->setVar('title', $_POST["title"]);
         $category->setVar('description', $_POST["description"]);
         $category->setVar('summary', $_POST["summary"]);
@@ -253,7 +253,7 @@ switch ($op)
 
         include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
         $totalcats = wfd_totalcategory();
-		var_dump($totalcats);
+
         if ($totalcats > 0)
         {
             $sform = new XoopsThemeForm(_AM_WFD_CCATEGORY_MODIFY, "category", $_SERVER['REQUEST_URI']);

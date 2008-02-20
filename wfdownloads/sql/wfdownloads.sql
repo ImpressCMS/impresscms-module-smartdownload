@@ -443,13 +443,13 @@ CREATE TABLE wfdownloads_mirrors (
 #
 
 #
-# Table structure for table `wfdownloads_broken`
+# Table structure for table `wfdownloads_ip_log`
 #
 
 CREATE TABLE wfdownloads_ip_log (
   ip_logid int(11) NOT NULL auto_increment,
   lid int(11) NOT NULL default '0',
   date int(11) NOT NULL default '0',
-  ip_adress varchar(20) NOT NULL default '',
+  ip_address varchar(20) NOT NULL default '',
   PRIMARY KEY  (ip_logid)
  ) TYPE=MyISAM;
