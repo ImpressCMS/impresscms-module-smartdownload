@@ -553,7 +553,7 @@ define("_AM_WFD_FFS_EDITDOWNLOADTITLE", "Editing a '{category}' file.");
 define("_AM_WFD_FFS_BACK", "Back");
 define("_AM_WFD_FFS_RELOAD", "Reload");
 
-  
+
 define("_MD_WFD_CATEGORYC", "Category: ");  // _MD to reuse the category form
 define("_MD_WFD_FFS_SUBMITCATEGORYHEAD", "Which Category of file do you want to submit?");
 define("_MD_WFD_FFS_DOWNLOADDETAILS", "Download details:");
@@ -563,4 +563,12 @@ define("_MD_WFD_DLURL", "Download URL: ");
 define("_MD_WFD_UPLOAD_FILEC", "Upload File: ");
 define("_MD_WFD_DESCRIPTION", "Description");
 // added - end - March 4 2006 - jpc
+
+define("_AM_WFD_MINDEX_LOG", "Logs");
+define("_MD_WFD_IP_LOGS", "View logs");
+define("_MD_WFD_EMPTY_LOG", "No logs recorded.");
+define("_MD_WFD_LOG_FOR_LID", "Here is the list of the downloaders IP address for %s");
+define("_MD_WFD_IP_ADDRESS", "IP Address");
+define("_MD_WFD_DATE", "Download date");
+define("_MD_WFD_BACK", "<< Back");
 ?>

@@ -27,9 +27,9 @@ function wfdownloads_xoops_cp_header()
 function wfdownloads_module_home($withLink=true)
 {
 	global $xoopsModuleConfig, $xoopsModule;
-	
+
 	$wfdownloads_moduleName = $xoopsModule->getVar('name');
-	
+
 	/*if(!$xoopsModuleConfig['show_mod_name_breadcrumb']){
 		return	'';
 	}*/
@@ -603,7 +603,7 @@ function wfd_toolbar()
     {
     	$submissions = 1;
     }
-	
+
     $toolbar = "[ ";
     if ($submissions == 1)
     {
@@ -621,10 +621,10 @@ function wfd_toolbar()
 function wfd_serverstats()
 {
 	global $xoopsModuleConfig, $xoopsDB;
-	
+
     $sql = $xoopsDB->query("SELECT metavalue FROM ".$xoopsDB->prefix('wfdownloads_meta')." WHERE metakey='version' LIMIT 1");
     list($meta) = $xoopsDB->fetchRow($sql);
-			
+
 	echo "
 		<fieldset><legend style='font-weight: bold; color: #900;'>" . _AM_WFD_DOWN_IMAGEINFO . "</legend>\n
 		<div style='padding: 8px;'>\n
@@ -1438,10 +1438,10 @@ function wfd_uploading($filename, $uploaddir = "uploads", $allowed_mimetypes = '
 }
 
 function wfd_download($filePath, $isbinary=true, $retbytes=true)
-{ 
-	$chunksize = 1*(1024*1024); // how many bytes per chunk 
-    $buffer = ''; 
-    $cnt =0; 
+{
+	$chunksize = 1*(1024*1024); // how many bytes per chunk
+    $buffer = '';
+    $cnt =0;
 
 	if ($isbinary == true)
 	{
@@ -1451,28 +1451,28 @@ function wfd_download($filePath, $isbinary=true, $retbytes=true)
 	{
 		$handle = fopen($filePath, 'r');
 	}
-	 
+
    	if ($handle === false)
-	{ 
-        return false; 
-    } 
+	{
+        return false;
+    }
    	while (!feof($handle))
-	{ 
-		$buffer = fread($handle, $chunksize); 
-        echo $buffer; 
-        ob_flush(); 
-        flush(); 
+	{
+		$buffer = fread($handle, $chunksize);
+        echo $buffer;
+        ob_flush();
+        flush();
         if ($retbytes)
-		{ 
-            $cnt += strlen($buffer); 
-        } 
-    } 
-	$status = fclose($handle); 
+		{
+            $cnt += strlen($buffer);
+        }
+    }
+	$status = fclose($handle);
     if ($retbytes && $status)
-	{ 
-        return $cnt; // return num. bytes delivered like readfile() does. 
-    } 
-    return $status; 
+	{
+        return $cnt; // return num. bytes delivered like readfile() does.
+    }
+    return $status;
 }
 
 function wfd_getforum($forumid)
@@ -1510,6 +1510,7 @@ function wfd_downlistheader($heading)
 		<th align='center'><b>" . _AM_WFD_MINDEX_SUBMITTED . "</b></th>\n
 		<th align='center'><b>" . _AM_WFD_MINDEX_ONLINESTATUS . "</b></th>\n
 		<th align='center'><b>" . _AM_WFD_MINDEX_PUBLISHED . "</b></th>\n
+		<th align='center'><b>" . _AM_WFD_MINDEX_LOG . "</b></th>\n
 		<th align='center'><b>" . _AM_WFD_MINDEX_ACTION . "</b></th>\n
 		</tr>\n
 		";
@@ -1537,6 +1538,7 @@ function wfd_downlistbody($published)
 		<td class='even' align='center'>" . $publish . "</td>\n
 		<td class='even' align='center'>" . $offline . "</td>\n
 		<td class='even' align='center'>" . $status . "</td>\n
+		<td class='even' align='center'><a href='ip_log.php?lid=" . $lid . "'>" ._MD_WFD_IP_LOGS. "</a></td>\n
 		<td class='even' align='center' width = '10%' nowrap>$modify $delete</td>\n
 		</tr>\n
 		";

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * $Id: main.php,v 1.4 2007/04/22 20:32:00 m0nty_ Exp $
@@ -8,14 +8,14 @@
  * Author: WF-Sections
  * Licence: GNU
  */
- 
-//Todo - Still to remove redundat defines from this area. 
+
+//Todo - Still to remove redundat defines from this area.
 define("_MD_WFD_NODOWNLOAD", "Ce téléchargement n'existe pas!");
 define("_MD_WFD_DOWNLOADMINPOSTS", "Vous devez augmenter vos points de téléchargement<br />avant de pouvoir télécharger des fichiers");
 define("_MD_WFD_UPLOADMINPOSTS", "Vous devez augmenter vos points de téléchargement<br />avant de pouvoir téléverser des fichiers");
 
 define("_MD_WFD_SUBCATLISTING", "Liste des catégories");
-define("_MD_WFD_ISADMINNOTICE", "Administrateur : Il y a un problème avec cette image."); 
+define("_MD_WFD_ISADMINNOTICE", "Administrateur : Il y a un problème avec cette image.");
 define("_MD_WFD_THANKSFORINFO","Merci pour l'information. Nous allons examiner votre demande rapidement.");
 define("_MD_WFD_ISAPPROVED", "Merci pour votre proposition. Votre demande a été approuvée et va maintenant apparaître sur le site.");
 define("_MD_WFD_THANKSFORHELP","Merci de nous aider &agrave; maintenir ce r&eacute;pertoire en ordre.");
@@ -160,9 +160,9 @@ define("_MD_WFD_REV_RATING", "Notation révisée:");
 define("_MD_WFD_REV_DESCRIPTION", "Révision:");
 define("_MD_WFD_REV_SUBMITREV", "Proposez une révision");
 define("_MD_WFD_ERROR_CREATEREVIEW", "Erreur lors de la création de la revue");
-define("_MD_WFD_REV_SNEWMNAMEDESC", " 
+define("_MD_WFD_REV_SNEWMNAMEDESC", "
 Remplissez le formulaire ci-dessous, et nous le vérifierons dès que possible.<br /><br />
-Merci de prendre le temps de nous donner votre avis. Nous souhaitons donner à nos utilisateurs la possiblité de trouver rapidiement des fichiers de qualité.<br /><br />Toutes les révisions seront vérifiées par l'un des adminsitrateurs avant publication. 
+Merci de prendre le temps de nous donner votre avis. Nous souhaitons donner à nos utilisateurs la possiblité de trouver rapidiement des fichiers de qualité.<br /><br />Toutes les révisions seront vérifiées par l'un des adminsitrateurs avant publication.
 ");
 define("_MD_WFD_ISNOTAPPROVED", "Votre proposition doit d'abord être approuvée par un modérateur.");
 define("_MD_WFD_LICENCEC", "Licence du logiciel : ");
@@ -235,9 +235,9 @@ define("_MD_WFD_MIRROR_LOCATION", "Location géographique:<br /><br />Exemple: Mo
 define("_MD_WFD_MIRROR_DOWNURL", "URL du fichier:<br /><br />Entrer l'URL du fichier.");
 define("_MD_WFD_MIRROR_SUBMITMIRROR", "Soumettre un miroir");
 define("_MD_WFD_ERROR_CREATEMIRROR", "Erreur lors de la création du mirroir");
-define("_MD_WFD_MIRROR_SNEWMNAMEDESC", " 
+define("_MD_WFD_MIRROR_SNEWMNAMEDESC", "
 Merci de compléter le formulaire suivant et nous ajouterons votre miroir dès que possible.<br /><br />
-Merci de nous propser un nouvel endroit pour télécharger ce fichier. Nous tenons à rendre disponible à nos utilisateurs des fichiers de qualité, rapidement..<br /><br />Chaque soumission de miroir sera approuvée par un administrateur avant publication. 
+Merci de nous propser un nouvel endroit pour télécharger ce fichier. Nous tenons à rendre disponible à nos utilisateurs des fichiers de qualité, rapidement..<br /><br />Chaque soumission de miroir sera approuvée par un administrateur avant publication.
 ");
 define("_MD_WFD_MIRROR_HHOST", "Hôte");
 define("_MD_WFD_MIRROR_HLOCATION", "Location géographique");
@@ -255,7 +255,7 @@ define("_MD_WFD_CONT5","Amérique du Nord");
 define("_MD_WFD_CONT6","Amérique du Sud");
 define("_MD_WFD_CONT7","Océanie");
 define("_MD_WFD_ADMIN_PAGE",":: Section Administrative ::");
-000000define("_MD_WFD_DOWNLOADS_LIST","Liste des fichiers (%s)");
+define("_MD_WFD_DOWNLOADS_LIST","Liste des fichiers (%s)");
 define("_MD_WFD_NEWDOWNLOADS_ALL","Tous");
 define("_MD_WFD_NEWDOWNLOADS_INTHELAST","Derniers % jours");
 define("_MD_WFD_DOWNLOAD_MOST_POPULAR","Fichiers les plus populaires");

@@ -83,12 +83,12 @@ if ($xoopsModuleConfig['showDowndisclaimer'] && $agreed == 0)
 {
 	$xoopsOption['template_main'] = 'wfdownloads_disclaimer.html';
     include XOOPS_ROOT_PATH . '/header.php';
-	
+
 	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
 	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
 	$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
-	
+
 	$xoopsTpl->assign('image_header', wfd_imageheader());
 	$xoopsTpl->assign('downdisclaimer', $myts->displayTarea($xoopsModuleConfig['downdisclaimer'], 1, 1, 1, 1, 1));
 	$xoopsTpl->assign('cancel_location', WFDOWNLOADS_URL.'index.php');
@@ -105,12 +105,21 @@ else
     {
         $download_handler->incrementHits($lid);
     }
+    //--
+	$ip_log_handler = xoops_getmodulehandler('ip_log');
+	$ip_logObj = $ip_log_handler->create();
+	$ip_logObj->setVar('lid', $lid);
+	$ip_logObj->setVar('date', time());
+	$ip_logObj->setVar('ip_address', getenv("REMOTE_ADDR"));
+	$ip_log_handler->insert($ip_logObj, true);
 
+
+	//--
     $full_name = trim($download->getVar('filename'));
     if ((!$download->getVar('url') == "" && !$download->getVar('url') == 'http://') || $full_name == '')
     {
         include XOOPS_ROOT_PATH . '/header.php';
-		
+
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
 		$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
@@ -154,7 +163,7 @@ else
 
 		// MSIE Bug fix.
 		$header_file = (strstr($_SERVER['HTTP_USER_AGENT'], 'MSIE')) ? preg_replace('/\./', '%2e', $file_name, substr_count($file_name, '.') - 1) : $file_name;
-		
+
         header("Pragma: public");
         header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
         header("Cache-Control: private",false);

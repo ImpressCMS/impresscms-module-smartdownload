@@ -442,3 +442,14 @@ CREATE TABLE wfdownloads_mirrors (
 # Dumping data for table `wfdownloads_mirrors`
 #
 
+#
+# Table structure for table `wfdownloads_broken`
+#
+
+CREATE TABLE wfdownloads_ip_log (
+  ip_logid int(11) NOT NULL auto_increment,
+  lid int(11) NOT NULL default '0',
+  date int(11) NOT NULL default '0',
+  ip_adress varchar(20) NOT NULL default '',
+  PRIMARY KEY  (ip_logid)
+ ) TYPE=MyISAM;
