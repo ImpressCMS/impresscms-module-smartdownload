@@ -174,7 +174,7 @@ class XoopsMediaUploader
         else {
             $media_name = @$_FILES[$media_name];
             $this->mediaName = MyTextSanitizer::stripSlashesGPC($media_name['name']);
-			$this->mediaName = preg_replace( '/[^0-9a-zA-Z_-]/' , '' , $this->mediaName);
+			//$this->mediaName = preg_replace( '/[^0-9a-zA-Z_-]/' , '' , $this->mediaName);
             if ($this->randomfilename) {
                 $unique = uniqid(time());
                 $this->mediaName = 'wfd_'.$unique.'--'.$this->mediaName;
@@ -183,6 +183,8 @@ class XoopsMediaUploader
             $this->mediaSize = $media_name['size'];
             $this->mediaTmpName = $media_name['tmp_name'];
             $this->mediaError = !empty($media_name['error']) ? $media_name['error'] : 0;
+
+
         }
         $this->dimension = getimagesize($this->mediaTmpName);
 
