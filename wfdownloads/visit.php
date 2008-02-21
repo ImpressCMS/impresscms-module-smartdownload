@@ -111,6 +111,7 @@ else
 	$ip_logObj->setVar('lid', $lid);
 	$ip_logObj->setVar('date', time());
 	$ip_logObj->setVar('ip_address', getenv("REMOTE_ADDR"));
+	$ip_logObj->setVar('uid', is_object($xoopsUser) ? $xoopsUser->getVar('uid') : 0);
 	$ip_log_handler->insert($ip_logObj, true);
 
 

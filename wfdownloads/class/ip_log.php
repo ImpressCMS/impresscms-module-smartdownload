@@ -36,6 +36,7 @@ class WfdownloadsIP_Log extends XoopsObject {
 		$this->initVar('ip_address', XOBJ_DTYPE_TXTBOX);
 		$this->initVar('date', XOBJ_DTYPE_INT);
 		$this->initVar('lid', XOBJ_DTYPE_INT);
+		$this->initVar('uid', XOBJ_DTYPE_INT);
 	}
 }
 

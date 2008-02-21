@@ -571,4 +571,6 @@ define("_MD_WFD_LOG_FOR_LID", "Here is the list of the downloaders IP address fo
 define("_MD_WFD_IP_ADDRESS", "IP Address");
 define("_MD_WFD_DATE", "Download date");
 define("_MD_WFD_BACK", "<< Back");
+define("_MD_WFD_USER", "User");
+define("_MD_WFD_ANONYMOUS", "Anonymous User");
 ?>
