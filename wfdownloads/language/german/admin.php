@@ -82,7 +82,7 @@ define("_AM_WFD_AREVIEWS_WAITING", "Auf Freigabe wartende Rezensionen:");
 define("_AM_WFD_AREVIEWS_INFO", "Informationen &uuml;ber Rezensionen");
 define("_AM_WFD_AREVIEWS_APPROVE", "<b>Freigeben-</b> Neue Rezensionen werden ohne Pr&uuml;fung freigegeben.");
 define("_AM_WFD_AREVIEWS_APPROVED", "Rezension ist genehmigt worden.");
-define("_AM_WFD_AREVIEWS_EDIT", "<b>&Auml;ndern-</b> Rezension &auml;ndern und anschließend freigeben.");
+define("_AM_WFD_AREVIEWS_EDIT", "<b>&Auml;ndern-</b> Rezension &auml;ndern und anschlieï¿½end freigeben.");
 define("_AM_WFD_AREVIEWS_DELETE", "<b>L&ouml;schen-</b> Rezension l&ouml;schen.");
 /*
 * Catgeory defines
@@ -378,7 +378,7 @@ define("_AM_WFD_FILE_MODIFYFILE", "Dateiinformationen modifizieren");
 define("_AM_WFD_FILE_CREATENEWFILE", "Neue Datei erstellen");
 define("_AM_WFD_FILE_TITLE", "Downloadtitel: ");
 define("_AM_WFD_FILE_DLURL", "Download-URL (direkter URL): ");
-define("_AM_WFD_FILE_FILENAME", "Lokaler Dateiname:<br /><br /><span style='font-weight: normal;'>ANMERKUNG: Wenn Du die lokale Datei als Download verwendest, müssen Du auch den korrekten Dateitype unten angeben!</span>");
+define("_AM_WFD_FILE_FILENAME", "Lokaler Dateiname:<br /><br /><span style='font-weight: normal;'>ANMERKUNG: Wenn Du die lokale Datei als Download verwendest, mï¿½ssen Du auch den korrekten Dateitype unten angeben!</span>");
 define("_AM_WFD_FILE_FILETYPE", "Dateitype: ");
 define("_AM_WFD_FILE_MIRRORURL", "Download-Mirror: ");
 define("_AM_WFD_FILE_SUMMARY", "Dateizusammenfassung: ");
@@ -442,13 +442,13 @@ define("_AM_WFD_BROKEN_REPORTSNO", "Wartende Defektberichte:");
 define("_AM_WFD_BROKEN_IGNOREDESC", "<b>Ignoriert</b> den Bericht und l&ouml;scht diesen Defektliste.");
 define("_AM_WFD_BROKEN_IGNORE_ALT", "Ignoriert den Bericht und l&ouml;scht diesen Defektliste");
 define("_AM_WFD_BROKEN_DELETEDESC", "<b>L&ouml;scht</b> den gemeldeten Download und den Defektbericht.");
-define("_AM_WFD_BROKEN_DELETE_ALT", "Löschen des Reports der berichteten Downloaddaten und defekte ");
+define("_AM_WFD_BROKEN_DELETE_ALT", "Lï¿½schen des Reports der berichteten Downloaddaten und defekte ");
 define("_AM_WFD_BROKEN_EDITDESC", "<b>Editiere</b> Download um das Problem zu beheben.");
 define("_AM_WFD_BROKEN_EDIT_ALT", "Redigieren dieses Download, um das Problem zu beheben");
 define("_AM_WFD_BROKEN_ACKDESC", "<b>Anerkannt</b> Setze den Status des Defektbericht auf *anerkannt*.");
-define("_AM_WFD_BROKEN_ACK_ALT", "Bestätigen des Zustand des defekten Dateienliste");
+define("_AM_WFD_BROKEN_ACK_ALT", "Bestï¿½tigen des Zustand des defekten Dateienliste");
 define("_AM_WFD_BROKEN_CONFIRMDESC", "<b>Best&auml;tigt</b> Setze den Status des Defektberichts auf *best&auml;tigt*.");
-define("_AM_WFD_BROKEN_CONFIRM_ALT", "Bestätigen des Zustand des defekten Dateienliste");
+define("_AM_WFD_BROKEN_CONFIRM_ALT", "Bestï¿½tigen des Zustand des defekten Dateienliste");
 
 define("_AM_WFD_BROKEN_ID", "ID");
 define("_AM_WFD_BROKEN_TITLE", "Titel");
@@ -532,7 +532,7 @@ define("_AM_WFD_DB_MSG_UPDATE_TABLE_ERR", "Errors updating field values in %s");
 define("_AM_WFD_AMIRRORS", "Mirrors Management");
 define("_AM_WFD_AMIRRORS_WAITING", "Mirrors warten auf G&uuml;ltigkeit:");
 define("_AM_WFD_AMIRRORS_INFO", "Mirrors Management Information");
-define("_AM_WFD_AMIRRORS_APPROVE", "<b>Freigabe</b> eines Neuen Mirror ohne &Uuml;berprüfung.");
+define("_AM_WFD_AMIRRORS_APPROVE", "<b>Freigabe</b> eines Neuen Mirror ohne &Uuml;berprï¿½fung.");
 define("_AM_WFD_AMIRRORS_EDIT", "<b>Eingabe</b> eines neuen Mirror und dessen Freigabe.");
 define("_AM_WFD_AMIRRORS_DELETE", "<b>L&ouml;sche</b> die neuen Mirror-Informationen.");
 
@@ -545,7 +545,7 @@ define("_AM_WFD_MIRROR_MIRROR_PUBLISHED", "Ver&ouml;ffentlichte Mirrors");
 define("_AM_WFD_MIRROR_SNEWMNAMEDESC", "Freigegebene Mirror: ");
 define("_AM_WFD_MIRROR_ID", "ID");
 define("_AM_WFD_MIRROR_TITLE", "Titel");
-define("_AM_WFD_MIRROR_MUSTBEVALID", "Das Homepage Logo muss ein gültige Bilddatei im %s Verzeichnis (ex. shot.gif) sein. Wird nichts eingegeben dann wird kein Logo angezeigt.");
+define("_AM_WFD_MIRROR_MUSTBEVALID", "Das Homepage Logo muss ein gï¿½ltige Bilddatei im %s Verzeichnis (ex. shot.gif) sein. Wird nichts eingegeben dann wird kein Logo angezeigt.");
 define("_AM_WFD_MIRROR_POSTER", "Erstellt von: ");
 define("_AM_WFD_MIRROR_SUBMITDATE", "Erstellt am: ");
 define("_AM_WFD_MIRROR_FHOMEURLTITLE", "Homepage Titel: ");
@@ -574,22 +574,32 @@ define("_AM_WFD_HELP","Hilfe");
 
 
 // added - start - March 4 2006 - jpc
-define("_AM_WFD_FFS_SUBMITBROKEN", "Submit");
+define("_AM_WFD_FFS_SUBMITBROKEN", "Hinzuf&uuml;gen");
 define("_AM_WFD_FFS_STANDARD_FORM", "No, use the standard form");
 define("_AM_WFD_FFS_CUSTOM_FORM", "Use a custom form for this category?");
 define("_AM_WFD_FFS_DOWNLOADTITLE", "Submitting a '{category}' file.");
 define("_AM_WFD_FFS_EDITDOWNLOADTITLE", "Editing a '{category}' file.");
-define("_AM_WFD_FFS_BACK", "Back");
-define("_AM_WFD_FFS_RELOAD", "Reload");
+define("_AM_WFD_FFS_BACK", "Zur&uuml;ck");
+define("_AM_WFD_FFS_RELOAD", "erneut Laden");
 
 
-define("_MD_WFD_CATEGORYC", "Category: ");  // _MD to reuse the category form
+define("_MD_WFD_CATEGORYC", "Kategorie: ");  // _MD to reuse the category form
 define("_MD_WFD_FFS_SUBMITCATEGORYHEAD", "Which Category of file do you want to submit?");
 define("_MD_WFD_FFS_DOWNLOADDETAILS", "Download details:");
 define("_MD_WFD_FFS_DOWNLOADCUSTOMDETAILS", "Custom details:");
 define("_MD_WFD_FILETITLE", "Download Title: ");
 define("_MD_WFD_DLURL", "Download URL: ");
 define("_MD_WFD_UPLOAD_FILEC", "Upload File: ");
-define("_MD_WFD_DESCRIPTION", "Description");
+define("_MD_WFD_DESCRIPTION", "Beschreibung");
 // added - end - March 4 2006 - jpc
+
+define("_AM_WFD_MINDEX_LOG", "Logs");
+define("_MD_WFD_IP_LOGS", "Zeige Logs");
+define("_MD_WFD_EMPTY_LOG", "Keine Logs aufgezeichnet.");
+define("_MD_WFD_LOG_FOR_LID", "Hier ist die Liste von IP Adressen der Downloader von %s");
+define("_MD_WFD_IP_ADDRESS", "IP Adresse");
+define("_MD_WFD_DATE", "Downloaddatum");
+define("_MD_WFD_BACK", "<< Zur&uuml;ck");
+define("_MD_WFD_USER", "Mitglied");
+define("_MD_WFD_ANONYMOUS", "Gast");
 ?>
