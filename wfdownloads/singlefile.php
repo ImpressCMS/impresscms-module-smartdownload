@@ -16,7 +16,9 @@ $xoopsOption['template_main'] = 'wfdownloads_singlefile.html';
 
 $download_handler = xoops_getmodulehandler('download');
 $download = $download_handler->get($lid);
-$cid = $download->getVar('cid');
+$cid = intval($download->getVar('cid'));
+$mid = intval($xoopsModule->getVar('mid'));
+
 if ($download->isNew()) {
    redirect_header(WFDOWNLOADS_URL.'index.php', 1, _MD_WFD_NODOWNLOAD);
    exit();
@@ -30,12 +32,12 @@ $gperm_handler =& xoops_gethandler('groupperm');
 $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
 if ($groups == XOOPS_GROUP_ANONYMOUS) {
-    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
         exit();
     }
 } else {
-    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
         exit();
     }
@@ -181,21 +183,25 @@ foreach (array_keys($downloads) as $i)
     $downuid['published'] = formatTimestamp($downloads[$i]->getVar('published'), $xoopsModuleConfig['dateformat']);
     $xoopsTpl->append('down_uid', $downuid);
 }
+
+$cid = intval($download->getVar('cid'));
+$lid = intval($download->getVar('lid'));
+
 /**
  * User reviews
  */
 $review_handler = xoops_getmodulehandler('review');
-$criteria = new CriteriaCompo(new Criteria("lid", $download->getVar('lid')));
+$criteria = new CriteriaCompo(new Criteria("lid", $lid));
 $criteria->add(new Criteria("submit", 1));
 $review_amount = $review_handler->getCount($criteria);
 
 if ($review_amount > 0)
 {
-    $user_reviews = "op=list&amp;cid=" . $download->getVar('cid') . "&amp;lid=" . $download->getVar('lid') . "\">" . _MD_WFD_USERREVIEWS;
+    $user_reviews = "op=list&amp;cid=" . $cid . "&amp;lid=" . $lid . "\">" . _MD_WFD_USERREVIEWS;
 }
 else
 {
-    $user_reviews = "cid=" . $download->getVar('cid') . "&amp;lid=" . $download->getVar('lid') . "\">" . _MD_WFD_NOUSERREVIEWS;
+    $user_reviews = "cid=" . $cid . "&amp;lid=" . $lid . "\">" . _MD_WFD_NOUSERREVIEWS;
 }
 $xoopsTpl->assign('lang_user_reviews', $xoopsConfig['sitename'] . " " . _MD_WFD_USERREVIEWSTITLE);
 $xoopsTpl->assign('lang_UserReviews', sprintf($user_reviews, $download->getVar('title')));
@@ -206,24 +212,24 @@ $xoopsTpl->assign('lang_UserReviews', sprintf($user_reviews, $download->getVar('
 $down['add_mirror'] = $add_mirror;
 
 $mirror_handler = xoops_getmodulehandler('mirror');
-$criteria = new CriteriaCompo(new Criteria("lid", $download->getVar('lid')));
+$criteria = new CriteriaCompo(new Criteria("lid", $lid));
 $criteria->add(new Criteria("submit", 1));
 $mirror_amount = $mirror_handler->getCount($criteria);
 
 if ($mirror_amount > 0)
 {
-    $user_mirrors = "op=list&amp;cid=" . $download->getVar('cid') . "&amp;lid=" . $download->getVar('lid') . "\">" . _MD_WFD_USERMIRRORS;
+    $user_mirrors = "op=list&amp;cid=" . $cid . "&amp;lid=" . $lid . "\">" . _MD_WFD_USERMIRRORS;
 }
 else
 {
-    $user_mirrors = "cid=" . $download->getVar('cid') . "&amp;lid=" . $download->getVar('lid') . "\">" . _MD_WFD_NOUSERMIRRORS;
+    $user_mirrors = "cid=" . $cid . "&amp;lid=" . $lid . "\">" . _MD_WFD_NOUSERMIRRORS;
 }
 $xoopsTpl->assign('lang_user_mirrors', $xoopsConfig['sitename'] . " " . _MD_WFD_USERMIRRORSTITLE);
 $xoopsTpl->assign('lang_UserMirrors', sprintf($user_mirrors, $download->getVar('title')));
 
 if (isset($xoopsModuleConfig['copyright']) && $xoopsModuleConfig['copyright'] == 1)
 {
-    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " © " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . XOOPS_URL);
+    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " ï¿½ " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . XOOPS_URL);
 }
 $xoopsTpl->assign('down', $down);
 

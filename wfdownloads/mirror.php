@@ -15,9 +15,10 @@ global $xoopsModuleConfig, $myts, $xoopsUser;
 $gperm_handler =& xoops_gethandler('groupperm');
 $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
-$cid = isset($_REQUEST['cid']) ? $_REQUEST['cid'] : 0;
+$cid = isset($_REQUEST['cid']) ? intval($_REQUEST['cid']) : 0;
+$mid = intval($xoopsModule->getVar('mid'));
 
-if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
     exit();
 }
@@ -131,7 +132,7 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
         if (!empty($_POST['submit']))
         {
-            $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+            $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 
             $mirror_handler = xoops_getmodulehandler('mirror');
             $mirror = $mirror_handler->create();
@@ -168,7 +169,7 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
         {
             include XOOPS_ROOT_PATH . '/header.php';
             include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-            $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+            $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 			
 			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
 			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
@@ -187,8 +188,8 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
             $continent_select->addOptionArray(array(_MD_WFD_CONT1 => _MD_WFD_CONT1, _MD_WFD_CONT2 => _MD_WFD_CONT2, _MD_WFD_CONT3 => _MD_WFD_CONT3, _MD_WFD_CONT4 => _MD_WFD_CONT4, _MD_WFD_CONT5 => _MD_WFD_CONT5, _MD_WFD_CONT6 => _MD_WFD_CONT6, _MD_WFD_CONT7 => _MD_WFD_CONT7));
             $sform->addElement($continent_select);
             $sform->addElement(new XoopsFormText(_MD_WFD_MIRROR_DOWNURL, 'downurl', 50, 255), true);
-            $sform->addElement(new XoopsFormHidden("lid", $_GET['lid']));
-            $sform->addElement(new XoopsFormHidden("cid", $_GET['cid']));
+            $sform->addElement(new XoopsFormHidden("lid", intval($_GET['lid'])));
+            $sform->addElement(new XoopsFormHidden("cid", intval($_GET['cid'])));
             $sform->addElement(new XoopsFormHidden("uid", $uid));
             $button_tray = new XoopsFormElementTray('', '');
             $button_tray->addElement(new XoopsFormButton('', 'submit', _SUBMIT, 'submit'));

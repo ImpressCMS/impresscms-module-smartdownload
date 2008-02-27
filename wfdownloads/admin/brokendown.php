@@ -142,13 +142,15 @@ switch ($op)
             $senderemail = isset($users[$reports[$i]->getVar('sender')]) ? $users[$reports[$i]->getVar('sender')]->getVar('email') : "";
             $sendername = isset($users[$reports[$i]->getVar('sender')]) ? $users[$reports[$i]->getVar('sender')]->getVar('uname') : $xoopsConfig['anonymous'];
 
-            $ingnore_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=ignoreBrokenDownloads&amp;lid=".$download->getVar('lid')."' alt='" . _AM_WFD_BROKEN_IGNORE_ALT . "' title='" . _AM_WFD_BROKEN_IGNORE_ALT . "'>" . $imagearray['ignore'] . "</a>";
-			$edit_link = "<a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=".$download->getVar('lid')."' alt='" . _AM_WFD_BROKEN_EDIT_ALT . "' title='" . _AM_WFD_BROKEN_EDIT_ALT . "'> " . $imagearray['editimg'] . " </a>";
-			$delete_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=delBrokenDownloads&amp;lid=".$download->getVar('lid')."' alt='" . _AM_WFD_BROKEN_DELETE_ALT . "' title='" . _AM_WFD_BROKEN_DELETE_ALT . "'>" . $imagearray['deleteimg'] . "</a>";
+	$lid = intval($download->getVar('lid'));
+
+            $ingnore_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=ignoreBrokenDownloads&amp;lid=".$lid."' alt='" . _AM_WFD_BROKEN_IGNORE_ALT . "' title='" . _AM_WFD_BROKEN_IGNORE_ALT . "'>" . $imagearray['ignore'] . "</a>";
+			$edit_link = "<a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=".$lid."' alt='" . _AM_WFD_BROKEN_EDIT_ALT . "' title='" . _AM_WFD_BROKEN_EDIT_ALT . "'> " . $imagearray['editimg'] . " </a>";
+			$delete_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=delBrokenDownloads&amp;lid=".$lid."' alt='" . _AM_WFD_BROKEN_DELETE_ALT . "' title='" . _AM_WFD_BROKEN_DELETE_ALT . "'>" . $imagearray['deleteimg'] . "</a>";
 			$ack_image = ($reports[$i]->getVar('acknowledged')) ? $imagearray['ack_yes'] : $imagearray['ack_no'];
-			$ack_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=updateNotice&amp;lid=".$download->getVar('lid')."&amp;ack=".$reports[$i]->getVar('acknowledged')."' alt='" . _AM_WFD_BROKEN_ACK_ALT . "' title='" . _AM_WFD_BROKEN_ACK_ALT . "'>" . $ack_image . "</a>";
+			$ack_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=updateNotice&amp;lid=".$lid."&amp;ack=".$reports[$i]->getVar('acknowledged')."' alt='" . _AM_WFD_BROKEN_ACK_ALT . "' title='" . _AM_WFD_BROKEN_ACK_ALT . "'>" . $ack_image . "</a>";
 			$con_image = ($reports[$i]->getVar('confirmed')) ? $imagearray['con_yes'] : $imagearray['con_no'];
-			$con_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=updateNotice&amp;lid=".$download->getVar('lid')."&amp;con=".$reports[$i]->getVar('confirmed')."' alt='" . _AM_WFD_BROKEN_CONFIRM_ALT . "' title='" . _AM_WFD_BROKEN_CONFIRM_ALT . "'>" . $con_image . " </a>\n";
+			$con_link = "<a href='".WFDOWNLOADS_URL."admin/brokendown.php?op=updateNotice&amp;lid=".$lid."&amp;con=".$reports[$i]->getVar('confirmed')."' alt='" . _AM_WFD_BROKEN_CONFIRM_ALT . "' title='" . _AM_WFD_BROKEN_CONFIRM_ALT . "'>" . $con_image . " </a>\n";
             
             echo "
 		<tr align = 'center'>\n

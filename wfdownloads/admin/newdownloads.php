@@ -25,6 +25,7 @@ switch ($op)
     /**
          * Update the database
          */
+    $cid = intval($download->getVar('cid'));
     $download->setVar('published', time());
     $download->setVar('status', 1);
     $download_handler->insert($download, true);
@@ -33,9 +34,8 @@ switch ($op)
 
     $tags = array();
     $tags['FILE_NAME'] = $title;
-    $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $download->getVar('cid') . '&amp;lid=' . $lid;
+    $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&amp;lid=' . $lid;
 
-    $cid = $download->getVar('cid');
     $category_handler = xoops_getmodulehandler('category');
     $category = $category_handler->get($cid);
 

@@ -71,7 +71,7 @@ function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 	$fids = array();
 	foreach($allowed_cats as $cid)
 	{
-		$category = $category_handler->get($cid);
+		$category = $category_handler->get(intval($cid));
 		if ($fid = $category->getVar('formulize_fid'))
 		{
 			$fids[] = $fid;
@@ -173,8 +173,8 @@ function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 		// make an array of the downloads based on the lid, and a separate list of all the lids found (the separate list is used in the case of an AND operator to derive an intersection of the hits across all search terms -- and it is used to determine the start and limit points of the main results array for an OR query)
 		foreach($temp_downloads as $td)
 		{
-			$downloads[$td->getVar('lid')] = $td;
-			$downloads_lids[] = $td->getVar('lid'); 
+			$downloads[intval($td->getVar('lid'))] = $td;
+			$downloads_lids[] = intval($td->getVar('lid')); 
 		}
 
 		// do an intersection of the found lids if the operator is AND

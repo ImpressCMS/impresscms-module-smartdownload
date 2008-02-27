@@ -161,7 +161,6 @@ class XoopsMediaUploader
         } elseif (is_array($_FILES[$media_name]['name']) && isset($index)) {
             $index = intval($index);
             $this->mediaName = MyTextSanitizer::stripSlashesGPC($_FILES[$media_name]['name'][$index]);
-			$this->mediaName = preg_replace( '/[^0-9a-zA-Z_-]/' , '' , $this->mediaName);
             if ($this->randomfilename) {
                 $unique = uniqid(time());
                 $this->mediaName = 'wfd_'.$unique.'--'.$this->mediaName;

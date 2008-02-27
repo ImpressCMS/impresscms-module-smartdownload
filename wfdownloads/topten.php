@@ -16,7 +16,7 @@ global $xoopsDB, $xoopsUser;
 $xoopsOption['template_main'] = 'wfdownloads_topten.html';
 
 $groups = (is_object($xoopsUser)) ? $xoopsUser -> getGroups() : XOOPS_GROUP_ANONYMOUS;
-$module_id = $xoopsModule -> getVar('mid');
+$module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = & xoops_gethandler('groupperm');
 
 include XOOPS_ROOT_PATH . '/header.php';
@@ -52,7 +52,7 @@ $e = 0;
 $rankings = array();
 foreach (array_keys($top_cats) as $i)
 {
-    $cid = $top_cats[$i]->getVar('cid');
+    $cid = intval($top_cats[$i]->getVar('cid'));
     if (in_array($cid, $allowed_cats))
     {
         $subcats = $mytree->getAllChild($cid);
@@ -89,8 +89,8 @@ foreach (array_keys($top_cats) as $i)
 
                 $catpath = implode('/', $parent_cat_titles);
 
-                $rankings[$e]['file'][] = array('id' => $downloads[$k]->getVar('lid'),
-                                                'cid' => $downloads[$k]->getVar('cid'),
+                $rankings[$e]['file'][] = array('id' => intval($downloads[$k]->getVar('lid')),
+                                                'cid' => intval($downloads[$k]->getVar('cid')),
                                                 'rank' => $rank,
                                                 'title' => $downloads[$k]->getVar('title'),
                                                 'category' => $catpath,

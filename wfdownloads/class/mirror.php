@@ -29,23 +29,6 @@
 if (!class_exists("XoopsPersistableObjectHandler")) {
 	include_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/object.php";
 }
-/*
-CREATE TABLE wfdownloads_mirrors (
-  mirror_id int(11) unsigned NOT NULL auto_increment,
-  lid int(11) NOT NULL default '0',
-  title varchar(255) NOT NULL default '',
-  homeurl varchar(100) NOT NULL default '',
-  location varchar(255) NOT NULL default '',
-  continent varchar(255) NOT NULL default '',
-  downurl varchar(255) NOT NULL default '',
-  submit int(11) NOT NULL default '0',
-  date int(11) NOT NULL default '0',
-  uid int(10) NOT NULL default '0',
-  PRIMARY KEY  (mirror_id),
-  KEY categoryid (lid)
-) TYPE=MyISAM;
-
-*/
 class WfdownloadsMirror extends XoopsObject {
 	function WfdownloadsMirror() {
 		$this->initVar('mirror_id', XOBJ_DTYPE_INT);
@@ -62,7 +45,7 @@ class WfdownloadsMirror extends XoopsObject {
 
 	function getForm() {
 	    include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
-        $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+        $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 
 	    $sform = new XoopsThemeForm(_AM_WFD_MIRROR_SNEWMNAMEDESC, "mirrorform", $_SERVER['REQUEST_URI']);
 	    $sform -> addElement(new XoopsFormText(_AM_WFD_MIRROR_FHOMEURLTITLE, 'title', 30, 40, $this->getVar('title', 'e')), true);
@@ -78,8 +61,8 @@ class WfdownloadsMirror extends XoopsObject {
 	    $approve_checkbox -> addOption(1, " ");
 	    $sform -> addElement($approve_checkbox);
 
-	    $sform -> addElement(new XoopsFormHidden("lid", $this->getVar('lid')));
-	    $sform -> addElement(new XoopsFormHidden("mirror_id", $this->getVar('mirror_id')));
+	    $sform -> addElement(new XoopsFormHidden("lid", intval($this->getVar('lid'))));
+	    $sform -> addElement(new XoopsFormHidden("mirror_id", intval($this->getVar('mirror_id'))));
 	    $sform -> addElement(new XoopsFormHidden("uid", $uid));
 	    $sform -> addElement(new XoopsFormHidden("confirm", 1));
 	    $button_tray = new XoopsFormElementTray('', '');

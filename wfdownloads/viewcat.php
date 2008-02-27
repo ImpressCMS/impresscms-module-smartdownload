@@ -15,17 +15,18 @@ global $xoopsModuleConfig, $myts, $xoopsModule, $xoopsUser;
 $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 $orderby = isset($_GET['orderby']) ? convertorderbyin($_GET['orderby']) : $xoopsModuleConfig['filexorder'];
 $cid = (isset($_GET['cid']) && $_GET['cid'] > 0) ? intval($_GET['cid']) : 0;
+$mid = intval($xoopsModule->getVar('mid'));
 
 $gperm_handler =& xoops_gethandler('groupperm');
 $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
 if ($groups == XOOPS_GROUP_ANONYMOUS) {
-    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
         exit();
     }
 } else {
-    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+    if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
         exit();
     }
@@ -76,7 +77,7 @@ $arr = $mytree->getFirstChild($cid);
  */
 if (is_array($arr) > 0 && !isset($_GET['list']) && !isset($_GET['selectdate']))
 {
-    $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $xoopsModule->getVar('mid'));
+    $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $mid);
     $listings = wfd_getTotalItems(0, $allowed_cats);
     $scount = 1;
     foreach(array_keys($arr) as $i)

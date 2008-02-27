@@ -155,7 +155,7 @@ switch ($op)
         if (!$cid)
         {
             if ($cid == 0) {
-                $newid = $category->getVar('cid');
+                $newid = intval($category->getVar('cid'));
             }
             wfd_save_Permissions($groups, $newid, 'WFDownCatPerm');
             /**
@@ -215,7 +215,7 @@ switch ($op)
             $report_handler->deleteAll($download_criteria);
             $download_handler->deleteAll($download_criteria);
             foreach (array_keys($downloads) as $lid) {
-                xoops_comment_delete($xoopsModule -> getVar('mid'), $lid);
+                xoops_comment_delete($xoopsModule->getVar('mid'), intval($lid));
             }
 
             // all downloads for each category is deleted, now delete the category data
@@ -223,7 +223,7 @@ switch ($op)
             $error = _AM_WFD_DBERROR;
 
             foreach ($cids as $cid) {
-                xoops_groupperm_deletebymoditem ($xoopsModule -> getVar('mid'), 'WFDownCatPerm', $cid);
+                xoops_groupperm_deletebymoditem (intval($xoopsModule->getVar('mid')), 'WFDownCatPerm', $cid);
             }
 
             redirect_header(WFDOWNLOADS_URL.'admin/category.php', 1, _AM_WFD_CCATEGORY_DELETED);
@@ -238,7 +238,7 @@ switch ($op)
         break;
 
     case "modCat":
-        $cid = (isset($_POST['cid'])) ? $_POST['cid'] : 0;
+        $cid = (isset($_POST['cid'])) ? intval($_POST['cid']) : 0;
         wfdownloads_xoops_cp_header();
         wfdownloads_adminMenu(2, _AM_WFD_MCATEGORY);
         createcat($cid);

@@ -29,7 +29,8 @@ switch ($op)
 
     $confirm = (isset($_REQUEST['confirm'])) ? 1 : 0;
     $review_handler = xoops_getmodulehandler('review');
-    $review = $review_handler->get($_REQUEST['review_id']);
+    $review_id = intval($_REQUEST['review_id']);
+    $review = $review_handler->get($review_id);
     if ($confirm)
     {
         $review_handler->delete($review);
@@ -48,7 +49,8 @@ switch ($op)
 
     $confirm = (isset($_REQUEST['confirm'])) ? 1 : 0;
     $review_handler = xoops_getmodulehandler('review');
-    $review = $review_handler->get($_REQUEST['review_id']);
+    $review_id = intval($_REQUEST['review_id']);
+    $review = $review_handler->get($review_id);
     if ($confirm)
     {
         $review->setVar('submit', 1);
@@ -68,7 +70,8 @@ switch ($op)
 
     $confirm = (isset($_REQUEST['confirm'])) ? 1 : 0;
     $review_handler = xoops_getmodulehandler('review');
-    $review = $review_handler->get($_REQUEST['review_id']);
+    $review_id = intval($_REQUEST['review_id']);
+    $review = $review_handler->get($review_id);
     if ($confirm)
     {
         $review->setVar('title', trim($_POST['title']));
@@ -159,14 +162,14 @@ switch ($op)
             $title = isset($downloads[$reviews[$i]->getVar('lid')]) ? $downloads[$reviews[$i]->getVar('lid')] : "";
 			$submitter = xoops_getLinkedUnameFromId(intval($reviews[$i]->getVar('uid')));
             $datetime = formatTimestamp($reviews[$i]->getVar('date'), $xoopsModuleConfig['dateformat']);
-            $status = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=approve_review&review_id=" . $review_id . "'>" . $imagearray['approve'] . "</a>";
-            $modify = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&review_id=" . $review_id . "'>" . $imagearray['editimg'] . "</a>";
-            $delete = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=del_review&review_id=" . $review_id . "'>" . $imagearray['deleteimg'] . "</a>";
+            $status = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=approve_review&review_id=" . intval($review_id) . "'>" . $imagearray['approve'] . "</a>";
+            $modify = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&review_id=" . intval($review_id) . "'>" . $imagearray['editimg'] . "</a>";
+            $delete = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=del_review&review_id=" . intval($review_id) . "'>" . $imagearray['deleteimg'] . "</a>";
             echo "
             		<tr>\n
             		<td class='head' align='center'>" . $review_id . "</td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . $reviews[$i]->getVar('lid') . "'>" . $title . "</a></td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&amp;review_id=" . $review_id . "'>" . $review_title . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . intval($reviews[$i]->getVar('lid')) . "'>" . $title . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&amp;review_id=" . intval($review_id) . "'>" . $review_title . "</a></td>\n
             		<td class='even' align='center' nowrap>$submitter</td>\n
             		<td class='even' align='center'>" . $datetime . "</td>\n
             		<td class='even' align='center' nowrap>$status $modify $delete</td>\n
@@ -213,13 +216,13 @@ switch ($op)
             $title2 = isset($downloads[$reviews2[$i2]->getVar('lid')]) ? $downloads[$reviews2[$i2]->getVar('lid')] : "";
 			$submitter2 = xoops_getLinkedUnameFromId(intval($reviews2[$i2]->getVar('uid')));
             $datetime2 = formatTimestamp($reviews2[$i2]->getVar('date'), $xoopsModuleConfig['dateformat']);
-            $modify2 = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&review_id=" . $review_id2 . "'>" . $imagearray['editimg'] . "</a>";
-            $delete2 = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=del_review&review_id=" . $review_id2 . "'>" . $imagearray['deleteimg'] . "</a>";
+            $modify2 = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&review_id=" . intval($review_id2) . "'>" . $imagearray['editimg'] . "</a>";
+            $delete2 = "<a href='".WFDOWNLOADS_URL."admin/review.php?op=del_review&review_id=" . intval($review_id2) . "'>" . $imagearray['deleteimg'] . "</a>";
             echo "
             		<tr>\n
             		<td class='head' align='center'>" . $review_id2 . "</td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . $reviews2[$i2]->getVar('lid') . "'>" . $title2 . "</a></td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&amp;review_id=" . $review_id2 . "'>" . $review_title2 . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . intval($reviews2[$i2]->getVar('lid')) . "'>" . $title2 . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/review.php?op=edit_review&amp;review_id=" . intval($review_id2) . "'>" . $review_title2 . "</a></td>\n
             		<td class='even' align='center' nowrap>$submitter2</td>\n
             		<td class='even' align='center'>" . $datetime2 . "</td>\n
             		<td class='even' align='center' nowrap>$modify2 $delete2</td>\n

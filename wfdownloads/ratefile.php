@@ -27,7 +27,7 @@ if (!empty($_POST['submit']))
     }
     else
     {
-        $ratinguser = $xoopsUser -> getVar('uid');
+        $ratinguser = intval($xoopsUser->getVar('uid'));
     }
     // Make sure only 1 anonymous from an IP in a single day.
     $anonwaitdays = 1;

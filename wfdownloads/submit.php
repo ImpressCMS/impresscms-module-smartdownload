@@ -294,14 +294,14 @@ else
        	    if ($lid) {
        		    $entries[$fid][0] = $download->getVar('formulize_idreq');
        		    $owner = getEntryOwner($entries[$fid][0]);
-       		    $cid = $download->getVar('cid');
+       		    $cid = intval($download->getVar('cid'));
        	    }	else {
        		    $entries[$fid][0] = "";
        		    $owner = "";
         	    }
 		    $member_handler =& xoops_gethandler('member');
 		    $owner_groups =& $member_handler->getGroupsByUser($owner, FALSE);
-       	    $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+       	    $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
        	    $groups = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
        	    $entries = handleSubmission($formulize_mgr, $entries, $uid, $owner, $fid, $owner_groups, $groups, "new"); // "new" causes xoops token check to be skipped, since WF-downloads should be doing that
@@ -321,7 +321,7 @@ else
     }
     $download->setVar('title', $title);
     $download->setVar('url', $url);
-    $download->setVar('cid', $cid);
+    $download->setVar('cid', intval($cid));
     $download->setVar('filename', $filename);
     $download->setVar('filetype', $filetype);
     
@@ -337,12 +337,12 @@ else
         $notification_handler = &xoops_gethandler('notification');
         $tags = array();
         $tags['FILE_NAME'] = $title;
-        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&amp;lid=' . $lid;
+        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . intval($cid) . '&amp;lid=' . intval($lid);
         $category_handler = xoops_getmodulehandler('category');
         $category = $category_handler->get($cid);
 		$tags['FILE_VERSION'] = $version;
         $tags['CATEGORY_NAME'] = $category->getVar('title');
-        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . $cid;
+        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . intval($cid);
 
         if ($xoopsModuleConfig['autoapprove'] == 2 || $xoopsModuleConfig['autoapprove'] == 4)
         { // Then this change will be automatically approved, so the notification needs to go out.
@@ -407,7 +407,7 @@ else
             $error = _MD_WFD_INFONOSAVEDB;
             trigger_error($error, E_USER_ERROR);
         }
-        $newid = $download->getVar('lid');
+        $newid = intval($download->getVar('lid'));
         $groups = array(1, 2);
         /*
         *  Notify of new link (anywhere) and new link in category
@@ -415,12 +415,12 @@ else
         $notification_handler = &xoops_gethandler('notification');
         $tags = array();
         $tags['FILE_NAME'] = $title;
-        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&amp;lid=' . $newid;
+        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . intval($cid) . '&amp;lid=' . $newid;
         $category_handler = xoops_getmodulehandler('category');
         $category = $category_handler->get($cid);
 
         $tags['CATEGORY_NAME'] = $category->getVar('title');
-        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . $cid;
+        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . intval($cid);
 
         if ($xoopsModuleConfig['autoapprove'] == 2 || $xoopsModuleConfig['autoapprove'] == 4)
         {
@@ -457,18 +457,18 @@ else
             $notification_handler = &xoops_gethandler('notification');
             $tags = array();
             $tags['FILE_NAME'] = $title;
-            $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&amp;lid=' . $lid;
+            $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . intval($cid) . '&amp;lid=' . intval($lid);
 
             $category_handler = xoops_getmodulehandler('category');
             $category = $category_handler->get($cid);
             $tags['CATEGORY_NAME'] = $category->getVar('title');
-            $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . $cid;
+            $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . intval($cid);
         }
         else
         {
             $updated = (isset($_POST['up_dated']) && $_POST['up_dated'] == 0) ? 0 : time();
             $download->setVar('updated', $updated);
-            $download->setVar('modifysubmitter', $xoopsUser->uid());
+            $download->setVar('modifysubmitter', intval($xoopsUser->uid()));
             $download->setVar('requestdate', time());
             if (!$modification_handler->insert($download))
             {
@@ -521,14 +521,14 @@ else
     $download_handler = xoops_getmodulehandler('download');
     if (isset($_REQUEST['lid']) && is_object($xoopsUser))
     {
-        $user_id = $xoopsUser->uid();
+        $user_id = intval($xoopsUser->uid());
 		$lid = intval($_REQUEST['lid']);
 		$download = $download_handler->get($lid);
 		if ($user_id !== $download->getVar('submitter')) {
 			redirect_header("index.php",5, _MD_WFD_NOTALLOWEDTOMOD);
 	        exit();
 		}
-	  $cid = $download->getVar('cid');
+	  $cid = intval($download->getVar('cid'));
 	  
     }
     else

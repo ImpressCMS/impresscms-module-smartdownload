@@ -21,7 +21,7 @@ switch ($op)
         $indexheading = $myts->addslashes($_POST['indexheading']);
         $indexheader = $myts->addslashes($_POST['indexheader']);
         $indexfooter = $myts->addslashes($_POST['indexfooter']);
-		$indeximage = $myts->addslashes($_POST['indeximage']);
+	$indeximage = $myts->addslashes($_POST['indeximage']);
         $nohtml = isset($_POST['nohtml']);
         $nosmiley = isset($_POST['nosmiley']);
         $noxcodes = isset($_POST['noxcodes']);
@@ -30,7 +30,7 @@ switch ($op)
         $indexheaderalign = $_POST['indexheaderalign'];
         $indexfooteralign = $_POST['indexfooteralign'];
 
-        $xoopsDB->query("update " . $xoopsDB->prefix("wfdownloads_indexpage") . " set indexheading='$indexheading', indexheader='$indexheader', indexfooter='$indexfooter', indeximage='$indeximage', indexheaderalign='$indexheaderalign', indexfooteralign='$indexfooteralign', nohtml='$nohtml', nosmiley='$nosmiley', noxcodes='$noxcodes', noimages='$noimages', nobreak='$nobreak' ");
+        $xoopsDB->query("update " . $xoopsDB->prefix("wfdownloads_indexpage") . " set indexheading='$indexheading', indexheader='$indexheader', indexfooter='$indexfooter', indeximage='$indeximage', indexheaderalign='$indexheaderalign', indexfooteralign='$indexfooteralign', nohtml='".intval($nohtml)."', nosmiley='".intval($nosmiley)."', noxcodes='".intval($noxcodes)."', noimages='".intval($noimages)."', nobreak='".intval($nobreak)."' ");
         redirect_header(WFDOWNLOADS_URL.'admin/indexpage.php', 1, _AM_WFD_IPAGE_UPDATED);
         exit();
 

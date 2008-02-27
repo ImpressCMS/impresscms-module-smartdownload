@@ -57,13 +57,13 @@ $chcount = 0;
 $countin = 0;
 
 $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
-$module_id = $xoopsModule->getVar('mid');
+$module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = &xoops_gethandler('groupperm');
 
 /**
  * Begin Main page download info
  */
-$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $xoopsModule->getVar('mid'));
+$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $module_id);
 $listings = wfd_getTotalItems(0, $allowed_cats);
 /*
 * get total amount of categories
@@ -124,20 +124,20 @@ if($xoopsModuleConfig['subcats'] != 1) {
 		unset($subcategories);
 	  
 		$xoopsTpl->append('categories', array('image' => $imgurl,
-											'id' => $cats[$i]->getVar('cid'),
+											'id' => intval($cats[$i]->getVar('cid')),
 											'title' => $cats[$i]->getVar('title'),
 											'summary' => $cats[$i]->getVar('summary'),
-											'totaldownloads' => $download_count,
-											'count' => $count,
+											'totaldownloads' => intval($download_count),
+											'count' => intval($count),
 											'alttext' => $indicator['alttext']));
 	 } else {
 		$xoopsTpl->append('categories', array('image' => $imgurl,
-											'id' => $cats[$i]->getVar('cid'),
+											'id' => intval($cats[$i]->getVar('cid')),
 											'title' => $cats[$i]->getVar('title'),
 											'summary' => $cats[$i]->getVar('summary'),
 											'subcategories' => $subcategories,
-											'totaldownloads' => $download_count,
-											'count' => $count,
+											'totaldownloads' => intval($download_count),
+											'count' => intval($count),
 											'alttext' => $indicator['alttext']));
 	 }
 	}

@@ -29,7 +29,7 @@
 
 function wfdownloads_com_update($download_id, $total_num){
     $download_handler = xoops_getmodulehandler('download');
-    $download_handler->updateAll("comments", $total_num, new Criteria("lid", intval($download_id)));
+    $download_handler->updateAll("comments", intval($total_num), new Criteria("lid", intval($download_id)));
 }
 
 function wfdownloads_com_approve(&$comment){

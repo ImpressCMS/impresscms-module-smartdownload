@@ -40,7 +40,7 @@ switch ($op)
     else
     {
         wfdownloads_xoops_cp_header();
-        xoops_confirm(array('op' => 'del_mirror', 'mirror_id' => $mirror->getVar('mirror_id'), 'confirm' => 1), WFDOWNLOADS_URL.'admin/mirror.php?op=default', _AM_WFD_FILE_REALLYDELETEDTHIS . "<br /><br>" . $mirror->getVar('title'), _AM_WFD_BDELETE);
+        xoops_confirm(array('op' => 'del_mirror', 'mirror_id' => intval($mirror->getVar('mirror_id')), 'confirm' => 1), WFDOWNLOADS_URL.'admin/mirror.php?op=default', _AM_WFD_FILE_REALLYDELETEDTHIS . "<br /><br>" . $mirror->getVar('title'), _AM_WFD_BDELETE);
         xoops_cp_footer();
     }
     break;
@@ -60,7 +60,7 @@ switch ($op)
     else
     {
         wfdownloads_xoops_cp_header();
-        xoops_confirm(array('op' => 'approve_mirror', 'mirror_id' => $mirror->getVar('mirror_id'), 'confirm' => 1), WFDOWNLOADS_URL.'admin/mirror.php?op=default', _AM_WFD_MIRROR_APPROVETHIS . "<br /><br>" . $mirror->getVar('title'), _AM_WFD_MIRROR_APPROVETHIS);
+        xoops_confirm(array('op' => 'approve_mirror', 'mirror_id' => intval($mirror->getVar('mirror_id')), 'confirm' => 1), WFDOWNLOADS_URL.'admin/mirror.php?op=default', _AM_WFD_MIRROR_APPROVETHIS . "<br /><br>" . $mirror->getVar('title'), _AM_WFD_MIRROR_APPROVETHIS);
         xoops_cp_footer();
     }
     break; 
@@ -166,8 +166,8 @@ switch ($op)
             $delete = "<a href='".WFDOWNLOADS_URL."admin/mirror.php?op=del_mirror&mirror_id=" . $mirror_id . "'>" . $imagearray['deleteimg'] . "</a>";
             echo "
             		<tr>\n
-            		<td class='head' align='center'>" . $mirror_id . "</td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . $mirrors[$i]->getVar('lid') . "'>" . $title . "</a></td>\n
+            		<td class='head' align='center'>" . intval($mirror_id) . "</td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . intval($mirrors[$i]->getVar('lid')) . "'>" . $title . "</a></td>\n
             		<td class='even' align='center' nowrap>$submitter</td>\n
             		<td class='even' align='center'>" . $datetime . "</td>\n
             		<td class='even' align='center' nowrap>$status $modify $delete</td>\n
@@ -214,13 +214,13 @@ switch ($op)
             $title2 = isset($downloads[$mirrors2[$i2]->getVar('lid')]) ? $downloads[$mirrors2[$i2]->getVar('lid')] : "";
 			$submitter2 = xoops_getLinkedUnameFromId(intval($mirrors2[$i2]->getVar('uid')));
             $datetime2 = formatTimestamp($mirrors2[$i2]->getVar('date'), $xoopsModuleConfig['dateformat']);
-            $modify2 = "<a href='".WFDOWNLOADS_URL."admin/mirror.php?op=edit_mirror&mirror_id=" . $mirror_id2 . "'>" . $imagearray['editimg'] . "</a>";
-            $delete2 = "<a href='".WFDOWNLOADS_URL."admin/mirror.php?op=del_mirror&mirror_id=" . $mirror_id2 . "'>" . $imagearray['deleteimg'] . "</a>";
+            $modify2 = "<a href='".WFDOWNLOADS_URL."admin/mirror.php?op=edit_mirror&mirror_id=" . intval($mirror_id2) . "'>" . $imagearray['editimg'] . "</a>";
+            $delete2 = "<a href='".WFDOWNLOADS_URL."admin/mirror.php?op=del_mirror&mirror_id=" . intval($mirror_id2) . "'>" . $imagearray['deleteimg'] . "</a>";
             echo "
             		<tr>\n
             		<td class='head' align='center'>" . $mirror_id2 . "</td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . $mirrors2[$i2]->getVar('lid') . "'>" . $title2 . "</a></td>\n
-            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/mirror.php?op=edit_mirror&amp;mirror_id=" . $mirror_id2 . "'>" . $mirror_title2 . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/index.php?op=Download&amp;lid=" . intval($mirrors2[$i2]->getVar('lid')) . "'>" . $title2 . "</a></td>\n
+            		<td class='even' nowrap><a href='".WFDOWNLOADS_URL."admin/mirror.php?op=edit_mirror&amp;mirror_id=" . intval($mirror_id2) . "'>" . $mirror_title2 . "</a></td>\n
             		<td class='even' align='center' nowrap>$submitter2</td>\n
             		<td class='even' align='center'>" . $datetime2 . "</td>\n
             		<td class='even' align='center' nowrap>$modify2 $delete2</td>\n

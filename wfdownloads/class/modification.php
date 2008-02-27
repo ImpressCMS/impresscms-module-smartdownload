@@ -52,11 +52,11 @@ class WfdownloadsModificationHandler extends XoopsPersistableObjectHandler {
 	function approveModification($requestid) {
 	    $download_handler = xoops_getmodulehandler('download');
 
-	    $sql = "UPDATE " .$this->table." m, ". $download_handler->table . " d SET d.cid = m.cid, d.title = m.title,
-			d.url = m.url, d.filename = m.filename, d.filetype = m.filetype, d.mirror = m.mirror, d.license = m.license, d.features = m.features, d.homepage = m.homepage, d.version = m.version, d.size = m.size, d.platform = m.platform,
-			d.screenshot = m.screenshot, d.screenshot2 = m.screenshot2, d.screenshot3 = m.screenshot3, d.screenshot4 = m.screenshot4, d.publisher = m.publisher, d.status = '2', d.price = m.price, d.requirements = m.requirements,
-			d.homepagetitle = m.homepagetitle, d.limitations = m.limitations, d.versiontypes = m.versiontypes, d.dhistory = m.dhistory, d.updated = m.updated,
-			d.summary = m.summary, d.description = m.description WHERE d.lid = m.lid AND m.requestid=".intval($requestid);
+	    $sql = "UPDATE " .$this->table." m, ". $download_handler->table . " d SET d.cid = 'm.cid', d.title = 'm.title',
+			d.url = 'm.url', d.filename = 'm.filename', d.filetype = 'm.filetype', d.mirror = 'm.mirror', d.license = 'm.license', d.features = 'm.features', d.homepage = 'm.homepage', d.version = 'm.version', d.size = 'm.size', d.platform = 'm.platform',
+			d.screenshot = 'm.screenshot', d.screenshot2 = 'm.screenshot2', d.screenshot3 = 'm.screenshot3', d.screenshot4 = 'm.screenshot4', d.publisher = 'm.publisher', d.status = '2', d.price = 'm.price', d.requirements = 'm.requirements',
+			d.homepagetitle = 'm.homepagetitle', d.limitations = 'm.limitations', d.versiontypes = 'm.versiontypes', d.dhistory = 'm.dhistory', d.updated = 'm.updated',
+			d.summary = 'm.summary', d.description = 'm.description' WHERE d.lid = 'm.lid' AND m.requestid='".intval($requestid)."'";
 	    if ($this->db->query($sql)) {
 	        return $this->deleteAll(new Criteria("requestid", intval($requestid)));
 	    }

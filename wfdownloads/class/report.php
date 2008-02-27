@@ -29,21 +29,7 @@
 if (!class_exists("XoopsPersistableObjectHandler")) {
 	include_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/object.php";
 }
-/*
-CREATE TABLE wfdownloads_broken (
-  reportid int(5) NOT NULL auto_increment,
-  lid int(11) NOT NULL default '0',
-  sender int(11) NOT NULL default '0',
-  ip varchar(20) NOT NULL default '',
-  date varchar(11) NOT NULL default '0',
-  confirmed enum('0','1') NOT NULL default '0',
-  acknowledged enum('0','1') NOT NULL default '0',
-  PRIMARY KEY  (reportid),
-  KEY lid (lid),
-  KEY sender (sender),
-  KEY ip (ip)
-) TYPE=MyISAM;
-*/
+
 class WfdownloadsReport extends XoopsObject {
 	function WfdownloadsReport() {
 		$this->initVar('reportid', XOBJ_DTYPE_INT);

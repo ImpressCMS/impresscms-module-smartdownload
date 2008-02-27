@@ -48,7 +48,7 @@ function Download()
             $download = $download_handler->get($lid);
 			$title = _AM_WFD_FILE_MODIFYFILE;
 		// added - start - March 4 2006 - jpc
-		$cid = $download->getVar('cid');
+		$cid = intval($download->getVar('cid'));
 		$category = $category_handler->get($cid);
 		// added - end - March 4 2006 - jpc
 
@@ -255,7 +255,7 @@ function delVote()
     $rating_handler = xoops_getmodulehandler('rating');
     $rating = $rating_handler->get($_GET['rid']);
     if ($rating_handler->delete($rating, true)) {
-        wfd_updaterating($rating->getVar('lid'));
+        wfd_updaterating(intval($rating->getVar('lid')));
     }
     redirect_header(WFDOWNLOADS_URL.'admin/index.php', 1, _AM_WFD_VOTE_VOTEDELETED);
 }

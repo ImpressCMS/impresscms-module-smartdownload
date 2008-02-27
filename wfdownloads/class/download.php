@@ -83,8 +83,8 @@ class WfdownloadsDownload extends XoopsObject {
     function getDownloadInfo() {
         global $xoopsModuleConfig, $xoopsConfig;
         global $xoopsUser, $xoopsModule, $myts;
-        $down['id'] = $this->getVar('lid');
-        $down['cid'] = $this->getVar('cid');
+        $down['id'] = intval($this->getVar('lid'));
+        $down['cid'] = intval($this->getVar('cid'));
 
 		$use_mirrors = $xoopsModuleConfig['enable_mirrors'];
 		$add_mirror = 0;
@@ -106,11 +106,11 @@ class WfdownloadsDownload extends XoopsObject {
         $down['hits'] = $this->getVar('hits');
 
         $category_handler = xoops_getmodulehandler('category');
-        $down['path'] = $category_handler->getNicePath($this->getVar('cid'));
+        $down['path'] = $category_handler->getNicePath($down['cid']);
 
         $down['imageheader'] = wfd_imageheader();
 
-        $down['title'] = $this->getVar('title');
+        $down['title'] = trim($this->getVar('title'));
         $down['url'] = $this->getVar('url');
 		$down['filename'] = $this->getVar('filename');
 		$down['filetype'] = $this->getVar('filetype');
@@ -270,26 +270,26 @@ class WfdownloadsDownload extends XoopsObject {
             }
         }
         $down['mail_subject'] = rawurlencode(sprintf(_MD_WFD_INTFILEFOUND, $xoopsConfig['sitename']));
-        $down['mail_body'] = rawurlencode(sprintf(_MD_WFD_INTFILEFOUND, $xoopsConfig['sitename']) . ':  ' . WFDOWNLOADS_URL . 'singlefile.php?cid=' . $this->getVar('cid') . '&amp;lid=' . $this->getVar('lid'));
+        $down['mail_body'] = rawurlencode(sprintf(_MD_WFD_INTFILEFOUND, $xoopsConfig['sitename']) . ':  ' . WFDOWNLOADS_URL . 'singlefile.php?cid=' . $down['cid'] . '&amp;lid=' . $down['id']);
 
         $down['isadmin'] = (!empty($xoopsUser) && $xoopsUser->isAdmin($xoopsModule->mid())) ? true : false;
 
         $down['adminlink'] = '';
         if ($down['isadmin'] == true)
         {
-            $down['adminlink'] = '[ <a href="' . WFDOWNLOADS_URL . 'admin/index.php?op=Download&amp;lid=' . $this->getVar('lid') . '">' . _MD_WFD_EDIT . '</a> | ';
-            $down['adminlink'] .= '<a href="' . WFDOWNLOADS_URL . 'admin/index.php?op=delDownload&amp;lid=' . $this->getVar('lid') . '">' . _MD_WFD_DELETE . '</a> ]';
+            $down['adminlink'] = '[ <a href="' . WFDOWNLOADS_URL . 'admin/index.php?op=Download&amp;lid=' . $down['id'] . '">' . _MD_WFD_EDIT . '</a> | ';
+            $down['adminlink'] .= '<a href="' . WFDOWNLOADS_URL . 'admin/index.php?op=delDownload&amp;lid=' . $down['id'] . '">' . _MD_WFD_DELETE . '</a> ]';
         }
         $votestring = ($this->getVar('votes') == 1) ? _MD_WFD_ONEVOTE : sprintf(_MD_WFD_NUMVOTES, $this->getVar('votes'));
         $down['is_updated'] = ($this->getVar('updated') > 0) ? _MD_WFD_UPDATEDON : _MD_WFD_SUBMITDATE;
 
         if (is_object($xoopsUser) && $down['isadmin'] != true)
         {
-            $down['useradminlink'] = ($xoopsUser->getvar('uid') == $this->getVar('submitter')) ? true : false;
+            $down['useradminlink'] = (intval($xoopsUser->getvar('uid')) == $this->getVar('submitter')) ? true : false;
         }
 
         global $xoopsDB;
-        $sql2 = "SELECT rated FROM " . $xoopsDB->prefix('wfdownloads_reviews') . " WHERE lid = " . $this->getVar('lid') . " AND submit = 1";
+        $sql2 = "SELECT rated FROM " . $xoopsDB->prefix('wfdownloads_reviews') . " WHERE lid = " . $down['id'] . " AND submit = '1'";
         $results = $xoopsDB->query($sql2);
         $numrows = $xoopsDB->getRowsNum($results);
 
@@ -313,7 +313,7 @@ class WfdownloadsDownload extends XoopsObject {
         $down['icons'] = wfd_displayicons($this->getVar('published'), $this->getVar('status'), $this->getVar('hits'));
 
 		global $xoopsDB;
-        $sql3 = "SELECT downurl FROM " . $xoopsDB->prefix('wfdownloads_mirrors') . " WHERE lid = " . $this->getVar('lid') . " AND submit = 1";
+        $sql3 = "SELECT downurl FROM " . $xoopsDB->prefix('wfdownloads_mirrors') . " WHERE lid = '" . $down['id'] . "' AND submit = '1'";
         $results3 = $xoopsDB->query($sql3);
         $numrows2 = $xoopsDB->getRowsNum($results3);
 
@@ -444,7 +444,7 @@ class WfdownloadsDownload extends XoopsObject {
         $sform = new XoopsThemeForm($title, "storyform", $_SERVER['REQUEST_URI']);
         $sform -> setExtra('enctype="multipart/form-data"');
         if (!$this->isNew()) {
-            $sform -> addElement(new XoopsFormLabel(_AM_WFD_FILE_ID, $this->getVar('lid')));
+            $sform -> addElement(new XoopsFormLabel(_AM_WFD_FILE_ID, intval($this->getVar('lid'))));
         }
         if ($this->getVar('ipaddress') != "")  {
             $sform -> addElement(new XoopsFormLabel(_AM_WFD_FILE_IP, $this->getVar('ipaddress')));
@@ -672,7 +672,7 @@ class WfdownloadsDownload extends XoopsObject {
         else
         {
             $button_tray = new XoopsFormElementTray('', '');
-            $button_tray -> addElement(new XoopsFormHidden('lid', $this->getVar('lid')));
+            $button_tray -> addElement(new XoopsFormHidden('lid', intval($this->getVar('lid'))));
             $button_tray -> addElement(new XoopsFormHidden('status', 2));
             $hidden = new XoopsFormHidden('op', 'addDownload');
             $button_tray -> addElement($hidden);
@@ -792,7 +792,7 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
         $wfModule = wfdownloads_getModuleInfo();
         $gperm_handler = xoops_gethandler('groupperm');
         $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
-        $mid = $wfModule->getVar('mid');
+        $mid = intval($wfModule->getVar('mid'));
         $categoryids = $gperm_handler->getItemIds('WFDownCatPerm', $groups, $mid);
         $criteria->add(new Criteria('cid', "(".implode(',', $categoryids).")", "IN"));
         return $criteria;
@@ -837,14 +837,14 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
 	 * @return bool
 	 */
     function incrementHits($lid) {
-    	$sql = "UPDATE ".$this->table." SET hits=hits+1 WHERE lid=".intval($lid);
+    	$sql = "UPDATE ".$this->table." SET hits=hits+1 WHERE lid='".intval($lid)."'";
     	return $this->db->queryF($sql);
     }
 
     function delete($download, $force = false) {
         if (parent::delete($download, $force)) {
             global $xoopsModule;
-            $criteria = new Criteria("lid", $download->getVar('lid'));
+            $criteria = new Criteria("lid", intval($download->getVar('lid')));
             $rating_handler = xoops_getmodulehandler('rating', 'wfdownloads');
             $rating_handler->deleteAll($criteria);
 			$mirror_handler = xoops_getmodulehandler('mirror', 'wfdownloads');
@@ -854,7 +854,7 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
             $report_handler = xoops_getmodulehandler('report', 'wfdownloads');
             $report_handler->deleteAll($criteria);
             // delete comments
-            xoops_comment_delete($xoopsModule -> getVar('mid'), $download->getVar('lid'));
+            xoops_comment_delete(intval($xoopsModule->getVar('mid')), intval($download->getVar('lid')));
 
 		    // added - start - March 4 2006 - jpc
             if(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php") AND $download->getVar("formulize_idreq") > 0) {

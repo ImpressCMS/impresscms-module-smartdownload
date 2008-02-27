@@ -15,9 +15,10 @@ global $xoopsModuleConfig, $myts, $xoopsUser;
 $gperm_handler =& xoops_gethandler('groupperm');
 $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
-$cid = isset($_REQUEST['cid']) ? $_REQUEST['cid'] : 0;
+$cid = isset($_REQUEST['cid']) ? intval($_REQUEST['cid']) : 0;
+$mid = intval($xoopsModule->getVar('mid'));
 
-if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
     exit();
 }
@@ -102,7 +103,7 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
 
         if (!empty($_POST['submit']))
         {
-            $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+            $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 
             $review_handler = xoops_getmodulehandler('review');
             $review = $review_handler->create();
@@ -134,7 +135,7 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
 			$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
             include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-            $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+            $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 
             echo "
 				<div align='center'>" . wfd_imageheader() . "</div><br />\n
@@ -146,7 +147,7 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
             $rating_select->addOptionArray(array('1' => 1, '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9, '10' => 10));
             $sform->addElement($rating_select);
             $sform->addElement(new XoopsFormDhtmlTextArea(_MD_WFD_REV_DESCRIPTION, 'review', '', 15, 60), true);
-            $sform->addElement(new XoopsFormHidden("lid", $_GET['lid']));
+            $sform->addElement(new XoopsFormHidden("lid", intval($_GET['lid'])));
             $sform->addElement(new XoopsFormHidden("uid", $uid));
             $button_tray = new XoopsFormElementTray('', '');
             $button_tray->addElement(new XoopsFormButton('', 'submit', _SUBMIT, 'submit'));

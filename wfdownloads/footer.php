@@ -26,7 +26,7 @@
 //  ------------------------------------------------------------------------ //
 
 global $xoopsModule, $xoopsModuleConfig;
-$uid = ($xoopsUser) ? ($xoopsUser->getVar("uid")) : 0;
+$uid = ($xoopsUser) ? (intval($xoopsUser->getVar('uid'))) : 0;
 
 $xoopsTpl->assign("wfdownloads_adminpage", "<a href='" . WFDOWNLOADS_URL . "admin/index.php'>" ._MD_WFD_ADMIN_PAGE . "</a>");
 

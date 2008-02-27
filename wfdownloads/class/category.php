@@ -61,8 +61,11 @@ class WfdownloadsCategory extends XoopsObject {
         $member_handler = & xoops_gethandler('member');
         $group_list = $member_handler -> getGroupList();
 
+	$cid = intval($this->getVar('cid'));
+	$mid = intval($xoopsModule->getVar('mid'));
+
         $gperm_handler = & xoops_gethandler('groupperm');
-        $groups = $gperm_handler -> getGroupIds('WFDownCatPerm', $this->getVar('cid'), $xoopsModule -> getVar('mid'));
+        $groups = $gperm_handler -> getGroupIds('WFDownCatPerm', $cid, $mid);
         $groups = $groups;
         $sform -> addElement(new XoopsFormSelectGroup(_AM_WFD_FCATEGORY_GROUPPROMPT, "groups", true, $groups, 5, true));
 
@@ -97,23 +100,23 @@ class WfdownloadsCategory extends XoopsObject {
 
         $options_tray = new XoopsFormElementTray(_AM_WFD_TEXTOPTIONS, '<br />');
 
-        $html_checkbox = new XoopsFormCheckBox('', 'dohtml', $this->getVar('dohtml'));
+        $html_checkbox = new XoopsFormCheckBox('', 'dohtml', intval($this->getVar('dohtml')));
         $html_checkbox -> addOption(1, _AM_WFD_ALLOWHTML);
         $options_tray -> addElement($html_checkbox);
 
-        $smiley_checkbox = new XoopsFormCheckBox('', 'dosmiley', $this->getVar('dosmiley'));
+        $smiley_checkbox = new XoopsFormCheckBox('', 'dosmiley', intval($this->getVar('dosmiley')));
         $smiley_checkbox -> addOption(1, _AM_WFD_ALLOWSMILEY);
         $options_tray -> addElement($smiley_checkbox);
 
-        $xcodes_checkbox = new XoopsFormCheckBox('', 'doxcode', $this->getVar('doxcode'));
+        $xcodes_checkbox = new XoopsFormCheckBox('', 'doxcode', intval($this->getVar('doxcode')));
         $xcodes_checkbox -> addOption(1, _AM_WFD_ALLOWXCODE);
         $options_tray -> addElement($xcodes_checkbox);
 
-        $noimages_checkbox = new XoopsFormCheckBox('', 'doimage', $this->getVar('doimage'));
+        $noimages_checkbox = new XoopsFormCheckBox('', 'doimage', intval($this->getVar('doimage')));
         $noimages_checkbox -> addOption(1, _AM_WFD_ALLOWIMAGES);
         $options_tray -> addElement($noimages_checkbox);
 
-        $breaks_checkbox = new XoopsFormCheckBox('', 'dobr', $this->getVar('dobr'));
+        $breaks_checkbox = new XoopsFormCheckBox('', 'dobr', intval($this->getVar('dobr')));
         $breaks_checkbox -> addOption(1, _AM_WFD_ALLOWBREAK);
         $options_tray -> addElement($breaks_checkbox);
         $sform -> addElement($options_tray);
@@ -156,7 +159,7 @@ class WfdownloadsCategory extends XoopsObject {
         }
         else
         {
-            $sform->addElement(new XoopsFormHidden('cid', $this->getVar('cid')));
+            $sform->addElement(new XoopsFormHidden('cid', $cid));
             $butt_create = new XoopsFormButton('', '', _AM_WFD_BMODIFY, 'submit');
             $butt_create -> setExtra('onclick="this.form.elements.op.value=\'addCat\'"');
             $button_tray -> addElement($butt_create);
@@ -182,7 +185,7 @@ class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
     function getNicePath($cid, $root_filename = "index.php", $item_filename = "viewcat.php?op=") {
         include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
         $mytree = new XoopsTree($this->table, $this->keyName, "pid");
-        $pathstring = $mytree->getNicePathFromId($cid, $this->identifierName, $item_filename);
+        $pathstring = $mytree->getNicePathFromId(intval($cid), $this->identifierName, $item_filename);
 
         /**
          * Replacing the " with ">" and deleteing the last ">" at the end
@@ -206,7 +209,7 @@ class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
         $wfModule = wfdownloads_getModuleInfo();
         $gperm_handler = xoops_gethandler('groupperm');
         $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
-        $categoryids = $gperm_handler->getItemIds('WFDownCatPerm', $groups, $wfModule->getVar('mid'));
+        $categoryids = $gperm_handler->getItemIds('WFDownCatPerm', $groups, intval($wfModule->getVar('mid')));
         return $this->getObjects(new Criteria('cid', "(".implode(',', $categoryids).")", "IN"), $id_as_key, $as_object);
     }
 

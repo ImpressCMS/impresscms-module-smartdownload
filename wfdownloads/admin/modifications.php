@@ -118,7 +118,7 @@ switch ($op)
         $sform->display();
 
         $modify_user = new XoopsUser($modification->getVar('modifysubmitter'));
-        $modifyname = xoops_getLinkedUnameFromId($modify_user->getVar('uid'));
+        $modifyname = xoops_getLinkedUnameFromId(intval($modify_user->getVar('uid')));
         $modifyemail = $modify_user->getVar("email");
 
         echo "<div><b>" . _AM_WFD_MOD_MODIFYSUBMITTER . "</b> $modifyname</div>";
@@ -194,7 +194,7 @@ switch ($op)
 
         $button_tray = new XoopsFormElementTray('', '');
         $button_tray->addElement(new XoopsFormHidden('requestid', $requestid));
-        $button_tray->addElement(new XoopsFormHidden('lid', $modification->getVar('lid')));
+        $button_tray->addElement(new XoopsFormHidden('lid', intval($modification->getVar('lid'))));
         $hidden = new XoopsFormHidden('op', 'changeModReq');
         $button_tray->addElement($hidden);
         if (!$modification->isNew())
@@ -235,6 +235,9 @@ switch ($op)
 
         $modification_handler = xoops_getmodulehandler('modification');
         $modification_handler->approveModification($_POST['requestid']);
+
+	$cid = intval($download->getVar('cid'));
+	$lid = intval($download->getVar('lid'));
         
 		/* Added by lankford on 2007/3/21 */
         if ($raiseModifyEvents) {
@@ -242,16 +245,16 @@ switch ($op)
         $notification_handler = &xoops_gethandler('notification');
         $tags = array();
         $tags['FILE_NAME'] = $download->getVar('title');
-        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $download->getVar('cid') . '&amp;lid=' . $download->getVar('lid');
+        $tags['FILE_URL'] = WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&amp;lid=' . $lid;
         $category_handler = xoops_getmodulehandler('category');
-        $category = $category_handler->get($download->getVar('cid'));
+        $category = $category_handler->get($cid);
 		$tags['FILE_VERSION'] = $download->getVar('version');
         $tags['CATEGORY_NAME'] = $category->getVar('title');
-        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . $download->getVar('cid');
+        $tags['CATEGORY_URL'] = WFDOWNLOADS_URL.'viewcat.php?cid=' . $cid;
 
         $notification_handler->triggerEvent('global', 0, 'filemodified', $tags);
-        $notification_handler->triggerEvent('category', $download->getVar('cid'), 'filemodified', $tags);
-        $notification_handler->triggerEvent('file', $download->getVar('lid'), 'filemodified', $tags);
+        $notification_handler->triggerEvent('category', $cid, 'filemodified', $tags);
+        $notification_handler->triggerEvent('file', $lid, 'filemodified', $tags);
 		}
         /* end add block */
 		
@@ -304,11 +307,11 @@ switch ($op)
                 $requestdate = formatTimestamp($modification->getVar('requestdate'), $xoopsModuleConfig['dateformat']);
 	            echo "
             		<tr>\n
-            		<td class='head' align='center'>" . $modification->getVar('requestid') . "</td>\n
+            		<td class='head' align='center'>" . intval($modification->getVar('requestid')) . "</td>\n
             		<td class='even'>" . $modification->getVar('title') . "</td>\n
             		<td class='even' align='center'>" . $submitter . "</td>\n
             		<td class='even' align='center'>" . $requestdate . "</td>\n
-            		<td class='even' align='center'> <a href='".WFDOWNLOADS_URL."admin/modifications.php?op=listModReqshow&amp;requestid=" . $modification->getVar('requestid'). "'>"._AM_WFD_MOD_VIEW."</a></td>\n
+            		<td class='even' align='center'> <a href='".WFDOWNLOADS_URL."admin/modifications.php?op=listModReqshow&amp;requestid=" . intval($modification->getVar('requestid')). "'>"._AM_WFD_MOD_VIEW."</a></td>\n
             		</tr>\n";
             }
         }

@@ -21,7 +21,7 @@ $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
 $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
 $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
-$module_id = $xoopsModule->getVar('mid');
+$module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = &xoops_gethandler('groupperm');
 
 $imageheader = wfd_imageheader();
@@ -30,7 +30,7 @@ $xoopsTpl->assign('imageheader', $imageheader);
 //Get number of downloads the last week
 $one_week_ago = time() - 3600*24*7; //@TODO: Change to strtotime (TODAY-1week);
 $download_handler = xoops_getmodulehandler('download');
-$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $xoopsModule->getVar('mid'));
+$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $module_id);
 $criteria = new Criteria("published", $one_week_ago, ">=");
 $allweekdownloads = $download_handler->getActiveCount($criteria);
 

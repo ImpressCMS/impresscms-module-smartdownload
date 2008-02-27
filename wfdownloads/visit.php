@@ -29,6 +29,7 @@ $lid = intval($_GET['lid']);
 $download_handler = xoops_getmodulehandler('download');
 $download = $download_handler->get($lid);
 $cid = intval($download->getVar('cid'));
+$mid = intval($xoopsModule->getVar('mid'));
 
 if ($download->isNew()) {
     redirect_header(WFDOWNLOADS_URL.'index.php', 1, _MD_WFD_NODOWNLOAD);
@@ -42,7 +43,7 @@ if ($download->getVar('published') == 0 || $download->getVar('published') > time
 $gperm_handler =& xoops_gethandler('groupperm');
 $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 
-if (!$gperm_handler->checkRight("WFDownCatPerm", $cid,$groups, $xoopsModule->getVar('mid'))) {
+if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
     exit();
 }

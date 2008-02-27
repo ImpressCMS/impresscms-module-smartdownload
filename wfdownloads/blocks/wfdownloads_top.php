@@ -27,11 +27,12 @@ function b_wfdownloads_top_show($options)
     $modhandler = xoops_gethandler('module');
     $wfModule = $modhandler->getByDirname("wfdownloads");
     $config_handler = xoops_gethandler('config');
-    $wfModuleConfig = $config_handler->getConfigsByCat(0, $wfModule->getVar('mid'));
+    $wf_mid = intval($wfModule->getVar('mid'));
+    $wfModuleConfig = $config_handler->getConfigsByCat(0, $wf_mid);
 
     $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
     $gperm_handler = &xoops_gethandler('groupperm');
-    $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $wfModule->getVar('mid'));
+    $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $wf_mid);
 
     $criteria = new Criteria("cid", implode(',', $allowed_cats), "IN");
 	$criteria = new CriteriaCompo(new Criteria('offline', 0));
@@ -43,13 +44,13 @@ function b_wfdownloads_top_show($options)
 
     foreach (array_keys($downloads) as $i) {
         $download = $downloads[$i]->toArray();
-        if (!in_array($download['cid'], $allowed_cats))
+        if (!in_array(intval($download['cid']), $allowed_cats))
         {
             continue;
         }
 
         $download['title'] =  xoops_substr($download['title'], 0, ($options[2] -1));
-        $download['id'] = $download['lid'];
+        $download['id'] = intval($download['lid']);
         if ($options[0] == "published")
         {
             $download['date'] = formatTimestamp($download['published'], $wfModuleConfig['dateformat']);

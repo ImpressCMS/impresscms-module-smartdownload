@@ -14,7 +14,7 @@ if (!empty($_POST['submit'])) {
 
     global $xoopsModule, $xoopsModuleConfig, $xoopsUser;
 
-    $sender = (is_object($xoopsUser)) ? $xoopsUser->getVar('uid') : 0;
+    $sender = (is_object($xoopsUser)) ? intval($xoopsUser->getVar('uid')) : 0;
     $ip = getenv("REMOTE_ADDR");
     $lid = intval($_POST['lid']);
     $time = time();
@@ -57,7 +57,7 @@ if (!empty($_POST['submit'])) {
         $member_handler = xoops_gethandler('member');
         $user = $member_handler->getUser($download->getVar('submitter'));
         $subdate = formatTimestamp($download->getVar('published'), $xoopsModuleConfig['dateformat']);
-        $cid = $download->getVar('cid');
+        $cid = intval($download->getVar('cid'));
         $title = $download->getVar('title');
         $subject = _MD_WFD_BROKENREPORTED;
 

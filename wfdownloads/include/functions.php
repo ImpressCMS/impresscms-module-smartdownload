@@ -374,14 +374,12 @@ function wfdownloads_modFooter ()
 	$hModule = &xoops_gethandler('module');
 
 	$smartModule = wfdownloads_getModuleInfo();
-	$module_id = $smartModule->getVar('mid');
+	$module_id = intval($smartModule->getVar('mid'));
 
 	$module_name = $smartModule->getVar('dirname');
 	$smartConfig = wfdownloads_getModuleConfig();
 
-	$module_id = $smartModule->getVar('mid');
-
-	$versioninfo = &$hModule->get($smartModule->getVar('mid'));
+	$versioninfo = &$hModule->get($module_id);
 	$modfootertxt = "Module " . $versioninfo->getInfo('name') . " - Version " . $versioninfo->getInfo('version') . "";
 
 	$modfooter = "<a href='" . $versioninfo->getInfo('support_site_url') . "' target='_blank'><img src='" . WFDOWNLOADS_URL . "images/spcssbutton.gif' title='" . $modfootertxt . "' alt='" . $modfootertxt . "'/></a>";
@@ -558,11 +556,12 @@ function urlExists($url)
  **/
 function wfd_save_Permissions($groups, $id, $perm_name)
 {
+	$id = intval($id);
     $result = true;
     $hModule = & xoops_gethandler('module');
     $wfdModule = & $hModule -> getByDirname('wfdownloads');
 
-    $module_id = $wfdModule -> getVar('mid');
+    $module_id = intval($wfdModule -> getVar('mid'));
     $gperm_handler = & xoops_gethandler('groupperm');
 
     /*
@@ -872,7 +871,8 @@ function wfd_totalcategory()
  **/
 function wfd_getTotalItems($sel_id = 0, $ids = array())
 {
-    $criteria = new CriteriaCompo(new Criteria("offline", 0));
+	$sel_id = intval($sel_id);    
+	$criteria = new CriteriaCompo(new Criteria("offline", 0));
     $criteria->add(new Criteria('published', 0, '>'));
     $criteria->add(new Criteria('published', time(), "<="));
     $expired_criteria = new CriteriaCompo(new Criteria('expired', 0));
@@ -1183,11 +1183,11 @@ function wfd_retmime($filename, $usertype = 1)
     $sql = "SELECT mime_types, mime_ext FROM " . $xoopsDB -> prefix('wfdownloads_mimetypes') . " WHERE mime_ext = '" . strtolower($ext) . "'";
     if ($usertype == 1)
     {
-        $sql .= " AND mime_admin = 1";
+        $sql .= " AND mime_admin = '1'";
     }
     else
     {
-        $sql .= " AND mime_user = 1";
+        $sql .= " AND mime_user = '1'";
     }
     $result = $xoopsDB -> query($sql);
     list($mime_types , $mime_ext) = $xoopsDB -> fetchrow($result);
@@ -1479,6 +1479,8 @@ function wfd_getforum($forumid)
 {
     global $xoopsDB, $xoopsConfig;
 
+	$forumid = intval($forumid);
+
     echo "<select name='forumid'>";
     echo "<option value='0'>----------------------</option>";
     $result = $xoopsDB -> query("SELECT forum_name, forum_id FROM " . $xoopsDB -> prefix("bb_forums") . " ORDER BY forum_id");
@@ -1520,9 +1522,9 @@ function wfd_downlistbody($published)
 {
     global $myts, $imagearray;
 
-    $lid = $published['lid'];
-    $cid = $published['cid'];
-    $title = "<a href='../singlefile.php?cid=" . $published['cid'] . "&amp;lid=" . $published['lid'] . "'>" . $myts -> htmlSpecialChars(trim($published['title'])) . "</a>";;
+    $lid = intval($published['lid']);
+    $cid = intval($published['cid']);
+    $title = "<a href='../singlefile.php?cid=" . $cid . "&amp;lid=" . $lid . "'>" . $myts->htmlSpecialChars(trim($published['title'])) . "</a>";;
     $submitter = xoops_getLinkedUnameFromId(intval($published['submitter']));
     $publish = formatTimestamp($published['published'], 's');
     $status = ($published['published'] > 0) ? $imagearray['online'] : "<a href='newdownloads.php'>" . $imagearray['offline'] . "</a>";
