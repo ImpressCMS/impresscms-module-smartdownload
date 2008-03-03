@@ -1,9 +1,9 @@
 <b><u>=> Version 3.2 RC2 (2007-04-23)</u></b>
 
+Fixed: issue with getNicePath (ImpressCMS Only), XOOPS requires patching class/xoopstree.  (Skenow / m0nty)
 Fixed: bug when user modification of download. "formulize_idreq" field was not found in the mysql table for wfdownloads_mod. (m0nty)
 Fixed: Issue with filenames containing multiple periods(.), protector module disallows the upload.
-- option added to header.php to disable multiple dot protection if necessary (read important notes in docs folder),
-periods & spaces now get replaced with underscores. (m0nty)
+- option added to header.php to disable multiple dot protection if necessary (read important notes in docs folder). (m0nty)
 Fixed: user submissions were not being displayed on userinfo.php page, problem in search.inc.php. (marcan & jegelstaff)
 Fixed: Bug in submit.php (disclaimer now uses full url for button (agree) instead of a relative url. (thanks to xavhmn)
 Fixed: Bug which (under certain server & user browser configurations created 0byte downloads with large files (over 10mb).  (m0nty)

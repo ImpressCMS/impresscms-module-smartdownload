@@ -192,7 +192,7 @@ class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
          */
         $pathstring = trim($pathstring);
         $pathstring = str_replace(':', '>', $pathstring);
-        $pathstring = substr($pathstring, 0, strlen($pathstring) - 13);
+//      $pathstring = substr($pathstring, 0, strlen($pathstring) - 13); // not needed now with fixed icms core! but required for XOOPS
 
         return $pathstring;
     }
