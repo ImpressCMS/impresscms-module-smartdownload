@@ -10,9 +10,9 @@ Unter folgendem URL erreichst Du den Kategorie-Index:
 
 -----------
 
-Du erhältst diese Nachricht weil Du entschieden hast, über neue Dateien in dieser Kategorie informiert zu werden.
+Du erhÃ¤ltst diese Nachricht weil Du entschieden hast, Ã¼ber neue Dateien in dieser Kategorie informiert zu werden.
 
-Sollte es sich dabei um einen Fehler handeln oder Du kein Interesse mehr daran haben derartige Informationen zu erhalten, ändere die Einstellungen in Deinem Profil in dem Du folgenden URL aufrufst:
+Sollte es sich dabei um einen Fehler handeln oder Du kein Interesse mehr daran haben derartige Informationen zu erhalten, Ã¤ndere die Einstellungen in Deinem Profil in dem Du folgenden URL aufrufst:
 
 Unsubscribe
 {X_UNSUBSCRIBE_URL}

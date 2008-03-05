@@ -71,7 +71,7 @@ define('_MI_WFD_PERPAGE', 'Anzahl Downloads pro Listing');
 define('_MI_WFD_PERPAGEDSC', 'Maximale Anzahl von Downloads die auf jeder (DL-)Seite dargestellt werden');
 
 define('_MI_WFD_TEMPLATESET', 'Auswahl des Template Set');
-define('_MI_WFD_TEMPLATESETDSC', 'W&auml;hle ein Template das Du für dein Modul ben&uuml;tzen m&ouml;chtest.<br />Dieses erlaubt dir, das aussehen der Downloads an Ihre Webseite anzupassen.');
+define('_MI_WFD_TEMPLATESETDSC', 'W&auml;hle ein Template das Du f&uuml;r dein Modul ben&uuml;tzen m&ouml;chtest.<br />Dieses erlaubt dir, das aussehen der Downloads an Ihre Webseite anzupassen.');
 define('_MI_WFD_TEMPLATESET1', 'Default');
 define('_MI_WFD_TEMPLATESET2', 'Professional');
 
@@ -95,7 +95,7 @@ define("_MI_WFD_ANONPOST2","Nur vom Downloadverzeichnis");
 define("_MI_WFD_ANONPOST3","Nur vom Mirror");
 define("_MI_WFD_ANONPOST4","Beide");
 
-define('_MI_WFD_AUTOAPPROVE','Automatische freigabe für Downloads/Mirrors ');
+define('_MI_WFD_AUTOAPPROVE','Automatische freigabe f&uuml;r Downloads/Mirrors ');
 define('_MI_WFD_AUTOAPPROVEDSC','Neue Downloads ohne (Admin-)&Uuml;berpr&uuml;fung in die Datenbank &uuml;bernehmen?');
 define('_MI_WFD_AUTOAPPROVE1','Keines Ausgew&ouml;ht');
 define('_MI_WFD_AUTOAPPROVE2','Nur vom Downloadverzeichnis');
@@ -117,7 +117,7 @@ define('_MI_WFD_IMGHEIGHTDSC','Maximal erlaubte H&ouml;he (height) eines Bildes,
 define('_MI_WFD_AUTOSUMMARY','Freigabe der automatischen Zusammenfassung');
 define('_MI_WFD_AUTOSUMMARYDESC','Erstelle eine automatisch Zusammenfassung, die auf x Anzahl definierten Buchstaben basiert.');
 define('_MI_WFD_AUTOSUMMARYLENGTH','Zusammenfassungsl&auml;nge');
-define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Die maximale Anzahl der Buchstaben, die für die Zusammenfassung Angezeigt wird');
+define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Die maximale Anzahl der Buchstaben, die f&uuml;r die Zusammenfassung Angezeigt wird');
 
 define('_MI_WFD_UPLOADDIR','Uploadverzeichnis (Kein Trailingslash)');
 define('_MI_WFD_UPLOADDIRDSC','Das Uploadverzeichnis *MUSS* ein absoluter Path sein!');
@@ -136,7 +136,7 @@ define('_MI_WFD_ALLOWSUBMISS4','Beite');
 define('_MI_WFD_ALLOWUPLOADS','User Uploads:');
 define('_MI_WFD_ALLOWUPLOADSDSC','User d&uuml;rfen Downloads uploaden?');
 define('_MI_WFD_ALLOWUPLOADSGROUP','Uploads einreichen:');
-define('_MI_WFD_ALLOWUPLOADSGROUPDSC','Diese ausgew&auml;hlte Gruppe kann Dateien auf den Server laden.<br />Diese Berechtigung gilt für alle Dateien Screenshots!');
+define('_MI_WFD_ALLOWUPLOADSGROUPDSC','Diese ausgew&auml;hlte Gruppe kann Dateien auf den Server laden.<br />Diese Berechtigung gilt f&uuml;r alle Dateien Screenshots!');
 define('_MI_WFD_SCREENSHOTS','Uploadverzeichnis f&uuml;r Screenshots');
 define('_MI_WFD_CATEGORYIMG','Uploadverzeichnis f&uuml;r Kategoriebilder');
 define('_MI_WFD_MAINIMGDIR','Hauptbilderverzeichnis');
@@ -154,7 +154,7 @@ define('_MI_WFD_VERSIONTYPES', 'Versionsstatus:');
 define('_MI_WFD_LICENSE', 'Lizenz ausw&auml;hlen:');
 define('_MI_WFD_LIMITS', 'Dateibeschr&auml;nkungen eingeben:');
 define('_MI_WFD_MAXSHOTS', 'Vorgabe der maximalen screenshots:');
-define('_MI_WFD_MAXSHOTSDSC', 'Stellt die Anzahl maximal zus&auml;ssige screeshorts ein für eine Upload.');
+define('_MI_WFD_MAXSHOTSDSC', 'Stellt die Anzahl maximal zus&auml;ssige screeshorts ein f&uuml;r eine Upload.');
 
 define("_MI_WFD_SUBMITART", "Download Untergruppe:");
 define("_MI_WFD_SUBMITARTDSC", "Auswahl der Gruppen, die neue Downloads einreichen d&uuml;rfen.");
@@ -239,17 +239,17 @@ define('_MI_WFD_FILE_APPROVE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify 
 define('_MI_WFD_FILE_FILEMODIFIED_NOTIFY', 'Datei ver&auml;nderung');
 define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYCAP', 'Mitteilung wenn diese Datei ge&auml;ndert wurde.');
 define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYDSC', 'Ich m&ouml;chte eine Mitteilungen erhalten wenn diese Datei ge&auml;ndert wurde.');
-define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&äuml;nderung');
+define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&auml;nderung');
 
 define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFY', 'Datei ver&auml;nderung');
 define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYCAP', 'Mitteilung wenn sich eine Datei in dieser Kategorie ge&auml;ndert wurde.');
 define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYDSC', 'Ich m&ouml;chte eine Mitteilungen erhalten wenn eine Datei dieser Kategorie ge&auml;ndert wurde.');
-define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&äuml;nderung');
+define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&auml;nderung');
 
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFY', 'Datei ver&auml;nderung');
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYCAP', 'Mitteilung wenn sich irgend eine Datei ge&auml;ndert wurde.');
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYDSC', 'Ich m&ouml;chte eine Mitteilungen erhalten wenn irgend eine Datei ge&auml;ndert wurde.');
-define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&äuml;nderung');
+define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} Automatische Mitteilung : Dateiver&auml;nderung');
 /* End add block */
 
 define('_MI_WFD_AUTHOR_INFO', "Entwickler Information");

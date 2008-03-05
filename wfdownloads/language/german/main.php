@@ -13,8 +13,8 @@
 * Todo - Still to remove redundat defines from this area.
 */
 define("_MD_WFD_NODOWNLOAD", "Das Download existiert nicht!");
-define("_MD_WFD_DOWNLOADMINPOSTS", "Du musst erst den Zähler um 1 erhöhen,<br />bevor Du die Datei Downloaden kannst.");
-define("_MD_WFD_UPLOADMINPOSTS", "Du musst erst den Zähler um 1 erhöhen,<br />bevor Du die Datei Uploaden kannst.");
+define("_MD_WFD_DOWNLOADMINPOSTS", "Du musst erst den Z&auml;hler um 1 erh&ouml;hen,<br />bevor Du die Datei Downloaden kannst.");
+define("_MD_WFD_UPLOADMINPOSTS", "Du musst erst den Z&auml;hler um 1 erh&ouml;hen,<br />bevor Du die Datei Uploaden kannst.");
 
 define("_MD_WFD_SUBCATLISTING", "Kategorie Listing");
 define("_MD_WFD_ISADMINNOTICE", "Webmaster: Mit diesem Bild gibt es ein Problem.");
@@ -44,7 +44,7 @@ define("_MD_WFD_VERSION", "Version");
 define("_MD_WFD_SUBMITDATE", "Ver&ouml;ffentlicht");
 define("_MD_WFD_DLTIMES", "Diese Datei wurde %s mal heruntergeladen");
 define("_MD_WFD_FILESIZE", "Dateigr&ouml;&szlig;e");
-define("_MD_WFD_SUPPORTEDPLAT", "Unterstützte Betriebssysteme");
+define("_MD_WFD_SUPPORTEDPLAT", "Unterst&uuml;tzte Betriebssysteme");
 define("_MD_WFD_HOMEPAGE", "Homepage");
 
 define("_MD_WFD_PUBLISHERC", "Ver&ouml;ffentlicht von: ");
@@ -215,7 +215,7 @@ define("_MD_WFD_INFORUM", "Im Forum diskutieren");
 */
 define("_MD_WFD_NOTALLOWESTOSUBMIT","Keine Berechtigung zum &Uuml;bertragen von Dateien");
 define("_MD_WFD_INFONOSAVEDB","Information wurde nicht in die Datenbank &uuml;bernommen: <br /><br />");
-define("_MD_WFD_NOTALLOWEDTOMOD","Du hast nicht Erlaubniss dieses Download zu verändern");
+define("_MD_WFD_NOTALLOWEDTOMOD","Du hast nicht Erlaubniss dieses Download zu ver&auml;ndern");
 /*
 * review.php
 */
@@ -255,7 +255,7 @@ define("_MD_WFD_MIRROR_DOWNURL", "Download URL:<br /><br />Enter the url to the 
 define("_MD_WFD_MIRROR_SUBMITMIRROR", "&Uuml;bertragen an den Mirror");
 define("_MD_WFD_ERROR_CREATEMIRROR", "Fehler beim erstellen des Mirror");
 define("_MD_WFD_MIRROR_SNEWMNAMEDESC", "
-Bitte fülle das untenstehente Formular komplett gewissenhaft aus und wir f&uuml;gen deinen Mirror so bald als m&ouml;glich dazu.<br /><br />
+Bitte f&uuml;lle das untenstehente Formular komplett gewissenhaft aus und wir f&uuml;gen deinen Mirror so bald als m&ouml;glich dazu.<br /><br />
 Thank you for your assistance in providing another location to download these files. We want to give our users a possibility to find quality software faster.<br /><br />All mirror submissions will be reviewed by one of our webmasters before they are put up on the web site.
 ");
 define("_MD_WFD_MIRROR_HHOST", "Host");

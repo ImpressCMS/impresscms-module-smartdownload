@@ -2,9 +2,9 @@ Hallo {X_UNAME},
 
 Solltest Du derjenige sein, der uns {X_TITLE} am {X_SUB_DATE} eingsendet hat.
 
-Uns wurde gemeldet, dass die Datei {X_TITLE} die Du auf unserer Webseite ({X_SITENAME}) am {X_SUB_DATE} veröffentlicht hast, nicht mehr erreichbar ist. 
+Uns wurde gemeldet, dass die Datei {X_TITLE} die Du auf unserer Webseite ({X_SITENAME}) am {X_SUB_DATE} verÃ¶ffentlicht hast, nicht mehr erreichbar ist. 
 
-Bitte überprüfe den Link, den Du in unserer Download-Datenbank eingetragen hast und aktualisiere gegebenenfalls diese Informationen
+Bitte Ã¼berprÃ¼fe den Link, den Du in unserer Download-Datenbank eingetragen hast und aktualisiere gegebenenfalls diese Informationen
 
 Besuche: {X_DOWNLOAD}
 
