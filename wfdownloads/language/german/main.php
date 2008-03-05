@@ -78,6 +78,7 @@ define("_MD_WFD_NUMBYTES", "%s Bytes");
 define("_MD_WFD_PLATFORMC", "Betriebssystem: ");
 define("_MD_WFD_PRICE", "Preis");
 define("_MD_WFD_LIMITS", "Beschr&auml;nkungen");
+define("_MD_WFD_VERSIONTYPES", "Status der Version:");
 define("_MD_WFD_DOWNLICENSE", "Lizenz");
 define("_MD_WFD_NOTSPECIFIED", "Nicht angegeben");
 define("_MD_WFD_MIRRORSITE", "Download Mirror");

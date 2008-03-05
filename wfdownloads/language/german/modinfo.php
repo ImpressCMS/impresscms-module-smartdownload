@@ -122,6 +122,9 @@ define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Die maximale Anzahl der Buchstaben, die 
 define('_MI_WFD_UPLOADDIR','Uploadverzeichnis (Kein Trailingslash)');
 define('_MI_WFD_UPLOADDIRDSC','Das Uploadverzeichnis *MUSS* ein absoluter Path sein!');
 
+define('_MI_WFD_ENABLERSS','RSS-Feeds einschalten:');
+define('_MI_WFD_ENABLERSSDSC','W&auml;hle JA um den RSS-Feed f&uuml;r das Modul zu aktivieren.');
+
 define('_MI_WFD_DOWNLOADMINPOSTS', "Minimum an posts bevor eine Datei heruntergeladen werden darf");
 define('_MI_WFD_DOWNLOADMINPOSTSDSC', "Tragen die Mindestzahl der posts ein bevor eine Datei heruntergeladen werden darf");
 define('_MI_WFD_UPLOADMINPOSTS', "Minimum an posts bevor eine Datei hochgeladen werden darf");
