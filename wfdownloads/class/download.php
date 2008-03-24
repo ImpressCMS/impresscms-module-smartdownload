@@ -289,7 +289,7 @@ class WfdownloadsDownload extends XoopsObject {
         }
 
         global $xoopsDB;
-        $sql2 = "SELECT rated FROM " . $xoopsDB->prefix('wfdownloads_reviews') . " WHERE lid = " . $down['id'] . " AND submit = '1'";
+        $sql2 = "SELECT rated FROM " . $xoopsDB->prefix('wfdownloads_reviews') . " WHERE lid = '" . intval($down['id']) . "' AND submit = '1'";
         $results = $xoopsDB->query($sql2);
         $numrows = $xoopsDB->getRowsNum($results);
 
@@ -430,7 +430,7 @@ class WfdownloadsDownload extends XoopsObject {
 
         $button_tray->addElement(new XoopsFormButton('', 'submit', _SUBMIT, 'submit'));
         if (!$this->isNew()) {
-            $button_tray->addElement(new XoopsFormHidden('lid', $this->getVar('lid', 'e')));
+            $button_tray->addElement(new XoopsFormHidden('lid', intval($this->getVar('lid', 'e'))));
         }
         $sform->addElement($button_tray);
         return $sform;

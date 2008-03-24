@@ -30,19 +30,16 @@ if (is_object($xoopsUser) && ($xoopsModuleConfig['submissions'] == 2 || $xoopsMo
 		$submissions = 1;
     } else {
 	    redirect_header(XOOPS_URL . '/user.php', 5, _MD_WFD_MUSTREGFIRST);
-	    exit();
 	}
 }
 
 if (!$submissions == 1) {
 	redirect_header(WFDOWNLOADS_URL.'index.php', 5, _MD_WFD_NOTALLOWESTOSUBMIT);
-    exit();
 }
 
 if (is_object($xoopsUser) && !$xoopsUser->isAdmin()) {
     if ($xoopsUser->getVar('posts') < $xoopsModuleConfig['upload_minposts']) {
         redirect_header("index.php",5,_MD_WFD_UPLOADMINPOSTS);
-        exit();
     }
 }
 
@@ -362,11 +359,11 @@ else
 	$download->setVar('screenshot4', $screenshot4);
     $download->setVar('summary', $_POST["summary"]);
     $download->setVar('description', $_POST["description"]);
-    $submitter = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
+    $submitter = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
     $download->setVar('submitter', $submitter);
     $download->setVar('publisher', trim($_POST["publisher"]));
     $download->setVar('price', trim($_POST["price"]));
-    $download->setVar('mirror', isset($_POST["mirror"]) ? formatURL(trim($_POST["mirror"])) : '');
+    $download->setVar('mirror', isset($_POST["mirror"]) ? trim($_POST["mirror"]) : '');
     $download->setVar('license', trim($_POST["license"]));
     $paypalemail = '';
     $download->setVar('features', trim($_POST["features"]));
@@ -481,7 +478,6 @@ else
             $notification_handler->triggerEvent('global', 0, 'file_modify', $tags);
         }
         redirect_header(WFDOWNLOADS_URL.'index.php', 2, _MD_WFD_THANKSFORINFO);
-        exit();
     }
 }
 else
@@ -526,7 +522,6 @@ else
 		$download = $download_handler->get($lid);
 		if ($user_id !== $download->getVar('submitter')) {
 			redirect_header("index.php",5, _MD_WFD_NOTALLOWEDTOMOD);
-	        exit();
 		}
 	  $cid = intval($download->getVar('cid'));
 	  
@@ -543,8 +538,10 @@ else
 		<p><div align = 'center'>" . wfd_imageheader() . "</div></p>\n
 		<div>" . _MD_WFD_SUB_SNEWMNAMEDESC . "</div>\n";
 
-
-
+   if (!empty($_GET['cid'])) {
+   	$download->setVar('cid', intval($_GET['cid']));
+   }  //Added by Lankford on 2008/2/20.
+ 
 	if (isset($_POST['submit_category']) && !empty($_POST['submit_category']))
     {
 		  $category = $category_handler->get($cid);

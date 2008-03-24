@@ -15,12 +15,10 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 if (is_object($xoopsUser)) {
     if ($xoopsUser->getVar('posts') < $xoopsModuleConfig['download_minposts'] && !$xoopsUser->isAdmin()) {
         redirect_header(WFDOWNLOADS_URL.'index.php',5,_MD_WFD_DOWNLOADMINPOSTS);
-        exit();
     }
 }
 elseif (!is_object($xoopsUser) && ($xoopsModuleConfig['download_minposts'] > 0)) {
     redirect_header(XOOPS_URL . '/user.php', 1, _MD_WFD_MUSTREGFIRST);
-    exit();
 }
 
 $agreed = (isset($_GET['agree'])) ? intval($_GET['agree']) : 0;
@@ -33,7 +31,6 @@ $mid = intval($xoopsModule->getVar('mid'));
 
 if ($download->isNew()) {
     redirect_header(WFDOWNLOADS_URL.'index.php', 1, _MD_WFD_NODOWNLOAD);
-    exit();
 }
 if ($download->getVar('published') == 0 || $download->getVar('published') > time() || $download->getVar('offline') == 1 || ($download->getVar('expired') != 0 && $download->getVar('expired') < time()) || $download->getVar('status') == 0) {
     //Download not published, expired or taken offline - redirect
@@ -45,7 +42,6 @@ $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOU
 
 if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-    exit();
 }
 
 function reportBroken($lid)
@@ -68,14 +64,13 @@ if ($agreed == 0)
         {
             if (!empty($ref) && preg_match("/" . $ref . "/i", $referer_host))
             {
-                $goodhost = "1";
+                $goodhost = '1';
                 break;
             }
         }
         if (!$goodhost)
         {
             redirect_header(WFDOWNLOADS_URL.'/modules/wfdownloads/singlefile.php?cid=$cid&amp;lid=$lid', 20, _MD_WFD_NOPERMISETOLINK);
-            exit();
         }
     }
 }
@@ -93,7 +88,7 @@ if ($xoopsModuleConfig['showDowndisclaimer'] && $agreed == 0)
 	$xoopsTpl->assign('image_header', wfd_imageheader());
 	$xoopsTpl->assign('downdisclaimer', $myts->displayTarea($xoopsModuleConfig['downdisclaimer'], 1, 1, 1, 1, 1));
 	$xoopsTpl->assign('cancel_location', WFDOWNLOADS_URL.'index.php');
-	$xoopsTpl->assign('agree_location', WFDOWNLOADS_URL.'visit.php?agree=1&amp;lid='.$lid.'&amp;cid='.$cid);
+	$xoopsTpl->assign('agree_location', WFDOWNLOADS_URL.'visit.php?agree=1&amp;lid='.intval($lid).'&amp;cid='.intval($cid));
 	$xoopsTpl->assign('down_disclaimer', true);
 
     include XOOPS_ROOT_PATH . '/footer.php';

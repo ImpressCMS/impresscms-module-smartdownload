@@ -78,7 +78,7 @@ if (isset($xoopsModuleConfig['screenshot']) && $xoopsModuleConfig['screenshot'] 
 	$xoopsTpl->assign('viewcat', true);
 }
 if (isset($days)) {
-	$which_new_downloads = " > " . sprintf(_MD_WFD_NEWDOWNLOADS_INTHELAST, $days);
+	$which_new_downloads = " > " . sprintf(_MD_WFD_NEWDOWNLOADS_INTHELAST, intval($days));
 	$xoopsTpl->assign('categoryPath', '<a href="' . WFDOWNLOADS_URL . 'newlist.php">' . _MD_WFD_NEWDOWNLOADS . '</a>' . $which_new_downloads);
 } else {
 	$xoopsTpl->assign('categoryPath',  _MD_WFD_NEWDOWNLOADS);

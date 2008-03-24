@@ -20,7 +20,6 @@ $mid = intval($xoopsModule->getVar('mid'));
 
 if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-    exit();
 }
 
 $op = '';

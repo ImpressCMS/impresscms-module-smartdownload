@@ -111,7 +111,8 @@ if ($submissions)
 {
     $i++;
     $modversion['sub'][$i]['name'] = _MI_WFD_SMNAME1;
-    $modversion['sub'][$i]['url'] = "submit.php";
+    $category_suffix = (!empty($_GET['cid']))? "?cid=" . intval($_GET['cid']): "";    //Added by Lankford on 2008/2/20
+    $modversion['sub'][$i]['url'] = "submit.php$category_suffix";
 }
 $i++;
 $modversion['sub'][$i]['name'] = _MI_WFD_SMNAME2;

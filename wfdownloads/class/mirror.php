@@ -37,7 +37,7 @@ class WfdownloadsMirror extends XoopsObject {
 		$this->initVar('homeurl', XOBJ_DTYPE_URL, 'http://');
 		$this->initVar('location', XOBJ_DTYPE_TXTBOX);
 		$this->initVar('continent', XOBJ_DTYPE_TXTBOX);
-		$this->initVar('downurl', XOBJ_DTYPE_URL, 'http://');
+		$this->initVar('downurl', XOBJ_DTYPE_URL, '');
 		$this->initVar('submit', XOBJ_DTYPE_INT);
 		$this->initVar('date', XOBJ_DTYPE_INT);
 		$this->initVar('uid', XOBJ_DTYPE_INT);

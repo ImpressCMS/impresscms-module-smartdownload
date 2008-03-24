@@ -20,13 +20,11 @@ $mid = intval($xoopsModule->getVar('mid'));
 
 if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-    exit();
 }
 
 $use_mirrors = $xoopsModuleConfig['enable_mirrors'];
 if ($use_mirrors !== 1 && ((is_object($xoopsUser) && !$xoopsUser->isAdmin()) || !is_object($xoopsUser))) {
     redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-    exit();
 }
 
 $op = '';
@@ -140,7 +138,7 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
             $mirror->setVar('homeurl', formatURL(trim($_POST["homeurl"])));
             $mirror->setVar('location', trim($_POST["location"]));
             $mirror->setVar('continent', trim($_POST["continent"]));
-            $mirror->setVar('downurl', formatURL(trim($_POST["downurl"])));
+            $mirror->setVar('downurl', trim($_POST["downurl"]));
             $mirror->setVar('lid', intval($_POST["lid"]));
             $mirror->setVar('uid', $uid);
             $mirror->setVar('date', time());

@@ -44,11 +44,11 @@ $xoopsTpl = new XoopsTpl();
 // Find case
 $case = "all";
 $category_handler = xoops_getmodulehandler('category');
-$category = $category_handler->get($_REQUEST['cid']);
+$category = $category_handler->get(intval($_REQUEST['cid']));
 
 $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
 $gperm_handler = &xoops_gethandler('groupperm');
-$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $xoopsModule->getVar('mid'));
+$allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, intval($xoopsModule->getVar('mid')));
 
 if (!$category->isNew()) {
     if (!in_array($category->getVar('cid'), $allowed_cats)) {
@@ -65,13 +65,13 @@ switch ($case) {
         break;
 
     case "category":
-        $cache_prefix = 'wfd|catfeed|' . $feed_type. '|'.$category->getVar('cid');
+        $cache_prefix = 'wfd|catfeed|' . $feed_type. '|'.intval($category->getVar('cid'));
         break;
 }
 
 
 $xoopsTpl->caching = true;
-$xoopsTpl->cache_lifetime = $xoopsConfig['module_cache'][$xoopsModule->getVar('mid')];
+$xoopsTpl->cache_lifetime = $xoopsConfig['module_cache'][intval($xoopsModule->getVar('mid'))];
 if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) ) {
     // Get content
     $item_handler = xoops_getmodulehandler('download');
@@ -86,7 +86,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
         default:
         case "all":
             $shorthand = "all";
-            $title = $xoopsConfig['sitename'] . ' - ' . $xoopsModule->getVar('name');
+            $title = $xoopsConfig['sitename'] . ' - ' . htmlspecialchars($xoopsModule->getVar('name'), ENT_QUOTES);
             $desc = $xoopsConfig['slogan'] ;
             $channel_url = XOOPS_URL . '/modules/wfdownloads/rss.php';
 
@@ -97,11 +97,11 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
 
         case "category":
             $shorthand = "cat";
-            $title = $xoopsConfig['sitename'] . ' - ' . $category->getVar('title');
-            $desc = $xoopsConfig['slogan'] . ' - ' . $category->getVar('title');
-            $channel_url = XOOPS_URL . '/modules/wfdownloads/rss.php?cid='.$category->getVar('cid');
+            $title = $xoopsConfig['sitename'] . ' - ' . htmlspecialchars($category->getVar('title'), ENT_QUOTES);
+            $desc = $xoopsConfig['slogan'] . ' - ' . htmlspecialchars($category->getVar('title'), ENT_QUOTES);
+            $channel_url = XOOPS_URL . '/modules/wfdownloads/rss.php?cid='.intval($category->getVar('cid'));
             
-            $criteria->add(new Criteria("cid", $category->getVar('cid')));
+            $criteria->add(new Criteria("cid", intval($category->getVar('cid'))));
             $items = $item_handler->getObjects($criteria);
             $id = $category->getVar('categoryid');
             break;
@@ -141,7 +141,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
         //Assign items to template
         foreach(array_keys($items) AS $i){
             $item = $items[$i];
-            $link = $url.'singlefile.php?lid='.$item->getVar('lid');
+            $link = $url.'singlefile.php?lid='.intval($item->getVar('lid'));
             $title = htmlspecialchars($item->getVar('title', 'n'));
             $teaser = htmlspecialchars($item->getVar('summary', 'n'));
             $author = isset($users[$item->getVar('submitter')]) ? isset($users[$item->getVar('submitter')]) : $xoopsConfig['anonymous'];
@@ -150,7 +150,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
                                 'title' => xoops_utf8_encode($title),
                                 'author' => xoops_utf8_encode($author),
                                 'link' => $link,
-                                'guid' => $url.'/'.$item->getVar('lid'),
+                                'guid' => $url.'/'.intval($item->getVar('lid')),
                                 'is_permalink'=>false,
                                 'pubdate' => formatTimestamp($item->getVar('published'), $feed_type),
                                 'dc_date' => formatTimestamp($item->getVar('published'), 'd/m H:i'), 

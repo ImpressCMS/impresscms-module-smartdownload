@@ -15,6 +15,8 @@ Added: Making the category image and title available in the viewcat and singlefi
 Added: wfdownloads_disclaimer.html template for download/submission disclaimer page. (m0nty)
 Added: $xoTheme->addStylesheet to allow templates to use module.css makes easier w3c validation. (m0nty)
 Added: JS effects & lightbox effects to templates. (m0nty, aphex & thanks to Kris_fr)
+Added: Automated Category Selection on submit process (RLankford)
+Changed: submit & mirrors should now accept FTP:// uri's aswell as http://  (m0nty)
 
 <b><u>=> Version 3.2 RC1 (2007-04-23)</u></b>
 

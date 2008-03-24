@@ -606,7 +606,8 @@ function wfd_toolbar()
     $toolbar = "[ ";
     if ($submissions == 1)
     {
-        $toolbar .= "<a href='submit.php'>" . _MD_WFD_SUBMITDOWNLOAD . "</a> | ";
+    		$category_suffix = (!empty($_GET['cid']))? "?cid=" . intval($_GET['cid']): "";    //Added by Lankford
+    		$toolbar .= "<a href='submit.php$category_suffix'>" . _MD_WFD_SUBMITDOWNLOAD . "</a> | ";
     }
     $toolbar .= "<a href='newlist.php'>" . _MD_WFD_LATESTLIST . "</a> | <a href='topten.php?list=hit'>" . _MD_WFD_POPULARITY . "</a> | <a href='topten.php?list=rate'>" . _MD_WFD_TOPRATED . "</a> ]";
     return $toolbar;

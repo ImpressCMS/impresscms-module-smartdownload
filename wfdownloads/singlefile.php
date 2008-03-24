@@ -21,7 +21,6 @@ $mid = intval($xoopsModule->getVar('mid'));
 
 if ($download->isNew()) {
    redirect_header(WFDOWNLOADS_URL.'index.php', 1, _MD_WFD_NODOWNLOAD);
-   exit();
 }
 if ($download->getVar('published') == 0 || $download->getVar('published') > time() || $download->getVar('offline') == 1 || ($download->getVar('expired') != 0 && $download->getVar('expired') < time()) || $download->getVar('status') == 0) {
 	//Download not published, expired or taken offline - redirect
@@ -34,12 +33,10 @@ $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOU
 if ($groups == XOOPS_GROUP_ANONYMOUS) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
-        exit();
     }
 } else {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-        exit();
     }
 }
 
@@ -178,8 +175,8 @@ $downloads = $download_handler->getActiveDownloads($criteria);
 foreach (array_keys($downloads) as $i)
 {
     $downuid['title'] = $downloads[$i]->getVar('title');
-    $downuid['lid'] = $downloads[$i]->getVar('lid');
-    $downuid['cid'] = $downloads[$i]->getVar('cid');
+    $downuid['lid'] = intval($downloads[$i]->getVar('lid'));
+    $downuid['cid'] = intval($downloads[$i]->getVar('cid'));
     $downuid['published'] = formatTimestamp($downloads[$i]->getVar('published'), $xoopsModuleConfig['dateformat']);
     $xoopsTpl->append('down_uid', $downuid);
 }

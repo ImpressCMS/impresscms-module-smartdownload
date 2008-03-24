@@ -23,12 +23,10 @@ $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOU
 if ($groups == XOOPS_GROUP_ANONYMOUS) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
-        exit();
     }
 } else {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(WFDOWNLOADS_URL.'index.php',3, _NOPERM);
-        exit();
     }
 }
 
