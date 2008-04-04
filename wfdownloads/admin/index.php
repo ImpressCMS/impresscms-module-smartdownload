@@ -470,8 +470,14 @@ function addDownload()
        	    $formulize_mgr =& xoops_getmodulehandler('elements', 'formulize');
 
        	    if ($lid) {
-       		    $entries[$fid][0] = $download->getVar('formulize_idreq');
-       		    $owner = getEntryOwner($entries[$fid][0]);
+  $entries[$fid][0] = $download->getVar('formulize_idreq');
+  if($entries[$fid][0]) {
+    $owner = getEntryOwner($entries[$fid][0]);
+  } else {
+    print "no idreq";
+    $entries[$fid][0] = "";
+    $owner = "";
+  }
        		    $cid = $download->getVar('cid');
        	    }	else {
        		    $entries[$fid][0] = "";
@@ -483,7 +489,8 @@ function addDownload()
        	    $groups = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
        	    $entries = handleSubmission($formulize_mgr, $entries, $uid, $owner, $fid, $owner_groups, $groups, "new"); // "new" causes xoops token check to be skipped, since WF-downloads should be doing that
 
-       	    if (!$lid)
+       	    //if (!$lid)
+            if(!$owner)
        	    {
        	        $id_req = $entries[$fid][0]; 
        	        $download->setVar('formulize_idreq', $id_req);

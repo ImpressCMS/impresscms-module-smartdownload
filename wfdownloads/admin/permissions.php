@@ -27,7 +27,7 @@ if (count($categories) > 0)
 {
     foreach (array_keys($categories) as $i)
     {
-            $cat_form->addItem($categories[$i]->getVar('cid'), $categories[$i]->getVar('title'), $categories[$i]->getVar('pid'));
+    	$cat_form->addItem($categories[$i]->getVar('cid'), $categories[$i]->getVar('title'), $categories[$i]->getVar('pid'));
     }
     echo $cat_form->render();
 }

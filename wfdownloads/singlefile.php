@@ -70,6 +70,14 @@ else
 $xoopsTpl->assign('category_title', $category->getVar('title'));
 $xoopsTpl->assign('category_image', $imgurl);
 
+/**
+ * Retreiving the top parent category
+ */
+$allSubcatsTopParentCid = $category_handler->getAllSubcatsTopParentCid();
+$topCategory = $category_handler->allCategories[$allSubcatsTopParentCid[$download->getVar('cid')]];
+$xoopsTpl->assign('topcategory_title', $topCategory->getVar('title'));
+$xoopsTpl->assign('topcategory_image', $topCategory->getVar('imgurl'));
+$xoopsTpl->assign('topcategory_cid', $topCategory->getVar('cid'));
 
 // added - start - March 6 2006, March 8, 2006 - jpc
 $formulize_idreq = $download->getVar('formulize_idreq');

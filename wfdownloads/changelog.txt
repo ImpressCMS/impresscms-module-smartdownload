@@ -18,6 +18,7 @@ Added: JS effects & lightbox effects to templates. (m0nty, aphex & thanks to Kri
 Added: Automated Category Selection on submit process (RLankford)
 Added: Addition of a downloads by top category block (malanciault)
 Changed: submit & mirrors should now accept FTP:// uri's aswell as http://  (m0nty)
+Fixed: Fixes in Formulize integration thanks to jegelstaff (malanciault)
 
 
 <b><u>=> Version 3.2 RC1 (2007-04-23)</u></b>

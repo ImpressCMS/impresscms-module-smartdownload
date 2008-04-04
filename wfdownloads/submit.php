@@ -289,9 +289,14 @@ else
        	    $formulize_mgr =& xoops_getmodulehandler('elements', 'formulize');
 
        	    if ($lid) {
-       		    $entries[$fid][0] = $download->getVar('formulize_idreq');
-       		    $owner = getEntryOwner($entries[$fid][0]);
-       		    $cid = intval($download->getVar('cid'));
+              $entries[$fid][0] = $download->getVar('formulize_idreq');
+              if($entries[$fid][0]) {
+                $owner = getEntryOwner($entries[$fid][0]);
+              } else {
+                $entries[$fid][0] = "";
+                $owner = "";
+              }
+              $cid = $download->getVar('cid');
        	    }	else {
        		    $entries[$fid][0] = "";
        		    $owner = "";
@@ -303,7 +308,7 @@ else
 
        	    $entries = handleSubmission($formulize_mgr, $entries, $uid, $owner, $fid, $owner_groups, $groups, "new"); // "new" causes xoops token check to be skipped, since WF-downloads should be doing that
 
-       	    if (!$lid)
+       	    if (!$owner)
        	    {
        	        $id_req = $entries[$fid][0]; 
        	        $download->setVar('formulize_idreq', $id_req);
