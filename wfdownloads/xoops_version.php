@@ -81,6 +81,15 @@ $modversion['blocks'][2]['show_func'] = "b_wfdownloads_top_show";
 $modversion['blocks'][2]['edit_func'] = "b_wfdownloads_top_edit";
 $modversion['blocks'][2]['options'] = "hits|10|19";
 $modversion['blocks'][2]['template'] = 'wfdownloads_block_top.html';
+
+$modversion['blocks'][3]['file'] = "wfdownloads_top_by_cat.php";
+$modversion['blocks'][3]['name'] = _MI_WFD_BNAME3;
+$modversion['blocks'][3]['description'] = "Shows most downloaded files by top categories";
+$modversion['blocks'][3]['show_func'] = "b_wfdownloads_top_by_cat_show";
+$modversion['blocks'][3]['edit_func'] = "b_wfdownloads_top_by_cat_edit";
+$modversion['blocks'][3]['options'] = "hits|10|19";
+$modversion['blocks'][3]['template'] = 'wfdownloads_block_top_by_cat.html';
+
 // Menu
 $modversion['hasMain'] = 1;
 

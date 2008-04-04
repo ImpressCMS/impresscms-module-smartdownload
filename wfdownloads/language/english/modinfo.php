@@ -18,6 +18,7 @@ define("_MI_WFD_DESC","Creates a downloads section where users can download/subm
 // Names of blocks for this module (Not all module has blocks)
 define("_MI_WFD_BNAME1","Recent WF-Downloads");
 define("_MI_WFD_BNAME2","Top WF-Downloads");
+define("_MI_WFD_BNAME3","Top Downloads by top categories");
 
 // Sub menu titles
 define("_MI_WFD_SMNAME1","Submit");
