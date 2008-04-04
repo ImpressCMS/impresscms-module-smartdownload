@@ -178,6 +178,10 @@ class WfdownloadsCategory extends XoopsObject {
 }
 
 class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
+	
+	var $allCategories = false;
+	var $topCategories = false;
+	
     function WfdownloadsCategoryHandler($db) {
         $this->XoopsPersistableObjectHandler($db, 'wfdownloads_cat', 'WfdownloadsCategory', 'cid', 'title');
     }
@@ -219,5 +223,50 @@ class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
         $tree = new XoopsObjectTree($allcats, $this->keyName, "pid");
         return $tree->getAllChild($category->getVar($this->keyName));
     }
+
+	function getAllSubcatsTopParentCid() {
+		if (!$this->allCategories) {
+			$this->allCategories = $this->getObjects(null, true);
+		}
+    
+		include_once(XOOPS_ROOT_PATH."/class/tree.php");
+	    $tree = new XoopsObjectTree($this->allCategories, $this->keyName, "pid");
+	    $treeobj = $tree->getTree();
+	
+	    /**
+	     * Let's create an array where key will be cid of the top categories and
+	     * value will be an array containing all the cid of its subcategories
+	     * If value = 0, then this topcat does not have any subcats
+	     */
+	    $topcatsarray = array();
+	    foreach($treeobj[0]['child'] as $topcid) {
+	    	if (!isset($this->topCategories[$topcid])) {
+	    		$this->topCategories[$topcid] = $topcid;
+	    	}
+	    	foreach ($tree->getAllChild($topcid) as $key=>$category) {
+	    		$childrenids[] = $category->getVar('cid');
+	    	}
+	   		$childrenids = isset($childrenids) ? $childrenids : 0;
+	    	$topcatsarray[$topcid] = $childrenids;
+	   		unset($childrenids);
+	    }
+	    
+	    /**
+	     * Now we need to create another array where key will be all subcategories cid and
+	     * value will be the cid of its top most category
+	     */
+	    $allsubcats_linked_totop = array();
+	    
+	    foreach ($topcatsarray as $topcatcid=>$subcatsarray) {
+			if ($subcatsarray == 0) {
+				$allsubcats_linked_totop[$topcatcid] = $topcatcid;
+			} else {
+		    	foreach ($subcatsarray as $subcatcid) {
+		    		$allsubcats_linked_totop[$subcatcid] = $topcatcid;
+		    	}
+			}
+	    }
+		return $allsubcats_linked_totop;	
+	}
 }
 ?>
