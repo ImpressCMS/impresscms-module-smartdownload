@@ -42,6 +42,16 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 $category_handler = xoops_getmodulehandler('category');
 $category = $category_handler->get($cid);
 
+/**
+ * Retreiving the top parent category
+ */
+
+$allSubcatsTopParentCid = $category_handler->getAllSubcatsTopParentCid();
+$topCategory = $category_handler->allCategories[$allSubcatsTopParentCid[$cid]];
+$xoopsTpl->assign('topcategory_title', $topCategory->getVar('title'));
+$xoopsTpl->assign('topcategory_image', $topCategory->getVar('imgurl'));
+$xoopsTpl->assign('topcategory_cid', $topCategory->getVar('cid'));
+
 $formulize_fid = $category->getVar('formulize_fid');
 if($formulize_fid)
 	$xoopsTpl->assign('custom_form', 1);

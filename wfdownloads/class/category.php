@@ -266,6 +266,15 @@ class WfdownloadsCategoryHandler extends XoopsPersistableObjectHandler {
 		    	}
 			}
 	    }
+	    
+	    /**
+	     * Finally, let's finish by adding to this array, all the top categories which values 
+	     * will be their cid
+	     */
+	    foreach($this->topCategories as $topcid) {
+	    	$allsubcats_linked_totop[$topcid] = $topcid;
+	    }
+	    
 		return $allsubcats_linked_totop;	
 	}
 }
