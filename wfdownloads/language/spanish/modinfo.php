@@ -20,6 +20,9 @@ define("_MI_WFD_DESC","Crea una secci&oacute;n de descargas donde los usuarios p
 // Names of blocks for this module (Not all module has blocks)
 define("_MI_WFD_BNAME1","Descargas recientess");
 define("_MI_WFD_BNAME2","Descargas populares");
+//Línea añadida en la revisión 1473
+
+define("_MI_WFD_BNAME3","Descargas más importantes");//Top Downloads by top categories
 
 // Sub menu titles
 define("_MI_WFD_SMNAME1","Enviar descarga");

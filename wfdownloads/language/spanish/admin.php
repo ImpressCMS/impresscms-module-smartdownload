@@ -559,4 +559,15 @@ define("_MD_WFD_DLURL", "URL de la descarga: ");
 define("_MD_WFD_UPLOAD_FILEC", "Enviar archivo: ");
 define("_MD_WFD_DESCRIPTION", "Descripción");
 define("_AM_WFD_MOD_VERSIONTYPES", "Estado de la versión: ");
+//Añadido en la revisión 1473
+
++define("_AM_WFD_MINDEX_LOG", "Registros");
++define("_MD_WFD_IP_LOGS", "Ver registros");
++define("_MD_WFD_EMPTY_LOG", "No hay registros guardados.");
++define("_MD_WFD_LOG_FOR_LID", "Lista de las direcciones IP de los que descargaron %s");
++define("_MD_WFD_IP_ADDRESS", "Dirección IP");
++define("_MD_WFD_DATE", "Fecha de la descarga");
++define("_MD_WFD_BACK", "<< Retornar");
++define("_MD_WFD_USER", "Usuario");
++define("_MD_WFD_ANONYMOUS", "Usuario anónimo");
 ?>
