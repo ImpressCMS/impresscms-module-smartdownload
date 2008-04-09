@@ -38,7 +38,7 @@ function b_wfdownloads_top_by_cat_show($options)
     $criteria = new Criteria("cid", '(' . $allowed_cats_string . ')', "IN");
     	
     $criteria = new CriteriaCompo(new Criteria('offline', 0));
-    $criteria->setSort($options[0]);
+    $criteria->setSort('date');
     $criteria->setOrder("DESC");
     
     $criteria->setLimit($options[1]);
