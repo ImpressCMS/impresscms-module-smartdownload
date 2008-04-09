@@ -45,12 +45,13 @@ $category = $category_handler->get($cid);
 /**
  * Retreiving the top parent category
  */
-
-$allSubcatsTopParentCid = $category_handler->getAllSubcatsTopParentCid();
-$topCategory = $category_handler->allCategories[$allSubcatsTopParentCid[$cid]];
-$xoopsTpl->assign('topcategory_title', $topCategory->getVar('title'));
-$xoopsTpl->assign('topcategory_image', $topCategory->getVar('imgurl'));
-$xoopsTpl->assign('topcategory_cid', $topCategory->getVar('cid'));
+if (!isset($_GET['list']) && !isset($_GET['selectdate'])) {
+	$allSubcatsTopParentCid = $category_handler->getAllSubcatsTopParentCid();
+	$topCategory = $category_handler->allCategories[$allSubcatsTopParentCid[$cid]];
+	$xoopsTpl->assign('topcategory_title', $topCategory->getVar('title'));
+	$xoopsTpl->assign('topcategory_image', $topCategory->getVar('imgurl'));
+	$xoopsTpl->assign('topcategory_cid', $topCategory->getVar('cid'));
+}
 
 $formulize_fid = $category->getVar('formulize_fid');
 if($formulize_fid)
