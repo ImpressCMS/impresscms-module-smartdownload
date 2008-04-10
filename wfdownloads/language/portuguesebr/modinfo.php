@@ -13,252 +13,252 @@
 define("_MI_WFD_NAME","WF-Downloads");
 
 // A brief description of this module
-define("_MI_WFD_DESC","Creates a downloads section where users can download/submit/rate various files.");
+define("_MI_WFD_DESC","Cria uma seção de downloads onde os membros podem baixar/enviar/avaliar vários arquivos.");
 
 // Names of blocks for this module (Not all module has blocks)
-define("_MI_WFD_BNAME1","Recent WF-Downloads");
-define("_MI_WFD_BNAME2","Top WF-Downloads");
-define("_MI_WFD_BNAME3","Top Downloads by top categories");
+define("_MI_WFD_BNAME1","Downloads Recentes");
+define("_MI_WFD_BNAME2","Top Downloads");
+define("_MI_WFD_BNAME3","Mais Baixados por Categoria");
 
 // Sub menu titles
-define("_MI_WFD_SMNAME1","Submit");
+define("_MI_WFD_SMNAME1","Enviar");
 define("_MI_WFD_SMNAME2","Popular");
-define("_MI_WFD_SMNAME3","Top Rated");
+define("_MI_WFD_SMNAME3","Mais Votados");
 
 // Names of admin menu items
-define("_MI_WFD_BINDEX","Index");
-define("_MI_WFD_INDEXPAGE","Index Management");
-define("_MI_WFD_MCATEGORY","Categories");
-define("_MI_WFD_MDOWNLOADS","Files");
-define('_MI_WFD_REVIEWS','Reviews');
-define("_MI_WFD_MUPLOADS","Image Upload");
-define("_MI_WFD_MMIMETYPES","Mimetypes");
-define("_MI_WFD_PERMISSIONS","Permissions");
-define("_MI_WFD_MVOTEDATA","Votes");
+define("_MI_WFD_BINDEX","Índice");
+define("_MI_WFD_INDEXPAGE","Admin de Índices");
+define("_MI_WFD_MCATEGORY","Admin de Categorias");
+define("_MI_WFD_MDOWNLOADS","Admin de Arquivos");
+define('_MI_WFD_REVIEWS','Avaliações');
+define("_MI_WFD_MUPLOADS","Enviar Imagens");
+define("_MI_WFD_MMIMETYPES","Admin de Mimetypes");
+define("_MI_WFD_PERMISSIONS","Permissões");
+define("_MI_WFD_MVOTEDATA","Votos");
 define("_MI_WFD_MMIRRORS","Mirrors");
 
 // Title of config items
-define('_MI_WFD_POPULAR', 'Download Popular Count');
-define('_MI_WFD_POPULARDSC', 'The number of hits before a Download status will be considered as popular.');
+define('_MI_WFD_POPULAR', 'Nº Cliques Popular');
+define('_MI_WFD_POPULARDSC', 'O número de cliques para um download ser considerado como Popular.');
 
 //Display Icons
-define("_MI_WFD_ICONDISPLAY","Downloads Popular and New:");
-define("_MI_WFD_DISPLAYICONDSC", "Select how to display the popular and new icons in download listing.");
-define("_MI_WFD_DISPLAYICON1", "Display As Icons");
-define("_MI_WFD_DISPLAYICON2", "Display As Text");
-define("_MI_WFD_DISPLAYICON3", "Do Not Display");
+define("_MI_WFD_ICONDISPLAY","Downloads Populares e Novos:");
+define("_MI_WFD_DISPLAYICONDSC", "Selecione como mostrar os icones popular e novo na lista de downloads");
+define("_MI_WFD_DISPLAYICON1", "Mostrar como Ícones");
+define("_MI_WFD_DISPLAYICON2", "Mostrar como Texto");
+define("_MI_WFD_DISPLAYICON3", "Não Mostrar");
 
-define("_MI_WFD_DAYSNEW","Downloads Days New:");
-define("_MI_WFD_DAYSNEWDSC","The number of days a download status will be considered as new.");
-define("_MI_WFD_DAYSUPDATED","Downloads Days Updated:");
-define("_MI_WFD_DAYSUPDATEDDSC","The amount of days a download status will be considered as updated.");
+define("_MI_WFD_DAYSNEW","Downloads Novos, em Dias:");
+define("_MI_WFD_DAYSNEWDSC","O nº de dias que um download é considerado novo.");
+define("_MI_WFD_DAYSUPDATED","Downloads Atualizado, em Dias:");
+define("_MI_WFD_DAYSUPDATEDDSC","O nº de dias que um download é considerado Atualizado.");
 
-define('_MI_WFD_PERPAGE', 'Download Listing Count');
-define('_MI_WFD_PERPAGEDSC', 'Number of Downloads to display in each category listing.');
+define('_MI_WFD_PERPAGE', 'Nº de Downloads nas listagens');
+define('_MI_WFD_PERPAGEDSC', 'Nº de downloads a mostrar em cada listagem de categoria.');
 
-define('_MI_WFD_TEMPLATESET', 'Select Template Set');
-define('_MI_WFD_TEMPLATESETDSC', 'Select Templates to use for your module.<br />This will allow you to choose how your downloads are listed');
-define('_MI_WFD_TEMPLATESET1', 'Default');
-define('_MI_WFD_TEMPLATESET2', 'Professional');
+define('_MI_WFD_TEMPLATESET', 'Selecionar set de templates');
+define('_MI_WFD_TEMPLATESETDSC', 'Selecionar templates para usar em seu módulo.<br />Isto irá habiltá-lo a escolher como seus downloads serão listados');
+define('_MI_WFD_TEMPLATESET1', 'Padrão');
+define('_MI_WFD_TEMPLATESET2', 'Profissional');
 
-define('_MI_WFD_USESHOTS', 'Display Screenshot Images?');
-define('_MI_WFD_USESHOTSDSC', 'Select yes to display screenshot images for each download item');
-define('_MI_WFD_SHOTWIDTH', 'Image Display Width');
-define('_MI_WFD_SHOTWIDTHDSC', 'Display width for screenshot image');
-define('_MI_WFD_SHOTHEIGHT', 'Image Display Height');
-define('_MI_WFD_SHOTHEIGHTDSC', 'Display height for screenshot image');
-define('_MI_WFD_CHECKHOST', 'Disallow direct download linking? (leeching)');
-define('_MI_WFD_REFERERS', 'These sites can directly link to your files <br />Separate with | ');
+define('_MI_WFD_USESHOTS', 'Mostrar screenshots?');
+define('_MI_WFD_USESHOTSDSC', 'Selecione SIM para mostrar screenshots para cada download.<br> <b><font color="#FF0000">É recomendado manter em SIM</font></b>, mesmo não tendo screenshots.');
+define('_MI_WFD_SHOTWIDTH', 'Mostrar comprimento da Imagem');
+define('_MI_WFD_SHOTWIDTHDSC', 'Mostrar comprimento do screenshot');
+define('_MI_WFD_SHOTHEIGHT', 'Mostrar altura da Imagem');
+define('_MI_WFD_SHOTHEIGHTDSC', 'Mostrar altura do screenshot');
+define('_MI_WFD_CHECKHOST', 'Desabilitar links diretos de outros sites para seus downloads? (leeching)');
+define('_MI_WFD_REFERERS', 'Estes sites podem linkar direto <br />Separar com uma <font color="#FF0000">|</font> ');
 
-define('_MI_WFD_CAT_IMGWIDTH', 'Category Image Display Width');
-define('_MI_WFD_CAT_IMGWIDTHDSC', 'Display width for category image');
-define('_MI_WFD_CAT_IMGHEIGHT', 'Category Image Display Height');
-define('_MI_WFD_CAT_IMGHEIGHTDSC', 'Display height for category image');
+define('_MI_WFD_CAT_IMGWIDTH', 'Categoria: Largura Imagem');
+define('_MI_WFD_CAT_IMGWIDTHDSC', 'Largura da imagem para ser visualizar na categoria');
+define('_MI_WFD_CAT_IMGHEIGHT', 'Categoria: Altura da Imagem');
+define('_MI_WFD_CAT_IMGHEIGHTDSC', 'Altura da imagem para ser visualizar na categoria');
 
-define("_MI_WFD_ANONPOST","Anonymous User Submission:");
-define("_MI_WFD_ANONPOSTDSC","Allow Anonymous users to submit new Downloads/Mirrors to your website?");
-define("_MI_WFD_ANONPOST1","None");
-define("_MI_WFD_ANONPOST2","Download Only");
-define("_MI_WFD_ANONPOST3","Mirror Only");
-define("_MI_WFD_ANONPOST4","Both");
+define("_MI_WFD_ANONPOST","Envio por Usuários Anônimos:");
+define("_MI_WFD_ANONPOSTDSC","Permitir que usuários anônimos enviem downloads?");
+define("_MI_WFD_ANONPOST1","Nenhum");
+define("_MI_WFD_ANONPOST2","Somente Downloads");
+define("_MI_WFD_ANONPOST3","Somente Mirrors");
+define("_MI_WFD_ANONPOST4","Ambos");
 
-define('_MI_WFD_AUTOAPPROVE','Auto Approve Submitted Downloads/Mirrors');
-define('_MI_WFD_AUTOAPPROVEDSC','Select to approve submitted downloads/mirrors without moderation.');
-define('_MI_WFD_AUTOAPPROVE1','None');
-define('_MI_WFD_AUTOAPPROVE2','Download Only');
-define('_MI_WFD_AUTOAPPROVE3','Mirror Only');
-define('_MI_WFD_AUTOAPPROVE4','Both');
+define('_MI_WFD_AUTOAPPROVE','Auto aprovar downloads enviados');
+define('_MI_WFD_AUTOAPPROVEDSC','Escolha para aprovar automaticamente os downloads enviados.');
+define('_MI_WFD_AUTOAPPROVE1','Nenhum');
+define('_MI_WFD_AUTOAPPROVE2','Somente Downloads');
+define('_MI_WFD_AUTOAPPROVE3','Somente Mirrors');
+define('_MI_WFD_AUTOAPPROVE4','Ambos');
 
-define('_MI_WFD_REVIEWAPPROVE','Auto Approve Submitted Reviews');
-define('_MI_WFD_REVIEWAPPROVEDSC','Select to approve submitted reviews without moderation.');
-define("_MI_WFD_REVIEWANONPOST","Anonymous User Reviews:");
-define("_MI_WFD_REVIEWANONPOSTDSC","Allow Anonymous users to submit new Reviews to your website?");
+define('_MI_WFD_REVIEWAPPROVE','Auto aprovar avaliações submetidas');
+define('_MI_WFD_REVIEWAPPROVEDSC','Selecione para aprovar avaliações submetidas sem moderação');
+define("_MI_WFD_REVIEWANONPOST","Avaliações feitas por Visitantes");
+define("_MI_WFD_REVIEWANONPOSTDSC","Permitir avaliações por visitantes em seu site?");
 
-define('_MI_WFD_MAXFILESIZE','Upload Size (KB)');
-define('_MI_WFD_MAXFILESIZEDSC','Maximum file size permitted with file uploads.');
-define('_MI_WFD_IMGWIDTH','Upload Image width');
-define('_MI_WFD_IMGWIDTHDSC','Maximum image width permitted when uploading image files');
-define('_MI_WFD_IMGHEIGHT','Upload Image height');
-define('_MI_WFD_IMGHEIGHTDSC','Maximum image height permitted when uploading image files');
+define('_MI_WFD_MAXFILESIZE','Tamanho Upload (KB)');
+define('_MI_WFD_MAXFILESIZEDSC','Tamanho máximo permitido para os arquivos enviados.');
+define('_MI_WFD_IMGWIDTH','Comprimento Imagem Upload');
+define('_MI_WFD_IMGWIDTHDSC','Comprimento máximo da imagem quando se envia arquivo de imagem.');
+define('_MI_WFD_IMGHEIGHT','Altura Imagem Upload');
+define('_MI_WFD_IMGHEIGHTDSC','Altura máxima da imagem quando se envia arquivo de imagem.');
 
-define('_MI_WFD_AUTOSUMMARY','Enable Auto Summary');
-define('_MI_WFD_AUTOSUMMARYDESC','Automatically create summary based on x amount of characters defined');
-define('_MI_WFD_AUTOSUMMARYLENGTH','Summary Length');
-define('_MI_WFD_AUTOSUMMARYLENGTHDESC','The maximum amount of characters displayed for the summary');
+define('_MI_WFD_AUTOSUMMARY','Permitir Resumo Automático');
+define('_MI_WFD_AUTOSUMMARYDESC','Criar resumo automático baseado em x quantidade definidos de caracteres');
+define('_MI_WFD_AUTOSUMMARYLENGTH','Tamanho do Resumo');
+define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Quantidade Máxima de Caracteres a serem exibidos no Resumo');
 
-define('_MI_WFD_UPLOADDIR','Upload Directory (No trailing slash)');
-define('_MI_WFD_UPLOADDIRDSC','Upload Directory *MUST* be an absolute path!');
+define('_MI_WFD_UPLOADDIR','Pasta de Uploads (Sem a barra <font color="#FF0000">/</font> no final)');
+define('_MI_WFD_UPLOADDIRDSC','Diretórios para Upload <font color="#FF0000">*DEVEM*</font> ter o caminho absoluto definido!');
 
-define('_MI_WFD_ENABLERSS','Enable RSS Feeds:');
-define('_MI_WFD_ENABLERSSDSC','Select yes to enable rss feeds');
+define('_MI_WFD_ENABLERSS','Ativar RSS Feeds:');
+define('_MI_WFD_ENABLERSSDSC','Selecione SIM para permitir rss feeds');
 
-define('_MI_WFD_DOWNLOADMINPOSTS', "Minimum posts required to download");
-define('_MI_WFD_DOWNLOADMINPOSTSDSC', "Enter the minimum number of posts required to download a file");
-define('_MI_WFD_UPLOADMINPOSTS', "Minimum posts required to upload");
-define('_MI_WFD_UPLOADMINPOSTSDSC', "Enter the minimum number of posts required to upload a file");
+define('_MI_WFD_DOWNLOADMINPOSTS', "Mínimo de posts requeridos para download");
+define('_MI_WFD_DOWNLOADMINPOSTSDSC', "Digite o mínimo de posts a serem requeridos para permitir um download");
+define('_MI_WFD_UPLOADMINPOSTS', "Mínimo de posts requeridos para realizar um upload");
+define('_MI_WFD_UPLOADMINPOSTSDSC', "Digite o mínimo de posts requeridos para realizar upload de um arquivo");
 
-define('_MI_WFD_ALLOWSUBMISS','User Submissions:');
-define('_MI_WFD_ALLOWSUBMISSDSC','Allow Users to Submit new Downloads/Mirrors');
-define('_MI_WFD_ALLOWSUBMISS1','None');
-define('_MI_WFD_ALLOWSUBMISS2','Download Only');
-define('_MI_WFD_ALLOWSUBMISS3','Mirror Only');
-define('_MI_WFD_ALLOWSUBMISS4','Both');
-define('_MI_WFD_ALLOWUPLOADS','User Uploads:');
-define('_MI_WFD_ALLOWUPLOADSDSC','Allow Users to upload files directly to your website.<br />This includes both files & screenshots!');
-define('_MI_WFD_ALLOWUPLOADSGROUP','Uploads Submit:');
-define('_MI_WFD_ALLOWUPLOADSGROUPDSC','Select groups that can upload files.<br />This includes both files & screenshots!');
-define('_MI_WFD_SCREENSHOTS','Screenshots Upload Directory');
-define('_MI_WFD_CATEGORYIMG','Category Image Upload Directory');
-define('_MI_WFD_MAINIMGDIR','Main Image Directory');
-define('_MI_WFD_USETHUMBS', 'Use Thumb Nails:');
-define("_MI_WFD_USETHUMBSDSC", "Supported file types: JPG, GIF, PNG.<div style='padding-top: 8px;'>WF-Downloads will use thumb nails for images (category & screenshots). Set to 'No' to use orginal image if the server does not support this option.</div>");
-define('_MI_WFD_DATEFORMAT', 'Timestamp:');
-define('_MI_WFD_DATEFORMATDSC', 'Default Timestamp for WF-Downloads:');
-define('_MI_WFD_SHOWDISCLAIMER', 'Show Disclaimer before User Submission?');
-define('_MI_WFD_SHOWDOWNDISCL', 'Show Disclaimer before User Download?');
-define('_MI_WFD_DISCLAIMER', 'Enter Submission Disclaimer Text:');
-define('_MI_WFD_DOWNDISCLAIMER', 'Enter Download Disclaimer Text:');
-define('_MI_WFD_PLATFORM', 'Enter Platforms:');
-define('_MI_WFD_SUBCATS', 'Sub-Categories:');
-define('_MI_WFD_VERSIONTYPES', 'Version Status:');
-define('_MI_WFD_LICENSE', 'Enter License:');
-define('_MI_WFD_LIMITS', 'Enter File Limitations:');
-define('_MI_WFD_MAXSHOTS', 'Select Max Number of screenshots:');
-define('_MI_WFD_MAXSHOTSDSC', 'Sets the maximum number of allowed screenshot uploads.');
+define('_MI_WFD_ALLOWSUBMISS','Sugestão por Membros:');
+define('_MI_WFD_ALLOWSUBMISSDSC','Permitir que membros sugiram downloads');
+define('_MI_WFD_ALLOWSUBMISS1','Nenhum');
+define('_MI_WFD_ALLOWSUBMISS2','Somente Download');
+define('_MI_WFD_ALLOWSUBMISS3','Somente Mirror');
+define('_MI_WFD_ALLOWSUBMISS4','Ambos');
+define('_MI_WFD_ALLOWUPLOADS','Envio por Membros:');
+define('_MI_WFD_ALLOWUPLOADSDSC','Permitir que os membros enviem diretamente para o site');
+define('_MI_WFD_ALLOWUPLOADSGROUP','Adicionar Uploads:');
+define('_MI_WFD_ALLOWUPLOADSGROUPDSC','Selecione os grupos que podem enviar arquivos (upload).<br/>Isto incluindo arquivos e screenshots!');
+define('_MI_WFD_SCREENSHOTS','Pasta de Upload de Imagem de Screenshots');
+define('_MI_WFD_CATEGORYIMG','Pasta de Upload de Imagem de Categorias');
+define('_MI_WFD_MAINIMGDIR','Pasta Principal de Imagens');
+define('_MI_WFD_USETHUMBS', 'Usar Thumbnails:');
+define("_MI_WFD_USETHUMBSDSC", "Formatos suportados: JPG, GIF, PNG.<div style='padding-top: 8px;'>WF-Section vai usar thumbnails das imagens. Escolha  'Não' para usar imagem original se o servidor não suportar esta opção.</div>");
+define('_MI_WFD_DATEFORMAT', 'Relógio:');
+define('_MI_WFD_DATEFORMATDSC', 'Relógio usado por padrão pelo WF-Downloads:');
+define('_MI_WFD_SHOWDISCLAIMER', 'Mostrar Termos de Uso antes do upload de arquivo?');
+define('_MI_WFD_SHOWDOWNDISCL', 'Mostrar Termos de Uso antes de download de arquivo?');
+define('_MI_WFD_DISCLAIMER', 'Escreva Termos de Uso do Upload:');
+define('_MI_WFD_DOWNDISCLAIMER', 'Escreva Termos de Uso do Download:');
+define('_MI_WFD_PLATFORM', 'Escreva as Plataformas:');
+define('_MI_WFD_SUBCATS', 'Sub-Categorias:');
+define('_MI_WFD_VERSIONTYPES', 'Status da Versão:');
+define('_MI_WFD_LICENSE', 'Licença:');
+define('_MI_WFD_LIMITS', 'Limitações:');
+define('_MI_WFD_MAXSHOTS', 'Selecione o número máximo de screenshots:');
+define('_MI_WFD_MAXSHOTSDSC', 'Estabeleça o número máximo de uploads permitidos do screenshot.');
 
-define("_MI_WFD_SUBMITART", "Download Submission:");
-define("_MI_WFD_SUBMITARTDSC", "Select groups that can submit new downloads.<br />Webmasters are automatically selected!");
+define("_MI_WFD_SUBMITART", "Download Enviado:");
+define("_MI_WFD_SUBMITARTDSC", "Selecione os grupos que podem enviar downloads.");
 
-define("_MI_WFD_IMGUPDATE", "Update Thumbnails?");
-define("_MI_WFD_IMGUPDATEDSC", "If selected Thumbnail images will be updated at each page render, otherwise the first thumbnail image will be used regardless. <br /><br />");
-define("_MI_WFD_QUALITY", "Thumb Nail Quality:");
-define("_MI_WFD_QUALITYDSC", "Quality Lowest: 0 Highest: 100");
-define("_MI_WFD_KEEPASPECT", "Keep Image Aspect Ratio?");
+define("_MI_WFD_IMGUPDATE", "Atualizar thumbnails?");
+define("_MI_WFD_IMGUPDATEDSC", "Se escolhido os thumbnails serão atualizados a cada visualização da página, senão vai ser usada a primeira imagem sempre. <br /><br />");
+define("_MI_WFD_QUALITY", "Qualidade do Thumbnail:");
+define("_MI_WFD_QUALITYDSC", "Qualidade 0 (menor) 100 (maior)");
+define("_MI_WFD_KEEPASPECT", "Manter Proporção da Imagem?");
 define("_MI_WFD_KEEPASPECTDSC", "");
-define("_MI_WFD_ADMINPAGE", "Admin Index Files Count:");
-define("_MI_WFD_AMDMINPAGEDSC", "Number of new files to display in module admin area.");
-define("_MI_WFD_ARTICLESSORT", "Default download Order:");
-define("_MI_WFD_ARTICLESSORTDSC", "Select the default order for the download listings.");
-define("_MI_WFD_TITLE", "Title");
-define("_MI_WFD_RATING", "Rating");
-define("_MI_WFD_WEIGHT", "Weight");
-define("_MI_WFD_POPULARITY", "Popularity");
-define("_MI_WFD_SUBMITTED2", "Submission Date");
-define('_MI_WFD_COPYRIGHT', 'Copyright Notice:');
-define('_MI_WFD_COPYRIGHTDSC', 'Select to display a copyright notice on download page.');
+define("_MI_WFD_ADMINPAGE", "Nº de Arquivos no Índice de Admin:");
+define("_MI_WFD_AMDMINPAGEDSC", "Nº de novos arquivos a mostrar na zona de admin dos módulos");
+define("_MI_WFD_ARTICLESSORT", "Ordenar downloads:");
+define("_MI_WFD_ARTICLESSORTDSC", "Selecione a ordem da listagem de downloads.");
+define("_MI_WFD_TITLE", "Título");
+define("_MI_WFD_RATING", "Pontuação");
+define("_MI_WFD_WEIGHT", "Importância");
+define("_MI_WFD_POPULARITY", "Popularidade");
+define("_MI_WFD_SUBMITTED2", "Data de Envio");
+define('_MI_WFD_COPYRIGHT', 'Copyright:');
+define('_MI_WFD_COPYRIGHTDSC', 'Selecione para mostrar Copyright na página de download.');
 
 // Description of each config items
-define('_MI_WFD_PLATFORMDSC', 'List of platforms to enter <br />Separate with | IMPORTANT: Do not change this once the site is Live, Add new to the end of the list!');
-define('_MI_WFD_SUBCATSDSC', 'Select Yes to display sub-categories. Selecting No will hide sub-categories from the listings');
-define('_MI_WFD_LICENSEDSC', 'List of platforms to enter <br />Separate with |');
+define('_MI_WFD_PLATFORMDSC', 'Lista das Plataformas <br />Separar com uma | IMPORTANTE: Não mude isto após começar a usar o módulo! Adicione as novas plataformas no fim da lista só.');
+define('_MI_WFD_SUBCATSDSC', 'Selecione SIM para mostrar sub-categorias. Selecionar NÃO vai esconder as sub-categorias nas listagens.');
+define('_MI_WFD_LICENSEDSC', 'Licenças <br />Separar com uma |');
 
 // Text for notifications
 define('_MI_WFD_GLOBAL_NOTIFY', 'Global');
-define('_MI_WFD_GLOBAL_NOTIFYDSC', 'Global downloads notification options.');
+define('_MI_WFD_GLOBAL_NOTIFYDSC', 'Opções globais de notificações.');
 
-define('_MI_WFD_CATEGORY_NOTIFY', 'Category');
-define('_MI_WFD_CATEGORY_NOTIFYDSC', 'Notification options that apply to the current file category.');
+define('_MI_WFD_CATEGORY_NOTIFY', 'Categoria');
+define('_MI_WFD_CATEGORY_NOTIFYDSC', 'Opções de notificações correspondentes apenas à categoria corrente.');
 
-define('_MI_WFD_FILE_NOTIFY', 'File');
-define('_MI_WFD_FILE_NOTIFYDSC', 'Notification options that apply to the current file.');
+define('_MI_WFD_FILE_NOTIFY', 'Arquivo');
+define('_MI_WFD_FILE_NOTIFYDSC', 'Opções de notificações correspondentes apenas ao arquivo corrente.');
 
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFY', 'New Category');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYCAP', 'Notify me when a new file category is created.');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYDSC', 'Receive notification when a new file category is created.');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : New file category');                              
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFY', 'Nova Categoria');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYCAP', 'Notificar-me quando uma nova categoria de arquivos for criada.');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYDSC', 'Receber notificação quando uma nova categoria de arquivos for criada.');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Existe uma nova categoria de arquivos');                              
 
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFY', 'Modify File Requested');
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYCAP', 'Notify me of any file modification request.');
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYDSC', 'Receive notification when any file modification request is submitted.');
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : File Modification Requested');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFY', 'Pedido de Modificação de Arquivo');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYCAP', 'Notificar-me de pedidos de modificações de arquivo.');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYDSC', 'Receber notificação quando um pedido de modificações de arquivo acontecer.');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Pedido de Modificação de Arquivo');
 
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFY', 'Broken File Submitted');
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYCAP', 'Notify me of any broken file report.');
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYDSC', 'Receive notification when any broken file report is submitted.');
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : Broken File Reported');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFY', 'Arquivo Corrompido');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYCAP', 'Notificar-me de novos relatórios de arquivo corrompido.');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYDSC', 'Receber notificação quando houverem novos relatórios de arquivo corrompido.');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Novos relatórios de arquivo corrompido');
 
-define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFY', 'File Submitted');
-define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYCAP', 'Notify me when any new file is submitted (awaiting approval).');
-define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYDSC', 'Receive notification when any new file is submitted (awaiting approval).');
-define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : New file submitted');
+define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFY', 'Arquivo Enviado');
+define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYCAP', 'Notificar-me de novos arquivos enviados (esperando aprovação).');
+define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYDSC', 'Receber notificação quando houverem novos arquivos enviados (esperando aprovação).');
+define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Existem novos arquivos enviados (esperando aprovação)');
 
-define('_MI_WFD_GLOBAL_NEWFILE_NOTIFY', 'New File');
-define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYCAP', 'Notify me when any new file is posted.');
-define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYDSC', 'Receive notification when any new file is posted.');
-define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : New file');
+define('_MI_WFD_GLOBAL_NEWFILE_NOTIFY', 'Novos Arquivos');
+define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYCAP', 'Notificar-me de novos arquivos publicados.');
+define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYDSC', 'Receber notificação quando houverem novos arquivos publicados.');
+define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Existem novos arquivos publicados');
 
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFY', 'File Submitted');
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYCAP', 'Notify me when a new file is submitted (awaiting approval) to the current category.');   
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYDSC', 'Receive notification when a new file is submitted (awaiting approval) to the current category.');      
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : New file submitted in category'); 
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFY', 'Arquivo Enviado Nesta Categoria');
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYCAP', 'Notificar-me de novos arquivos enviados (esperando aprovação) nesta categoria.');   
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYDSC', 'Receber notificação quando houverem novos arquivos enviados (esperando aprovação) nesta categoria.');      
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Existem novos arquivos enviados (esperando aprovação) nesta categoria'); 
 
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFY', 'New File');
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYCAP', 'Notify me when a new file is posted to the current category.');   
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYDSC', 'Receive notification when a new file is posted to the current category.');      
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : New file in category'); 
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFY', 'Novos Arquivos Nesta Categoria');
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYCAP', 'Notificar-me de novos arquivos publicados nesta categoria.');   
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYDSC', 'Receber notificação quando houverem novos arquivos publicados nesta categoria.');      
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Existem novos arquivos publicados nesta categoria'); 
 
-define('_MI_WFD_FILE_APPROVE_NOTIFY', 'File Approved');
-define('_MI_WFD_FILE_APPROVE_NOTIFYCAP', 'Notify me when this file is approved.');
-define('_MI_WFD_FILE_APPROVE_NOTIFYDSC', 'Receive notification when this file is approved.');
-define('_MI_WFD_FILE_APPROVE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : File Approved');
+define('_MI_WFD_FILE_APPROVE_NOTIFY', 'Arquivo Aprovado');
+define('_MI_WFD_FILE_APPROVE_NOTIFYCAP', 'Notificar-me quando este arquivo for aprovado.');
+define('_MI_WFD_FILE_APPROVE_NOTIFYDSC', 'Receber notificação quando este arquivo for aprovado.');
+define('_MI_WFD_FILE_APPROVE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Este arquivo foi aprovado');
 
 /* Added by Lankford on 2007/3/21 */
-define('_MI_WFD_FILE_FILEMODIFIED_NOTIFY', 'File Modified');
-define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYCAP', 'Notify me when this file is modified.');
-define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYDSC', 'Receive notification when this file is modified.');
-define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : File Modified');
+define('_MI_WFD_FILE_FILEMODIFIED_NOTIFY', 'Arquivo Modificado');
+define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYCAP', 'Notificar-me quando este arquivo for modificado.');
+define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYDSC', 'Receber a notificação quando este arquivo for modificada.');
+define('_MI_WFD_FILE_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação: Arquivo Modificado');
 
-define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFY', 'File Modified');
-define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYCAP', 'Notify me when a file in this category is modified.');
-define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYDSC', 'Receive notification when a file in this category is modified.');
-define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : File Modified');
+define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFY', 'Categoria Modificada');
+define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYCAP', 'Notificar-me quando esta categoria for modificada.');
+define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYDSC', 'Receber a notificação quando esta categoria for modificada.');
+define('_MI_WFD_CATEGORY_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Categoria Modificada');
 
-define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFY', 'File Modified');
-define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYCAP', 'Notify me when any file is modified.');
-define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYDSC', 'Receive notification when any file is modified.');
-define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notify : File Modified');
+define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFY', 'Modificação Geral');
+define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYCAP', 'Notificar-me quando todos os arquivos forem modificados.');
+define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYDSC', 'Receber a notificação quando todos os arquivos forem modificados.');
+define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificação : Modificação Geral');
 /* End add block */
 
-define('_MI_WFD_AUTHOR_INFO', "Developer Information");
-define('_MI_WFD_AUTHOR_NAME', "Developer");
-define('_MI_WFD_AUTHOR_DEVTEAM', "Development Team");
-define('_MI_WFD_AUTHOR_WEBSITE', "Developer website");
-define('_MI_WFD_AUTHOR_EMAIL', "Developer email");
-define('_MI_WFD_AUTHOR_CREDITS', "Credits");
-define('_MI_WFD_MODULE_INFO', "Module Development Information");
-define('_MI_WFD_MODULE_STATUS', "Development Status");
-define('_MI_WFD_MODULE_DEMO', "Demo Site");
-define('_MI_WFD_MODULE_SUPPORT', "Official support site");
-define('_MI_WFD_MODULE_BUG', "Report a bug for this module");
-define('_MI_WFD_MODULE_FEATURE', "Suggest a new feature for this module");
-define('_MI_WFD_MODULE_DISCLAIMER', "Disclaimer");
-define('_MI_WFD_RELEASE', "Release Date: ");
+define('_MI_WFD_AUTHOR_INFO', "Informação de Desenvolvimento");
+define('_MI_WFD_AUTHOR_NAME', "Desenvolvedor");
+define('_MI_WFD_AUTHOR_DEVTEAM', "Equipe de Desenvolvimento");
+define('_MI_WFD_AUTHOR_WEBSITE', "Desenvolvedor website");
+define('_MI_WFD_AUTHOR_EMAIL', "E-mail do Desenvolvedor");
+define('_MI_WFD_AUTHOR_CREDITS', "Créditos");
+define('_MI_WFD_MODULE_INFO', "Informação do Desenvolvedor do Modulo");
+define('_MI_WFD_MODULE_STATUS', "Status do Desenvolvimento");
+define('_MI_WFD_MODULE_DEMO', "Site Demo");
+define('_MI_WFD_MODULE_SUPPORT', "Site de Suporte Oficial");
+define('_MI_WFD_MODULE_BUG', "Reportar um bug deste módulo");
+define('_MI_WFD_MODULE_FEATURE', "Sugerir um novo aperfeiçoamento para este módulo");
+define('_MI_WFD_MODULE_DISCLAIMER', "Aviso de Isenção de Responsabilidade");
+define('_MI_WFD_RELEASE', "Data do Release: ");
 
 define('_MI_WFD_MODULE_MAILLIST', "SmartFactory Mailing Lists");
 
-define('_MI_WFD_MODULE_MAILANNOUNCEMENTS', "Announcements Mailing List");
+define('_MI_WFD_MODULE_MAILANNOUNCEMENTS', "Anúncios Mailing List");
 define('_MI_WFD_MODULE_MAILBUGS', "Bug Mailing List");
-define('_MI_WFD_MODULE_MAILFEATURES', "Features Mailing List");
+define('_MI_WFD_MODULE_MAILFEATURES', "Características Mailing List");
 
 define('_MI_WFD_MODULE_MAILANNOUNCEMENTSDSC', "Get the latest announcements from SmartFactory.");
 define('_MI_WFD_MODULE_MAILBUGSDSC', "Bug Tracking and submission mailing list");
@@ -272,36 +272,34 @@ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
 FURTHER, SMARTFACTORY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE TRUTH,
 ACCURACY OR COMPLETENESS OF ANY STATEMENTS, INFORMATION OR MATERIALS
 CONCERNING THE SOFTWARE THAT IS CONTAINED IN SMARTFACTORY WEBSITE. IN NO
-EVENT WILL SMARTFACTORY BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL,
-INCIDENTAL OR CONSEQUENTIAL DAMAGES HOWEVER THEY MAY ARISE AND EVEN IF
-SMARTFACTORY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES..");
+EVENT WILL SMARTFACTORY BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL,INCIDENTAL OR CONSEQUENTIAL DAMAGES HOWEVER THEY MAY ARISE AND EVEN IFSMARTFACTORY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES..");
 
-define('_MI_WFD_AUTHOR_CREDITSTEXT',"The SmartFactory Team would like to thank the following people for their help and support during the development phase of this module:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish, Kiang<br />and anyone else who has contributed to either directly or indirectly.");
+define('_MI_WFD_AUTHOR_CREDITSTEXT',"The SmartFactory Team would like to thank the following people for their help and support during the development phase of this module:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish.<br /><br />And on a personal note, I would like to thank the special girl in my life who I love dearly and who gives me the strength and support to do all of this.");
 define('_MI_WFD_AUTHOR_BUGFIXES', "Bug Fix History");
 
 define('_MI_WFD_COPYRIGHTIMAGE', "Images copyright WF-Project/SmartFactory and may only be used with permission");
 
 // mirror defines
-define('_MI_WFD_MIRROR_USEIMAGES', 'Display Mirror Logos?'); // not implemented yet
-define('_MI_WFD_MIRROR_USEIMAGESDSC', 'Select yes to display logo for each mirror'); // not implemented yet
-define('_MI_WFD_MIRROR_IMGWIDTH', 'Logo Display Width'); // not implemented yet
-define('_MI_WFD_MIRROR_IMGWIDTHDSC', 'Display width for mirror logo'); // not implemented yet
-define('_MI_WFD_MIRROR_IMGHEIGHT', 'Logo Display Height'); // not implemented yet
-define('_MI_WFD_MIRROR_IMGHEIGHTDSC', 'Display height for mirror logo'); // not implemented yet
-define('_MI_WFD_MIRROR_AUTOAPPROVE','Auto Approve Submitted Mirrors');
-define('_MI_WFD_MIRROR_AUTOAPPROVEDSC','Select to approve submitted mirrors without moderation.');
+define('_MI_WFD_MIRROR_USEIMAGES', 'Exibir os Logos dos Mirrors?'); // not implemented yet
+define('_MI_WFD_MIRROR_USEIMAGESDSC', 'Selecione sim para exibir o logo de cada mirror'); // not implemented yet
+define('_MI_WFD_MIRROR_IMGWIDTH', 'Largura para exibição do Logo'); // not implemented yet
+define('_MI_WFD_MIRROR_IMGWIDTHDSC', 'Largura de exibição para o logo do mirror'); // not implemented yet
+define('_MI_WFD_MIRROR_IMGHEIGHT', 'Altura para exibição do Logo'); // not implemented yet
+define('_MI_WFD_MIRROR_IMGHEIGHTDSC', 'Altura para exibição do logo do mirror'); // not implemented yet
+define('_MI_WFD_MIRROR_AUTOAPPROVE','Auto Aprovar Mirrors Submetidos');
+define('_MI_WFD_MIRROR_AUTOAPPROVEDSC','Selecione para aprovar mirrors submetidos sem moderação');
 
-define('_MI_WFD_MIRROR_MAXIMGWIDTH','Upload Logo width'); // not implemented yet
-define('_MI_WFD_MIRROR_MAXIMGWIDTHDSC','Maximum logo width permitted when uploading logo files'); // not implemented yet
-define('_MI_WFD_MIRROR_MAXIMGHEIGHT','Upload logo height'); // not implemented yet
-define('_MI_WFD_MIRROR_MAXIMGHEIGHTDSC','Maximum logo height permitted when uploading logo files'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGWIDTH','Largura do Logo de Upload'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGWIDTHDSC','Largura Máxima de Logo permitida para upload de logos de arquivos'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGHEIGHT','Altura de Logo de Upload'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGHEIGHTDSC','Altura Máxima de Logo permitida para upload de logos de arquivos'); // not implemented yet
 
-define('_MI_WFD_MIRROR_ENABLE','Enable Mirror System');
+define('_MI_WFD_MIRROR_ENABLE','Habilitar Sistema de Mirrors');
 define('_MI_WFD_MIRROR_ENABLEDSC','');
-define('_MI_WFD_MIRROR_ENABLEONCHK','Enable Server Online Check');
-define('_MI_WFD_MIRROR_ENABLEONCHKDSC','Enables the host server check for the Mirrors<br />This can slow your page load down if<br />you have many mirrors');
-define('_MI_WFD_MIRROR_ALLOWSUBMISS','User Mirror Submissions:');
-define('_MI_WFD_MIRROR_ALLOWSUBMISSDSC','Allow Users to Submit new mirrors');
-define('_MI_WFD_MIRROR_MIRRORIMAGES','Mirror Logo Upload Directory'); // not implemented yet
-define('_MI_WFD_MIRROR_MIRRORIMAGESDSC','Mirror Logo Upload Directory'); // not implemented yet
+define('_MI_WFD_MIRROR_ENABLEONCHK','Habilitar checagem de Servidores Online');
+define('_MI_WFD_MIRROR_ENABLEONCHKDSC','Habilitar checagem de servidores para Mirrors<br />Isto pode sobrecarregar sua página se<br />você tiver muitos mirrors');
+define('_MI_WFD_MIRROR_ALLOWSUBMISS','Mirrors submetidos por Usuários:');
+define('_MI_WFD_MIRROR_ALLOWSUBMISSDSC','Permitir que os Usuários Submetam Novos Mirrors  ');
+define('_MI_WFD_MIRROR_MIRRORIMAGES','Diretório para Uploads de Logos de Mirrors'); // not implemented yet
+define('_MI_WFD_MIRROR_MIRRORIMAGESDSC','Diretório para Uploads de Logos de Mirrors'); // not implemented yet
 ?>
