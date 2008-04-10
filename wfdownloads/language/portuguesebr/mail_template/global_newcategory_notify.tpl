@@ -1,24 +1,23 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A new file category "{CATEGORY_NAME}" has been created at {X_SITENAME}.
+Uma nova categoria "{CATEGORY_NAME}" foi criada no {X_SITENAME} .
 
-Follow this link to view this file category:
+Veja este link para esta categoria:
 {CATEGORY_URL}
 
-Follow this link to view the category index:
+Veja este link para ver a página principal de categorias:
 {X_MODULE_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new file categories are added to our site.
+Você está recebendo esta mensagem por ter selecionado ser notificado quando novas categorias fossem adicionas em noss site.
 
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
-
 {X_SITENAME} ({X_SITEURL}) 
 webmaster
 {X_ADMINMAIL}

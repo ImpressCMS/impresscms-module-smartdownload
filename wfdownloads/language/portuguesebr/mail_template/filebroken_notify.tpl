@@ -1,19 +1,17 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-If you are the publisher of {X_TITLE} submitted on the date: {X_SUB_DATE}.
+Você publicou o {X_TITLE} enviado na data: {X_SUB_DATE}.
 
-It has been brought to our attention that the file {X_TITLE} which you published on the {X_SUB_DATE} 
-has now been reported as broken link at our website ({X_SITENAME}).   
+Estamos pedindo sua atenção para o arquivo {X_TITLE} que foi publicado por você em (X_SUB_DATE),
+pois ele está sendo reportado como link quebrado em nosso site ({X_SITENAME}). 
+   
+Por favor, visite o link abaixo e atualize esta informação que nos temos em nosso Banco de Dados, relativa ao recurso que você nos encaminhou.
 
-Can you please follow the link given below and update the current information we have in our database 
-concerning the resource you submitted to us.
+Visite: {X_DOWNLOAD}
 
-Visit: {X_DOWNLOAD}
+Se você não atualizar esta informação, teremos que remover seus envios de nosso Banco de Dados no futuro.
 
-If you fail to update this information, we may remove your submission from our database in the future.
-
-If you have any problems, questions or need assistance in updating your submission information, please feel free 
-to contact us anytime and we will be only to happy to help you.
+Se você estiver tendo algum problema, alguma dúvida ou necessitar de auxílio para atualizar estas informações, sinta-se a vontade para entrar em contato a qualquer tempo, e ficaremos felizes em ajudá-lo.
 
 {X_SITENAME} ({X_SITEURL}) 
 webmaster

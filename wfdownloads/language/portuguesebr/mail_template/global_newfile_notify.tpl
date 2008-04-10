@@ -1,21 +1,20 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A new file "{FILE_NAME}" has been added at {X_SITENAME}.
+Um novo arquivo "{FILE_NAME}" foi adicionado no {X_SITENAME}.
 
-You can view this file here:
+Você pode ver este arquivo aqui:
 {FILE_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new files are added to our site.
+Você está recebendo esta mensagem por ter selecionado ser notificado quando novos arquivos fossem adicionados em nosso site.
 
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
-
 {X_SITENAME} ({X_SITEURL}) 
 webmaster
 {X_ADMINMAIL}

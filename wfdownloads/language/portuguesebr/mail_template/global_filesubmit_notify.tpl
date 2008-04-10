@@ -1,21 +1,20 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A new file "{FILE_NAME}" has been submitted at {X_SITENAME} and is awaiting approval.
+Um novo arquivo "{FILE_NAME}" foi submetido no {X_SITENAME} e está aguardando aprovação.
 
-You can view this link submission here:
+Você pode ver o link deste envio aqui:
 {WAITINGFILES_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new files are submitted to our site.
+Você está recebendo esta mensagem por ter selecionado ser notificado quando novos arquivos fossem submetidos em nosso site.
 
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
-
 {X_SITENAME} ({X_SITEURL}) 
 webmaster
 {X_ADMINMAIL}

@@ -9,8 +9,8 @@
  */
  
 // Blocks
-define("_MB_WFD_DISP","Display");
-define("_MB_WFD_FILES","Files");
-define("_MB_WFD_CHARS","Length of the title");
-define("_MB_WFD_LENGTH"," characters");
+define("_MB_WFD_DISP","Visualizar");
+define("_MB_WFD_FILES","Arquivos");
+define("_MB_WFD_CHARS","Comprimento do título");
+define("_MB_WFD_LENGTH"," caracteres");
 ?>

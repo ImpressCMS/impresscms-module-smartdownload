@@ -1,18 +1,17 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A broken file report has been submitted and is awaiting approval.
+Uma notícia de link quebrado foi enviada e está esperando aprovação
 
-You can view this request here:
+Você pode ver esta requisição aqui:
 {BROKENREPORTS_URL}
 
 -----------
+Você esta recebendo esta mensagem por ter selecionado ser notificado quando notícias de arquivos/links quebrados fossem submetidos.
 
-You are receiving this message because you selected to be notified when broken file reports are submitted.
-
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou você não deseja receber outras notificações, atualize suas inscriçoes visitando o link abaixo:
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
 

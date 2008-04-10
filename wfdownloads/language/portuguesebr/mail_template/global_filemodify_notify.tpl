@@ -1,21 +1,20 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A file modification request has been submitted and is awaiting approval.
+Uma solicitação para modificação de arquivo foi submetida e está aguardando aprovação.
 
-You can view this request here:
+Você pode ver esta solicitação aqui:
 {MODIFYREPORTS_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new file modification requests are submitted.
+Você está recebendo esta mensagem por ter selecionado ser notificado quando novos solicitações de modificação de arquivo fossem submetidas.
 
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
-
 {X_SITENAME} ({X_SITEURL}) 
 webmaster
 {X_ADMINMAIL}

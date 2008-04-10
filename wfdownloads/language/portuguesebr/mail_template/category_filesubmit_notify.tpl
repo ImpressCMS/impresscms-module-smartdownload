@@ -1,18 +1,18 @@
-Hello {X_UNAME},
+Olá {X_UNAME},
 
-A new file "{FILE_NAME}" has been submitted in the category "{CATEGORY_NAME}" at {X_SITENAME} and is awaiting approval.
+Um novo arquivo "{FILE_NAME}" foi enviado na categoria "{CATEGORY_NAME}" no {X_SITENAME} e está esperando aprovação. 
 
-You can view this file submission here (note this page shows waiting files in ALL categories):
+Você pode ver o arquivo enviado aqui (note que esta página mostra arquivos pendentes em TODAS AS categorias):
 {WAITINGFILES_URL}
 
 -----------
 
-You are receiving this message because you selected to be notified when new files are submitted in this category.
+Você está recebendo esta mensagem por ter selecionado ser notificado quando novos arquivos fossem submetidos nesta categoria.
 
-If this is an error or you wish not to receive further such notifications, please update your subscriptions by visiting the link below:
+Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-Please do not reply to this message.
+Por favor não responda esta mensagem.
 
 -----------
 
