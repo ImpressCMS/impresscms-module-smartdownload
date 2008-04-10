@@ -10,567 +10,567 @@
 
 // %%%%%%	Module NMDe 'MyDownloads' (Admin)	  %%%%%
 // Buttons
-define("_AM_WFD_BMODIFY", "Modify");
-define("_AM_WFD_BDELETE", "Delete");
-define("_AM_WFD_BADD", "Add");
-define("_AM_WFD_BAPPROVE", "Approve");
-define("_AM_WFD_BIGNORE", "Ignore");
-define("_AM_WFD_BCANCEL", "Cancel");
-define("_AM_WFD_BSAVE", "Save");
-define("_AM_WFD_BRESET", "Reset");
-define("_AM_WFD_BMOVE", "Move Files");
+define("_AM_WFD_BMODIFY", "Modificar");
+define("_AM_WFD_BDELETE", "Apagar");
+define("_AM_WFD_BADD", "Adicionar");
+define("_AM_WFD_BAPPROVE", "Aprovar");
+define("_AM_WFD_BIGNORE", "Ignorar");
+define("_AM_WFD_BCANCEL", "Cancelar");
+define("_AM_WFD_BSAVE", "Salvar");
+define("_AM_WFD_BRESET", "Reiniciar");
+define("_AM_WFD_BMOVE", "Mover arquivos");
 define("_AM_WFD_BUPLOAD", "Upload");
-define("_AM_WFD_BDELETEIMAGE", "Delete Selected Image");
-define("_AM_WFD_BRETURN", "Return to where you where!");
-define("_AM_WFD_DBERROR", "Database Access Error: Please report this error to the SmartFactory Website");
+define("_AM_WFD_BDELETEIMAGE", "Apagar imagens selecionadas");
+define("_AM_WFD_BRETURN", "Voltar para onde você estava!");
+define("_AM_WFD_DBERROR", "Erro ao acessar o BD: Favor reportar erro no site do WF-Downloads");
 //Banned Users
-define("_AM_WFD_NONBANNED", "Not Banned");
-define("_AM_WFD_BANNED", "Banned");
-define("_AM_WFD_EDITBANNED", "Edit Banned Users");
+define("_AM_WFD_NONBANNED", "Não Banido");
+define("_AM_WFD_BANNED", "Banido");
+define("_AM_WFD_EDITBANNED", "Editar Membros Banidos");
 // Other Options
-define("_AM_WFD_TEXTOPTIONS", "Text Options:");
-define("_AM_WFD_ALLOWHTML", " Allow HTML Tags");
-define("_AM_WFD_ALLOWSMILEY", " Allow Smiley Icons");
-define("_AM_WFD_ALLOWXCODE", " Allow XOOPS Codes");
-define("_AM_WFD_ALLOWIMAGES", " Allow Images");
-define("_AM_WFD_ALLOWBREAK", " Use XOOPS linebreak conversion?");
-define("_AM_WFD_UPLOADFILE", "File Uploaded Successfully");
-define("_AM_WFD_NOMENUITEMS", "No menu items within the menu");
+define("_AM_WFD_TEXTOPTIONS", "Opções de Texto:");
+define("_AM_WFD_ALLOWHTML", " Permitir Tags HTML");
+define("_AM_WFD_ALLOWSMILEY", " Permitir Smilies");
+define("_AM_WFD_ALLOWXCODE", " Permitir BBcodes");
+define("_AM_WFD_ALLOWIMAGES", " Permitir imagens");
+define("_AM_WFD_ALLOWBREAK", " Usar conversão de 'quebra de linha' ?"); //GibaPhp 
+define("_AM_WFD_UPLOADFILE", "Arquivo carregado com sucesso");
+define("_AM_WFD_NOMENUITEMS", "Nenhum sub-item dentro do menu");
 
 // Admin Bread crumb
-define("_AM_WFD_PREFS", "Preferences");
-define("_AM_WFD_PERMISSIONS", "Permissions");
-define("_AM_WFD_BINDEX", "Main Index");
-define("_AM_WFD_BLOCKADMIN", "Blocks");
-define("_AM_WFD_GOMODULE", "Go to module");
-define("_AM_WFD_BHELP", "Help");
-define("_AM_WFD_ABOUT", "About");
+define("_AM_WFD_PREFS", "Preferências");
+define("_AM_WFD_PERMISSIONS", "Permissões");
+define("_AM_WFD_BINDEX", "Índice Principal");
+define("_AM_WFD_BLOCKADMIN", "Blocos");
+define("_AM_WFD_GOMODULE", "Ir para o Módulo");
+define("_AM_WFD_BHELP", "Ajuda");
+define("_AM_WFD_ABOUT", "Sobre");
 // Admin Summary
-define("_AM_WFD_SCATEGORY", "Category: ");
-define("_AM_WFD_SFILES", "Files: ");
-define("_AM_WFD_SNEWFILESVAL", "Submitted: ");
-define("_AM_WFD_SMODREQUEST", "Modified: ");
-define("_AM_WFD_SREVIEWS", "Reviews: ");
-define("_AM_WFD_SMIRRORS", "Mirrors: ");
+define("_AM_WFD_SCATEGORY", "Categoria: ");
+define("_AM_WFD_SFILES", "Arquivos: ");
+define("_AM_WFD_SNEWFILESVAL", "Enviados: ");
+define("_AM_WFD_SMODREQUEST", "Modificados: ");
+define("_AM_WFD_SREVIEWS", "Avaliações: ");
+define("_AM_WFD_SMIRRORS", "Mirrors:");
 // Admin Main Menu
-define("_AM_WFD_MCATEGORY", "Category Management");
-define("_AM_WFD_INDEXPAGE", "Index Page Management");
-define("_AM_WFD_MUPLOADS", "Image Upload");
-define("_AM_WFD_MMIMETYPES", "Mimetypes Management");
-define("_AM_WFD_MCOMMENTS", "Comments");
-define("_AM_WFS_MVOTEDATA", "Vote Data");
+define("_AM_WFD_MCATEGORY", "Administração de Categorias");
+define("_AM_WFD_INDEXPAGE", "Administração Principal"); //GibaPhp
+define("_AM_WFD_MUPLOADS", "Enviar Imagens");
+define("_AM_WFD_MMIMETYPES", "Administração de Mimetypes");
+define("_AM_WFD_MCOMMENTS", "Comentários");
+define("_AM_WFS_MVOTEDATA", "Votações");
 // waiting reviews
-define("_AM_WFD_AREVIEWS", "Reviews Management");
-define("_AM_WFD_AREVIEWS_WAITING", "Reviews Waiting Validation:");
-define("_AM_WFD_AREVIEWS_INFO", "Reviews Management Information");
-define("_AM_WFD_AREVIEWS_APPROVE", "<b>Approve</b> new review without validation.");
-define("_AM_WFD_AREVIEWS_APPROVED", "Review has been approved.");
-define("_AM_WFD_AREVIEWS_EDIT", "<b>Edit</b> new review and then approve.");
-define("_AM_WFD_AREVIEWS_DELETE", "<b>Delete</b> the new review information.");
+define("_AM_WFD_AREVIEWS", "Administração de Avaliações");
+define("_AM_WFD_AREVIEWS_WAITING", "Avaliações aguardando Aprovação:");
+define("_AM_WFD_AREVIEWS_INFO", "Revisões e Avaliações na Administração"); //GibaPhp
+define("_AM_WFD_AREVIEWS_APPROVE", "<b>Aprovar</b> novas Avaliações sem validação.");
+define("_AM_WFD_AREVIEWS_APPROVED", "Avaliação foi aprovada."); //GibaPhp
+define("_AM_WFD_AREVIEWS_EDIT", "<b>Editar</b> novas Avaliações e depois Aprovar.");
+define("_AM_WFD_AREVIEWS_DELETE", "<b>Apagar</b> novas informações de Avaliação.");
 
 // Catgeory defines
-define("_AM_WFD_CCATEGORY_CREATENEW", "Create New Category");
-define("_AM_WFD_CCATEGORY_MODIFY", "Modify Category");
-define("_AM_WFD_CCATEGORY_MOVE", "Move Category Files");
-define("_AM_WFD_CCATEGORY_MODIFY_TITLE", "Category Title:");
-define("_AM_WFD_CCATEGORY_MODIFY_FAILED", "Failed Moving Files: Cannot move to this Category");
-define("_AM_WFD_CCATEGORY_MODIFY_FAILEDT", "Failed Moving Files: Cannot find this Category");
-define("_AM_WFD_CCATEGORY_MODIFY_MOVED", "Files Moved");
-define("_AM_WFD_CCATEGORY_CREATED", "New Category Created and Database Updated Successfully");
-define("_AM_WFD_CCATEGORY_MODIFIED", "Selected Category Modified and Database Updated Successfully");
-define("_AM_WFD_CCATEGORY_DELETED", "Selected Category Deleted and Database Updated Successfully");
-define("_AM_WFD_CCATEGORY_AREUSURE", "WARNING: Are you sure you want to delete this Category and ALL its Files and Comments?");
-define("_AM_WFD_CCATEGORY_NOEXISTS", "You must create a Category before you can add a new file");
-define("_AM_WFD_FCATEGORY_GROUPPROMPT", "Category Access Permissions:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Select user groups who will have access to this Category.</span></div>");
-define("_AM_WFD_FCATEGORY_TITLE", "Category Title:");
-define("_AM_WFD_FCATEGORY_WEIGHT", "Category Weight:");
-define("_AM_WFD_FCATEGORY_SUBCATEGORY", "Set As Sub-Category:");
-define("_AM_WFD_FCATEGORY_CIMAGE", "Select Category Image:");
-define("_AM_WFD_FCATEGORY_DESCRIPTION", "Set Category Description:");
-define("_AM_WFD_FCATEGORY_SUMMARY", "Set Category Summary:");
-define("_AM_WFD_CCATEGORY_CHILDASPARENT", "You cannot set a child category as the category's parent");
+define("_AM_WFD_CCATEGORY_CREATENEW", "Criar nova Categoria");
+define("_AM_WFD_CCATEGORY_MODIFY", "Modificar Categoria");
+define("_AM_WFD_CCATEGORY_MOVE", "Mover Arquivos de Categoria");
+define("_AM_WFD_CCATEGORY_MODIFY_TITLE", "Título da Categoria:");
+define("_AM_WFD_CCATEGORY_MODIFY_FAILED", "Falhou a movimentação: Não é possível mover para esta Categoria"); //GibaPhp
+define("_AM_WFD_CCATEGORY_MODIFY_FAILEDT", "Falha ao Mover Arquivos: Categoria não encontrada");
+define("_AM_WFD_CCATEGORY_MODIFY_MOVED", "Arquivos Movidos");
+define("_AM_WFD_CCATEGORY_CREATED", "Nova categoria Criada e Banco de Dados atualizado com sucesso"); //GibaPhp
+define("_AM_WFD_CCATEGORY_MODIFIED", "Categoria selecionada foi Modificada e Banco de Dados atualizado com sucesso"); //GibaPhp
+define("_AM_WFD_CCATEGORY_DELETED", "Categoria selecionada apagada e Banco de Dados Atualizado com sucesso");
+define("_AM_WFD_CCATEGORY_AREUSURE", "Atenção: Tem a certeza que quer apagar esta categoria e <b>TODOS</b> os seus arquivos e comentários?");
+define("_AM_WFD_CCATEGORY_NOEXISTS", "É necessario criar uma Categoria antes de incluir um arquivo"); //GibaPhp
+define("_AM_WFD_FCATEGORY_GROUPPROMPT", "Permissões de Acesso às Categorias:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Selecione os grupos que podem acessar esta categoria.</span></div>");
+define("_AM_WFD_FCATEGORY_TITLE", "Titulo da Categoria:");
+define("_AM_WFD_FCATEGORY_WEIGHT", "Importância da Categoria:");
+define("_AM_WFD_FCATEGORY_SUBCATEGORY", "Sub-Categoria:"); //GibaPhp
+define("_AM_WFD_FCATEGORY_CIMAGE", "Selecionar Imagem da Categoria:");
+define("_AM_WFD_FCATEGORY_DESCRIPTION", "Descrição da Categoria:");
+define("_AM_WFD_FCATEGORY_SUMMARY", "Sumário da Categoria:");
+define("_AM_WFD_CCATEGORY_CHILDASPARENT", "Você não pode configurar uma sub-categoria como categoria principal");
 /*
 * Index page Defines
 */
-define("_AM_WFD_IPAGE_UPDATED", "Index Page Modified and Database Updated Successfully!");
-define("_AM_WFD_IPAGE_INFORMATION", "Index Page Information");
-define("_AM_WFD_IPAGE_MODIFY", "Modify Index Page");
-define("_AM_WFD_IPAGE_CIMAGE", "Select Index Image:");
-define("_AM_WFD_IPAGE_CTITLE", "Index Title:");
-define("_AM_WFD_IPAGE_CHEADING", "Index Heading:");
-define("_AM_WFD_IPAGE_CHEADINGA", "Index Heading Alignment:");
-define("_AM_WFD_IPAGE_CFOOTER", "Index Footer:");
-define("_AM_WFD_IPAGE_CFOOTERA", "Index Footer Alignment:");
-define("_AM_WFD_IPAGE_CLEFT", "Align Left");
-define("_AM_WFD_IPAGE_CCENTER", "Align Center");
-define("_AM_WFD_IPAGE_CRIGHT", "Align Right");
+define("_AM_WFD_IPAGE_UPDATED", "Página Inícial Modificada e o Banco de Dados atualizado com sucesso!"); //GibaPhp
+define("_AM_WFD_IPAGE_INFORMATION", "Informação Principal"); //GibaPhp
+define("_AM_WFD_IPAGE_MODIFY", "Modificar página Inicial"); //GibaPhp
+define("_AM_WFD_IPAGE_CIMAGE", "Selecionar Imagem da página Inicial:"); //GibaPhp
+define("_AM_WFD_IPAGE_CTITLE", "Titulo:");
+define("_AM_WFD_IPAGE_CHEADING", "Cabeçalho:");
+define("_AM_WFD_IPAGE_CHEADINGA","Alinhar Cabeçalho:"); //GibaPhp
+define("_AM_WFD_IPAGE_CFOOTER", "Rodapé:");
+define("_AM_WFD_IPAGE_CFOOTERA", "Alinhar Rodapé:"); //GibaPhp
+define("_AM_WFD_IPAGE_CLEFT", "Alinhar à esquerda");
+define("_AM_WFD_IPAGE_CCENTER", "Alinhar ao centro");
+define("_AM_WFD_IPAGE_CRIGHT", "Alinhar à direita");
 
 /*
 *  Permissions defines
 */
-define("_AM_WFD_PERM_MANAGEMENT", "Permissions Management");
-define("_AM_WFD_PERM_PERMSNOTE", "<div><b>NOTE:</b> Please be aware that even if you&#8217ve set correct viewing permissions here, a group might not see the articles or blocks if you don&#8217t also grant that group permissions to access the module. To do that, go to <b>System admin > Groups</b>, choose the appropriate group and click the checkboxes to grant its members the access.</div>");
-define("_AM_WFD_PERM_CPERMISSIONS", "Category Permissions");
-define("_AM_WFD_PERM_CSELECTPERMISSIONS", "Select categories that each group is allowed to view");
-define("_AM_WFD_PERM_CNOCATEGORY", "Cannot set permission's: No Categories's have been created yet!");
-define("_AM_WFD_PERM_FPERMISSIONS", "File Permissions");
-define("_AM_WFD_PERM_FNOFILES", "Cannot set permission's: No files have been created yet!");
-define("_AM_WFD_PERM_FSELECTPERMISSIONS", "Select the files that each group is allowed to view");
+define("_AM_WFD_PERM_MANAGEMENT", "Gerenciar Permissões"); //GibaPhp
+define("_AM_WFD_PERM_PERMSNOTE", "<div><b>NOTA:</b>Mesmo que as permissões sejam definidas corretamente aqui, um grupo pode não ter acesso ao Módulo ou aos Blocos se não for definido o acesso ao módulo. Para o fazê-lo, vá em <b>Sistema Administração - > Grupos</b>, escolha o grupo apropriado e dê-lhe acesso ao módulo.</div>"); //GibaPhp
+define("_AM_WFD_PERM_CPERMISSIONS", "Permissões da Categoria"); //GibaPhp
+define("_AM_WFD_PERM_CSELECTPERMISSIONS", "Selecione as categorias que cada grupo pode visualizar");
+define("_AM_WFD_PERM_CNOCATEGORY", "Não foi possível ajustar permissões porque não há categorias criadas!");
+define("_AM_WFD_PERM_FPERMISSIONS", "Permissões de Arquivos");
+define("_AM_WFD_PERM_FNOFILES", "Não foi possível ajustar permissões porque não há arquivos!");
+define("_AM_WFD_PERM_FSELECTPERMISSIONS", "Selecione os arquivos que cada grupo pode visualizar");
 /*
 * Upload defines
 */
-define("_AM_WFD_DOWN_IMAGEUPLOAD", "Image successfully uploaded to server destination");
-define("_AM_WFD_DOWN_NOIMAGEEXIST", "Error: No file was selected for uploading.  Please try again!");
-define("_AM_WFD_DOWN_IMAGEEXIST", "Image already exists in upload area!");
-define("_AM_WFD_DOWN_FILEDELETED", "File has been deleted.");
-define("_AM_WFD_DOWN_FILEERRORDELETE", "Error deleting File: File not found on server.");
-define("_AM_WFD_DOWN_NOFILEERROR", "Error deleting File: No File Selected For Deleting.");
-define("_AM_WFD_DOWN_DELETEFILE", "WARNING: Are you sure you want to delete this Image file?");
-define("_AM_WFD_DOWN_IMAGEINFO", "Server Status");
-define("_AM_WFD_DOWN_NOTSET", "Upload Path Not Set");
-define("_AM_WFD_DOWN_SERVERPATH", "Server Path to XOOPS Root: ");
-define("_AM_WFD_DOWN_UPLOADPATH", "Current Upload Path: ");
-define("_AM_WFD_DOWN_UPLOADPATHDSC", "Note. Upload Path *MUST* contain the full server path of your upload folder.");
-define("_AM_WFD_DOWN_SPHPINI", "<b>Information taken from PHP ini File:</b>");
+define("_AM_WFD_DOWN_IMAGEUPLOAD", "Imagem atualizada e enviada com sucesso para o servidor");
+define("_AM_WFD_DOWN_NOIMAGEEXIST", "Erro: Não foi selecionado nenhum arquivo para upload.  Por favor, tente novamente!");
+define("_AM_WFD_DOWN_IMAGEEXIST", "Imagem já existe na pasta de uploads!");
+define("_AM_WFD_DOWN_FILEDELETED", "Arquivo foi apagado.");
+define("_AM_WFD_DOWN_FILEERRORDELETE", "Erro ao apagar arquivo: Arquivo não encontrado.");
+define("_AM_WFD_DOWN_NOFILEERROR", "Erro ao apagar arquivo: Nenhum Arquivo foi selecionado.");
+define("_AM_WFD_DOWN_DELETEFILE", "Atenção: tem certeza que deseja apagar este arquivo de imagem?");
+define("_AM_WFD_DOWN_IMAGEINFO", "Status do servidor");
+define("_AM_WFD_DOWN_NOTSET", "Caminho do diretório de Upload não escolhido"); //GibaPhp
+define("_AM_WFD_DOWN_SERVERPATH", "Caminho para o Raiz do Servidor: ");
+define("_AM_WFD_DOWN_UPLOADPATH", "Caminho atual para o diretório de Upload: "); //GibaPhp
+define("_AM_WFD_DOWN_UPLOADPATHDSC", "Atenção: O caminho dos uploads tem que conter o caminho completo no servidor da sua pasta para uploads.");
+define("_AM_WFD_DOWN_SPHPINI", "<b>Informação retirada do arquivo PHP ini:</b>");
 define("_AM_WFD_DOWN_METAVERSION", "<b>WF-Downloads Meta Version:</b> ");
-define("_AM_WFD_DOWN_SAFEMODESTATUS", "Safe Mode Status: ");
+define("_AM_WFD_DOWN_SAFEMODESTATUS", "Modo seguro: ");
 define("_AM_WFD_DOWN_REGISTERGLOBALS", "Register Globals: ");
-define("_AM_WFD_DOWN_SERVERUPLOADSTATUS", "Server Uploads Status: ");
-define("_AM_WFD_DOWN_MAXUPLOADSIZE", "Max Upload Size Permitted: ");
-define("_AM_WFD_DOWN_MAXPOSTSIZE", "Max Post Size Permitted: ");
-define("_AM_WFD_DOWN_SAFEMODEPROBLEMS", " (This May Cause Problems)");
-define("_AM_WFD_DOWN_GDLIBSTATUS", "GD Library Support: ");
-define("_AM_WFD_DOWN_GDLIBVERSION", "GD Library Version: ");
-define("_AM_WFD_DOWN_GDON", "<b>Enabled</b> (Thumbs Nails Available)");
-define("_AM_WFD_DOWN_GDOFF", "<b>Disabled</b> (No Thumb Nails Available)");
+define("_AM_WFD_DOWN_SERVERUPLOADSTATUS", "Status de Uploads: ");
+define("_AM_WFD_DOWN_MAXUPLOADSIZE", "Tamanho Max de Upload: ");
+define("_AM_WFD_DOWN_MAXPOSTSIZE", "Tamanho Max de Post: ");
+define("_AM_WFD_DOWN_SAFEMODEPROBLEMS", " (Isto pode causar problemas)");
+define("_AM_WFD_DOWN_GDLIBSTATUS", "Suporte Biblioteca GD: ");
+define("_AM_WFD_DOWN_GDLIBVERSION", "Versão Biblioeca GD: ");
+define("_AM_WFD_DOWN_GDON", "<b>Ativado</b> (Thumbs Nails Disponiveis)");
+define("_AM_WFD_DOWN_GDOFF", "<b>Desativar</b> (Nenhum Thumb Nails Disponivel)");
 define("_AM_WFD_DOWN_OFF", "<b>OFF</b>");
 define("_AM_WFD_DOWN_ON", "<b>ON</b>");
-define("_AM_WFD_DOWN_CATIMAGE", "Category Images");
-define("_AM_WFD_DOWN_SCREENSHOTS", "Screenshot Images");
-define("_AM_WFD_DOWN_MAINIMAGEDIR", "Main images");
-define("_AM_WFD_DOWN_FCATIMAGE", "Category Image Path");
-define("_AM_WFD_DOWN_FSCREENSHOTS", "Screenshot Image Path");
-define("_AM_WFD_DOWN_FMAINIMAGEDIR", "Main image Path");
-define("_AM_WFD_DOWN_FUPLOADIMAGETO", "Upload Image: ");
-define("_AM_WFD_DOWN_FUPLOADPATH", "Upload Path: ");
-define("_AM_WFD_DOWN_FUPLOADURL", "Upload URL: ");
-define("_AM_WFD_DOWN_FOLDERSELECTION", "Select Upload Destination:");
-define("_AM_WFD_DOWN_FSHOWSELECTEDIMAGE", "Display Selected Image:");
-define("_AM_WFD_DOWN_FUPLOADIMAGE", "Upload New Image to Selected Destination:");
+define("_AM_WFD_DOWN_CATIMAGE", "Imagens da Categoria");
+define("_AM_WFD_DOWN_SCREENSHOTS", "Imagens de Screenshots");
+define("_AM_WFD_DOWN_MAINIMAGEDIR", "Imagens Principais");
+define("_AM_WFD_DOWN_FCATIMAGE", "Caminho para Imagens das Categorias");
+define("_AM_WFD_DOWN_FSCREENSHOTS", "Caminho para Imagens de Screenshot");
+define("_AM_WFD_DOWN_FMAINIMAGEDIR", "Caminho para Imagens principais");
+define("_AM_WFD_DOWN_FUPLOADIMAGETO", "Enviar Imagem: ");
+define("_AM_WFD_DOWN_FUPLOADPATH", "Caminho do Upload: ");
+define("_AM_WFD_DOWN_FUPLOADURL", "URL de Upload: ");
+define("_AM_WFD_DOWN_FOLDERSELECTION", "Selecione o destino do Upload:");
+define("_AM_WFD_DOWN_FSHOWSELECTEDIMAGE", "Mostrar Imagem Selecionada:");
+define("_AM_WFD_DOWN_FUPLOADIMAGE", "Enviar nova imagem para a pasta selecionada:");
 
 // Main Index defines
-define("_AM_WFD_MINDEX_DOWNSUMMARY", "Module Admin Summary");
-define("_AM_WFD_MINDEX_PUBLISHEDDOWN", "Published Files:");
-define("_AM_WFD_MINDEX_AUTOPUBLISHEDDOWN", "Auto Published Files:");
-define("_AM_WFD_MINDEX_AUTOEXPIRE", "Auto Expire Files:");
-define("_AM_WFD_MINDEX_OFFLINEDOWN", "Offline Files:");
+define("_AM_WFD_MINDEX_DOWNSUMMARY", "Sumário de Administração do Módulo");
+define("_AM_WFD_MINDEX_PUBLISHEDDOWN", "Arquivos Publicados:");
+define("_AM_WFD_MINDEX_AUTOPUBLISHEDDOWN", "Publicação Automática:"); //GibaPhp
+define("_AM_WFD_MINDEX_AUTOEXPIRE", "Arquivos Expirados:");
+define("_AM_WFD_MINDEX_OFFLINEDOWN", "Arquivos Ofline:");
 define("_AM_WFD_MINDEX_ID", "ID");
-define("_AM_WFD_MINDEX_TITLE", "File Title");
-define("_AM_WFD_MINDEX_POSTER", "Poster");
-define("_AM_WFD_MINDEX_SUBMITTED", "Submission Date");
-define("_AM_WFD_MINDEX_ONLINESTATUS", "Online Status");
-define("_AM_WFD_MINDEX_PUBLISHED", "Published");
-define("_AM_WFD_MINDEX_ACTION", "Action");
-define("_AM_WFD_MINDEX_NODOWNLOADSFOUND", "NOTICE: There are no files that match this criteria");
-define("_AM_WFD_MINDEX_PAGE", "<b>Page:<b> ");
-define('_AM_WFD_MINDEX_PAGEINFOTXT', '<ul><li>WF-Downloads main page details.</li><li>You can easily change the image logo, heading, main index header and footer text to suit your own look</li></ul><br /><br />Note: The Logo image choosen will be used throughout WF-Downloads.');
+define("_AM_WFD_MINDEX_TITLE", "Titulo do Arquivo");
+define("_AM_WFD_MINDEX_POSTER", "Enviado por");
+define("_AM_WFD_MINDEX_SUBMITTED", "Data de Envio");
+define("_AM_WFD_MINDEX_ONLINESTATUS", "Status");
+define("_AM_WFD_MINDEX_PUBLISHED", "Publicado");
+define("_AM_WFD_MINDEX_ACTION", "Ação");
+define("_AM_WFD_MINDEX_NODOWNLOADSFOUND", "NOTIFICAÇÃO:  Não existe arquivo que satisfaz os critérios");
+define("_AM_WFD_MINDEX_PAGE", "<b>Página:<b> ");
+define('_AM_WFD_MINDEX_PAGEINFOTXT', '<ul><li>WF-Downloads: detalhes da página principal.</li><li>Você pode facilmente alterar o logo, o cabeçalho, o índice ou o texto do rodape para ficar adequado à você</li></ul><br /><br />Nota: O Logo escolhido será usado por todo o WF-DOWNLOADS.');
 
 // Submitted Files
-define("_AM_WFD_SUB_SUBMITTEDFILES", "Submitted Files");
-define("_AM_WFD_SUB_FILESWAITINGINFO", "Waiting Files Information");
-define("_AM_WFD_SUB_FILESWAITINGVALIDATION", "Files Waiting Validation: ");
-define("_AM_WFD_SUB_APPROVEWAITINGFILE", "<b>Approve</b> new file information without validation.");
-define("_AM_WFD_SUB_EDITWAITINGFILE", "<b>Edit</b> new file information and then approve.");
-define("_AM_WFD_SUB_DELETEWAITINGFILE", "<b>Delete</b> the new file information.");
-define("_AM_WFD_SUB_NOFILESWAITING", "There are no files that match this critera");
-define("_AM_WFD_SUB_NEWFILECREATED", "New File Data Created and Database Updated Successfully");
+define("_AM_WFD_SUB_SUBMITTEDFILES", "Arquivos Enviados");
+define("_AM_WFD_SUB_FILESWAITINGINFO", "Informação de arquivos em espera");
+define("_AM_WFD_SUB_FILESWAITINGVALIDATION", "Validação de arquivos em espera: ");
+define("_AM_WFD_SUB_APPROVEWAITINGFILE", "<b>Aprovar</b> informações de novo arquivo sem validação.");
+define("_AM_WFD_SUB_EDITWAITINGFILE", "<b>Editar</b> novas informações de arquivo e aprovar.");
+define("_AM_WFD_SUB_DELETEWAITINGFILE", "<b>Remover</b> novas informações de arquivo.");
+define("_AM_WFD_SUB_NOFILESWAITING", "Não há arquivos que correspondem a estas características.");
+define("_AM_WFD_SUB_NEWFILECREATED", "Novo Arquivo criado e Banco de Dados atualizado com sucesso.");
 // Mimetypes
 define("_AM_WFD_MIME_ID", "ID");
 define("_AM_WFD_MIME_EXT", "EXT");
-define("_AM_WFD_MIME_NAME", "Application Type");
+define("_AM_WFD_MIME_NAME", "Tipo de Aplicação");
 define("_AM_WFD_MIME_ADMIN", "Admin");
-define("_AM_WFD_MIME_USER", "User");
+define("_AM_WFD_MIME_USER", "Usuário");
 // Mimetype Form
-define("_AM_WFD_MIME_CREATEF", "Create Mimetype");
-define("_AM_WFD_MIME_MODIFYF", "Modify Mimetype");
-define("_AM_WFD_MIME_EXTF", "File Extension:");
-define("_AM_WFD_MIME_NAMEF", "Application Type/Name:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Enter application associated with this extension.</span></div>");
-define("_AM_WFD_MIME_TYPEF", "Mimetypes:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Enter each mimetype associated with the file extension. Each mimetype must be seperated with a space.</span></div>");
-define("_AM_WFD_MIME_ADMINF", "Allowed Admin Mimetype");
-define("_AM_WFD_MIME_ADMINFINFO", "<b>Mimetypes that are available for Admin uploads:</b>");
-define("_AM_WFD_MIME_USERF", "Allowed User Mimetype");
-define("_AM_WFD_MIME_USERFINFO", "<b>Mimetypes that are available for User uploads:</b>");
-define("_AM_WFD_MIME_NOMIMEINFO", "No mimetypes selected.");
-define("_AM_WFD_MIME_FINDMIMETYPE", "Find New Mimetype:");
-define("_AM_WFD_MIME_EXTFIND", "Search File Extension:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Enter file extension you wish to search.</span></div>");
-define("_AM_WFD_MIME_INFOTEXT", "<ul><li>New mimetypes can be created, edit or deleted easily via this form.</li>
-	<li>Search for a new mimetypes via an external website.</li>
-	<li>View displayed mimetypes for Admin and User uploads.</li>
-	<li>Change mimetype upload status.</li></ul>
-	");
+define("_AM_WFD_MIME_CREATEF", "Criar Mimetype");
+define("_AM_WFD_MIME_MODIFYF", "Modificar Mimetype");
+define("_AM_WFD_MIME_EXTF", "Extensão do Arquivo:");
+define("_AM_WFD_MIME_NAMEF", "Tipo/Nome de Aplicação:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Escolher aplicação associada a este tipo de arquivo.</span></div>");
+define("_AM_WFD_MIME_TYPEF", "Mimetypes:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Insira cada mimetype associado ao tipo de arquivo. Cada mimetype deve estar separado por um espaço.</span></div>");
+define("_AM_WFD_MIME_ADMINF", "Permitir administrar Mimetype"); //GibaPhp
+define("_AM_WFD_MIME_ADMINFINFO", "<b>Mimetypes disponiveis para Admin enviar:</b>");
+define("_AM_WFD_MIME_USERF", "Permitir envio de Mimetype por Usuários");
+define("_AM_WFD_MIME_USERFINFO", "<b>Mimetypes disponiveis para Usuário enviar:</b>");
+define("_AM_WFD_MIME_NOMIMEINFO", "Nenhum Mimetype escolhido.");
+define("_AM_WFD_MIME_FINDMIMETYPE", "Procurar novo Mimetype:");
+define("_AM_WFD_MIME_EXTFIND", "Procurar Extensão de Arquivo:<div style='padding-top: 8px;'><span style='font-weight: normal;'>Escolha extensão que quer procurar.</span></div>");
+define("_AM_WFD_MIME_INFOTEXT", "<ul><li>Novos mimetypes podem ser criados,editados ou removidos facilmente por este formulário.</li> 
+	<li>Procurar um novo mimetype através de um website externo.</li>
+ 	<li>Ver mimetypes mostrados para envio do Admin e Usuários.</li> 	
+ 	<li>Mudar status de envio de mimetypes.</li></ul> 	
+ 	");
 
 // Mimetype Buttons
-define("_AM_WFD_MIME_CREATE", "Create");
-define("_AM_WFD_MIME_CLEAR", "Reset");
-define("_AM_WFD_MIME_CANCEL", "Cancel");
-define("_AM_WFD_MIME_MODIFY", "Modify");
-define("_AM_WFD_MIME_DELETE", "Delete");
-define("_AM_WFD_MIME_FINDIT", "Get Extension!");
+define("_AM_WFD_MIME_CREATE", "Criar");
+define("_AM_WFD_MIME_CLEAR", "Reiniciar");
+define("_AM_WFD_MIME_CANCEL", "Cancelar");
+define("_AM_WFD_MIME_MODIFY", "Modificar");
+define("_AM_WFD_MIME_DELETE", "Apagar");
+define("_AM_WFD_MIME_FINDIT", "Procurar Extensão!");
 // Mimetype Database
-define("_AM_WFD_MIME_DELETETHIS", "Delete Selected Mimetype?");
-define("_AM_WFD_MIME_MIMEDELETED", "Mimetype %s has been deleted");
-define("_AM_WFD_MIME_CREATED", "Mimetype Information Created");
-define("_AM_WFD_MIME_MODIFIED", "Mimetype Information Modified");
+define("_AM_WFD_MIME_DELETETHIS", "Apagar Mimetypes Seleccionados?");
+define("_AM_WFD_MIME_MIMEDELETED", "Os Mimetypes %s foram apagados");
+define("_AM_WFD_MIME_CREATED", "Informação do Mimetype Criada");
+define("_AM_WFD_MIME_MODIFIED", "Informação do Mimetype Modificada");
 // Vote Information
-define("_AM_WFD_VOTE_RATINGINFOMATION", "Voting Information");
-define("_AM_WFD_VOTE_TOTALVOTES", "Total votes: ");
-define("_AM_WFD_VOTE_REGUSERVOTES", "Registered User Votes: %s");
-define("_AM_WFD_VOTE_ANONUSERVOTES", "Anonymous User Votes: %s");
-define("_AM_WFD_VOTE_USER", "User");
-define("_AM_WFD_VOTE_IP", "IP Address");
-define("_AM_WFD_VOTE_USERAVG", "Average User Rating");
-define("_AM_WFD_VOTE_TOTALRATE", "Total Ratings");
-define("_AM_WFD_VOTE_DATE", "Submitted");
-define("_AM_WFD_VOTE_RATING", "Rating");
-define("_AM_WFD_VOTE_NOREGVOTES", "No Registered User Votes");
-define("_AM_WFD_VOTE_NOUNREGVOTES", "No Unregistered User Votes");
-define("_AM_WFD_VOTE_VOTEDELETED", "Vote data deleted.");
+define("_AM_WFD_VOTE_RATINGINFOMATION", "Informação de Votações");
+define("_AM_WFD_VOTE_TOTALVOTES", "Total de Votos: ");
+define("_AM_WFD_VOTE_REGUSERVOTES", "Votos de Usuários Registrados: %s"); //GibaPhp
+define("_AM_WFD_VOTE_ANONUSERVOTES", "Votos de Usuários Anônimos: %s"); //GibaPhp
+define("_AM_WFD_VOTE_USER", "Usuário");
+define("_AM_WFD_VOTE_IP", "Endereço IP");
+define("_AM_WFD_VOTE_USERAVG", "Média de Votos");
+define("_AM_WFD_VOTE_TOTALRATE", "Pontuação Total");
+define("_AM_WFD_VOTE_DATE", "Votado em");
+define("_AM_WFD_VOTE_RATING", "Pontuação");
+define("_AM_WFD_VOTE_NOREGVOTES", "Nenhum voto de usuários registrados");
+define("_AM_WFD_VOTE_NOUNREGVOTES", "Nenhum voto de usuários anônimos");
+define("_AM_WFD_VOTE_VOTEDELETED", "Votação apagada.");
 define("_AM_WFD_VOTE_ID", "ID");
-define("_AM_WFD_VOTE_FILETITLE", "File Title");
-define("_AM_WFD_VOTE_DISPLAYVOTES", "Voting Data Information");
-define("_AM_WFD_VOTE_NOVOTES", "No User Votes to display");
-define("_AM_WFD_VOTE_DELETE", "No User Votes to display");
-define("_AM_WFD_VOTE_DELETEDSC", "<b>Deletes</b> the chosen vote information from the database.");
+define("_AM_WFD_VOTE_FILETITLE", "Título do Arquivo");
+define("_AM_WFD_VOTE_DISPLAYVOTES", "Informação de Votação");
+define("_AM_WFD_VOTE_NOVOTES", "Nenhum Voto para mostrar");
+define("_AM_WFD_VOTE_DELETE", "Apagar Votação");
+define("_AM_WFD_VOTE_DELETEDSC", "<b>Apaga</b> a votação seleccionada do Banco de Dados."); //GibaPhp
 
 // Modifications
 /*
-define("_AM_WFD_MOD_TOTMODREQUESTS", "Total Modification Requests: ");
-define("_AM_WFD_MOD_MODREQUESTS", "Modified Files");
-define("_AM_WFD_MOD_MODREQUESTSINFO", "Modified Files Information");
+define("_AM_WFD_MOD_TOTMODREQUESTS", "Pedidos de Modificação: ");
+define("_AM_WFD_MOD_MODREQUESTS", "Arquivos Modificados");
+define("_AM_WFD_MOD_MODREQUESTSINFO", "Informação de Arquivos Modificados");
 define("_AM_WFD_MOD_MODID", "ID");
-define("_AM_WFD_MOD_MODTITLE", "Title");
-define("_AM_WFD_MOD_MODPOSTER", "Original Poster: ");
-define("_AM_WFD_MOD_DATE", "Submitted");
-define("_AM_WFD_MOD_NOMODREQUEST", "There are no requests that match this critera");
-define("_AM_WFD_MOD_MODIFYSUBMIT", "Submitter");
-define("_AM_WFD_MOD_ORIGINAL", "Orginal Download Details");
-define("_AM_WFD_MOD_REQDELETED", "Modification request removed from the database");
-define("_AM_WFD_MOD_REQUPDATED", "Selected Download Modified and Database Updated Successfully");
+define("_AM_WFD_MOD_MODTITLE", "Titulo");
+define("_AM_WFD_MOD_MODPOSTER", "Enviado Por: ");
+define("_AM_WFD_MOD_DATE", "Enviado em");
+define("_AM_WFD_MOD_NOMODREQUEST", "Não existem pedidos com estas características");
+define("_AM_WFD_MOD_MODIFYSUBMIT", "Enviar");
+define("_AM_WFD_MOD_ORIGINAL", "Detalhes Originais do Download");
+define("_AM_WFD_MOD_REQDELETED", "Pedido de modificação removido do BD");
+define("_AM_WFD_MOD_REQUPDATED", "Download modificado e Banco de Dados atualizado com sucesso"); //GibaPhp
 
 */
-define("_AM_WFD_MOD_TOTMODREQUESTS", "Total Modification Requests: ");
-define("_AM_WFD_MOD_MODREQUESTS", "Modified Files");
-define("_AM_WFD_MOD_MODREQUESTSINFO", "Modified Files Information");
+define("_AM_WFD_MOD_TOTMODREQUESTS", "Pedidos de Modificação: ");
+define("_AM_WFD_MOD_MODREQUESTS", "Arquivos Modificados");
+define("_AM_WFD_MOD_MODREQUESTSINFO", "Informação de Arquivos Modificados");
 define("_AM_WFD_MOD_MODID", "ID");
-define("_AM_WFD_MOD_MODTITLE", "Title");
-define("_AM_WFD_MOD_MODPOSTER", "Original Poster: ");
-define("_AM_WFD_MOD_DATE", "Submitted");
-define("_AM_WFD_MOD_NOMODREQUEST", "There are no requests that match this critera");
-define("_AM_WFD_MOD_TITLE", "Download Title: ");
-define("_AM_WFD_MOD_LID", "Download ID: ");
-define("_AM_WFD_MOD_CID", "Category: ");
-define("_AM_WFD_MOD_URL", "Remote Url: ");
-define("_AM_WFD_MOD_MIRROR", "Download Mirror: ");
-define("_AM_WFD_MOD_SIZE", "Download Size: ");
-define("_AM_WFD_MOD_PUBLISHER", "Publisher: ");
-define("_AM_WFD_MOD_LICENSE", "Software Licence: ");
-define("_AM_WFD_MOD_FEATURES", "Key Features: ");
-define("_AM_WFD_MOD_FORUMID", "Forum: ");
-define("_AM_WFD_MOD_LIMITATIONS", "Software limitations: ");
-define("_AM_WFD_MOD_VERSIONTYPES", "Release Status: ");
-define("_AM_WFD_MOD_DHISTORY", "Download History: ");
-define("_AM_WFD_MOD_SCREENSHOT", "Screenshot Image: ");
+define("_AM_WFD_MOD_MODTITLE", "Titulo");
+define("_AM_WFD_MOD_MODPOSTER", "Enviado Por: ");
+define("_AM_WFD_MOD_DATE", "Enviado em");
+define("_AM_WFD_MOD_NOMODREQUEST", "Não existem pedidos com estas características");
+define("_AM_WFD_MOD_TITLE", "Titulo de Download: ");
+define("_AM_WFD_MOD_LID", "ID de Download: ");
+define("_AM_WFD_MOD_CID", "Categoria: ");
+define("_AM_WFD_MOD_URL", "Url de Download: ");
+define("_AM_WFD_MOD_MIRROR", "Mirror de Download: ");
+define("_AM_WFD_MOD_SIZE", "Tamanho de Download: ");
+define("_AM_WFD_MOD_PUBLISHER", "Publicado por: ");
+define("_AM_WFD_MOD_LICENSE", "Licença de Software: ");
+define("_AM_WFD_MOD_FEATURES", "Funções Chave: ");
+define("_AM_WFD_MOD_FORUMID", "Fórum: ");
+define("_AM_WFD_MOD_LIMITATIONS", "Limitações de Software: ");
+define("_AM_WFD_MOD_VERSIONTYPES", "Status da Atualização: "); //GibaPhp - incluído em 2008-04-10
+define("_AM_WFD_MOD_DHISTORY", "Histórico de Download: ");
+define("_AM_WFD_MOD_SCREENSHOT", "Imagem de Screenshot: ");
 define("_AM_WFD_MOD_HOMEPAGE", "Home Page: ");
-define("_AM_WFD_MOD_HOMEPAGETITLE", "Home Page Title: ");
-define("_AM_WFD_MOD_VERSION", "Version: ");
-define("_AM_WFD_MOD_SHOTIMAGE", "Screenshot Image: ");
-define("_AM_WFD_MOD_FILESIZE", "File Size: ");
-define("_AM_WFD_MOD_PLATFORM", "Software Platform: ");
-define("_AM_WFD_MOD_PRICE", "Price: ");
-define("_AM_WFD_MOD_LICENCE", "Software Licence: ");
-define("_AM_WFD_MOD_DESCRIPTION", "Description: ");
-define("_AM_WFD_MOD_REQUIREMENTS", "Requirements: ");
-define("_AM_WFD_MOD_MODIFYSUBMITTER", "Submitter: ");
-define("_AM_WFD_MOD_MODIFYSUBMIT", "Submitter");
-define("_AM_WFD_MOD_PROPOSED", "Proposed Download Details");
-define("_AM_WFD_MOD_ORIGINAL", "Orginal Download Details");
-define("_AM_WFD_MOD_REQDELETED", "Modification request removed from the database");
-define("_AM_WFD_MOD_REQUPDATED", "Selected Download Modified and Database Updated Successfully");
-define('_AM_WFD_MOD_VIEW','View');
-define("_AM_WFD_MOD_FILENAME", "Local Filename: ");
-define("_AM_WFD_MOD_FILETYPE", "Local Filetype: ");
+define("_AM_WFD_MOD_HOMEPAGETITLE", "Título da Página Principal: ");
+define("_AM_WFD_MOD_VERSION", "Versão: ");
+define("_AM_WFD_MOD_SHOTIMAGE", "Imagem de Screenshot: ");
+define("_AM_WFD_MOD_FILESIZE", "Tamanho do Arquivo: ");
+define("_AM_WFD_MOD_PLATFORM", "Plataforma do Software: ");
+define("_AM_WFD_MOD_PRICE", "Preço: ");
+define("_AM_WFD_MOD_LICENCE", "Licença de Software: ");
+define("_AM_WFD_MOD_DESCRIPTION", "Limitações de Software: ");
+define("_AM_WFD_MOD_REQUIREMENTS", "Requisitos: ");
+define("_AM_WFD_MOD_MODIFYSUBMITTER", "Enviado por: ");
+define("_AM_WFD_MOD_MODIFYSUBMIT", "Enviar");
+define("_AM_WFD_MOD_PROPOSED", "Detalhes Propostos");
+define("_AM_WFD_MOD_ORIGINAL", "Detalhes Originais do Download");
+define("_AM_WFD_MOD_REQDELETED", "Pedido de modificação removido do Banco de Dados");
+define("_AM_WFD_MOD_REQUPDATED", "Download modificado e Banco de Dados atualizado com sucesso");
+define('_AM_WFD_MOD_VIEW','Visualizar');
+define("_AM_WFD_MOD_FILENAME", "Nome do arquivo local: ");
+define("_AM_WFD_MOD_FILETYPE", "Tipo do arquivo Local: ");
 define("_AM_WFD_MOD_STATUS", "Status: ");
-define("_AM_WFD_MOD_RATING", "Rating: ");
+define("_AM_WFD_MOD_RATING", "Avaliação: ");
 define("_AM_WFD_MOD_HITS", "Hits: ");
-define("_AM_WFD_MOD_VOTES", "Votes: ");
-define("_AM_WFD_MOD_COMMENTS", "Comments: ");
-define("_AM_WFD_MOD_PUBLISHED", "Published: ");
-define("_AM_WFD_MOD_EXPIRED", "Expired: ");
-define("_AM_WFD_MOD_UPDATED", "Updated: ");
+define("_AM_WFD_MOD_VOTES", "Votos: ");
+define("_AM_WFD_MOD_COMMENTS", "Comentários: ");
+define("_AM_WFD_MOD_PUBLISHED", "Publicado: ");
+define("_AM_WFD_MOD_EXPIRED", "Expirado: ");
+define("_AM_WFD_MOD_UPDATED", "Atualizado: ");
 define("_AM_WFD_MOD_OFFLINE", "Offline: ");
-define("_AM_WFD_MOD_REQUESTDATE", "Request Date: ");
-define("_AM_WFD_MOD_IPADDRESS", "IP Address: ");
-define("_AM_WFD_MOD_NOTIFYPUB", "Notify: ");
+define("_AM_WFD_MOD_REQUESTDATE", "Data do pedido: ");
+define("_AM_WFD_MOD_IPADDRESS", "IP: ");
+define("_AM_WFD_MOD_NOTIFYPUB", "Notificação: ");
 define("_AM_WFD_MOD_PAYPALEMAIL", "PayPal Email: ");
-define("_AM_WFD_MOD_SUMMARY", "Summary: ");
+define("_AM_WFD_MOD_SUMMARY", "Sumário: ");
 
 //Reviews defines
-define("_AM_WFD_REV_SNEWMNAMEDESC", "Approve Review: ");
+define("_AM_WFD_REV_SNEWMNAMEDESC", "Aprovar Avaliação: ");
 define("_AM_WFD_REV_ID", "ID");
-define("_AM_WFD_REV_TITLE", "Title");
-define("_AM_WFD_REV_REVIEWTITLE", "Review Title");
-define("_AM_WFD_REV_POSTER", "Submitter");
-define("_AM_WFD_REV_SUBMITDATE", "Submitted");
-define("_AM_WFD_REV_FTITLE", "Review Title: ");
-define("_AM_WFD_REV_FRATING", "Review Rating: ");
-define("_AM_WFD_REV_FDESCRIPTION", "Review Description: ");
-define("_AM_WFD_REV_FAPPROVE", "Review Approve: ");
-define("_AM_WFD_REV_ACTION", "Action");
-define("_AM_WFD_REV_NOWAITINGREVIEWS", "No Waiting Reviews Found");
-define("_AM_WFD_REVIEW_APPROVETHIS", "Approve Review");
-define("_AM_WFD_REV_NOPUBLISHEDREVIEWS", "No Published Reviews Found");
-define("_AM_WFD_REV_REVIEW_UPDATED", "Selected Review Modified and Database Updated Successfully");
-define("_AM_WFD_REV_REVIEW_TOTAL", "Total Reviews:");
-define("_AM_WFD_REV_REVIEW_WAITING", "Waiting Reviews");
-define("_AM_WFD_REV_REVIEW_PUBLISHED", "Published Reviews");
+define("_AM_WFD_REV_TITLE", "Título");
+define("_AM_WFD_REV_REVIEWTITLE", "Revisão do Título");
+define("_AM_WFD_REV_POSTER", "Enviado por");
+define("_AM_WFD_REV_SUBMITDATE", "Enviado a");
+define("_AM_WFD_REV_FTITLE", "Título da Avaliação: ");
+define("_AM_WFD_REV_FRATING", "Ranking da Avaliação: ");
+define("_AM_WFD_REV_FDESCRIPTION", "Descrição da Avaliação: ");
+define("_AM_WFD_REV_FAPPROVE", "Aprovar Avaliação: ");
+define("_AM_WFD_REV_ACTION", "Ação");
+define("_AM_WFD_REV_NOWAITINGREVIEWS", "Nenhuma Avaliação em espera");
+define("_AM_WFD_REVIEW_APPROVETHIS", "Aprovar Avaliação");
+define("_AM_WFD_REV_NOPUBLISHEDREVIEWS", "Não foram encontradas avaliações publicadas");
+define("_AM_WFD_REV_REVIEW_UPDATED", "Avaliação escolhida foi modificada e BD atualizado com sucesso.");
+define("_AM_WFD_REV_REVIEW_TOTAL", "Total de Avaliações:");
+define("_AM_WFD_REV_REVIEW_WAITING", "Avaliações em Espera");
+define("_AM_WFD_REV_REVIEW_PUBLISHED", "Avaliações Publicadas");
 
 //File management
-define("_AM_WFD_FILE_SUBMITTERID", "Submitter User Id: <br /><br />Leave this as it is, Unless you want to change who submitted the download");
-define("_AM_WFD_FILE_ID", "File ID: ");
-define("_AM_WFD_FILE_IP", "Uploaders IP Address: ");
-define("_AM_WFD_FILE_ALLOWEDAMIME", "<div style='padding-top: 4px; padding-bottom: 4px;'><b>Allowed Admin File Extensions</b>:</div>");
-define("_AM_WFD_FILE_MODIFYFILE", "Modify File Information");
-define("_AM_WFD_FILE_CREATENEWFILE", "Create New File");
-define("_AM_WFD_FILE_TITLE", "File Title: ");
-define("_AM_WFD_FILE_DLURL", "Remote URL: ");
-define("_AM_WFD_FILE_FILENAME", "Local Filename:<br /><br /><span style='font-weight: normal;'>Note: If using local file as download, then you must also enter the correct filetype below!</span>");
-define("_AM_WFD_FILE_FILETYPE", "File Type: ");
-define("_AM_WFD_FILE_MIRRORURL", "File Mirror: ");
-define("_AM_WFD_FILE_SUMMARY", "File Summary: ");
-define("_AM_WFD_FILE_DESCRIPTION", "File Description: ");
-define("_MD_WFD_FILE_SUMMARY", "File Summary: ");
-define("_AM_WFD_FILE_DUPLOAD", " Upload File:");
-define("_AM_WFD_FILE_CATEGORY", "Select Category: ");
-define("_AM_WFD_FILE_HOMEPAGETITLE", "Home Page Title: ");
-define("_AM_WFD_FILE_HOMEPAGE", "Home Page: ");
-define("_AM_WFD_FILE_SIZE", "File Size: ");
-define("_AM_WFD_FILE_VERSION", "File Version: ");
-define("_AM_WFD_FILE_VERSIONTYPES", "Release Status: ");
-define("_AM_WFD_FILE_PUBLISHER", "File Publisher: ");
-define("_AM_WFD_FILE_PLATFORM", "Software Platform: ");
-define("_AM_WFD_FILE_LICENCE", "Software Licence: ");
-define("_AM_WFD_FILE_LIMITATIONS", "Software limitations: ");
-define("_AM_WFD_FILE_PRICE", "Price: ");
-define("_AM_WFD_FILE_KEYFEATURES", "Key Features:<br /><br /><span style='font-weight: normal;'>Seperate each Key Feature with a |</span>");
-define("_AM_WFD_FILE_REQUIREMENTS", "System Requirements:<br /><br /><span style='font-weight: normal;'>Seperate each Requirement with |</span>");
-define("_AM_WFD_FILE_HISTORY", "Download History Edit:<br /><br /><span style='font-weight: normal;'>Add New Download History and only use this field to if you need to edit the previous history.</span>");
-define("_AM_WFD_FILE_HISTORYD", "Add New Download History:<br /><br /><span style='font-weight: normal;'>The version Number and date will be added automatically</span>");
-define("_AM_WFD_FILE_HISTORYVERS", "<b>Version: </b>");
-define("_AM_WFD_FILE_HISTORDATE", " <b>Updated:</b> ");
-define("_AM_WFD_FILE_FILESSTATUS", " Set Download offline?<br /><br /><span style='font-weight: normal;'>Download will not be viewable to all users.</span>");
-define("_AM_WFD_FILE_SETASUPDATED", " Set Download Status as Updated?<br /><br /><span style='font-weight: normal;'>Download will Display updated icon.</span>");
-define("_AM_WFD_FILE_SHOTIMAGE", "Select Screenshot Image: <br /><br /><span style='font-weight: normal;'>Note that screenshots will only be displayed if activated in module preferences.</span>");
-define("_AM_WFD_FILE_DISCUSSINFORUM", "Add Discuss in this Forum?");
-define("_AM_WFD_FILE_PUBLISHDATE", "File Publish Date:");
-define("_AM_WFD_FILE_EXPIREDATE", "File Expire Date:");
-define("_AM_WFD_FILE_CLEARPUBLISHDATE", "<br /><br />Remove Publish date:");
-define("_AM_WFD_FILE_CLEAREXPIREDATE", "<br /><br />Remove Expire date:");
-define("_AM_WFD_FILE_PUBLISHDATESET", " Publish date set: ");
-define("_AM_WFD_FILE_SETDATETIMEPUBLISH", " Set the date/time of publish");
-define("_AM_WFD_FILE_SETDATETIMEEXPIRE", " Set the date/time of expire");
-define("_AM_WFD_FILE_SETPUBLISHDATE", "<b>Set Publish Date: </b>");
-define("_AM_WFD_FILE_SETNEWPUBLISHDATE", "<b>Set New Publish Date: </b><br />Published:");
-define("_AM_WFD_FILE_SETPUBDATESETS", "<b>Publish Date Set: </b><br />Publishes On Date:");
-define("_AM_WFD_FILE_EXPIREDATESET", " Expire date set: ");
-define("_AM_WFD_FILE_SETEXPIREDATE", "<b>Set Expire Date: </b>");
-define("_AM_WFD_FILE_MUSTBEVALID", "Screenshot image must be a valid image file under %s directory (ex. shot.gif). Leave it blank if there is no image file.");
-define("_AM_WFD_FILE_EDITAPPROVE", "Approve download:");
-define("_AM_WFD_FILE_NEWFILEUPLOAD", "New File Created and Database Updated Successfully");
-define("_AM_WFD_FILE_FILEMODIFIEDUPDATE", "Selected File Modified and Database Updated Successfully");
-define("_AM_WFD_FILE_REALLYDELETEDTHIS", "Really delete the selected file?");
-define("_AM_WFD_FILE_FILEWASDELETED", "File %s successfully removed from the database!");
-define("_AM_WFD_FILE_USE_UPLOAD_TITLE", " Use upload filename for file title.");
-define("_AM_WFD_FILE_FILEAPPROVED", "File Approved and Database Updated Successfully");
-define("_AM_WFD_FILE_CREATENEWSSTORY", "<b>Create News Story From Download</b>");
-define("_AM_WFD_FILE_SUBMITNEWS", "Submit New file as News item?");
-define("_AM_WFD_FILE_NEWSCATEGORY", "Select News Category to submit News:");
-define("_AM_WFD_FILE_NEWSTITLE", "News Title:<div style='padding-top: 4px; padding-bottom: 4px;'><span style='font-weight: normal;'>Leave Blank to use File Title</span></div>");
+define("_AM_WFD_FILE_SUBMITTERID", "Enviado pelo Usuário: <br /><br />Deixe isto como está, a menos que você queira alterar quem submeteu o download"); //GibaPhp
+define("_AM_WFD_FILE_ID", "ID de Arquivo: ");
+define("_AM_WFD_FILE_IP", "Endereço IP : ");
+define("_AM_WFD_FILE_ALLOWEDAMIME", "<div style='padding-top: 4px; padding-bottom: 4px;'><b>Extensões Permitidas</b>:</div>");
+define("_AM_WFD_FILE_MODIFYFILE", "Modificar Informações de Arquivo");
+define("_AM_WFD_FILE_CREATENEWFILE", "Criar novo Arquivo");
+define("_AM_WFD_FILE_TITLE", "Título do Arquivo: ");
+define("_AM_WFD_FILE_DLURL", "URL do Arquivo: ");
+define("_AM_WFD_FILE_FILENAME", "Nome do arquivo: ");
+define("_AM_WFD_FILE_FILETYPE", "Tipo do Arquivo: ");
+define("_AM_WFD_FILE_MIRRORURL", "Mirror do Arquivo: ");
+define("_AM_WFD_FILE_SUMMARY", "Descrição: ");
+define("_AM_WFD_FILE_DESCRIPTION", "Descrição do Arquivo: ");
+define("_MD_WFD_FILE_SUMMARY", "Sumário do Arquivo: ");
+define("_AM_WFD_FILE_DUPLOAD", " Enviar Arquivo:");
+define("_AM_WFD_FILE_CATEGORY", "Selecionar Categoria: ");
+define("_AM_WFD_FILE_HOMEPAGETITLE", "Título Home Page: ");
+define("_AM_WFD_FILE_HOMEPAGE", "Home Page: "); //GibaPhp
+define("_AM_WFD_FILE_SIZE", "Tamanho do Arquivo: ");
+define("_AM_WFD_FILE_VERSION", "Versão do Arquivo: "); //GibaPhp
+define("_AM_WFD_FILE_VERSIONTYPES", "Status de Atualização: "); //GibaPhp
+define("_AM_WFD_FILE_PUBLISHER", "Publicado por: ");
+define("_AM_WFD_FILE_PLATFORM", "Plataformas Suportadas: ");
+define("_AM_WFD_FILE_LICENCE", "Licença do Software: ");
+define("_AM_WFD_FILE_LIMITATIONS", "Limitação do Software: ");
+define("_AM_WFD_FILE_PRICE", "Preço: ");
+define("_AM_WFD_FILE_KEYFEATURES", "Funções Chave:<br /><br /><span style='font-weight: normal;'>Separar cada função com uma |</span>");
+define("_AM_WFD_FILE_REQUIREMENTS", "Requisitos de Sistema:<br /><br /><span style='font-weight: normal;'>Separar cada requisito com uma |</span>");
+define("_AM_WFD_FILE_HISTORY", "Editar Histórico de Download:<br /><br /><span style='font-weight: normal;'>Adicionar novo Histórico de download. Só usar se precisar de alterar Histórico antigo</span>");
+define("_AM_WFD_FILE_HISTORYD", "Adicionar Novo Histórico:<br /><br /><span style='font-weight: normal;'>A versão e a data serão automaticamente adicionadas</span>");
+define("_AM_WFD_FILE_HISTORYVERS", "<b>Versão: </b>");
+define("_AM_WFD_FILE_HISTORDATE", " <b>Atualizado:</b> ");
+define("_AM_WFD_FILE_FILESSTATUS", " Colocar como Offline?<br /><br /><span style='font-weight: normal;'>Download não vai estar visível.</span>");
+define("_AM_WFD_FILE_SETASUPDATED", " Definir Status como Atualizado?<br /><br /><span style='font-weight: normal;'>Download vai mostrar ícone de Atualizado.</span>");
+define("_AM_WFD_FILE_SHOTIMAGE", "Selecionar Imagem de Screenshot: ");
+define("_AM_WFD_FILE_DISCUSSINFORUM", "Discutir download no fórum?");
+define("_AM_WFD_FILE_PUBLISHDATE", "Data de Publicação:");
+define("_AM_WFD_FILE_EXPIREDATE", "Data de Expiração:");
+define("_AM_WFD_FILE_CLEARPUBLISHDATE", "<br /><br />Remover Data de Publicação:");
+define("_AM_WFD_FILE_CLEAREXPIREDATE", "<br /><br />Remover Data de Expiração:");
+define("_AM_WFD_FILE_PUBLISHDATESET", " Data de Publicação Atual: ");
+define("_AM_WFD_FILE_SETDATETIMEPUBLISH", " Inserir data/hora de Publicação");
+define("_AM_WFD_FILE_SETDATETIMEEXPIRE", " Inserir data/hora de Expiração");
+define("_AM_WFD_FILE_SETPUBLISHDATE", "<b>Inserir data em que deverá ser Publicado: </b>");
+define("_AM_WFD_FILE_SETNEWPUBLISHDATE", "<b>Nova data em que deverá ser Publicado: </b><br />Publicado a:");
+define("_AM_WFD_FILE_SETPUBDATESETS", "<b>Data de Futura Publicação: </b><br />Publicar-se-á a:");
+define("_AM_WFD_FILE_EXPIREDATESET", " Data de Expiração Atual: ");
+define("_AM_WFD_FILE_SETEXPIREDATE", "<b>Inserir data a que deverá Expirar: </b>");
+define("_AM_WFD_FILE_MUSTBEVALID", "Imagem de Screenshot tem que ter formato válido e estar na pasta %s (ex. shot.gif). Deixe em branco se não houver screenshot.");
+define("_AM_WFD_FILE_EDITAPPROVE", "Aprovar Download:");
+define("_AM_WFD_FILE_NEWFILEUPLOAD", "Novo arquivo criado e BD atualizado com sucesso");
+define("_AM_WFD_FILE_FILEMODIFIEDUPDATE", "Arquivo selecionado foi modificado e BD atualizado com sucesso");
+define("_AM_WFD_FILE_REALLYDELETEDTHIS", "REMOVER o arquivo selecionado?");
+define("_AM_WFD_FILE_FILEWASDELETED", "Arquivo %s removido do BD!");
+define("_AM_WFD_FILE_USE_UPLOAD_TITLE", " Usar nome do arquivo para Título.");
+define("_AM_WFD_FILE_FILEAPPROVED", "Arquivo aprovado e BD atualizado com sucesso");
+define("_AM_WFD_FILE_CREATENEWSSTORY", "<b>Criar Notícia a partir do download</b>");
+define("_AM_WFD_FILE_SUBMITNEWS", "Enviar novo arquivo como Notícia?");
+define("_AM_WFD_FILE_NEWSCATEGORY", "Selecione a categoria de Notícias para a qual deve ser enviada:");
+define("_AM_WFD_FILE_NEWSTITLE", "Título de Notícia:<div style='padding-top: 4px; padding-bottom: 4px;'><span style='font-weight: normal;'>Deixe em branco ou use Título do Arquivo</span></div>");
 
 /*
 * Broken downloads defines
 */
-define("_AM_WFD_SBROKENSUBMIT", "Broken: ");
-define("_AM_WFD_BROKEN_FILE", "Broken Reports");
-define("_AM_WFD_BROKEN_FILEIGNORED", "Broken report ignored and successfully removed from the database!");
-define("_AM_WFD_BROKEN_NOWACK", "Acknowledged status changed and database updated!");
-define("_AM_WFD_BROKEN_NOWCON", "Confirmed status changed and database updated!");
-define("_AM_WFD_BROKEN_REPORTINFO", "Broken Report Information");
-define("_AM_WFD_BROKEN_REPORTSNO", "Broken Reports Waiting:");
-define("_AM_WFD_BROKEN_IGNOREDESC", "<b>Ignores</b> the report and only deletes the broken file report.");
-define("_AM_WFD_BROKEN_IGNORE_ALT", "Ignore and delete the broken file report");
-define("_AM_WFD_BROKEN_DELETEDESC", "<b>Deletes</b> the reported download data and broken file reports for the file.");
-define("_AM_WFD_BROKEN_DELETE_ALT", "Delete the reported download data and broken file report");
-define("_AM_WFD_BROKEN_EDITDESC", "<b>Edit</b> download to correct the problem.");
-define("_AM_WFD_BROKEN_EDIT_ALT", "Edit download to correct the problem");
-define("_AM_WFD_BROKEN_ACKDESC", "<b>Acknowledged</b> Set Acknowledged state of broken file report.");
-define("_AM_WFD_BROKEN_ACK_ALT", "Acknowledge state of broken file report");
-define("_AM_WFD_BROKEN_CONFIRMDESC", "<b>Confirmed</b> Set confirmed state of broken file report.");
-define("_AM_WFD_BROKEN_CONFIRM_ALT", "Confirme state of broken file report");
+define("_AM_WFD_SBROKENSUBMIT", "Corrompido: ");
+define("_AM_WFD_BROKEN_FILE", "Relatório de Corrompidos");
+define("_AM_WFD_BROKEN_FILEIGNORED", "Relatório ignorado e removido do BD!");
+define("_AM_WFD_BROKEN_NOWACK", "Status Recebido modificado e BD atualizado!");
+define("_AM_WFD_BROKEN_NOWCON", "Status Atual modificado e BD atualizado!");
+define("_AM_WFD_BROKEN_REPORTINFO", "Informação de Relatório Corrompido");
+define("_AM_WFD_BROKEN_REPORTSNO", "Relatórios em Espera:");
+define("_AM_WFD_BROKEN_IGNOREDESC", "<b>Ignora</b> o relatório e remove.");
+define("_AM_WFD_BROKEN_IGNORE_ALT", "<b>Ignorar</b> e apagar o arquivo quebrado do relatório"); //GibaPhp
+define("_AM_WFD_BROKEN_DELETEDESC", "<b>Apaga</b> o download e o relatório.");
+define("_AM_WFD_BROKEN_DELETE_ALT", "<b>Apagar</b> os dados reportados neste download quebrado e também no arquivo deste relatório"); //GibaPhp
+define("_AM_WFD_BROKEN_EDITDESC", "<b>Edita</b> o download para corrigir o problema.");
+define("_AM_WFD_BROKEN_EDIT_ALT", "Editar o download para corrigir o problema");
+define("_AM_WFD_BROKEN_ACKDESC", "<b>Recebido</b> - declara que o relatório foi recebido."); //GibaPhp
+define("_AM_WFD_BROKEN_ACK_ALT", "Reconheço o estado deste arquivo neste relatório"); //GibaPhp
+define("_AM_WFD_BROKEN_CONFIRMDESC", "<b>Confirmado</b> - confirma o recebimento do relatório."); //GibaPhp
+define("_AM_WFD_BROKEN_CONFIRM_ALT", "Confirme o estado do arquivo no relatório"); //GibaPhp
 
 define("_AM_WFD_BROKEN_ID", "ID");
-define("_AM_WFD_BROKEN_TITLE", "Title");
-define("_AM_WFD_BROKEN_REPORTER", "Reporter");
-define("_AM_WFD_BROKEN_FILESUBMITTER", "Submitter");
-define("_AM_WFD_BROKEN_DATESUBMITTED", "Submit Date");
-define("_AM_WFD_BROKEN_ACTION", "Action");
-define("_AM_WFD_BROKEN_NOFILEMATCH", "There are no Broken reports that match this critera");
-define("_AM_WFD_BROKENFILEDELETED", "Download description removed from database and broken report removed");
-define("_AM_WFD_BROKEN_DOWNLOAD_DONT_EXISTS", "The file does not exists anymore");
+define("_AM_WFD_BROKEN_TITLE", "Título");
+define("_AM_WFD_BROKEN_REPORTER", "Informado por");
+define("_AM_WFD_BROKEN_FILESUBMITTER", "Enviado por");
+define("_AM_WFD_BROKEN_DATESUBMITTED", "Data de Envio");
+define("_AM_WFD_BROKEN_ACTION", "Ação");
+define("_AM_WFD_BROKEN_NOFILEMATCH", "Não existem Relatórios com estas características");
+define("_AM_WFD_BROKENFILEDELETED", "Descrição de Download removida e Relatório apagado do BD");
+define("_AM_WFD_BROKEN_DOWNLOAD_DONT_EXISTS", "O arquivo não existe mais.");
 
 
 /*
 * About defines
 */
-define("_AM_WFD_BY", "by");
+define("_AM_WFD_BY", "De");
 
 //block defines
-define("_AM_WFD_BADMIN","Block Administration");
-define("_AM_WFD_BLKDESC","Description");
-define("_AM_WFD_TITLE","Title");
-define("_AM_WFD_SIDE","Alignment");
-define("_AM_WFD_WEIGHT","Weight");
-define("_AM_WFD_VISIBLE","Visible");
-define("_AM_WFD_ACTION","Action");
-define("_AM_WFD_SBLEFT","Left");
-define("_AM_WFD_SBRIGHT","Right");
-define("_AM_WFD_CBLEFT","Center Left");
-define("_AM_WFD_CBRIGHT","Center Right");
-define("_AM_WFD_CBCENTER","Center Middle");
-define("_AM_WFD_ACTIVERIGHTS","Active Rights");
-define("_AM_WFD_ACCESSRIGHTS","Access Rights");
+define("_AM_WFD_BADMIN","Administração de Blocos");
+define("_AM_WFD_BLKDESC","Descrição");
+define("_AM_WFD_TITLE","Título");
+define("_AM_WFD_SIDE","Alinhamento");
+define("_AM_WFD_WEIGHT","Importância");
+define("_AM_WFD_VISIBLE","Visível");
+define("_AM_WFD_ACTION","Ação");
+define("_AM_WFD_SBLEFT","Esquerda");
+define("_AM_WFD_SBRIGHT","Direita");
+define("_AM_WFD_CBLEFT","Centro-Esq");
+define("_AM_WFD_CBRIGHT","Centro-Dir");
+define("_AM_WFD_CBCENTER","Centro-Centro");
+define("_AM_WFD_ACTIVERIGHTS","Direito de Ativar");
+define("_AM_WFD_ACCESSRIGHTS","Direito de Acessar");
 
 //image admin icon
-define("_AM_WFD_ICO_EDIT","Edit This Item");
-define("_AM_WFD_ICO_DELETE","Delete This Item");
+define("_AM_WFD_ICO_EDIT","Editar este Item");
+define("_AM_WFD_ICO_DELETE","Apagar este Item");
 define("_AM_WFD_ICO_ONLINE","Online");
 define("_AM_WFD_ICO_OFFLINE","Offline");
-define("_AM_WFD_ICO_APPROVED","Approved");
-define("_AM_WFD_ICO_NOTAPPROVED","Not Approved");
+define("_AM_WFD_ICO_APPROVED","Aprovado");
+define("_AM_WFD_ICO_NOTAPPROVED","Não Aprovado");
 
-define("_AM_WFD_ICO_LINK","Related Link");
-define("_AM_WFD_ICO_URL","Add Related URL");
-define("_AM_WFD_ICO_ADD","Add");
-define("_AM_WFD_ICO_APPROVE","Approve");
-define("_AM_WFD_ICO_STATS","Stats");
+define("_AM_WFD_ICO_LINK","Link Correspondente");
+define("_AM_WFD_ICO_URL","Adicionar URL Correspondente");
+define("_AM_WFD_ICO_ADD","Adicionar");
+define("_AM_WFD_ICO_APPROVE","Aprovar");
+define("_AM_WFD_ICO_STATS","Estatísticas");
 
-define("_AM_WFD_ICO_IGNORE","Ignore");
-define("_AM_WFD_ICO_ACK","Broken Report Acknowledged");
-define("_AM_WFD_ICO_REPORT","Acknowledge Broken Report?");
-define("_AM_WFD_ICO_CONFIRM","Broken Report Confirmed");
-define("_AM_WFD_ICO_CONBROKEN","Confirm Broken Report?");
-
-
+define("_AM_WFD_ICO_IGNORE","Ignorar");
+define("_AM_WFD_ICO_ACK","Relatório de Corrompido Recebido");
+define("_AM_WFD_ICO_REPORT","Receber Relatório de Corrompido?");
+define("_AM_WFD_ICO_CONFIRM","Relatório de Corrompido Confirmado");
+define("_AM_WFD_ICO_CONBROKEN","Confirmar Relatório de Corrompido?");
 
 
 
-define("_AM_WFD_DB_IMPORT", "Import");
-define("_AM_WFD_DB_CURRENTVER", "Current version: <span class='currentVer'>%s</span>");
-define("_AM_WFD_DB_DBVER", "Database Version %s");
-define("_AM_WFD_DB_MSG_ADD_DATA", "Data added in table %s");
-define("_AM_WFD_DB_MSG_ADD_DATA_ERR", "Error adding data in table %s");
-define("_AM_WFD_DB_MSG_CHGFIELD", "Changing field %s in table %s");
-define("_AM_WFD_DB_MSG_CHGFIELD_ERR", "Error changing field %s in table %s");
-define("_AM_WFD_DB_MSG_CREATE_TABLE", "Table %s created");
-define("_AM_WFD_DB_MSG_CREATE_TABLE_ERR", "Error creating table %s");
-define("_AM_WFD_DB_MSG_NEWFIELD", "Successfully added field %s");
-define("_AM_WFD_DB_MSG_NEWFIELD_ERR", "Error adding field %s");
-define("_AM_WFD_DB_NEEDUPDATE", "Your database is out-of-date. Please upgrade your database tables!<br><b>Note : The SmartFactory strongly recommends you to backup all WF-Downloads tables before running this upgrade script.</b><br>");
-define("_AM_WFD_DB_NOUPDATE", "Your database is up-to-date. No updates are necessary.");
-define("_AM_WFD_DB_UPDATE_DB", "Updating Database");
-define("_AM_WFD_DB_UPDATE_ERR", "Errors updating to version %s");
-define("_AM_WFD_DB_UPDATE_NOW", "Update Now!");
-define("_AM_WFD_DB_UPDATE_OK", "Successfully updated to version %s");
-define("_AM_WFD_DB_UPDATE_TO", "Updating to version %s");
 
-define("_AM_WFD_GOMOD", "Go to module");
-define("_AM_WFD_UPDATE_MODULE", "Update module");
-define("_AM_WFD_MDOWNLOADS","File Management");
-define("_AM_WFD_DB_MSG_UPDATE_TABLE", "Updating field values in %s");
-define("_AM_WFD_DB_MSG_UPDATE_TABLE_ERR", "Errors updating field values in %s");
+
+define("_AM_WFD_DB_IMPORT", "Importar");
+define("_AM_WFD_DB_CURRENTVER", "Versão Atual: <span class='currentVer'>%s</span>");
+define("_AM_WFD_DB_DBVER", "Versão Banco de Dados %s");
+define("_AM_WFD_DB_MSG_ADD_DATA", "Dados foram adicionados a tabela %s");
+define("_AM_WFD_DB_MSG_ADD_DATA_ERR", "Erro! Os dados não foram adicionados a tabela %s");
+define("_AM_WFD_DB_MSG_CHGFIELD", "Alterando campo %s na tabela %s");
+define("_AM_WFD_DB_MSG_CHGFIELD_ERR", "Erro na alteração de campo %s na tabela %s");
+define("_AM_WFD_DB_MSG_CREATE_TABLE", "Tabela %s criada");
+define("_AM_WFD_DB_MSG_CREATE_TABLE_ERR", "Erro na criação da tabela %s");
+define("_AM_WFD_DB_MSG_NEWFIELD", "Campo %s adicionado(s) com sucesso");
+define("_AM_WFD_DB_MSG_NEWFIELD_ERR", "Erro ao adicionar campo %s");
+define("_AM_WFD_DB_NEEDUPDATE", "Seu BD está desatualizado. Por favor atualize as tabelas de seu banco de dados!<br><b>ATENÇAO : SmartFactory recomenda enfaticamente que você faça um backup de todas as tabelas ANTES de aplicar o script de atualização.</b><br>");
+define("_AM_WFD_DB_NOUPDATE", "Sua Base de dados é a mas recente. Não é necessário atualizar .");
+define("_AM_WFD_DB_UPDATE_DB", "Atualizar Banco de Dados");
+define("_AM_WFD_DB_UPDATE_ERR", "Erro ao atualizar versão %s");
+define("_AM_WFD_DB_UPDATE_NOW", "Atualizar Agora!");
+define("_AM_WFD_DB_UPDATE_OK", "Versão Atualizada com Sucesso %s");
+define("_AM_WFD_DB_UPDATE_TO", "Atualizar à versão %s");
+
+define("_AM_WFD_GOMOD", "Ir para Módulo");
+define("_AM_WFD_UPDATE_MODULE", "Atualizar Modulo");
+define("_AM_WFD_MDOWNLOADS","Administração de Arquivos");
+define("_AM_WFD_DB_MSG_UPDATE_TABLE", "Atualizar valores dos campos em %s");
+define("_AM_WFD_DB_MSG_UPDATE_TABLE_ERR", "Erro ao atualizar valores dos campos em %s");
 
 // Mirrors
 // waiting mirrors
-define("_AM_WFD_AMIRRORS", "Mirrors Management");
-define("_AM_WFD_AMIRRORS_WAITING", "Mirrors Waiting Validation:");
-define("_AM_WFD_AMIRRORS_INFO", "Mirrors Management Information");
-define("_AM_WFD_AMIRRORS_APPROVE", "<b>Approve</b> new mirror without validation.");
-define("_AM_WFD_AMIRRORS_EDIT", "<b>Edit</b> new mirror and then approve.");
-define("_AM_WFD_AMIRRORS_DELETE", "<b>Delete</b> the new mirror information.");
+define("_AM_WFD_AMIRRORS", "Gerenciamento de Mirrors");
+define("_AM_WFD_AMIRRORS_WAITING", "Mirrors aguardando validação:");
+define("_AM_WFD_AMIRRORS_INFO", "Informações de Gerenciamento de Mirrors");
+define("_AM_WFD_AMIRRORS_APPROVE", "<b>Aprovar</b> novo mirror sem validação.");
+define("_AM_WFD_AMIRRORS_EDIT", "<b>Editar</b> novo mirror e então aprovar.");
+define("_AM_WFD_AMIRRORS_DELETE", "<b>Apagar</b> a nova informação do mirror.");
 
 //mirrors defines
-define("_AM_WFD_MIRROR_MIRRORTITLE", "Mirror Host");
-define("_AM_WFD_MIRROR_NOPUBLISHEDMIRRORS", "No Published Mirrors Found");
-define("_AM_WFD_MIRROR_MIRROR_TOTAL", "Total Mirrors:");
-define("_AM_WFD_MIRROR_MIRROR_WAITING", "Waiting Mirrors");
-define("_AM_WFD_MIRROR_MIRROR_PUBLISHED", "Published Mirrors");
-define("_AM_WFD_MIRROR_SNEWMNAMEDESC", "Approve Mirror: ");
+define("_AM_WFD_MIRROR_MIRRORTITLE", "Url do Mirror");
+define("_AM_WFD_MIRROR_NOPUBLISHEDMIRRORS", "Não foram encontrados Mirrors publicados");
+define("_AM_WFD_MIRROR_MIRROR_TOTAL", "Total de Mirrors:");
+define("_AM_WFD_MIRROR_MIRROR_WAITING", "Mirrors Aguardando");
+define("_AM_WFD_MIRROR_MIRROR_PUBLISHED", "Mirrors publicados");
+define("_AM_WFD_MIRROR_SNEWMNAMEDESC", "Aprovar Mirror: ");
 define("_AM_WFD_MIRROR_ID", "ID");
-define("_AM_WFD_MIRROR_TITLE", "Title");
-define("_AM_WFD_MIRROR_MUSTBEVALID", "Home page logo  must be a valid image file under %s directory (ex. shot.gif). Leave it blank if there is no image file.");
-define("_AM_WFD_MIRROR_POSTER", "Submitter");
-define("_AM_WFD_MIRROR_SUBMITDATE", "Submitted");
-define("_AM_WFD_MIRROR_FHOMEURLTITLE", "Home Page Title: ");
-define("_AM_WFD_MIRROR_FHOMEURL", "Home Page URL: ");
-define("_AM_WFD_MIRROR_UPLOADIMAGE", "Upload Site Logo:<br /><br />A small logo representing your website.");
-define("_AM_WFD_MIRROR_MIRRORIMAGE", "Site Logo:");
-define("_AM_WFD_MIRROR_CONTINENT", "Continent:");
-define("_AM_WFD_MIRROR_LOCATION", "Location:<br /><br />Example: London, UK");
-define("_AM_WFD_MIRROR_DOWNURL", "Download URL:<br /><br />Enter the url to the file.");
-define("_AM_WFD_MIRROR_FAPPROVE", "Mirror Approve: ");
-define("_AM_WFD_MIRROR_ACTION", "Action");
-define("_AM_WFD_MIRROR_NOWAITINGMIRRORS", "No Waiting Mirrors Found");
-define("_AM_WFD_MIRROR_MIRROR_UPDATED", "Selected Mirror Modified and Database Updated Successfully");
-define("_AM_WFD_MIRROR_APPROVETHIS", "Approve Mirror");
+define("_AM_WFD_MIRROR_TITLE", "Título");
+define("_AM_WFD_MIRROR_MUSTBEVALID", "O logo da home page deve ser um arquivo de imagem válido no %s diretório (ex. shot.gif). Deixe em branco se não houver arquivo de imagem.");
+define("_AM_WFD_MIRROR_POSTER", "Enviado por");
+define("_AM_WFD_MIRROR_SUBMITDATE", "Submetido");
+define("_AM_WFD_MIRROR_FHOMEURLTITLE", "Título da Home Page: ");
+define("_AM_WFD_MIRROR_FHOMEURL", "URL da Home Page: ");
+define("_AM_WFD_MIRROR_UPLOADIMAGE", "Fazer upload do logo do site:<br /><br />Pequeno logo representativo do seu site.");
+define("_AM_WFD_MIRROR_MIRRORIMAGE", "Logo do Site:");
+define("_AM_WFD_MIRROR_CONTINENT", "Continente:");
+define("_AM_WFD_MIRROR_LOCATION", "Localidade:<br /><br />Exemplo: Rio de Janeiro, BR");
+define("_AM_WFD_MIRROR_DOWNURL", "URL do Download:<br /><br />Digite a URL do arquivo.");
+define("_AM_WFD_MIRROR_FAPPROVE", "Aprovar Mirror: ");
+define("_AM_WFD_MIRROR_ACTION", "Ação");
+define("_AM_WFD_MIRROR_NOWAITINGMIRRORS", "Não há mirrors em espera");
+define("_AM_WFD_MIRROR_MIRROR_UPDATED", "Mirror selecionado modificado e BD atualizado com sucesso");
+define("_AM_WFD_MIRROR_APPROVETHIS", "Aprovar Mirror");
 
 //continents (used in mirrors page)
 define("_AM_WFD_CONT1","Africa");
 define("_AM_WFD_CONT2","Antarctica");
 define("_AM_WFD_CONT3","Asia");
-define("_AM_WFD_CONT4","Europe");
-define("_AM_WFD_CONT5","North America");
-define("_AM_WFD_CONT6","South America");
+define("_AM_WFD_CONT4","Europa");
+define("_AM_WFD_CONT5","América do Norte");
+define("_AM_WFD_CONT6","América do Sul");
 define("_AM_WFD_CONT7","Oceania");
 
-define("_AM_WFD_HELP","Help");
+define("_AM_WFD_HELP","Ajuda");
 
 
 // added - start - March 4 2006 - jpc
-define("_AM_WFD_FFS_SUBMITBROKEN", "Submit");
-define("_AM_WFD_FFS_STANDARD_FORM", "No, use the standard form");
-define("_AM_WFD_FFS_CUSTOM_FORM", "Use a custom form for this category?");
-define("_AM_WFD_FFS_DOWNLOADTITLE", "Submitting a '{category}' file.");
-define("_AM_WFD_FFS_EDITDOWNLOADTITLE", "Editing a '{category}' file.");
-define("_AM_WFD_FFS_BACK", "Back");
-define("_AM_WFD_FFS_RELOAD", "Reload");
+define("_AM_WFD_FFS_SUBMITBROKEN", "Enviar");
+define("_AM_WFD_FFS_STANDARD_FORM", "Não, usa o formulário padrão");
+define("_AM_WFD_FFS_CUSTOM_FORM", "Usar um formulário feito sob encomenda para esta categoria?");
+define("_AM_WFD_FFS_DOWNLOADTITLE", "Adicionar uma arquivo.");
+define("_AM_WFD_FFS_EDITDOWNLOADTITLE", "Editando uma arquivo.");
+define("_AM_WFD_FFS_BACK", "Voltar"); //GibaPhp
+define("_AM_WFD_FFS_RELOAD", "Atualizar");
 
 
-define("_MD_WFD_CATEGORYC", "Category: ");  // _MD to reuse the category form
-define("_MD_WFD_FFS_SUBMITCATEGORYHEAD", "Which Category of file do you want to submit?");
-define("_MD_WFD_FFS_DOWNLOADDETAILS", "Download details:");
-define("_MD_WFD_FFS_DOWNLOADCUSTOMDETAILS", "Custom details:");
-define("_MD_WFD_FILETITLE", "Download Title: ");
-define("_MD_WFD_DLURL", "Download URL: ");
-define("_MD_WFD_UPLOAD_FILEC", "Upload File: ");
-define("_MD_WFD_DESCRIPTION", "Description");
+define("_MD_WFD_CATEGORYC", "Categoria: ");  // _MD to reuse the category form
+define("_MD_WFD_FFS_SUBMITCATEGORYHEAD", "Em qual categoria, você quer enviar o arquivo?");
+define("_MD_WFD_FFS_DOWNLOADDETAILS", "Detalhes do Download:");
+define("_MD_WFD_FFS_DOWNLOADCUSTOMDETAILS", "Detalhes Customizados:");
+define("_MD_WFD_FILETITLE", "Titulo do Download: ");
+define("_MD_WFD_DLURL", "URL Download: ");
+define("_MD_WFD_UPLOAD_FILEC", "Enviar Arquivo: ");
+define("_MD_WFD_DESCRIPTION", "Descrição");
 // added - end - March 4 2006 - jpc
 
 define("_AM_WFD_MINDEX_LOG", "Logs");
-define("_MD_WFD_IP_LOGS", "View logs");
-define("_MD_WFD_EMPTY_LOG", "No logs recorded.");
-define("_MD_WFD_LOG_FOR_LID", "Here is the list of the downloaders IP address for %s");
-define("_MD_WFD_IP_ADDRESS", "IP Address");
-define("_MD_WFD_DATE", "Download date");
-define("_MD_WFD_BACK", "<< Back");
-define("_MD_WFD_USER", "User");
-define("_MD_WFD_ANONYMOUS", "Anonymous User");
+define("_MD_WFD_IP_LOGS", "Ver logs");
+define("_MD_WFD_EMPTY_LOG", "Não existem Logs.");
+define("_MD_WFD_LOG_FOR_LID", "Aqui está uma lista dos downloaders e endereço IP para %s");
+define("_MD_WFD_IP_ADDRESS", "IP");
+define("_MD_WFD_DATE", "Data do Download");
+define("_MD_WFD_BACK", "<< Voltar");
+define("_MD_WFD_USER", "Usuário");
+define("_MD_WFD_ANONYMOUS", "Usuário Anônimo");
 ?>
