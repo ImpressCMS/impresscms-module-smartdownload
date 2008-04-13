@@ -20,7 +20,7 @@ $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
 $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
-$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 $module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = &xoops_gethandler('groupperm');
 

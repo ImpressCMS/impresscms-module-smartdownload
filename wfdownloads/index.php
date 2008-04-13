@@ -56,7 +56,7 @@ $xoopsTpl->assign('catarray', $catarray);
 $chcount = 0;
 $countin = 0;
 
-$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 $module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = &xoops_gethandler('groupperm');
 

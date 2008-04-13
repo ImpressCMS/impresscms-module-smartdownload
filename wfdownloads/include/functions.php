@@ -856,7 +856,7 @@ function wfd_totalcategory()
 {
     global $xoopsModule, $xoopsUser;
 
-    $groups = (is_object($xoopsUser)) ? $xoopsUser -> getGroups() : XOOPS_GROUP_ANONYMOUS;
+    $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
     $gperm_handler = & xoops_gethandler('groupperm');
 
     $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $xoopsModule->getVar('mid'));

@@ -791,7 +791,7 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
         global $xoopsUser;
         $wfModule = wfdownloads_getModuleInfo();
         $gperm_handler = xoops_gethandler('groupperm');
-        $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+        $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
         $mid = intval($wfModule->getVar('mid'));
         $categoryids = $gperm_handler->getItemIds('WFDownCatPerm', $groups, $mid);
         $criteria->add(new Criteria('cid', "(".implode(',', $categoryids).")", "IN"));

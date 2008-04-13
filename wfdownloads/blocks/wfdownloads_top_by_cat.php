@@ -30,7 +30,7 @@ function b_wfdownloads_top_by_cat_show($options)
     $wf_mid = intval($wfModule->getVar('mid'));
     $wfModuleConfig = $config_handler->getConfigsByCat(0, $wf_mid);
 
-    $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+    $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
     $gperm_handler = &xoops_gethandler('groupperm');
     $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $wf_mid);
 

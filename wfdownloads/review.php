@@ -13,7 +13,7 @@ include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
 
 global $xoopsModuleConfig, $myts, $xoopsUser;
 $gperm_handler =& xoops_gethandler('groupperm');
-$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 
 $cid = isset($_REQUEST['cid']) ? intval($_REQUEST['cid']) : 0;
 $mid = intval($xoopsModule->getVar('mid'));

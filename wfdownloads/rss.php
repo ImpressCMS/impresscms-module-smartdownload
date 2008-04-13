@@ -46,7 +46,7 @@ $case = "all";
 $category_handler = xoops_getmodulehandler('category');
 $category = $category_handler->get(intval($_REQUEST['cid']));
 
-$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 $gperm_handler = &xoops_gethandler('groupperm');
 $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, intval($xoopsModule->getVar('mid')));
 

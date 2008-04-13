@@ -14,7 +14,7 @@ function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 
     $module_handler = xoops_gethandler('module');
     $wfModule = $module_handler->getByDirname("wfdownloads");
-    $groups = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+    $groups = $xoopsUser ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 
     $gperm_handler = xoops_gethandler('groupperm');
     $allowed_cats = $gperm_handler->getItemIds("WFDownCatPerm", $groups, $wfModule->getVar('mid'));

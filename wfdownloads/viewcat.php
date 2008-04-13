@@ -18,9 +18,9 @@ $cid = (isset($_GET['cid']) && $_GET['cid'] > 0) ? intval($_GET['cid']) : 0;
 $mid = intval($xoopsModule->getVar('mid'));
 
 $gperm_handler =& xoops_gethandler('groupperm');
-$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 
-if ($groups == XOOPS_GROUP_ANONYMOUS) {
+if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
     }

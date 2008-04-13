@@ -89,7 +89,7 @@ function Download()
 			
 			$customArray['fid'] = $fid;
 			$customArray['formulize_mgr'] =& xoops_getmodulehandler('elements', 'formulize');
-			$customArray['groups'] = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;			
+			$customArray['groups'] = $xoopsUser ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);			
 			$customArray['prevEntry'] = getEntryValues($download->getVar('formulize_idreq'), $customArray['formulize_mgr'], $customArray['groups'], $fid);
 			$customArray['entry'] = $download->getVar('formulize_idreq');
 			$customArray['go_back'] = "";
@@ -486,7 +486,7 @@ function addDownload()
 		    $member_handler =& xoops_gethandler('member');
 		    $owner_groups =& $member_handler->getGroupsByUser($owner, FALSE);
        	    $uid = !empty($xoopsUser) ? $xoopsUser->getVar('uid') : 0;
-       	    $groups = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+       	    $groups = $xoopsUser ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
        	    $entries = handleSubmission($formulize_mgr, $entries, $uid, $owner, $fid, $owner_groups, $groups, "new"); // "new" causes xoops token check to be skipped, since WF-downloads should be doing that
 
        	    //if (!$lid)
@@ -500,7 +500,7 @@ function addDownload()
 
 
     $download_handler->insert($download);
-    $newid = $download->getVar('lid');
+    $newid = intval($download->getVar('lid'));
     /**
      * Send notifications
      */

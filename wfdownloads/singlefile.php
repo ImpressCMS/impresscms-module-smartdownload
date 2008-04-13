@@ -28,9 +28,9 @@ if ($download->getVar('published') == 0 || $download->getVar('published') > time
 }
 
 $gperm_handler =& xoops_gethandler('groupperm');
-$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+$groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
 
-if ($groups == XOOPS_GROUP_ANONYMOUS) {
+if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
         redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
     }
@@ -102,7 +102,7 @@ if($formulize_idreq) {
       	    // query the form for its data
       	    $data = getData("", $formulize_fid, $formulize_idreq);
       	    // include only elements that are visible to the user's groups in the DB query below
-      	    $groups = $xoopsUser ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
+      	    $groups = $xoopsUser ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
       	    $start = 1;
       	    foreach($groups as $thisgroup) {
       	        if($start) {
