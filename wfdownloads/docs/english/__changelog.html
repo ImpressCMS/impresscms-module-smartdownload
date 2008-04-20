@@ -6,6 +6,7 @@
 v. 3.2.0 RC2 &nbsp;&nbsp;&nbsp;&nbsp; 23/04/2007<BR>
 =================================================================<BR></B>
 <BR><UL>
+<LI>Fixed: issue with $xoopsUser->getGroups. replaced with $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS); (thanks to Jegelstaff)</LI>
 <LI>Fixed: issue with getNicePath (ImpressCMS Only), XOOPS requires patching class/xoopstree.  (Skenow / m0nty)</LI>
 <LI>Fixed: bug when user modification of download. "formulize_idreq" field was not found in the mysql table for wfdownloads_mod. (m0nty)</LI>
 <LI>Fixed: Issue with filenames containing multiple periods(.), protector module disallows the upload.<br />
