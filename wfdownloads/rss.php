@@ -150,7 +150,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
                                 'title' => xoops_utf8_encode($title),
                                 'author' => xoops_utf8_encode($author),
                                 'link' => $link,
-                                'guid' => $url.'/'.intval($item->getVar('lid')),
+                                'guid' => $link,
                                 'is_permalink'=>false,
                                 'pubdate' => formatTimestamp($item->getVar('published'), $feed_type),
                                 'dc_date' => formatTimestamp($item->getVar('published'), 'd/m H:i'), 
