@@ -5,37 +5,27 @@
  * Version: v2.0.5a
  * Release Date: 26 july 2004
  * Author: WF-Sections
- * German Translation: L-Dillmann@web.de http://www.einmal-so.de
  * Licence: GNU
  */
 
-/*
-* Module Info
-* The name of this module
-*/
+// Module Info
+// The name of this module
 define("_MI_WFD_NAME","WF-Downloads");
 
-/*
-* A brief description of this module
-*/
+// A brief description of this module
 define("_MI_WFD_DESC","Erstellt einen Downloadbereich in dem User verschiedene Dateien downloaden, einschicken und bewerten k&ouml;nnen.");
 
-/*
-* Names of blocks for this module (Not all module has blocks)
-*/
+// Names of blocks for this module (Not all module has blocks)
 define("_MI_WFD_BNAME1","Aktuelle Downloads");
 define("_MI_WFD_BNAME2","Top Downloads");
+define("_MI_WFD_BNAME3","Top Downloads nach Kategorien");
 
-/*
-* Sub menu titles
-*/
+// Sub menu titles
 define("_MI_WFD_SMNAME1","Einsenden");
 define("_MI_WFD_SMNAME2","Popul&auml;r");
 define("_MI_WFD_SMNAME3","Best bewertet");
 
-/*
-* Names of admin menu items
-*/
+// Names of admin menu items
 define("_MI_WFD_BINDEX","Zusammenfassung");
 define("_MI_WFD_INDEXPAGE","Startseite Erstellung");
 define("_MI_WFD_MCATEGORY","Kategorienverwaltung");
@@ -47,15 +37,11 @@ define("_MI_WFD_PERMISSIONS","Berechtigungseinstellungen");
 define("_MI_WFD_MVOTEDATA","Bewertungen");
 define("_MI_WFD_MMIRRORS","Mirrors");
 
-/*
-* Title of config items
-*/
+// Title of config items
 define('_MI_WFD_POPULAR', 'Popularit&auml;tsz&auml;hler');
 define('_MI_WFD_POPULARDSC', 'Anzahl an Downloads, bevor eine Downloaddatei als popul&auml;r gilt');
 
-/*
-* Display Icons
-*/
+//Display Icons
 define("_MI_WFD_ICONDISPLAY","Popul&auml;re und Neue Downloads:");
 define("_MI_WFD_DISPLAYICONDSC", "Wie sollen popul&auml;re und neue Downloadlistings markiert werden.");
 define("_MI_WFD_DISPLAYICON1", "Zeige als Icon");
@@ -83,6 +69,7 @@ define('_MI_WFD_SHOTHEIGHT', 'Bildattribut *height* [in px]');
 define('_MI_WFD_SHOTHEIGHTDSC', 'Maximale H&ouml;he (height) des Screenshot/Thumbnails');
 define('_MI_WFD_CHECKHOST', 'Unterbinde direkte Downloadverlinkung? (leeching)');
 define('_MI_WFD_REFERERS', 'Folgende Seite darf direkt auf die Downloads linken<br />Separiert mit | ');
+
 define('_MI_WFD_CAT_IMGWIDTH', 'Kategorie Image breite');
 define('_MI_WFD_CAT_IMGWIDTHDSC', 'Einstellen der breite f&uuml;r das Kategoriebild');
 define('_MI_WFD_CAT_IMGHEIGHT', 'Kategorie Image h&ouml;he');
@@ -180,15 +167,12 @@ define("_MI_WFD_SUBMITTED2", "Einsendedatum");
 define('_MI_WFD_COPYRIGHT', 'Copyright anzeigen?');
 define('_MI_WFD_COPYRIGHTDSC', 'Copyright Statement auf der Downloadseite anzeigen?');
 
-/*
-* Description of each config items
-*/
+// Description of each config items
 define('_MI_WFD_PLATFORMDSC', 'Neue Eintr&auml;ge durch | (Pipe) trennen.<br/><b>WICHTIG</b>: Werden nachtr&auml;glich Eintr&auml;ge ver&auml;ndert, oder zwischengeschoben, verschieben sich die entsprechenden Eintr&auml;ge aller Downloads. Entsprechend neue Eintr&auml;ge sind am Ende anzuf&uuml;gen! Diese wirken sich nicht aus.');
 define('_MI_WFD_SUBCATSDSC', 'Ja ausw&auml;hlen, um Unterkategorien anzuzeigen. Falls \'Nein\' ausgew&auml;hlt wird, werden Unterkategorien nicht gelistet.');
 define('_MI_WFD_LICENSEDSC', 'Neue Eintr&auml;ge durch | (Pipe) trennen.<br/><b>WICHTIG</b>: Werden nachtr&auml;glich Eintr&auml;ge ver&auml;ndert, oder zwischengeschoben, verschieben sich die entsprechenden Eintr&auml;ge aller Downloads. Entsprechend neue Eintr&auml;ge sind am Ende anzuf&uuml;gen! Diese wirken sich nicht aus.');
-/*
-* Text for notifications
-*/
+
+// Text for notifications
 define('_MI_WFD_GLOBAL_NOTIFY', 'Global');
 define('_MI_WFD_GLOBAL_NOTIFYDSC', 'Globale Download-Benachrichtigungsoptionen.');
 
@@ -293,7 +277,7 @@ INCIDENTAL OR CONSEQUENTIAL DAMAGES HOWEVER THEY MAY ARISE AND EVEN IF
 SMARTFACTORY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES..");
 
 define('_MI_WFD_AUTHOR_CREDITSTEXT',"The SmartFactory Team would like to thank the following people for their help and support during the development phase of this module:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish, Kiang<br />and anyone else who has contributed to either directly or indirectly.");
-define('_MI_WFD_AUTHOR_BUGFIXES', "Bug Fix History");
+define('_MI_WFD_AUTHOR_BUGFIXES', "Fehlerbereinigung Historie");
 
 define('_MI_WFD_COPYRIGHTIMAGE', "Images copyright WF-Project/SmartFactory and may only be used with permission");
 
