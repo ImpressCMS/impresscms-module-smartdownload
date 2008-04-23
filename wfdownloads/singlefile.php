@@ -234,7 +234,7 @@ $xoopsTpl->assign('lang_UserMirrors', sprintf($user_mirrors, $download->getVar('
 
 if (isset($xoopsModuleConfig['copyright']) && $xoopsModuleConfig['copyright'] == 1)
 {
-    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " � " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . XOOPS_URL);
+    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " &copy; " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . XOOPS_URL);
 }
 $xoopsTpl->assign('down', $down);
 
