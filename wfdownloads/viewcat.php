@@ -165,7 +165,7 @@ if (isset($cid) && $cid > 0 && isset($categories[$cid])) {
 		$imgurl = '';
 	}
 
-    $xoopsTpl->assign('category_title', $categories[$cid]->getVar('title'));
+    $xoopsTpl->assign('xoops_pagetitle', $categories[$cid]->getVar('title').' | '.$xoopsModule->name());
     $xoopsTpl->assign('category_image', $imgurl);
 }
 
