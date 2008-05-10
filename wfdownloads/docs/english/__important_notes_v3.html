@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Update</title>
-<meta NAME="GENERATOR" CONTENT="MAX's HTML Beauty++ 2004">
+<meta NAME="GENERATOR" CONTENT="WFDownloads 3.2 Important Notes">
 </head>
 <style type="text/css">
 <!--
@@ -47,8 +47,12 @@ Be cautious when disabling the protector fileschecker, and only use it if absolu
 
 This module tested fine with ImpressCMS 1.x.<br /><br />
 
-XOOPS CMS users will need to add linkexternal.js to their installation, and modify xoops_root/header.php to add the linkexternal.js file to their themes.
+XOOPS 2.0.18.1 CMS users will need to add linkexternal.js to their installation, and modify xoops_root/header.php to add the linkexternal.js file to their themes. rel="external" should be available in XOOPS versions newer than 2.0.18.1.
 
 this adds the ability to use rel="external", rel="nofollow", & rel="external nofollow" in your pages instead of using the w3c invalid target="_blank".
+
+Failure to add the relevant linkexternal.js & modification of xoops/header.php or alternatively adding rel="external" javascript to xoops.js will prevent wfdownloads functioning correctly when clicking links within the module.
+
+you can find linkexternal.js aswell as header.php modification instructions for 2.0.18.1 in the XOOPS Extras folder included in this package.
 </BODY>
 </HTML>

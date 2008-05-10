@@ -414,7 +414,7 @@ CREATE TABLE `wfdownloads_meta` (
 # Dumping data for table `wfdownloads_meta`
 #
 
-INSERT INTO `wfdownloads_meta` VALUES ('version','3.2.008');
+INSERT INTO `wfdownloads_meta` VALUES ('version','3.2.010');
 
 
 # --------------------------------------------------------

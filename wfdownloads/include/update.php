@@ -42,7 +42,7 @@ function xoops_module_update_wfdownloads($module) {
     else {
         echo $feedback;
     }
-    wfdownloads_SetMeta("version", "3.2.008"); //Set meta version to current
+    wfdownloads_SetMeta("version", "3.2.010"); //Set meta version to current
     return true;
 }
 

@@ -1,5 +1,6 @@
 <b><u>=> Version 3.2 RC2 (2007-04-23)</u></b>
 
+Fixed: Fixes in Formulize integration thanks to jegelstaff (malanciault)
 Fixed: issue causing invalid links in the RSS script (rss.php). (thanks to rasme)
 Fixed: issue with $xoopsUser->getGroups. replaced with $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS); (thanks to Jegelstaff)
 Fixed: issue with getNicePath (ImpressCMS Only), XOOPS requires patching class/xoopstree.  (Skenow / m0nty)
@@ -20,7 +21,6 @@ Added: JS effects & lightbox effects to templates. (m0nty, aphex & thanks to Kri
 Added: Automated Category Selection on submit process (RLankford)
 Added: Addition of a downloads by top category block (malanciault)
 Changed: submit & mirrors should now accept FTP:// uri's aswell as http://  (m0nty)
-Fixed: Fixes in Formulize integration thanks to jegelstaff (malanciault)
 
 
 <b><u>=> Version 3.2 RC1 (2007-04-23)</u></b>
