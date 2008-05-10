@@ -260,24 +260,26 @@ define('_MI_WFD_MODULE_MAILANNOUNCEMENTS', "Anúncios Mailing List");
 define('_MI_WFD_MODULE_MAILBUGS', "Bug Mailing List");
 define('_MI_WFD_MODULE_MAILFEATURES', "Características Mailing List");
 
-define('_MI_WFD_MODULE_MAILANNOUNCEMENTSDSC', "Get the latest announcements from SmartFactory.");
-define('_MI_WFD_MODULE_MAILBUGSDSC', "Bug Tracking and submission mailing list");
-define('_MI_WFD_MODULE_MAILFEATURESDSC', "Request New Features mailing list.");
+define('_MI_WFD_MODULE_MAILANNOUNCEMENTSDSC', "Receba as últimas mensagens a partir de SmartFactory.");
+define('_MI_WFD_MODULE_MAILBUGSDSC', "Relatório de Erros e apresentação de lista via email");
+define('_MI_WFD_MODULE_MAILFEATURESDSC', "Solicitar novas características via lista de email.");
 
-define('_MI_WFD_WARNINGTEXT', "THE SOFTWARE IS PROVIDED BY SMARTFACTORY \"AS IS\" AND \"WITH ALL FAULTS.\"
-SMARTFACTORY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING
-THE QUALITY, SAFETY OR SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR
-IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
-FURTHER, SMARTFACTORY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE TRUTH,
-ACCURACY OR COMPLETENESS OF ANY STATEMENTS, INFORMATION OR MATERIALS
-CONCERNING THE SOFTWARE THAT IS CONTAINED IN SMARTFACTORY WEBSITE. IN NO
-EVENT WILL SMARTFACTORY BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL,INCIDENTAL OR CONSEQUENTIAL DAMAGES HOWEVER THEY MAY ARISE AND EVEN IFSMARTFACTORY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES..");
+define('_MI_WFD_WARNINGTEXT', "O SOFTWARE É FORNECIDO POR SMARTFACTORY NA FORMA EM QUE SE ENCONTRA E COM TODAS AS FALHAS. 
+SMARTFACTORY não faz representações ou garantias de qualquer tipo relativas 
+A qualidade, segurança ou adequação do software, seja expressa ou
+Implícitas, incluindo, sem limitação, quaisquer garantias implícitas de
+COMERCIALIZAÇÃO, ADEQUAÇÃO PARA UM FIM ESPECÍFICO, OU NÃO-VIOLAÇÃO.
+Ainda mais, SMARTFACTORY não faz representações ou garantias quanto à verdade,
+Exatidão ou integridade de quaisquer declarações, informações ou materiais
+Relativo ao software que está contida no site SMARTFACTORY. EM NENHUM
+SMARTFACTORY evento irá ser responsável por qualquer INDIRETOS, PUNITIVOS, ESPECIAIS,
+Incidentais ou consequentes, porém eles podem surgir e, mesmo que
+SMARTFACTORY tenha sido previamente avisada da possibilidade de tais danos ..");
 
-define('_MI_WFD_AUTHOR_CREDITSTEXT',"The SmartFactory Team would like to thank the following people for their help and support during the development phase of this module:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish.<br /><br />And on a personal note, I would like to thank the special girl in my life who I love dearly and who gives me the strength and support to do all of this.");
-define('_MI_WFD_AUTHOR_BUGFIXES', "Bug Fix History");
+define('_MI_WFD_AUTHOR_CREDITSTEXT',"A Equipe DO SmartFactory gostaria de agradecer as seguintes pessoas pela sua ajuda e apoio durante a fase de desenvolvimento deste módulo:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish.<br /><br />E, numa nota pessoal, gostaria de agradecer a menina especial na minha vida que eu amo muito caro e que me dá a força e total apoio para fazer isto.");
+define('_MI_WFD_AUTHOR_BUGFIXES', "Histórico sobre Correções de Erros");
 
-define('_MI_WFD_COPYRIGHTIMAGE', "Images copyright WF-Project/SmartFactory and may only be used with permission");
+define('_MI_WFD_COPYRIGHTIMAGE', "Imagens são direitos autorais do WF-Project/SmartFactory e só podem ser utilizadas com autorização");
 
 // mirror defines
 define('_MI_WFD_MIRROR_USEIMAGES', 'Exibir os Logos dos Mirrors?'); // not implemented yet
@@ -294,10 +296,10 @@ define('_MI_WFD_MIRROR_MAXIMGWIDTHDSC','Largura Máxima de Logo permitida para up
 define('_MI_WFD_MIRROR_MAXIMGHEIGHT','Altura de Logo de Upload'); // not implemented yet
 define('_MI_WFD_MIRROR_MAXIMGHEIGHTDSC','Altura Máxima de Logo permitida para upload de logos de arquivos'); // not implemented yet
 
-define('_MI_WFD_MIRROR_ENABLE','Habilitar Sistema de Mirrors');
+define('_MI_WFD_MIRROR_ENABLE','Ativar Sistema de Mirrors');
 define('_MI_WFD_MIRROR_ENABLEDSC','');
-define('_MI_WFD_MIRROR_ENABLEONCHK','Habilitar checagem de Servidores Online');
-define('_MI_WFD_MIRROR_ENABLEONCHKDSC','Habilitar checagem de servidores para Mirrors<br />Isto pode sobrecarregar sua página se<br />você tiver muitos mirrors');
+define('_MI_WFD_MIRROR_ENABLEONCHK','Ativar checagem de Servidores Online');
+define('_MI_WFD_MIRROR_ENABLEONCHKDSC','Ativar checagem de servidores para Mirrors<br />Isto pode sobrecarregar sua página se<br />você tiver muitos mirrors');
 define('_MI_WFD_MIRROR_ALLOWSUBMISS','Mirrors submetidos por Usuários:');
 define('_MI_WFD_MIRROR_ALLOWSUBMISSDSC','Permitir que os Usuários Submetam Novos Mirrors  ');
 define('_MI_WFD_MIRROR_MIRRORIMAGES','Diretório para Uploads de Logos de Mirrors'); // not implemented yet
