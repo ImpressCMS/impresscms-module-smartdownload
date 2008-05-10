@@ -12,12 +12,12 @@ exit ;
 
 $modversion['name'] = _MI_WFD_NAME;
 $modversion['version'] = 3.2;
-$modversion['releasedate'] = "2007-04-23";
+$modversion['releasedate'] = "2008-05-10";
 $modversion['status'] = "RC2";
 $modversion['description'] = _MI_WFD_DESC;
 $modversion['author'] = "The SmartFactory [www.smartfactory.ca]";
 $modversion['credits'] = "This module was originally based on Mydownloads, and refactored by Catzwolf and the WF-Projects team. Then it became a project of The SmartFactory who continued the excellent work started by the WF-Projects team.";
-$modversion['teammembers'] = "Catzwolf, Rectifier, Bender, Phppp, David, FrankBlack, Xpider, Jazza, Mercibe, M0nty, Mithrandir, Marcan, felix[fx2024]";
+$modversion['teammembers'] = "Bender, David, FrankBlack, Xpider, M0nty, Mithrandir, Marcan, felix[fx2024], Sudhaker, Jegelstaff";
 $modversion['help'] = "wfdownloads.html";
 $modversion['license'] = "GPL see LICENSE";
 $modversion['official'] = 0;
