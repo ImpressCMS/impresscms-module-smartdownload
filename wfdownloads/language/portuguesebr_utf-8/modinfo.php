@@ -264,15 +264,17 @@ define('_MI_WFD_MODULE_MAILANNOUNCEMENTSDSC', "Get the latest announcements from
 define('_MI_WFD_MODULE_MAILBUGSDSC', "Bug Tracking and submission mailing list");
 define('_MI_WFD_MODULE_MAILFEATURESDSC', "Request New Features mailing list.");
 
-define('_MI_WFD_WARNINGTEXT', "THE SOFTWARE IS PROVIDED BY SMARTFACTORY \"AS IS\" AND \"WITH ALL FAULTS.\"
-SMARTFACTORY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING
-THE QUALITY, SAFETY OR SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR
-IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
-FURTHER, SMARTFACTORY MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE TRUTH,
-ACCURACY OR COMPLETENESS OF ANY STATEMENTS, INFORMATION OR MATERIALS
-CONCERNING THE SOFTWARE THAT IS CONTAINED IN SMARTFACTORY WEBSITE. IN NO
-EVENT WILL SMARTFACTORY BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL,INCIDENTAL OR CONSEQUENTIAL DAMAGES HOWEVER THEY MAY ARISE AND EVEN IFSMARTFACTORY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES..");
+define('_MI_WFD_WARNINGTEXT', "O SOFTWARE É FORNECIDO POR SMARTFACTORY NA FORMA EM QUE SE ENCONTRA E COM TODAS AS FALHAS. 
+SMARTFACTORY não faz representações ou garantias de qualquer tipo relativas 
+A qualidade, segurança ou adequação do software, seja expressa ou
+Implícitas, incluindo, sem limitação, quaisquer garantias implícitas de
+COMERCIALIZAÇÃO, ADEQUAÇÃO PARA UM FIM ESPECÍFICO, OU NÃO-VIOLAÇÃO.
+Ainda mais, SMARTFACTORY não faz representações ou garantias quanto à verdade,
+Exatidão ou integridade de quaisquer declarações, informações ou materiais
+Relativo ao software que está contida no site SMARTFACTORY. EM NENHUM
+SMARTFACTORY evento irá ser responsável por qualquer INDIRETOS, PUNITIVOS, ESPECIAIS,
+Incidentais ou consequentes, porém eles podem surgir e, mesmo que
+SMARTFACTORY tenha sido previamente avisada da possibilidade de tais danos ..");
 
 define('_MI_WFD_AUTHOR_CREDITSTEXT',"The SmartFactory Team would like to thank the following people for their help and support during the development phase of this module:<br /><br />tom, mking, paco1969, mharoun, Talis, m0nty, steenlnielsen, Clubby, Geronimo, bd_csmc, herko, LANG, Stewdio, tedsmith, veggieryan, carnuke, MadFish.<br /><br />And on a personal note, I would like to thank the special girl in my life who I love dearly and who gives me the strength and support to do all of this.");
 define('_MI_WFD_AUTHOR_BUGFIXES', "Bug Fix History");

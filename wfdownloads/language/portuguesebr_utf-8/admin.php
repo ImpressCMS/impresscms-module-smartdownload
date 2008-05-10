@@ -6,6 +6,7 @@
  * Release Date: 26 july 2004
  * Author: WF-Sections
  * Licence: GNU
+ * Translator: GibaPhp - http://br.impresscms.org
  */
 
 // %%%%%%	Module NMDe 'MyDownloads' (Admin)	  %%%%%

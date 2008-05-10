@@ -15,6 +15,7 @@ Se isto foi um erro ou se você preferir não receber outras notificações, por
 NÃO RESPONDER ESTA MENSAGEM.
 
 -----------
+
 {X_SITENAME} ({X_SITEURL}) 
 webmaster
 {X_ADMINMAIL}
