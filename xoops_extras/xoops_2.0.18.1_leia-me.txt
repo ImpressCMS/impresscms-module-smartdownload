@@ -1,0 +1,38 @@
+#================================================
+# Tradução...: GibaPhp - http://br.impresscms.org
+# Contato....: gibaphp@impresscms.org
+#================================================
+
+Instruções para adicionar linkexternal.js para XOOPS 2.0.18.1.
+
+1. copiar o conteúdo da pasta XOOPS_extras a sua pasta raiz XOOPS sobrescrevendo existentes.
+
+2. clean & cache pastas templates_c exceto para index.html.
+
+
+Para aqueles que deseja adicionar linkexternal.js manualmente sem sobrescrever header.php
+
+1. copiar o linkexternal.js da pasta XOOPS_extras/include para a sua pasta em xoops_root/include .
+
+2. Edite o seu arquivo existente xoops header.php como se segue >
+
+Abrir o arquivo header.php
+
+procure a linha 68:
+
+$xoTheme->addScript( '/include/xoops.js', array( 'type' => 'text/javascript' ) );
+
+logo após adicionar:
+
+$xoTheme->addScript('/include/linkexternal.js', array('type' => 'text/javascript')); // incluído por vaughan para rel="external" & rel="nofollow" etc. (que é melhor para os recursos e velocidade para usar um arquivo separado em vez de manter a acrescentar xoops.js
+
+
+salvar e fechar o arquivo.
+
+3. Limpar o conteúdo do diretório templates_c e cache, mas não apagar o index.html.
+
+Tudo está pronto.
+
+wfdownloads agora deve funcionar corretamente em XOOPS 2.0.18.1, e você também será capaz de usar rel="external", rel="nofollow" & rel="external nofollow" em todo p seu XOOPS.
+
+Ps: Se encontrar qualquer problema com este documento, pode entrar em contato ou altera-lo para melhora-lo.
