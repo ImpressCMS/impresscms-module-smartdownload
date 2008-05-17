@@ -17,12 +17,12 @@
 ###:==|
 ###:==|define("_AM_WFD_IMPORTD", "Importar");
 ###:==|define("_AM_WFD_IMPORMYD", "Importar dados do MyDownloads");
-###:==|define("_AM_WFD_IMPORMYDNOT", "Modulo MyDownloads n„o encontrado");
+###:==|define("_AM_WFD_IMPORMYDNOT", "Modulo MyDownloads n√£o encontrado");
 ###:==|define("_AM_WFD_IMPORPDD", "Importar dados do PD-Downloads");
-###:==|define("_AM_WFD_IMPORPDDNOT", "Modulo PD-Downloads n„o encontrado");
+###:==|define("_AM_WFD_IMPORPDDNOT", "Modulo PD-Downloads n√£o encontrado");
 ###:==|define("_AM_WFD_IMPORWMP", "Importar dados do wmpownloads");
-###:==|define("_AM_WFD_IMPORWMPNOT", "Modulo wmpownloads n„o encontrado");
+###:==|define("_AM_WFD_IMPORWMPNOT", "Modulo wmpownloads n√£o encontrado");
 ###:==|
 ###:========================================================
-###:==| HistÛrico: Team X-Trad.org - Old versions...
+###:==| Hist√≥rico: Team X-Trad.org - Old versions...
 ###:========================================================

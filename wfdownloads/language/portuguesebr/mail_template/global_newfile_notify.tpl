@@ -1,18 +1,18 @@
-Olá {X_UNAME},
+OlÃ¡ {X_UNAME},
 
 Um novo arquivo "{FILE_NAME}" foi adicionado no {X_SITENAME}.
 
-Você pode ver este arquivo aqui:
+VocÃª pode ver este arquivo aqui:
 {FILE_URL}
 
 -----------
 
-Você está recebendo esta mensagem por ter selecionado ser notificado quando novos arquivos fossem adicionados em nosso site.
+VocÃª estÃ¡ recebendo esta mensagem por ter selecionado ser notificado quando novos arquivos fossem adicionados em nosso site.
 
-Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
+Se isto foi um erro ou se vocÃª preferir nÃ£o receber outras notificaÃ§Ãµes, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-NÃO RESPONDER ESTA MENSAGEM.
+NÃƒO RESPONDER ESTA MENSAGEM.
 
 -----------
 

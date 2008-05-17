@@ -11,6 +11,6 @@
 // Blocks
 define("_MB_WFD_DISP","Visualizar");
 define("_MB_WFD_FILES","Arquivos");
-define("_MB_WFD_CHARS","Comprimento do título");
+define("_MB_WFD_CHARS","Comprimento do tÃ­tulo");
 define("_MB_WFD_LENGTH"," caracteres");
 ?>

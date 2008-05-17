@@ -1,18 +1,18 @@
-Olá {X_UNAME},
+OlÃ¡ {X_UNAME},
 
-Uma solicitação para modificação de arquivo foi submetida e está aguardando aprovação.
+Uma solicitaÃ§Ã£o para modificaÃ§Ã£o de arquivo foi submetida e estÃ¡ aguardando aprovaÃ§Ã£o.
 
-Você pode ver esta solicitação aqui:
+VocÃª pode ver esta solicitaÃ§Ã£o aqui:
 {MODIFYREPORTS_URL}
 
 -----------
 
-Você está recebendo esta mensagem por ter selecionado ser notificado quando novos solicitações de modificação de arquivo fossem submetidas.
+VocÃª estÃ¡ recebendo esta mensagem por ter selecionado ser notificado quando novos solicitaÃ§Ãµes de modificaÃ§Ã£o de arquivo fossem submetidas.
 
-Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
+Se isto foi um erro ou se vocÃª preferir nÃ£o receber outras notificaÃ§Ãµes, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-NÃO RESPONDER ESTA MENSAGEM.
+NÃƒO RESPONDER ESTA MENSAGEM.
 
 -----------
 

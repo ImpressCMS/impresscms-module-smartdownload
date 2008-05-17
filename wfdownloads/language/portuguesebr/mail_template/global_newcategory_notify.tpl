@@ -1,21 +1,21 @@
-Olá {X_UNAME},
+OlÃ¡ {X_UNAME},
 
 Uma nova categoria "{CATEGORY_NAME}" foi criada no {X_SITENAME} .
 
 Veja este link para esta categoria:
 {CATEGORY_URL}
 
-Veja este link para ver a página principal de categorias:
+Veja este link para ver a pÃ¡gina principal de categorias:
 {X_MODULE_URL}
 
 -----------
 
-Você está recebendo esta mensagem por ter selecionado ser notificado quando novas categorias fossem adicionas em noss site.
+VocÃª estÃ¡ recebendo esta mensagem por ter selecionado ser notificado quando novas categorias fossem adicionas em noss site.
 
-Se isto foi um erro ou se você preferir não receber outras notificações, por favor atualize suas assinaturas visitando o link abaixo:                         
+Se isto foi um erro ou se vocÃª preferir nÃ£o receber outras notificaÃ§Ãµes, por favor atualize suas assinaturas visitando o link abaixo:                         
 {X_UNSUBSCRIBE_URL}
 
-NÃO RESPONDER ESTA MENSAGEM.
+NÃƒO RESPONDER ESTA MENSAGEM.
 
 -----------
 

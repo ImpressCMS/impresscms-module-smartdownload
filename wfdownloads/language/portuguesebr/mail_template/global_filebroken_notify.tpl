@@ -1,18 +1,18 @@
-Olá {X_UNAME},
+OlÃ¡ {X_UNAME},
 
-Uma notícia de link quebrado foi enviada e está esperando aprovação
+Uma notÃ­cia de link quebrado foi enviada e estÃ¡ esperando aprovaÃ§Ã£o
 
-Você pode ver esta requisição aqui:
+VocÃª pode ver esta requisiÃ§Ã£o aqui:
 {BROKENREPORTS_URL}
 
 -----------
 
-Você esta recebendo esta mensagem por ter selecionado ser notificado quando notícias de arquivos/links quebrados fossem submetidos.
+VocÃª esta recebendo esta mensagem por ter selecionado ser notificado quando notÃ­cias de arquivos/links quebrados fossem submetidos.
 
-Se isto foi um erro ou você não deseja receber outras notificações, atualize suas inscriçoes visitando o link abaixo:
+Se isto foi um erro ou vocÃª nÃ£o deseja receber outras notificaÃ§Ãµes, atualize suas inscriÃ§oes visitando o link abaixo:
 {X_UNSUBSCRIBE_URL}
 
-NÃO RESPONDER ESTA MENSAGEM.
+NÃƒO RESPONDER ESTA MENSAGEM.
 
 -----------
 
