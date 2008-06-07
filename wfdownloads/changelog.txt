@@ -1,4 +1,8 @@
-<b><u>=> Version 3.2 RC2 (2007-04-23)</u></b>
+<b><u>=> Version 3.2 Final (2007-05-10)</u></b>
+
+Fixed: imageheader was left aligned, should be centered. (m0nty)
+
+<b><u>=> Version 3.2 RC2 (2007-05-10)</u></b>
 
 Fixed: Fixes in Formulize integration thanks to jegelstaff (malanciault)
 Fixed: issue causing invalid links in the RSS script (rss.php). (thanks to rasme)
