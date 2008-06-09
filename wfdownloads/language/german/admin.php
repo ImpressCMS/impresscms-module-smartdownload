@@ -22,7 +22,7 @@ define("_AM_WFD_BMOVE", "Dateien verschieben");
 define("_AM_WFD_BUPLOAD", "Upload");
 define("_AM_WFD_BDELETEIMAGE", "Ausgewähltes Bild löschen");
 define("_AM_WFD_BRETURN", "Zurück wo Du herkommst!");
-define("_AM_WFD_DBERROR", "Datenbank Zugriffs-Fehler: Bitte diesen Fehler einem der Webmaster der WF_Sections Homepage melden");
+define("_AM_WFD_DBERROR", "Datenbank Zugriffs-Fehler: Bitte diesen Fehler einem der Webmaster der Homepage melden");
 //Banned Users
 define("_AM_WFD_NONBANNED", "Nicht gebannt");
 define("_AM_WFD_BANNED", "Gebannt");
@@ -31,11 +31,11 @@ define("_AM_WFD_EDITBANNED", "Gebannte User editieren");
 define("_AM_WFD_TEXTOPTIONS", "Texteinstellungen:");
 define("_AM_WFD_ALLOWHTML", " HTML Tags deaktivieren");
 define("_AM_WFD_ALLOWSMILEY", " Smilie Icons deaktivieren");
-define("_AM_WFD_ALLOWXCODE", " XOOPS Code deaktivieren");
+define("_AM_WFD_ALLOWXCODE", " ImpressCMS Code deaktivieren");
 define("_AM_WFD_ALLOWIMAGES", " Bilder deaktivieren");
-define("_AM_WFD_ALLOWBREAK", " XOOPS Zeilenumbruch verwenden?");
+define("_AM_WFD_ALLOWBREAK", " ImpressCMS Zeilenumbruch verwenden?");
 define("_AM_WFD_UPLOADFILE", "Datei erfolgreich hochgeladen");
-define("_AM_WFD_NOMENUITEMS", "Keine Menüitems innerhalb dieses Menüs");
+define("_AM_WFD_NOMENUITEMS", "Keine Menüartikels innerhalb dieses Menüs");
 
 // Admin Bread crumb
 define("_AM_WFD_PREFS", "Einstellungen");
@@ -213,7 +213,7 @@ define("_AM_WFD_MIME_INFOTEXT", "<ul><li>Neue MDateiendungen können mit diesem 
 define("_AM_WFD_MIME_CREATE", "Erstellen");
 define("_AM_WFD_MIME_CLEAR", "Zurücksetzen");
 define("_AM_WFD_MIME_CANCEL", "Abbrechen");
-define("_AM_WFD_MIME_MODIFY", "&Auml;ndern");
+define("_AM_WFD_MIME_MODIFY", "Ändern");
 define("_AM_WFD_MIME_DELETE", "Löschen");
 define("_AM_WFD_MIME_FINDIT", "Get Extension!");
 // Mimetype Database
@@ -258,7 +258,7 @@ define("_AM_WFD_MOD_REQDELETED", "Modification request removed from the database
 define("_AM_WFD_MOD_REQUPDATED", "Selected Download Modified and Database Updated Successfully");
 
 */
-define("_AM_WFD_MOD_TOTMODREQUESTS", "&Auml;nderungsanfragen insgesamt: ");
+define("_AM_WFD_MOD_TOTMODREQUESTS", "Änderungsanfragen insgesamt: ");
 define("_AM_WFD_MOD_MODREQUESTS", "Geänderte Dateien");
 define("_AM_WFD_MOD_MODREQUESTSINFO", "Informationen: Geänderte Dateien");
 define("_AM_WFD_MOD_MODID", "ID");
@@ -294,7 +294,7 @@ define("_AM_WFD_MOD_MODIFYSUBMITTER", "Eingesandt von: ");
 define("_AM_WFD_MOD_MODIFYSUBMIT", "Eingesandt von");
 define("_AM_WFD_MOD_PROPOSED", "Vorgeschlagene Downloaddetails");
 define("_AM_WFD_MOD_ORIGINAL", "Orginal Downloaddetails");
-define("_AM_WFD_MOD_REQDELETED", "&Auml;nderungsanfrage aus Datenbank entfernt");
+define("_AM_WFD_MOD_REQDELETED", "Änderungsanfrage aus Datenbank entfernt");
 define("_AM_WFD_MOD_REQUPDATED", "Gewählter Download erfolgreich modifiziert und Datenbank aktualisiert");
 define('_AM_WFD_MOD_VIEW','Zeigen');
 define("_AM_WFD_MOD_FILENAME", "Lokaler Dateiname: ");
@@ -335,7 +335,7 @@ define("_AM_WFD_REV_REVIEW_WAITING", "Wartende Rezensionen:");
 define("_AM_WFD_REV_REVIEW_PUBLISHED", "Freigegebene Rezensionen:");
 
 //File management
-define("_AM_WFD_FILE_SUBMITTERID", "Submitter User Id: <br /><br />Leave this as it is, Unless you want to change who submitted the download");
+define("_AM_WFD_FILE_SUBMITTERID", "User-ID vom Einsender: <br /><br />Das Feld kann frei gelassen werden, nach dem hinzufügen einer Datei wird das Feld automatisch gefüllt.");
 define("_AM_WFD_FILE_ID", "Datei ID: ");
 define("_AM_WFD_FILE_IP", "Uploaders IP Adresse: ");
 define("_AM_WFD_FILE_ALLOWEDAMIME", "<div style='padding-top: 4px; padding-bottom: 4px;'><b>Erlaubte Admin Dateiendungen</b>:</div>");
@@ -370,7 +370,7 @@ define("_AM_WFD_FILE_HISTORDATE", " <b>Aktualisiert:</b> ");
 define("_AM_WFD_FILE_FILESSTATUS", " Download offline setzen?<br /><br /><span style='font-weight: normal;'>Dadurch wird der Download nach Außen unsichtbar für die Besucher.</span>");
 define("_AM_WFD_FILE_SETASUPDATED", " Download Status auf Aktualisiert (Updated) setzen?<br /><br /><span style='font-weight: normal;'>Dadurch wird das Updated Icon gesetzt.</span>");
 define("_AM_WFD_FILE_SHOTIMAGE", "Screenshot auswählen: ");
-define("_AM_WFD_FILE_DISCUSSINFORUM", "Diskussion in Forum hinzufügen? (Nur Xoopsboard)");
+define("_AM_WFD_FILE_DISCUSSINFORUM", "Diskussion in Forum hinzufügen? (Nur CBB-Forum)");
 define("_AM_WFD_FILE_PUBLISHDATE", "Veröffentlichungsdatum:");
 define("_AM_WFD_FILE_EXPIREDATE", "Ablaufdatum:");
 define("_AM_WFD_FILE_CLEARPUBLISHDATE", "<br /><br />Veröffentlichungsdatum entfernen:");
@@ -476,27 +476,27 @@ define("_AM_WFD_ICO_CONBROKEN","Defektbericht bestätigen?");
 define("_AM_WFD_DB_IMPORT", "Importieren");
 define("_AM_WFD_DB_CURRENTVER", "Aktuelle Version: <span class='currentVer'>%s</span>");
 define("_AM_WFD_DB_DBVER", "Datenbank Version %s");
-define("_AM_WFD_DB_MSG_ADD_DATA", "Data added in table %s");
-define("_AM_WFD_DB_MSG_ADD_DATA_ERR", "Error adding data in table %s");
-define("_AM_WFD_DB_MSG_CHGFIELD", "Changing field %s in table %s");
-define("_AM_WFD_DB_MSG_CHGFIELD_ERR", "Error changing field %s in table %s");
+define("_AM_WFD_DB_MSG_ADD_DATA", "Daten in Tabelle %s hinzugefügt");
+define("_AM_WFD_DB_MSG_ADD_DATA_ERR", "Fehler beim hinzufügen der Daten in die Tabelle %s");
+define("_AM_WFD_DB_MSG_CHGFIELD", "Änderungen des Feldes %s in der Tabelle %s");
+define("_AM_WFD_DB_MSG_CHGFIELD_ERR", "Fehler beim Ändern des Feldes %s in der Tabelle %s");
 define("_AM_WFD_DB_MSG_CREATE_TABLE", "Tabelle %s erstellt");
 define("_AM_WFD_DB_MSG_CREATE_TABLE_ERR", "Fehler beim Erstellen der Tabelle %s");
 define("_AM_WFD_DB_MSG_NEWFIELD", "Felder %s erfolgreich hinzugefügt");
 define("_AM_WFD_DB_MSG_NEWFIELD_ERR", "Fehler beim Erstellen des Feldes %s");
-define("_AM_WFD_DB_NEEDUPDATE", "Your database is out-of-date. Please upgrade your database tables!<br><b>Note : The SmartFactory strongly recommends you to backup all SmartSection tables before running this upgrade script.</b><br>");
-define("_AM_WFD_DB_NOUPDATE", "Your database is up-to-date. No updates are necessary.");
-define("_AM_WFD_DB_UPDATE_DB", "Updating Database");
+define("_AM_WFD_DB_NEEDUPDATE", "Die Datenbank ist nicht auf dem aktuellen Stand. Please upgrade your database tables!<br><b>Note : The SmartFactory strongly recommends you to backup all SmartSection tables before running this upgrade script.</b><br>");
+define("_AM_WFD_DB_NOUPDATE", "die Datenbank befindet sich auf den aktuellen Stand. Keine Aktualisierungen notwendig.");
+define("_AM_WFD_DB_UPDATE_DB", "Datenbank aktualisieren");
 define("_AM_WFD_DB_UPDATE_ERR", "Fehler beim Aktualisieren auf Version %s");
 define("_AM_WFD_DB_UPDATE_NOW", "Jetzt aktualisieren!");
 define("_AM_WFD_DB_UPDATE_OK", "Aktualisierung auf Version %s erfolgreich");
 define("_AM_WFD_DB_UPDATE_TO", "Aktualisieren auf Version %s");
 
 define("_AM_WFD_GOMOD", "Zum Modul");
-define("_AM_WFD_UPDATE_MODULE", "Update Modul");
+define("_AM_WFD_UPDATE_MODULE", "Modul aktualisieren");
 define("_AM_WFD_MDOWNLOADS","Dateimanagement");
-define("_AM_WFD_DB_MSG_UPDATE_TABLE", "Updating field values in %s");
-define("_AM_WFD_DB_MSG_UPDATE_TABLE_ERR", "Errors updating field values in %s");
+define("_AM_WFD_DB_MSG_UPDATE_TABLE", "Aktualisierung der Inhalte von %s");
+define("_AM_WFD_DB_MSG_UPDATE_TABLE_ERR", "fehler beim Aktualisieren der Inhalte in %s");
 
 // Mirrors
 // waiting mirrors
