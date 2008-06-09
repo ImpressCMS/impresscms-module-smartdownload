@@ -42,7 +42,7 @@ define("_MD_WFD_VERSION", "Version");
 define("_MD_WFD_SUBMITDATE", "Veröffentlicht");
 define("_MD_WFD_DLTIMES", "Diese Datei wurde %s mal heruntergeladen");
 define("_MD_WFD_FILESIZE", "Dateigröße");
-define("_MD_WFD_SUPPORTEDPLAT", "Unterstützte Betriebssysteme");
+define("_MD_WFD_SUPPORTEDPLAT", "Software Plattform");
 define("_MD_WFD_HOMEPAGE", "Homepage");
 define("_MD_WFD_PUBLISHERC", "Veröffentlicht von: ");
 define("_MD_WFD_RATINGC", "Bewertung: ");
