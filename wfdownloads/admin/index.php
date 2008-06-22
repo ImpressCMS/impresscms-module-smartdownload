@@ -292,7 +292,7 @@ function addDownload()
 			$filetype = '';
 		} else {
 	        $url = ($_POST["url"] != "http://") ? $_POST["url"] : '';
-			$filename = $_POST['filename'];
+			$filename = basename(realpath($_POST['filename']));
 			$filetype = $_POST['filetype'];
 		}
         $size = ((empty($_POST["size"]) || !is_numeric($_POST["size"]))) ? 0 : intval($_POST["size"]);
