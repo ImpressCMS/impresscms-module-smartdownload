@@ -236,7 +236,7 @@ define("_MD_WFD_USERMIRRORSTITLE", "Verfügbare Download Mirrors");
 define("_MD_WFD_USERMIRRORS", "Anzeige der verfügbaren Download Mirrors bei %s");
 define("_MD_WFD_NOUSERMIRRORS", "Hinzufügen eines neuen Download Mirror bei %s.");
 define("_MD_WFD_TOTALMIRRORS", "Alle verfügbaren Mirrors:");
-define("_MD_WFD_ADDMIRROR", "Mirror hinzufögen");
+define("_MD_WFD_ADDMIRROR", "Mirror hinzufügen");
 define("_MD_WFD_MIRROR_TOTAL", "<b>Alle Mirrors:</b> %s");
 define("_MD_WFD_MIRROR_HOMEURLTITLE", "Homepage Titel:");
 define("_MD_WFD_MIRROR_HOMEURL", "Homepage URL:<br /><br />Eingabe deiner Homepage URL.");
