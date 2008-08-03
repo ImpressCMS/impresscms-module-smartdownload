@@ -24,7 +24,7 @@
 				<tr>
 					<{foreach item=subcat from=$subcategories}>
 						<td>
-							<a href="viewcat.php?cid=<{$subcat.id}>"><img src="<{$subcat.image}>" alt="<{$subcat.title}>" title="<{$subcat.title}>" align="middle" />&nbsp;&nbsp;<{$subcat.title}></a>&nbsp;(<{$subcat.totallinks}>)<br />
+							<div style="padding-left:10px;" /><a href="viewcat.php?cid=<{$subcat.id}>"><img src="<{$subcat.image}>" alt="<{$subcat.title}>" title="<{$subcat.title}>" align="middle" /><{$subcat.title}></a>&nbsp;(<{$subcat.totallinks}>)</div><br />
 						</td>
 	 					<{if $subcat.count is div by 2}>
       						</tr>
