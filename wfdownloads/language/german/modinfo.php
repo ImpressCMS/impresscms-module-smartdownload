@@ -77,14 +77,14 @@ define('_MI_WFD_CAT_IMGHEIGHTDSC', 'Einstellen der höhe für das Kategoriebild'
 
 define("_MI_WFD_ANONPOST","Anonyme Einsendungen:");
 define("_MI_WFD_ANONPOSTDSC","Anonymen Usern erlauben, Downloads zu posten?");
-define("_MI_WFD_ANONPOST1","Keines Ausgewöht");
+define("_MI_WFD_ANONPOST1","Keines Ausgewäht");
 define("_MI_WFD_ANONPOST2","Nur vom Downloadverzeichnis");
 define("_MI_WFD_ANONPOST3","Nur vom Mirror");
 define("_MI_WFD_ANONPOST4","Beide");
 
 define('_MI_WFD_AUTOAPPROVE','Automatische freigabe für Downloads/Mirrors ');
 define('_MI_WFD_AUTOAPPROVEDSC','Neue Downloads ohne (Admin-)Überprüfung in die Datenbank übernehmen?');
-define('_MI_WFD_AUTOAPPROVE1','Keines Ausgewöht');
+define('_MI_WFD_AUTOAPPROVE1','Keines Ausgewäht');
 define('_MI_WFD_AUTOAPPROVE2','Nur vom Downloadverzeichnis');
 define('_MI_WFD_AUTOAPPROVE3','Nur vom Mirror');
 define('_MI_WFD_AUTOAPPROVE4','Beides');
@@ -119,7 +119,7 @@ define('_MI_WFD_UPLOADMINPOSTSDSC', "Tragen die Mindestzahl der posts ein bevor 
 
 define('_MI_WFD_ALLOWSUBMISS','User Einsendungen:');
 define('_MI_WFD_ALLOWSUBMISSDSC','User dürfen Downloads übermitteln?');
-define('_MI_WFD_ALLOWSUBMISS1','Keines Ausgewöht');
+define('_MI_WFD_ALLOWSUBMISS1','Keines Ausgewäht');
 define('_MI_WFD_ALLOWSUBMISS2','Nur vom Downloadverzeichnis');
 define('_MI_WFD_ALLOWSUBMISS3','Nur vom Mirror');
 define('_MI_WFD_ALLOWSUBMISS4','Beite');
