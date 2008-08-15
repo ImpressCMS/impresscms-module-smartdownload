@@ -14,7 +14,7 @@ define("_MD_WFD_NODOWNLOAD", "Das Download existiert nicht!");
 define("_MD_WFD_DOWNLOADMINPOSTS", "Du musst erst den Zähler um 1 erhöhen,<br />bevor Du die Datei Downloaden kannst.");
 define("_MD_WFD_UPLOADMINPOSTS", "Du musst erst den Zähler um 1 erhöhen,<br />bevor Du die Datei Uploaden kannst.");
 
-define("_MD_WFD_SUBCATLISTING", "Kategorie Listing");
+define("_MD_WFD_SUBCATLISTING", "weitere Unterkategorien");
 define("_MD_WFD_ISADMINNOTICE", "Webmaster: Mit diesem Bild gibt es ein Problem.");
 define("_MD_WFD_THANKSFORINFO", "Danke für die Übermittlung. Du wirst informiert, sobald Deine Einsendung vom Webmaster freigegeben wurde.");
 define("_MD_WFD_ISAPPROVED", "Danke für die Übermittlung. Deine Einsendung wurde überprüft, freigegeben und wird ab jetzt gelistet.");
