@@ -149,7 +149,7 @@ $xoopsTpl->assign('module_home', wfdownloads_module_home(false));
 
 if($xoopsModuleConfig['enablerss'] == 1)
 {
-	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border=0 alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php", _MD_WFD_LEGENDTEXTRSS, XOOPS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTRSS);
+	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border=0 alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php", _MD_WFD_LEGENDTEXTRSS, XOOPS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTRSS, _MD_WFD_LEGENDTEXTRSS);
 	$xoopsTpl->assign('full_rssfeed_link', $rsslink);
 }
 
