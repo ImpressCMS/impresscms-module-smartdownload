@@ -304,4 +304,9 @@ define('_MI_WFD_MIRROR_ALLOWSUBMISS','User Mirror Submissions:');
 define('_MI_WFD_MIRROR_ALLOWSUBMISSDSC','Allow Users to Submit new mirrors');
 define('_MI_WFD_MIRROR_MIRRORIMAGES','Mirror Logo Upload Directory'); // not implemented yet
 define('_MI_WFD_MIRROR_MIRRORIMAGESDSC','Mirror Logo Upload Directory'); // not implemented yet
+
+// added in 3.2 Final
+define('_MI_WFD_BNAME1_DSC','Shows recently added download files');
+define('_MI_WFD_BNAME2_DSC','Shows most downloaded files');
+define('_MI_WFD_BNAME3_DSC','Shows most downloaded files by top categories');
 ?>
