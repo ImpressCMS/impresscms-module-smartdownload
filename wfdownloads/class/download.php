@@ -859,7 +859,9 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
 		    // added - start - March 4 2006 - jpc
             if(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php") AND $download->getVar("formulize_idreq") > 0) {
 			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
-			deleteFormEntries(array($download->getVar("formulize_idreq")));
+			$category_handler = xoops_getmodulehandler('category');
+			$category = $category_handler->get($download->getVar('cid'));
+			deleteFormEntries(array($download->getVar("formulize_idreq")), $category->getVar('formulize_fid'));
 		}
 		    // added - emd - March 4 2006 - jpc
 

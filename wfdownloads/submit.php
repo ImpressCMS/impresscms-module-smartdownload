@@ -291,7 +291,7 @@ else
        	    if ($lid) {
               $entries[$fid][0] = $download->getVar('formulize_idreq');
               if($entries[$fid][0]) {
-                $owner = getEntryOwner($entries[$fid][0]);
+                $owner = getEntryOwner($entries[$fid][0], $fid);
               } else {
                 $entries[$fid][0] = "";
                 $owner = "";
@@ -566,7 +566,7 @@ else
 			$customArray['go_back'] = "";
 			$customArray['parentLinks'] = "";
 
-			$owner = getEntryOwner($entry); 
+			$owner = getEntryOwner($entry, $fid); 
 			$member_handler =& xoops_gethandler('member');
 			$owner_groups =& $member_handler->getGroupsByUser($owner, FALSE);			
 

@@ -142,10 +142,10 @@ function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 			foreach($data as $entry)
 			{ // gather all IDs for this $fid
 				$found_ids = internalRecordIds($entry, $formHandle);
-				$temp_saved_ids = array_merge($temp_saved_ids, $found_ids);
+				$temp_saved_ids = array_merge((array)$temp_saved_ids, (array)$found_ids);
 				unset($found_ids);
 			}
-			$saved_ids = array_merge($saved_ids, $temp_saved_ids); // merge this $fid's IDs with IDs from all previous $fids
+			$saved_ids = array_merge((array)$saved_ids, (array)$temp_saved_ids); // merge this $fid's IDs with IDs from all previous $fids
 			unset($temp_saved_ids);
 			unset($data);
 		} // end of foreach $fids
