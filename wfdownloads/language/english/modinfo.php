@@ -170,7 +170,7 @@ define('_MI_WFD_COPYRIGHTDSC', 'Select to display a copyright notice on download
 // Description of each config items
 define('_MI_WFD_PLATFORMDSC', 'List of platforms to enter <br />Separate with | IMPORTANT: Do not change this once the site is Live, Add new to the end of the list!');
 define('_MI_WFD_SUBCATSDSC', 'Select Yes to display sub-categories. Selecting No will hide sub-categories from the listings');
-define('_MI_WFD_LICENSEDSC', 'List of platforms to enter <br />Separate with |');
+define('_MI_WFD_LICENSEDSC', 'List of Licenses to enter<br />Separate with |');
 
 // Text for notifications
 define('_MI_WFD_GLOBAL_NOTIFY', 'Global');

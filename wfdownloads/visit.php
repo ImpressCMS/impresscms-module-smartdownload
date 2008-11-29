@@ -146,7 +146,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 		header("Pragma: public");
 		header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 		header("Cache-Control: private",false);
-		header("Content-Length: ".(string)(filesize($filePath)));
+//		header("Content-Length: ".filesize($filePath));
 		header("Content-Transfer-Encoding: binary");
 		if(isset($mimeType)) {header("Content-Type: " . $mimeType);}
 		header("Content-Disposition: attachment; filename=".$header_file);
@@ -163,4 +163,5 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 	}
 
 	include XOOPS_ROOT_PATH.'/footer.php';
+}
 ?>
