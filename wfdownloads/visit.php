@@ -18,7 +18,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 	}
 	elseif(is_object($xoopsUser) && $xoopsUser->getVar('posts') < $xoopsModuleConfig['download_minposts'] && !$xoopsUser->isAdmin())
 	{
-		redirect_header(WFDOWNLOADS_URL.'index.php',5,_MD_WFD_DOWNLOADMINPOSTS);}
+		redirect_header(WFDOWNLOADS_URL.'index.php',5,_MD_WFD_DOWNLOADMINPOSTS);
 	}
 
 	$agreed = (isset($_GET['agree'])) ? intval($_GET['agree']) : 0;
