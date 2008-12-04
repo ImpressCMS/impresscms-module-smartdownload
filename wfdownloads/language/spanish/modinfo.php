@@ -18,12 +18,15 @@ define("_MI_WFD_NAME","Descargas");
 define("_MI_WFD_DESC","Crea una secci&oacute;n de descargas donde los usuarios pueden descargar/subir/puntuar ficheros.");
 
 // Names of blocks for this module (Not all module has blocks)
-define("_MI_WFD_BNAME1","Descargas recientess");
+define("_MI_WFD_BNAME1","Descargas recientes");
 define("_MI_WFD_BNAME2","Descargas populares");
 //Línea añadida en la revisión 1473
 
 define("_MI_WFD_BNAME3","Descargas más importantes");//Top Downloads by top categories
-
+// added in 3.2 Final
+define('_MI_WFD_BNAME1_DSC','Muestra los archivos que se han añadido recientemente para descargar');
+define('_MI_WFD_BNAME2_DSC','Muestra los archivos con más descargas');
+define('_MI_WFD_BNAME3_DSC','Muestra los archivos con más descargas por categorías');
 // Sub menu titles
 define("_MI_WFD_SMNAME1","Enviar descarga");
 define("_MI_WFD_SMNAME2","Populares");
@@ -31,12 +34,12 @@ define("_MI_WFD_SMNAME3","Mejor valoradas");
 
 // Names of admin menu items
 define("_MI_WFD_BINDEX","&Iacute;ndice principal");
-define("_MI_WFD_INDEXPAGE","Gesti&oacute;n de la p&aacute;gina principal");
-define("_MI_WFD_MCATEGORY","Gesti&oacute;n de las categor&iacute;as");
-define("_MI_WFD_MDOWNLOADS","Gesti&oacute;n de ficheros");
+define("_MI_WFD_INDEXPAGE","Gestión de la p&aacute;gina principal");
+define("_MI_WFD_MCATEGORY","Gestión de las categorías");
+define("_MI_WFD_MDOWNLOADS","Gestión de ficheros");
 define("_MI_WFD_REVIEWS","Revisiones");
 define("_MI_WFD_MUPLOADS","Subida de im&aacute;genes");
-define("_MI_WFD_MMIMETYPES","Gesti&oacute;n de Mimetypes (tipos de archivo)");
+define("_MI_WFD_MMIMETYPES","Gestión de Mimetypes (tipos de archivo)");
 define("_MI_WFD_PERMISSIONS","Configuración de los permisos");
 define("_MI_WFD_BLOCKADMIN","Configuración de los bloques");
 define("_MI_WFD_MVOTEDATA","Votos");
@@ -54,7 +57,7 @@ define("_MI_WFD_DISPLAYICON2", "Mostrar como texto");
 define("_MI_WFD_DISPLAYICON3", "No mostrar");
 
 define("_MI_WFD_DAYSNEW","D&iacute;as de nuevas descargas:");
-define("_MI_WFD_DAYSNEWDSC","El n&uacute;mero de d&iacute;as que la descarga ser&aacute; considerada como nueva.");
+define("_MI_WFD_DAYSNEWDSC","El número de d&iacute;as que la descarga ser&aacute; considerada como nueva.");
 define("_MI_WFD_DAYSUPDATED","Actualizadas las descargas los d&iacute;as:");
 define("_MI_WFD_DAYSUPDATEDDSC","La cantidad de d&iacute;as que la descarga ser&aacute; considerada como actualizada.");
 
@@ -68,7 +71,7 @@ define('_MI_WFD_TEMPLATESET2', 'Profesional');
 
 define('_MI_WFD_USESHOTS', '¿Mostrar capturas de pantalla de cada descarga?');
 define('_MI_WFD_USESHOTSDSC', 'Selecciona "S&iacute;" para mostrar capturas de pantalla de cada descarga');
-define('_MI_WFD_SHOTWIDTH', 'Ancho m&aacute;ximo de las capturas de pantalla/miniaturas');
+define('_MI_WFD_SHOTWIDTH', 'Ancho máximo de las capturas de pantalla/miniaturas');
 define('_MI_WFD_SHOTWIDTHDSC', 'Mostrar anchura de las capturas de pantalla');
 define('_MI_WFD_SHOTHEIGHT', 'Altura m&aacute;xima de las capturas de pantalla/miniaturas');
 define('_MI_WFD_SHOTHEIGHTDSC', 'Mostrar altura de las capturas de pantalla');
@@ -93,16 +96,16 @@ define("_MI_WFD_REVIEWANONPOST","Revisiones de usuarios an&oacute;nimos:");
 define("_MI_WFD_REVIEWANONPOSTDSC","¿Los usuarios an&oacute;nimos pueden enviar las revisiones?");
 
 define('_MI_WFD_MAXFILESIZE','Tama&ntilde;o de la subida (KB)');
-define('_MI_WFD_MAXFILESIZEDSC','Tama&ntilde;o m&aacute;ximo permitido del fichero de subida.');
+define('_MI_WFD_MAXFILESIZEDSC','Tama&ntilde;o máximo permitido del fichero de subida.');
 define('_MI_WFD_IMGWIDTH','Ancho de la imagen subida');
-define('_MI_WFD_IMGWIDTHDSC','Ancho m&aacute;ximo de la imagen a enviar');
+define('_MI_WFD_IMGWIDTHDSC','Ancho máximo de la imagen a enviar');
 define('_MI_WFD_IMGHEIGHT','Altura de la imagen subida');
 define('_MI_WFD_IMGHEIGHTDSC','Altura m&aacute;xima de la imagen a enviar');
 
 define('_MI_WFD_AUTOSUMMARY','Habilitar sumario autom&aacute;tico');
 define('_MI_WFD_AUTOSUMMARYDESC','Crear autom&aacute;ticamente un sumario basado en x caracteres definidos');
 define('_MI_WFD_AUTOSUMMARYLENGTH','Longitud del sumario');
-define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Tama&ntilde;o m&aacute;ximo de la cantidad de caracteres mostrados en el sumario');
+define('_MI_WFD_AUTOSUMMARYLENGTHDESC','Tama&ntilde;o máximo de la cantidad de caracteres mostrados en el sumario');
 
 define('_MI_WFD_UPLOADDIR','Directorio para subidas (sin la barra final)');
 define('_MI_WFD_UPLOADDIRDSC','Directorio de subida *RUTA* absoluta');
@@ -121,7 +124,7 @@ define('_MI_WFD_ALLOWUPLOADS','Subidas del usuario:');
 define('_MI_WFD_ALLOWUPLOADSDSC','¿Permitir a los usuarios subir archivos directamente a la web?');
 define('_MI_WFD_SCREENSHOTS','Directorio para las capturas de pantalla');
 define('_MI_WFD_CATEGORYIMG','Directorio de subida(upload) para la imagen de la categoría');
-define('_MI_WFD_MAINIMGDIR','Directorio para las im&aacute;genes de las categor&iacute;as');
+define('_MI_WFD_MAINIMGDIR','Directorio para las im&aacute;genes de las categorías');
 define('_MI_WFD_USETHUMBS', 'Miniaturas:');
 define("_MI_WFD_USETHUMBSDSC", "Tipos de archivos permitidos: JPG, GIF, PNG.<div style='padding-top: 8px;'>Usar&aacute; miniaturas para las im&aacute;genes. Seleccione 'No' para usar la imagen original si el servidor no soporta esta opcion.</div>");
 define('_MI_WFD_DATEFORMAT', 'Formato de la fecha:');
@@ -131,7 +134,7 @@ define('_MI_WFD_SHOWDOWNDISCL', '¿Mostrar las Condiciones de Uso a los usuarios 
 define('_MI_WFD_DISCLAIMER', 'Condiciones de uso para los env&iacute;os:');
 define('_MI_WFD_DOWNDISCLAIMER', 'Condiciones de uso para las descargas:');
 define('_MI_WFD_PLATFORM', 'Plataformas:');
-define('_MI_WFD_SUBCATS', 'Subcategor&iacute;as:');
+define('_MI_WFD_SUBCATS', 'Subcategorías:');
 define('_MI_WFD_VERSIONTYPES', 'Estado de la versi&oacute;n:');
 define('_MI_WFD_LICENSE', 'Licencia:');
 define('_MI_WFD_LIMITS', 'Limitaciones del fichero:');
@@ -158,58 +161,58 @@ define('_MI_WFD_COPYRIGHT', '¿Notificar Copyright?:');
 define('_MI_WFD_COPYRIGHTDSC', '¿A&ntilde;adir copright a la p&aacute;gina de Informaci&oacute;n de la descarga?');
 // Description of each config items
 define('_MI_WFD_PLATFORMDSC', 'Lista de plataformas <br />Separar con una | Importante: No cambiar esto si la p&aacute;gina est&aacute; en funcionamiento, ¡a&ntilde;adir nuevas al final de la lista');
-define('_MI_WFD_SUBCATSDSC', '¿Mostrar subcategor&iacute;as?. Seleccionando \'No\' ocultar&aacute; las subcategor&iacute;as en los listados');
+define('_MI_WFD_SUBCATSDSC', '¿Mostrar subcategorías?. Seleccionando \'No\' ocultar&aacute; las subcategorías en los listados');
 define('_MI_WFD_LICENSEDSC', 'Lista de plataformas <br />Separadas con una |');
 
 // Text for notifications
 define('_MI_WFD_GLOBAL_NOTIFY', 'Global');
-define('_MI_WFD_GLOBAL_NOTIFYDSC', 'Opciones de notificaci&oacute;n global');
+define('_MI_WFD_GLOBAL_NOTIFYDSC', 'Opciones de notificación global');
 
 define('_MI_WFD_CATEGORY_NOTIFY', 'Categor&iacute;as');
-define('_MI_WFD_CATEGORY_NOTIFYDSC', 'Opciones de notificaci&oacute;n acerca de la categor&iacute;a actual.');
+define('_MI_WFD_CATEGORY_NOTIFYDSC', 'Opciones de notificación acerca de la categoría actual.');
 
 define('_MI_WFD_FILE_NOTIFY', 'Fichero');
-define('_MI_WFD_FILE_NOTIFYDSC', 'Opciones de notificaci&oacute;n acerca del fichero actual.');
+define('_MI_WFD_FILE_NOTIFYDSC', 'Opciones de notificación acerca del fichero actual.');
 
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFY', 'Nueva categor&iacute;a');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYCAP', 'Notificarme cuando una nueva categor&iacute;a sea creada.');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando una nueva categor&iacute;a sea creada.');
-define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: nueva categor&iacute;a');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFY', 'Nueva categoría');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYCAP', 'Notificarme cuando una nueva categoría sea creada.');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYDSC', 'Recibir notificación cuando una nueva categoría sea creada.');
+define('_MI_WFD_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: nueva categoría');
 
 define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFY', 'Petici&oacute;n de Modificaci&oacute;n de fichero');
 define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYCAP', 'Notificarme cuando se pida modificar un fichero.');
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando se envi&eacute; una petici&oacute;nde modificaci&oacute;n de un fichero.');
-define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: petici&oacute;n de modificaci&oacute;n de fichero');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYDSC', 'Recibir notificación cuando se envi&eacute; una petici&oacute;nde modificaci&oacute;n de un fichero.');
+define('_MI_WFD_GLOBAL_FILEMODIFY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: petici&oacute;n de modificaci&oacute;n de fichero');
 
 define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFY', 'Informe de enlace roto');
 define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYCAP', 'Notificarme cuando haya un informe de alg&uacute;n enlace roto.');
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando se env&iacute;e un informe de cualquier enlace roto. ');
-define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: informe de enlace roto');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYDSC', 'Recibir notificación cuando se env&iacute;e un informe de cualquier enlace roto. ');
+define('_MI_WFD_GLOBAL_FILEBROKEN_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: informe de enlace roto');
 
 define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFY', 'Fichero Enviado');
 define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYCAP', 'Notificarme cuando se env&iacute;e un nuevo fichero (esperando aprobaci&oacute;n).');
 define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYDSC', 'Recibir notificiaci&oacute;n cuando cualquier nuevo fichero sea enviado (esperando aprobaci&oacute;n).');
-define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: nuevo fichero enviado');
+define('_MI_WFD_GLOBAL_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: nuevo fichero enviado');
 
 define('_MI_WFD_GLOBAL_NEWFILE_NOTIFY', 'Nuevo fichero');
 define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYCAP', 'Notificarme cuando se publique una nueva descarga.');
 define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYDSC', 'Recibir notificiaci&oacute;n cuando se publique cualquier nueva descarga.');
-define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: nueva descarga');
+define('_MI_WFD_GLOBAL_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: nueva descarga');
 
 define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFY', 'Fichero enviado');
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYCAP', 'Notificarme cuando se env&iacute;e un nuevo fichero (esperando aprobaci&oacute;n) en la categor&iacute;a actual.');
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando se env&iacute;e un nuevo fichero (esperando aprobaci&oacute;n) en la categor&iacute;a actual.');
-define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: nuevo fichero enviado en la categor&iacute;a');
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYCAP', 'Notificarme cuando se env&iacute;e un nuevo fichero (esperando aprobaci&oacute;n) en la categoría actual.');
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYDSC', 'Recibir notificación cuando se env&iacute;e un nuevo fichero (esperando aprobaci&oacute;n) en la categoría actual.');
+define('_MI_WFD_CATEGORY_FILESUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: nuevo fichero enviado en la categoría');
 
 define('_MI_WFD_CATEGORY_NEWFILE_NOTIFY', 'Nuevo fichero');
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYCAP', 'Notificarme cuando un nuevo env&iacute;o sea enviado en la categor&iacute;a actual.');
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando se publique una nueva descarga en la categor&iacute;a actual.');
-define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificaci&oacute;n: nuevo fichero en categor&iacute;a');
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYCAP', 'Notificarme cuando un nuevo env&iacute;o sea enviado en la categoría actual.');
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYDSC', 'Recibir notificación cuando se publique una nueva descarga en la categoría actual.');
+define('_MI_WFD_CATEGORY_NEWFILE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} auto-notificación: nuevo fichero en categoría');
 
 define('_MI_WFD_FILE_APPROVE_NOTIFY', 'Fichero aprobado');
 define('_MI_WFD_FILE_APPROVE_NOTIFYCAP', 'Notificarme cuando el fichero sea aprobado.');
-define('_MI_WFD_FILE_APPROVE_NOTIFYDSC', 'Recibir notificaci&oacute;n cuando el fichero sea aprobado.');
-define('_MI_WFD_FILE_APPROVE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} aauto-notificaci&oacute;n: fichero aprobado');
+define('_MI_WFD_FILE_APPROVE_NOTIFYDSC', 'Recibir notificación cuando el fichero sea aprobado.');
+define('_MI_WFD_FILE_APPROVE_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} aauto-notificación: fichero aprobado');
 
 define('_MI_WFD_AUTHOR_INFO', "Informaci&oacute;n de los desarrolladores");
 define('_MI_WFD_AUTHOR_NAME', "Desarrollador");
@@ -265,9 +268,9 @@ define('_MI_WFD_MIRROR_AUTOAPPROVE','Aprobar autom&aacute;ticamente los mirrors 
 define('_MI_WFD_MIRROR_AUTOAPPROVEDSC','Seleccionar para validar los mirrors enviados sin moderacion.');
 
 define('_MI_WFD_MIRROR_MAXIMGWIDTH','Ancho del logo subido'); // not implemented yet
-define('_MI_WFD_MIRROR_MAXIMGWIDTHDSC','Ancho m&aacute;ximo permitido del logo de archivos subido'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGWIDTHDSC','Ancho máximo permitido del logo de archivos subido'); // not implemented yet
 define('_MI_WFD_MIRROR_MAXIMGHEIGHT','Alto del logo subido'); // not implemented yet
-define('_MI_WFD_MIRROR_MAXIMGHEIGHTDSC','Alto m&aacute;ximo permitido del logo de archivos subido'); // not implemented yet
+define('_MI_WFD_MIRROR_MAXIMGHEIGHTDSC','Alto máximo permitido del logo de archivos subido'); // not implemented yet
 
 define('_MI_WFD_MIRROR_ENABLE','Activar el sistema de mirror');
 define('_MI_WFD_MIRROR_ENABLEDSC','');
@@ -305,4 +308,5 @@ define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFY', 'Archivo modificado');
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYCAP', 'Notificarme cuando cualquier archivo sea modificado.');
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYDSC', 'Recibir notificación cuando cualquier archivo sea modificado.');
 define('_MI_WFD_GLOBAL_FILEMODIFIED_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} autonotificación: Archivo modificado');
+
 ?>
