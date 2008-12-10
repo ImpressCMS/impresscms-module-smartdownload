@@ -324,7 +324,7 @@ switch ($op)
         include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
         $page = ($totalmodrequests > $xoopsModuleConfig['admin_perpage']) ? _AM_WFD_MINDEX_PAGE : '';
         $pagenav = new XoopsPageNav($totalmodrequests, $xoopsModuleConfig['admin_perpage'], $start, 'start');
-        echo "<div align='right' style='padding: 8px;'>" . $page . '' . $pagenav->renderNav() . '</div>';
+        echo "<div align='"._GLOBAL_RIGHT."' style='padding: 8px;'>" . $page . '' . $pagenav->renderNav() . '</div>';
         xoops_cp_footer();
 }
 

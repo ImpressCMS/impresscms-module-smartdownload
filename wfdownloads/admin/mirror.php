@@ -236,7 +236,7 @@ switch ($op)
 
     include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
     $pagenav = new XoopsPageNav($num, $xoopsModuleConfig['admin_perpage'] , $start, 'start');
-    echo "<div text-align='right'>" . $pagenav -> renderNav() . '</div>';
+    echo "<div text-align='"._GLOBAL_RIGHT."'>" . $pagenav -> renderNav() . '</div>';
     xoops_cp_footer();
     break;
 

@@ -42,8 +42,8 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
     $xoopsOption['template_main'] = 'wfdownloads_reviews.html';
     include XOOPS_ROOT_PATH . '/header.php';
 	
-	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 	$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
     $sql = "SELECT * FROM " . $xoopsDB->prefix('wfdownloads_indexpage') . " ";
@@ -129,8 +129,8 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
         {
             include XOOPS_ROOT_PATH . '/header.php';
 			
-			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 			$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
             include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';

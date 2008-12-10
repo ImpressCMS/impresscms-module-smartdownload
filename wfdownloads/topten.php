@@ -21,8 +21,8 @@ $gperm_handler = & xoops_gethandler('groupperm');
 
 include XOOPS_ROOT_PATH . '/header.php';
 
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
 $action_array = array('hit' => 0, 'rate' => 1);

@@ -98,7 +98,7 @@ switch ($op)
 		include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
         $page = ($votes > 20) ? _AM_WFD_MINDEX_PAGE : '';
         $pagenav = new XoopsPageNav($page, 20, $start, 'start');
-        echo '<div align="right" style="padding: 8px;">' . $page . '' . $pagenav->renderNav() . '</div>';
+        echo '<div align="'._GLOBAL_RIGHT.'" style="padding: 8px;">' . $page . '' . $pagenav->renderNav() . '</div>';
         break;
 }
 xoops_cp_footer();

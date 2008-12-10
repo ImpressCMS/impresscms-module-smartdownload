@@ -52,10 +52,10 @@
   <!-- Start mirror loop -->
   <{foreach item=mirror from=$down_mirror}>
   <tr style="line-height: 25px;">
-    <td align="left"><span><a href="<{$mirror.homeurl}>"><{$mirror.title}></a></span></td>
-    <td align="left"><span><{$mirror.location}></span></td>
-    <td align="left"><span><{$mirror.continent}></span></td>
-    <td align="left"><span><a href="<{$mirror.downurl}>"><{$smarty.const._MD_WFD_MIRROR_HDOWNLOAD}></a></span></td>
+    <td align="<{$smarty.const._GLOBAL_LEFT}>"><span><a href="<{$mirror.homeurl}>"><{$mirror.title}></a></span></td>
+    <td align="<{$smarty.const._GLOBAL_LEFT}>"><span><{$mirror.location}></span></td>
+    <td align="<{$smarty.const._GLOBAL_LEFT}>"><span><{$mirror.continent}></span></td>
+    <td align="<{$smarty.const._GLOBAL_LEFT}>"><span><a href="<{$mirror.downurl}>"><{$smarty.const._MD_WFD_MIRROR_HDOWNLOAD}></a></span></td>
 <{if $mirror.isonline == 1}>
     <td align="center" style="vertical-align: middle;"><img src="<{$xoops_url}>/modules/wfdownloads/images/icon/on.gif" alt="Online" title="Online" width="18" height="18"></td>
 <{/if}>

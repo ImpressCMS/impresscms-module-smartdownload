@@ -12,6 +12,10 @@
 if (!defined("XOOPS_ROOT_PATH")) {
  	die("XOOPS root path not defined");
 }
+if(!defined("_GLOBAL_LEFT")){
+define('_GLOBAL_LEFT', (( defined('_ADM_USE_RTL') && _ADM_USE_RTL )?"right":"left"));} // type here right in rtl languages
+if(!defined("_GLOBAL_RIGHT")){
+define('_GLOBAL_RIGHT', (( defined('_ADM_USE_RTL') && _ADM_USE_RTL )?"left":"right"));} // type here left in rtl languages
 
 function wfdownloads_xoops_cp_header()
 {
@@ -1565,7 +1569,7 @@ function wfd_downlistpagenav($pubrowamount, $start, $art = "art")
     // Display Page Nav if published is > total display pages amount.
     $page = ($pubrowamount > $xoopsModuleConfig['admin_perpage']) ? _AM_WFD_MINDEX_PAGE : '';
     $pagenav = new XoopsPageNav($pubrowamount, $xoopsModuleConfig['admin_perpage'], $start, 'st' . $art);
-    echo '<div align="right" style="padding: 8px;">' . $page . '' . $pagenav -> renderNav() . '</div>';
+    echo '<div align="'._GLOBAL_RIGHT.'" style="padding: 8px;">' . $page . '' . $pagenav -> renderNav() . '</div>';
     echo "</fieldset><br />";
 }
 

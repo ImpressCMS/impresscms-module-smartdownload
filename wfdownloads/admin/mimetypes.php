@@ -281,7 +281,7 @@ switch ($op)
         $headingarray = array(_AM_WFD_MIME_ID, _AM_WFD_MIME_NAME, _AM_WFD_MIME_EXT, _AM_WFD_MIME_ADMIN, _AM_WFD_MIME_USER, _AM_WFD_MINDEX_ACTION);
         for($i = 0; $i <= count($headingarray)-1; $i++)
         {
-            $align = ($i == 1) ? "left" : "center";
+            $align = ($i == 1) ? _GLOBAL_LEFT : "center";
             echo "<td align='$align' class='bg3'><b>" . $headingarray[$i] . "</td>";
         }
         echo "</tr>";
@@ -330,7 +330,7 @@ switch ($op)
         include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
         $page = ($mime_num > 20) ? _AM_WFD_MINDEX_PAGE : '';
         $pagenav = new XoopsPageNav($mime_num, 20, $start, 'start');
-        echo "<div align='right' style='padding: 8px;'>" . $page . '' . $pagenav -> renderNav() . '</div>';
+        echo "<div align='"._GLOBAL_RIGHT."' style='padding: 8px;'>" . $page . '' . $pagenav -> renderNav() . '</div>';
         xoops_cp_footer();
 }
 

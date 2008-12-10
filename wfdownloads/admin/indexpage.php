@@ -75,11 +75,11 @@ switch ($op)
 
         $sform->addElement(new XoopsFormDhtmlTextArea(_AM_WFD_IPAGE_CHEADING, 'indexheader', $indexheader, 15, 60));
         $headeralign_select = new XoopsFormSelect(_AM_WFD_IPAGE_CHEADINGA, "indexheaderalign", $indexheaderalign);
-        $headeralign_select->addOptionArray(array("left" => _AM_WFD_IPAGE_CLEFT, "right" => _AM_WFD_IPAGE_CRIGHT, "center" => _AM_WFD_IPAGE_CCENTER));
+        $headeralign_select->addOptionArray(array(_GLOBAL_LEFT => _AM_WFD_IPAGE_CLEFT, _GLOBAL_RIGHT => _AM_WFD_IPAGE_CRIGHT, "center" => _AM_WFD_IPAGE_CCENTER));
         $sform->addElement($headeralign_select);
         $sform->addElement(new XoopsFormTextArea(_AM_WFD_IPAGE_CFOOTER, 'indexfooter', $indexfooter, 10, 60));
         $footeralign_select = new XoopsFormSelect(_AM_WFD_IPAGE_CFOOTERA, "indexfooteralign", $indexfooteralign);
-        $footeralign_select->addOptionArray(array("left" => _AM_WFD_IPAGE_CLEFT, "right" => _AM_WFD_IPAGE_CRIGHT, "center" => _AM_WFD_IPAGE_CCENTER));
+        $footeralign_select->addOptionArray(array(_GLOBAL_LEFT => _AM_WFD_IPAGE_CLEFT, _GLOBAL_RIGHT => _AM_WFD_IPAGE_CRIGHT, "center" => _AM_WFD_IPAGE_CCENTER));
         $sform->addElement($footeralign_select);
 
         $options_tray = new XoopsFormElementTray(_AM_WFD_TEXTOPTIONS, '<br />');

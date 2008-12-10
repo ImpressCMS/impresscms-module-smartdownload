@@ -95,7 +95,7 @@ switch ($op)
 		<table width='100%' border='0' cellspacing='1' cellpadding = '2' class='outer'>\n
 		<tr align = 'center'>\n
 		<th width = '3%' align = 'center'>" . _AM_WFD_BROKEN_ID . "</th>\n
-		<th width = '35%' align = 'left'>" . _AM_WFD_BROKEN_TITLE . "</th>\n
+		<th width = '35%' align = '"._GLOBAL_LEFT."'>" . _AM_WFD_BROKEN_TITLE . "</th>\n
 		<th>" . _AM_WFD_BROKEN_REPORTER . "</th>\n
 		<th>" . _AM_WFD_BROKEN_FILESUBMITTER . "</th>\n
 		<th>" . _AM_WFD_BROKEN_DATESUBMITTED . "</th>\n
@@ -155,7 +155,7 @@ switch ($op)
             echo "
 		<tr align = 'center'>\n
 		<td class = 'head'>".$reports[$i]->getVar('reportid')."</td>\n
-		<td class = 'even' align = 'left'>$download_link</td>\n
+		<td class = 'even' align = '"._GLOBAL_LEFT."'>$download_link</td>\n
 		";
             if ($senderemail == "")
             {

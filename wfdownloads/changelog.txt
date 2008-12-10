@@ -3,6 +3,7 @@
 Fixed: imageheader was left aligned, should be centered. (m0nty)
 Fixed: template bug on viewcat (sato-san)
 Added: added basename(realpath()) to $_POST['filename'] in submit forms. increases protection when dealing with user uploaded files. (m0nty)
+Added: Addition to support RTL (stranger)
 
 <b><u>=> Version 3.2 RC2 (2007-05-10)</u></b>
 

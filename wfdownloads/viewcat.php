@@ -33,8 +33,8 @@ if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
 $xoopsOption['template_main'] = 'wfdownloads_viewcat.html';
 include XOOPS_ROOT_PATH . '/header.php';
 
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
 // added - start - March 4 2006 - jpc

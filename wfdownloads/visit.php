@@ -75,8 +75,8 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 		$xoopsOption['template_main'] = 'wfdownloads_disclaimer.html';
 		include XOOPS_ROOT_PATH.'/header.php';
 	
-		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 		$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 		$xoopsTpl->assign('image_header', wfd_imageheader());
 		$xoopsTpl->assign('downdisclaimer', $myts->displayTarea($xoopsModuleConfig['downdisclaimer'], 1, 1, 1, 1, 1));
@@ -105,8 +105,8 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 	{
 		include XOOPS_ROOT_PATH.'/header.php';
 	
-		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 		$xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 	
 		echo "<div align='center'>".wfd_imageheader()."</div>";

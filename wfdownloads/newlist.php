@@ -16,8 +16,8 @@ include XOOPS_ROOT_PATH . '/header.php';
 
 global $xoopsDB, $xoopsModule, $xoopsUser, $xoopsModuleConfig;
 
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module.css');
-$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
+$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
 $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP_ANONYMOUS);
