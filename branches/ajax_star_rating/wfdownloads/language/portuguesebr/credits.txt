@@ -1,0 +1,28 @@
+###:========================================================
+###:==| Credits: Team http://br.impresscms.org.
+###:========================================================
+###:==| Version: 3.2 
+###:==| Data Release: 2007-04-23
+###:==| Module: SmartDownloads - Project impresscms.org
+###:==| Status: RC2
+###:==| Translation: GibaPhp complements and revision.
+###:========================================================
+###:==| Credits: Team X-Trad.org - In Special ArtsGeral.
+###:========================================================
+###:==| at version 3.2 smartfactory.
+###:==|
+###:==|Removido itens abaixo:
+###:==|
+###:==|// adicionado "by artsgeral"  28/01/2008
+###:==|
+###:==|define("_AM_WFD_IMPORTD", "Importar");
+###:==|define("_AM_WFD_IMPORMYD", "Importar dados do MyDownloads");
+###:==|define("_AM_WFD_IMPORMYDNOT", "Modulo MyDownloads não encontrado");
+###:==|define("_AM_WFD_IMPORPDD", "Importar dados do PD-Downloads");
+###:==|define("_AM_WFD_IMPORPDDNOT", "Modulo PD-Downloads não encontrado");
+###:==|define("_AM_WFD_IMPORWMP", "Importar dados do wmpownloads");
+###:==|define("_AM_WFD_IMPORWMPNOT", "Modulo wmpownloads não encontrado");
+###:==|
+###:========================================================
+###:==| Histórico: Team X-Trad.org - Old versions...
+###:========================================================
