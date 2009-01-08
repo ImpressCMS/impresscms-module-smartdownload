@@ -58,6 +58,7 @@ $modversion['tables'][7] = 'wfdownloads_mimetypes';
 $modversion['tables'][8] = 'wfdownloads_meta';
 $modversion['tables'][9] = 'wfdownloads_mirrors';
 $modversion['tables'][10] = 'wfdownloads_ip_log';
+$modversion['tables'][11] = 'wfdownloads_ratings';
 
 // Admin things
 $modversion['hasAdmin'] = 1;
