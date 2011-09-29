@@ -1,5 +1,5 @@
 <?php
-// $Id: mirror.php,v 1.4 2007/09/30 13:47:53 m0nty_ Exp $
+// $Id$
 // ------------------------------------------------------------------------ //
 // 				 XOOPS - PHP Content Management System                      //
 //					 Copyright (c) 2000 XOOPS.org                           //
@@ -27,7 +27,7 @@
 // Project: The XOOPS Project                                               //
 // -------------------------------------------------------------------------//
 if (!class_exists("XoopsPersistableObjectHandler")) {
-	include_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/object.php";
+	include_once ICMS_ROOT_PATH."/modules/wfdownloads/class/object.php";
 }
 class WfdownloadsMirror extends XoopsObject {
 	function WfdownloadsMirror() {
@@ -44,7 +44,7 @@ class WfdownloadsMirror extends XoopsObject {
 	}
 
 	function getForm() {
-	    include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
+	    include_once ICMS_ROOT_PATH."/class/xoopsformloader.php";
         $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 
 	    $sform = new XoopsThemeForm(_AM_WFD_MIRROR_SNEWMNAMEDESC, "mirrorform", $_SERVER['REQUEST_URI']);

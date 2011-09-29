@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: wfdownloads_top.php,v 1.5 2007/05/13 19:38:07 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -16,7 +16,7 @@
  *            $options[1]   = How many downloads are displayes
  * Output  : Returns the most recent or most popular downloads
  */
-include_once XOOPS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
 
 function b_wfdownloads_top_show($options)
 {

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: modinfo.php,v 1.12 2007/03/31 16:42:01 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004

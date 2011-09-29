@@ -1,0 +1,59 @@
+<{include file='db:wfdownloads_header.html'}>
+
+<{if count($categories) gt 0}>
+<div class="even">
+	<b><{$smarty.const._MD_WFD_MAINLISTING}></b>
+</div>
+<br />
+
+   <{foreach item=category from=$categories}>
+      <div class="wfd_cats2 odd mbottom5 <{if $category.count is div by 2}>toright<{else}>toleft<{/if}>" >
+          <a href="<{$xoops_url}>/modules/wfdownloads/viewcat.php?cid=<{$category.id}>">
+              <img src="<{$category.image}>" alt="<{$category.alttext}>" title="<{$category.alttext}>" style=" padding-right:5px" align="left" />
+          </a>
+          
+          <a href="<{$xoops_url}>/modules/wfdownloads/viewcat.php?cid=<{$category.id}>">
+              <b><{$category.title}></b>
+          </a>&nbsp;(<{$category.totaldownloads}>)<br />
+              <div class="wfd_catsummary">
+                  <{$category.summary}>
+              </div>
+                  <{if $category.subcategories}>
+                  	<div class="even toleft">
+                      <{foreach item=subcat from=$category.subcategories}>
+                          <div class="wfd_subcattitle">
+                              <small><a href="<{$xoops_url}>/modules/wfdownloads/viewcat.php?cid=<{$subcat.id}>"><{$subcat.title}></a></small>
+                          </div>
+                      <{/foreach}>
+                     </div>
+                  <{/if}>
+      </div>
+      <{if $category.count is div by 2}>
+      	<div class="clearit"></div>
+      <{/if}>
+   <{/foreach}>
+
+<div class="clearit"></div>
+<br />
+<div class="odd" style="line-height: 8px;"><small><{$lang_thereare}></small></div><br />
+<div align="center" style="margin-bottom: 1px;"><small>
+
+<{if $full_rssfeed_link}>
+	<{$full_rssfeed_link}>&nbsp;<{$smarty.const._MD_WFD_LEGENDTEXTRSS}>
+<{/if}>
+
+<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/download1.gif" alt="<{$smarty.const._MD_WFD_LEGENDTEXTNEW}>" 
+title="<{$smarty.const._MD_WFD_LEGENDTEXTNEW}>" align="middle" />&nbsp;<{$smarty.const._MD_WFD_LEGENDTEXTNEW}>
+<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/download2.gif" alt="<{$smarty.const._MD_WFD_LEGENDTEXTNEWTHREE}>" 
+title="<{$smarty.const._MD_WFD_LEGENDTEXTNEWTHREE}>" align="middle" />&nbsp;<{$smarty.const._MD_WFD_LEGENDTEXTNEWTHREE}>
+<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/download3.gif" alt="<{$smarty.const._MD_WFD_LEGENDTEXTTHISWEEK}>" 
+title="<{$smarty.const._MD_WFD_LEGENDTEXTTHISWEEK}>" align="middle" />&nbsp;<{$smarty.const._MD_WFD_LEGENDTEXTTHISWEEK}>
+<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/download4.gif" alt="<{$smarty.const._MD_WFD_LEGENDTEXTNEWLAST}>" 
+title="<{$smarty.const._MD_WFD_LEGENDTEXTNEWLAST}>" align="middle" />&nbsp;<{$smarty.const._MD_WFD_LEGENDTEXTNEWLAST}>
+</small></div>
+<{/if}>
+<br />
+<div align="<{$catarray.indexfooteralign}>"><{$catarray.indexfooter}></div>
+<br />
+
+<{include file='db:wfdownloads_footer.html'}>

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: brokenfile.php,v 1.7 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -73,7 +73,7 @@ if (!empty($_POST['submit'])) {
         $xoopsMailer->assign("X_UNAME", $user->uname());
         $xoopsMailer->assign("SITENAME", $xoopsConfig['sitename']);
         $xoopsMailer->assign("X_ADMINMAIL", $xoopsConfig['adminmail']);
-        $xoopsMailer->assign('X_SITEURL', XOOPS_URL . '/');
+        $xoopsMailer->assign('X_SITEURL', ICMS_URL . '/');
         $xoopsMailer->assign("X_TITLE", $title);
         $xoopsMailer->assign("X_SUB_DATE", $subdate);
         $xoopsMailer->assign('X_DOWNLOAD', WFDOWNLOADS_URL.'singlefile.php?cid=' . $cid . '&lid=' . $lid);
@@ -99,7 +99,7 @@ if (!empty($_POST['submit'])) {
     }
 
     $xoopsOption['template_main'] = 'wfdownloads_brokenfile.html';
-    include XOOPS_ROOT_PATH . '/header.php';
+    include ICMS_ROOT_PATH . '/header.php';
 
     $xoopsTpl->assign('catarray', $catarray);
 
@@ -133,7 +133,7 @@ if (!empty($_POST['submit'])) {
         $xoopsTpl->assign('lang_subdate' , $is_updated);
         $xoopsTpl->assign('down', $down);
     }
-    include_once XOOPS_ROOT_PATH . '/footer.php';
+    include_once ICMS_ROOT_PATH . '/footer.php';
 }
 
 ?>

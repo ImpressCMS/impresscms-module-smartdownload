@@ -330,7 +330,7 @@ switch ($op) {
 
     default:
         //ask what to do
-        include XOOPS_ROOT_PATH."/class/xoopsformloader.php";
+        include ICMS_ROOT_PATH."/class/xoopsformloader.php";
         $form = new XoopsThemeForm('Importing',"form", $_SERVER['REQUEST_URI']);
 
         //Is MyDownloads installed?

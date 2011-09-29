@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: main.php,v 1.14 2007/06/25 15:57:52 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004

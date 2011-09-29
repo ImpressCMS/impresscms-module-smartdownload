@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: modinfo.php,v 1.12 2007/03/31 16:42:01 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -106,7 +106,7 @@ define('_MI_WFD_AUTOSUMMARYLENGTH','طول خلاصه');
 define('_MI_WFD_AUTOSUMMARYLENGTHDESC','حداکثر تعداد کاراکتر نشان داده شده در خلاصه');
 
 define('_MI_WFD_UPLOADDIR','شاخه بارگذاری (بدون داشتن اسلش در آخر)');
-define('_MI_WFD_UPLOADDIRDSC','شاخه بارگذاری باید یک مسیر کامل (full path)باشد. مسیر کامل یا مسیر فیزیکی مکانی است که در فایل ها در سرور قرار میگیرند. به عنوان مثال در سرور های لینوکس این مسیر به صورت home/YOUR_ACCOUNT/upload_path  تعریف میشود. در سرور های ویندوز به صورت d:/path/path/upload_path  تعریف میشود. <br /> برای اطلاع بیشتر از چگونگی تنظیم  مسیر فیزیکی مثلا مسیر فیزیکی که زوپس سایت شما در آن نصب شده عبارت است از: '.XOOPS_ROOT_PATH.'');
+define('_MI_WFD_UPLOADDIRDSC','شاخه بارگذاری باید یک مسیر کامل (full path)باشد. مسیر کامل یا مسیر فیزیکی مکانی است که در فایل ها در سرور قرار میگیرند. به عنوان مثال در سرور های لینوکس این مسیر به صورت home/YOUR_ACCOUNT/upload_path  تعریف میشود. در سرور های ویندوز به صورت d:/path/path/upload_path  تعریف میشود. <br /> برای اطلاع بیشتر از چگونگی تنظیم  مسیر فیزیکی مثلا مسیر فیزیکی که زوپس سایت شما در آن نصب شده عبارت است از: '.ICMS_ROOT_PATH.'');
 
 define('_MI_WFD_ENABLERSS','فعال کردن RSS:');
 define('_MI_WFD_ENABLERSSDSC','بله را انتخاب کنید تا RSS  فعال شود.');

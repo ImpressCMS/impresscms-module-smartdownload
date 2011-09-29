@@ -3,7 +3,7 @@
 //Revisión inicial de la traducción y añadidos para la ver. 3.2 RC1 por debianus para es.impresscms.org
 
 /**
- * $Id: admin.php,v 1.24 2007/06/25 15:57:52 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v3.1
  * Release Date: 26 july 2004

@@ -1,5 +1,5 @@
 <?php
-// $Id: object.php,v 1.3 2006/04/06 17:55:28 mithyt2 Exp $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //

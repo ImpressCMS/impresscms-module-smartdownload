@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: category.php,v 1.11 2007/09/30 12:39:13 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -8,15 +8,15 @@
  * Licence: GNU
  */
 include 'admin_header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
-include_once XOOPS_ROOT_PATH . '/class/tree.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
+include_once ICMS_ROOT_PATH . '/class/tree.php';
 
 $op = '';
 
 function createcat($cid = 0)
 {
     include_once WFDOWNLOADS_ROOT_PATH.'class/wfd_lists.php';
-    include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+    include_once ICMS_ROOT_PATH . '/class/xoopsformloader.php';
 
     $category_handler = xoops_getmodulehandler('category');
 
@@ -46,7 +46,7 @@ switch ($op)
             wfdownloads_xoops_cp_header();
             wfdownloads_adminMenu(2, _AM_WFD_MCATEGORY);
 
-            include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+            include_once ICMS_ROOT_PATH . '/class/xoopsformloader.php';
             $sform = new XoopsThemeForm(_AM_WFD_CCATEGORY_MOVE, "move", xoops_getenv('PHP_SELF'));
 
             $category_handler = xoops_getmodulehandler('category');
@@ -251,7 +251,7 @@ switch ($op)
         wfdownloads_xoops_cp_header();
         wfdownloads_adminMenu(2, _AM_WFD_MCATEGORY);
 
-        include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+        include_once ICMS_ROOT_PATH . '/class/xoopsformloader.php';
         $totalcats = wfd_totalcategory();
 
         if ($totalcats > 0)

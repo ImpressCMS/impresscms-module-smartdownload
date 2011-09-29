@@ -1,5 +1,5 @@
 <?php
-// $Id: comment_new.php,v 1.1 2005/12/03 16:34:42 malanciault Exp $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -32,6 +32,6 @@ if ($com_itemid > 0) {
     $download_handler = xoops_getmodulehandler('download');
     $download = $download_handler->get($com_itemid);
     $com_replytitle = $download->getVar('title');
-    include XOOPS_ROOT_PATH.'/include/comment_new.php';
+    include ICMS_ROOT_PATH.'/include/comment_new.php';
 }
 ?>

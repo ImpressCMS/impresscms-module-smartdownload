@@ -1,13 +1,13 @@
 <?php
 /**
- * $Id: xoops_version.php,v 1.36 2007/08/12 10:39:12 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
  * Author: WF-Sections
  * Licence: GNU
  */
-if(!defined('XOOPS_ROOT_PATH')) {exit;}
+if(!defined('ICMS_ROOT_PATH')) {exit;}
 
 $modversion['name'] = _MI_WFD_NAME;
 $modversion['version'] = 3.2;
@@ -452,7 +452,7 @@ $modversion['config'][] = array(
 	'description' 	=> '_MI_WFD_UPLOADDIRDSC',
 	'formtype' 	=> 'textbox',
 	'valuetype' 	=> 'text',
-	'default' 	=> XOOPS_ROOT_PATH.'/uploads');
+	'default' 	=> ICMS_ROOT_PATH.'/uploads');
 
 $modversion['config'][] = array(
 	'name' 		=> 'check_host',

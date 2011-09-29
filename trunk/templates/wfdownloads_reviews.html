@@ -1,0 +1,64 @@
+<{if $catarray.imageheader != ""}>
+	<br /><div align="center"><{$catarray.imageheader}></div><br />
+<{/if}>
+<div class="wfd_head_catletters"><{$catarray.letters}></div>
+<div class="wfd_head_cattoolbar"><{$catarray.toolbar}></div><br />
+
+
+<h3>
+	<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/reviews.gif" width="32" height="32" alt="" title="<{$smarty.const._MD_WFD_TITLE}>" 
+    align="middle" />&nbsp;<b><{$smarty.const._MD_WFD_TITLE}>:</b> <{$down_arr.title}>
+</h3>
+
+<p>
+	<b><{$smarty.const._MD_WFD_DESCRIPTION}>:</b> <{$down_arr.description}>
+</p>
+
+<p>
+	<{$smarty.const._MD_WFD_REVIEW_CATPATH}> <{$category_path}>
+</p>
+
+<div class="wfd_reviews_found">
+	<div class="wfd_reviews_revfound">
+		<{$lang_review_found}>
+	</div>
+</div>
+
+
+<{if $navbar.navbar }>
+<div class="odd"><b><{$smarty.const._MD_WFD_PAGES}></b>: <{$navbar.navbar}></div><br />
+<{/if}>
+
+<!-- Start ranking loop --> 
+<{foreach item=review from=$down_review}>
+<div class="head">
+	<{$smarty.const._MD_WFD_REVIEWER}> : <{$review.submitter}><br />
+    <{$review.date}>
+</div>
+
+	<div class="toleft odd" style="width:19%">
+    <b><{$smarty.const._MD_WFD_RATEDRESOURCE}></b><br />
+	<img src="<{$xoops_url}>/modules/wfdownloads/images/icon/<{$review.rated_img}>" alt="" title="" align="middle" />
+    </div>
+    <div class="toright even" style="width: 78%;">
+    	<span class="wfd_reviews_revlisttitle"><{$review.title}></span>
+        <br />
+        <span><{$review.review}></span>
+    </div>
+    <div class="clearit"></div>
+
+<br />
+<{/foreach}>
+
+
+<div class="even">
+	<a href="<{$xoops_url}>/modules/wfdownloads/review.php?cid=<{$down_arr.cid}>&amp;lid=<{$down_arr.lid}>"><{$smarty.const._MD_WFD_ADDREVIEW}></a>
+</div>
+<br />
+
+<{if $navbar.navbar }>
+<div style="text-align: <{$smarty.const._GLOBAL_RIGHT}>;" class="odd">
+	<b><{$smarty.const._MD_WFD_PAGES}></b>: <{$navbar.navbar}></div><br />
+<{/if}>
+<!-- End ranking loop --> 
+<{include file='db:wfdownloads_footer.html'}>

@@ -1,5 +1,5 @@
 <?php
-// $Id: modification.php,v 1.8 2007/09/30 13:47:53 m0nty_ Exp $
+// $Id$
 // ------------------------------------------------------------------------ //
 // 				 XOOPS - PHP Content Management System                      //
 //					 Copyright (c) 2000 XOOPS.org                           //
@@ -27,10 +27,10 @@
 // Project: The XOOPS Project                                               //
 // -------------------------------------------------------------------------//
 if (!class_exists("XoopsPersistableObjectHandler")) {
-	include_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/object.php";
+	include_once ICMS_ROOT_PATH."/modules/wfdownloads/class/object.php";
 }
 
-require_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/download.php";
+require_once ICMS_ROOT_PATH."/modules/wfdownloads/class/download.php";
 class WfdownloadsModification extends WfdownloadsDownload  {
 	function WfdownloadsModification() {
 	    $this->WfdownloadsDownload();

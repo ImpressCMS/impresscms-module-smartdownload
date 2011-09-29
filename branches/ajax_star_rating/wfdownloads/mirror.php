@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: mirror.php,v 1.9 2007/09/30 16:18:09 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,7 +9,7 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 
 global $xoopsModuleConfig, $myts, $xoopsUser;
 $gperm_handler =& xoops_gethandler('groupperm');
@@ -46,7 +46,7 @@ switch (isset($_REQUEST['op']) && !empty($_REQUEST['op']))
     }
 
     $xoopsOption['template_main'] = 'wfdownloads_mirrors.html';
-    include XOOPS_ROOT_PATH . '/header.php';
+    include ICMS_ROOT_PATH . '/header.php';
 
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -104,7 +104,7 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
     }
     $xoopsTpl->assign('lang_mirror_found', sprintf(_MD_WFD_MIRROR_TOTAL, $mirror_amount));
 
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
     $pagenav = new XoopsPageNav($mirror_amount, 5 , $start, 'start', 'op=list&amp;cid=' . $cid . '&amp;lid=' . $lid . '', 1);
     $navbar['navbar'] = $pagenav->renderNav();
     $xoopsTpl->assign('navbar', $navbar);
@@ -119,7 +119,7 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
     default:
         if (!is_object($xoopsUser) && ($xoopsModuleConfig['anonpost'] == 1 || $xoopsModuleConfig['anonpost'] == 2))
         {
-            redirect_header(XOOPS_URL . '/user.php', 1, _MD_WFD_MUSTREGFIRST);
+            redirect_header(ICMS_URL . '/user.php', 1, _MD_WFD_MUSTREGFIRST);
             exit();
         }
         elseif (is_object($xoopsUser) && ($xoopsModuleConfig['submissions'] == 1 || $xoopsModuleConfig['submissions'] == 2) && !$xoopsUser->isAdmin())
@@ -165,8 +165,8 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
         }
         else
         {
-            include XOOPS_ROOT_PATH . '/header.php';
-            include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+            include ICMS_ROOT_PATH . '/header.php';
+            include ICMS_ROOT_PATH . '/class/xoopsformloader.php';
             $uid = !empty($xoopsUser) ? intval($xoopsUser->getVar('uid')) : 0;
 			
 			$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');

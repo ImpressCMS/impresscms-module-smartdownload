@@ -1,0 +1,104 @@
+<{include file='db:wfdownloads_header.html'}>
+
+<div class="odd mbottom5">
+	<div class="toleft" style="width:92%;">
+      <{if $category_title}>
+          <h2><{$category_title}></h2>
+      <{/if}>
+      <{if $category_image}>
+        <img src="<{$category_image}>" alt="<{$category_title}>" title="<{$category_title}>" align="left" 
+        style="border: 1px solid #CCC; padding: 2px; margin-right:5px;" />
+      <{/if}>
+      <{$description}>
+	</div>
+    <div class="toright" style="width: 6%">
+    	<{if $cat_rssfeed_link}>
+			<{$cat_rssfeed_link}>
+		<{/if}>
+    </div>
+    <div class="clearit"></div>
+</div>
+
+<{if $subcategories}>
+<div class="odd">
+	<div class="toleft" style="width:20%">
+		<b><{$smarty.const._MD_WFD_SUBCATLISTING}>:</b>
+    </div>
+    <div class="toright" style="width: 78%">
+			<{foreach item=subcat from=$subcategories}>
+				<div class="toleft even" style="padding-right:5px">
+                	<a href="viewcat.php?cid=<{$subcat.id}>">
+                    	<img src="<{$subcat.image}>" alt="<{$subcat.title}>" title="<{$subcat.title}>" align="middle" />
+                        	<{$subcat.title}>&nbsp;(<{$subcat.totallinks}>)
+                    </a>
+                 </div>
+			<{/foreach}>
+     </div>
+		<div class="clearit"></div>
+</div>
+<{/if}>
+    
+<div class="clearit"></div>
+
+<div class="wfd_view_catpath">
+	<{$category_path}>
+</div>
+<br />
+
+<{if $show_links == true}> 
+	<div class="wfd_view_sortlist" align="center">
+		<b><{$smarty.const._MD_WFD_SORTBY}></b>&nbsp;<{$smarty.const._MD_WFD_TITLE}> (
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=titleA">
+		<img src="images/up.gif" align="top" alt="" title="" /></a>
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=titleD">
+		<img src="images/down.gif" align="top" alt="" title="" /></a>
+		)
+		&nbsp;
+		<{$smarty.const._MD_WFD_DATE}> (
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=dateA">
+		<img src="images/up.gif" align="top" alt="" title="" /></a>
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=dateD">
+		<img src="images/down.gif" align="top" alt="" title="" /></a>
+		)
+		&nbsp;
+		<{$smarty.const._MD_WFD_RATING}> (
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=ratingA">
+		<img src="images/up.gif" align="top" alt="" title="" /></a>
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=ratingD">
+		<img src="images/down.gif" align="top" alt="" title="" /></a>
+		)
+		&nbsp;
+		<{$smarty.const._MD_WFD_POPULARITY}> (
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=hitsA">
+		<img src="images/up.gif" align="top" alt="" title="" /></a>
+		<a href="viewcat.php?cid=<{$category_id}>&amp;orderby=hitsD">
+		<img src="images/down.gif" align="top" alt="" title="" /></a>
+		)
+		<br />
+		<b><{$lang_cursortedby}></b>
+	</div>
+	<br />
+<{/if}>
+
+<{if $page_nav == true}>
+	<div class="wfd_pagenav">
+		<{$smarty.const._MD_WFD_PAGES}>: <{$pagenav}>
+	</div>
+	<br />
+<{/if}>
+
+
+<!-- Start link loop -->
+<{section name=i loop=$file}>
+	<{include file="db:wfdownloads_download.html" down=$file[i]}>
+<{/section}>
+<!-- End link loop -->
+
+<{if $page_nav == true}>
+	<div class="wfd_pagenav">
+		<{$smarty.const._MD_WFD_PAGES}>: <{$pagenav}>
+	</div>
+<{/if}>
+
+
+<{include file='db:wfdownloads_footer.html'}>

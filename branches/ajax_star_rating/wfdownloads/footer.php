@@ -1,5 +1,5 @@
 <?php
-// $Id: footer.php,v 1.3 2007/09/30 12:39:14 m0nty_ Exp $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -35,6 +35,6 @@ $xoopsTpl->assign('wfdownloads_url', WFDOWNLOADS_URL);
 
 $xoopsTpl->assign("ref_smartfactory", "WFDownloads is developed by The SmartFactory (http://www.smartfactory.ca), a division of InBox Solutions (http://www.inboxsolutions.net)");
 
-include_once XOOPS_ROOT_PATH . '/footer.php';
+include_once ICMS_ROOT_PATH . '/footer.php';
 
 ?>

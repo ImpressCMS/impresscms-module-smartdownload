@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: review.php,v 1.7 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v3.1
  * Release Date: 26 july 2004
@@ -236,7 +236,7 @@ switch ($op)
     }
     echo "</table>\n";
 
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
     $pagenav = new XoopsPageNav($num, $xoopsModuleConfig['admin_perpage'] , $start, 'start');
     echo "<div text-align='"._GLOBAL_RIGHT."'>" . $pagenav -> renderNav() . '</div>';
     xoops_cp_footer();

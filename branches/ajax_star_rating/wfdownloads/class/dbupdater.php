@@ -5,7 +5,7 @@
  *
  * @license GNU
  * @author marcan <marcan@smartfactory.ca>
- * @version $Id: dbupdater.php,v 1.6 2006/04/06 17:55:28 mithyt2 Exp $
+ * @version $Id$
  * @link http://www.smartfactory.ca The SmartFactory
  * @package WF-Downloads
  * @subpackage dbUpdater
@@ -20,7 +20,7 @@
  * @author marcan <marcan@smartfactory.ca>
  * @link http://www.smartfactory.ca The SmartFactory
  */
-if (!defined("XOOPS_ROOT_PATH")) {
+if (!defined("ICMS_ROOT_PATH")) {
 die("XOOPS root path not defined");
 }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: newdownloads.php,v 1.3 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -55,7 +55,7 @@ switch ($op)
     case 'main':
     default:
 
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
 
     $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 
@@ -121,7 +121,7 @@ switch ($op)
         echo "<tr ><td align='center' class='head' colspan='6'>" . _AM_WFD_SUB_NOFILESWAITING . "</td></tr>";
     }
     echo "</table>\n";
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
     $page = ($new_array_count > $xoopsModuleConfig['admin_perpage']) ? _AM_WFD_MINDEX_PAGE : '';
     $pagenav = new XoopsPageNav($new_array_count, $xoopsModuleConfig['admin_perpage'], $start, 'start');
     echo '<div align="'._GLOBAL_RIGHT.'" style="padding: 8px;">' . $page . '' . $pagenav->renderNav() . '</div>';

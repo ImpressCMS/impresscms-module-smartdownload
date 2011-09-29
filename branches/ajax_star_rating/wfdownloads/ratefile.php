@@ -1,5 +1,5 @@
 <?php
-/* $Id: ratefile.php,v 1.7 2007/09/30 16:19:50 m0nty_ Exp $
+/* $Id$
 * Module: WF-Downloads
 * Version: v2.0.5a
 * Release Date: 26 july 2004
@@ -93,7 +93,7 @@ if (!empty($_POST['submit']))
 else
 {
     $xoopsOption['template_main'] = 'wfdownloads_ratefile.html';
-    include XOOPS_ROOT_PATH . '/header.php';
+    include ICMS_ROOT_PATH . '/header.php';
 	
 	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 	$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -110,7 +110,7 @@ else
     }
 
     $xoopsTpl -> assign('file', array('id' => $lid, 'cid' => $cid, 'title' => $download->getVar('title'), 'imageheader' => $imageheader));
-    include XOOPS_ROOT_PATH . '/footer.php';
+    include ICMS_ROOT_PATH . '/footer.php';
 }
 include 'footer.php';
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: votedata.php,v 1.5 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -95,7 +95,7 @@ switch ($op)
         }
         echo "</table>";
 		//Include page navigation
-		include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+		include_once ICMS_ROOT_PATH . '/class/pagenav.php';
         $page = ($votes > 20) ? _AM_WFD_MINDEX_PAGE : '';
         $pagenav = new XoopsPageNav($page, 20, $start, 'start');
         echo '<div align="'._GLOBAL_RIGHT.'" style="padding: 8px;">' . $page . '' . $pagenav->renderNav() . '</div>';

@@ -1,5 +1,5 @@
 <?php
-// $Id: download.php,v 1.24 2007/09/30 13:47:53 m0nty_ Exp $
+// $Id$
 // ------------------------------------------------------------------------ //
 // 				 XOOPS - PHP Content Management System                      //
 //					 Copyright (c) 2000 XOOPS.org                           //
@@ -27,7 +27,7 @@
 // Project: The XOOPS Project                                               //
 // -------------------------------------------------------------------------//
 if (!class_exists("XoopsPersistableObjectHandler")) {
-	include_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/object.php";
+	include_once ICMS_ROOT_PATH."/modules/wfdownloads/class/object.php";
 }
 
 class WfdownloadsDownload extends XoopsObject {
@@ -119,56 +119,56 @@ class WfdownloadsDownload extends XoopsObject {
         if ($this->getVar('screenshot'))
         {
             $down['screenshot_full'] = $this->getVar('screenshot');
-            if ($this->getVar('screenshot') && file_exists(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot'))))
+            if ($this->getVar('screenshot') && file_exists(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot'))))
             {
                 if (isset($xoopsModuleConfig['usethumbs']) && $xoopsModuleConfig['usethumbs'] == 1)
                 {
                     $down['screenshot_thumb'] = down_createthumb($down['screenshot_full'], $xoopsModuleConfig['screenshots'], "thumbs", $xoopsModuleConfig['shotwidth'], $xoopsModuleConfig['shotheight'],
                     $xoopsModuleConfig['imagequality'], $xoopsModuleConfig['updatethumbs'], $xoopsModuleConfig['keepaspect']);
                 } else {
-                    $down['screenshot_thumb'] = XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot'));
+                    $down['screenshot_thumb'] = ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot'));
                 }
             }
         }
         if ($this->getVar('screenshot2') && $xoopsModuleConfig['max_screenshot'] >= 2)
         {
             $down['screenshot_full2'] = $this->getVar('screenshot2');
-            if ($this->getVar('screenshot2') && file_exists(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot2'))))
+            if ($this->getVar('screenshot2') && file_exists(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot2'))))
             {
                 if (isset($xoopsModuleConfig['usethumbs']) && $xoopsModuleConfig['usethumbs'] == 1)
                 {
                     $down['screenshot_thumb2'] = down_createthumb($down['screenshot_full2'], $xoopsModuleConfig['screenshots'], "thumbs", $xoopsModuleConfig['shotwidth'], $xoopsModuleConfig['shotheight'],
                     $xoopsModuleConfig['imagequality'], $xoopsModuleConfig['updatethumbs'], $xoopsModuleConfig['keepaspect']);
                 } else {
-                    $down['screenshot_thumb2'] = XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot2'));
+                    $down['screenshot_thumb2'] = ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot2'));
                 }
             }
         }
         if ($this->getVar('screenshot3') && $xoopsModuleConfig['max_screenshot'] >= 3)
         {
             $down['screenshot_full3'] = $this->getVar('screenshot3');
-            if ($this->getVar('screenshot3') && file_exists(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot3'))))
+            if ($this->getVar('screenshot3') && file_exists(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot3'))))
             {
                 if (isset($xoopsModuleConfig['usethumbs']) && $xoopsModuleConfig['usethumbs'] == 1)
                 {
                     $down['screenshot_thumb3'] = down_createthumb($down['screenshot_full3'], $xoopsModuleConfig['screenshots'], "thumbs", $xoopsModuleConfig['shotwidth'], $xoopsModuleConfig['shotheight'],
                     $xoopsModuleConfig['imagequality'], $xoopsModuleConfig['updatethumbs'], $xoopsModuleConfig['keepaspect']);
                 } else {
-                    $down['screenshot_thumb3'] = XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot3'));
+                    $down['screenshot_thumb3'] = ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot3'));
                 }
             }
         }
         if ($this->getVar('screenshot4') && $xoopsModuleConfig['max_screenshot'] >= 4)
         {
             $down['screenshot_full4'] = $this->getVar('screenshot4');
-            if ($this->getVar('screenshot4') && file_exists(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot4'))))
+            if ($this->getVar('screenshot4') && file_exists(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot4'))))
             {
                 if (isset($xoopsModuleConfig['usethumbs']) && $xoopsModuleConfig['usethumbs'] == 1)
                 {
                     $down['screenshot_thumb4'] = down_createthumb($down['screenshot_full4'], $xoopsModuleConfig['screenshots'], "thumbs", $xoopsModuleConfig['shotwidth'], $xoopsModuleConfig['shotheight'],
                     $xoopsModuleConfig['imagequality'], $xoopsModuleConfig['updatethumbs'], $xoopsModuleConfig['keepaspect']);
                 } else {
-                    $down['screenshot_thumb4'] = XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot4'));
+                    $down['screenshot_thumb4'] = ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . xoops_trim($this->getVar('screenshot4'));
                 }
             }
         }
@@ -325,8 +325,8 @@ class WfdownloadsDownload extends XoopsObject {
 
     function getForm($customArray=array()) { // $custom array added April 22, 2006 by jwe) {
         global $xoopsModuleConfig, $xoopsUser;
-        include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-        include_once(XOOPS_ROOT_PATH."/class/tree.php");
+        include ICMS_ROOT_PATH . '/class/xoopsformloader.php';
+        include_once(ICMS_ROOT_PATH."/class/tree.php");
 
 		$groups = $xoopsUser->getGroups();
 
@@ -351,7 +351,7 @@ class WfdownloadsDownload extends XoopsObject {
 		}	        
 
 		// changed - start - March 4 2006 - jpc
-		if(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php")) {
+		if(file_exists(ICMS_ROOT_PATH . "/modules/formulize/include/functions.php")) {
 		      $sform->addElement(new XoopsFormHidden('cid', $this->getVar('cid', 'e')));
 		} else {
 		        $category_handler = xoops_getmodulehandler('category');
@@ -482,7 +482,7 @@ class WfdownloadsDownload extends XoopsObject {
 
 
 		// changed - start - March 4 2006 - jpc
-//		if(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php")) {
+//		if(file_exists(ICMS_ROOT_PATH . "/modules/formulize/include/functions.php")) {
 //		       $sform->addElement(new XoopsFormHidden('cid', $this->getVar('cid', 'e')));
 //		} else {
 	        $category_handler = xoops_getmodulehandler('category');
@@ -546,67 +546,67 @@ class WfdownloadsDownload extends XoopsObject {
         {
             $sform -> addElement(new XoopsFormTextArea(_AM_WFD_FILE_HISTORYD, 'dhistoryaddedd', "", 7, 60), false);
         }
-        $graph_array = & WfsLists :: getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
+        $graph_array = & WfsLists :: getListTypeAsArray(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
         $indeximage_select = new XoopsFormSelect('', 'screenshot', $this->getVar('screenshot', 'e'));
         $indeximage_select -> addOptionArray($graph_array);
-        $indeximage_select -> setExtra("onchange='showImgSelected(\"image1\", \"screenshot\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . XOOPS_URL . "\")'");
+        $indeximage_select -> setExtra("onchange='showImgSelected(\"image1\", \"screenshot\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . ICMS_URL . "\")'");
         $indeximage_tray = new XoopsFormElementTray(_AM_WFD_FILE_SHOTIMAGE, '&nbsp;');
         $indeximage_tray -> addElement($indeximage_select);
         if ($this->getVar('screenshot') != "")
         {
-            $indeximage_tray -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot', 'e') . "' id='image1' alt='' title='screenshot 1' />"));
+            $indeximage_tray -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot', 'e') . "' id='image1' alt='' title='screenshot 1' />"));
         }
         else
         {
-            $indeximage_tray -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' id='image1' alt='' title='' />"));
+            $indeximage_tray -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' id='image1' alt='' title='' />"));
         }
         $sform -> addElement($indeximage_tray);
 
-        $graph_array2 = & WfsLists :: getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
+        $graph_array2 = & WfsLists :: getListTypeAsArray(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
         $indeximage_select2 = new XoopsFormSelect('', 'screenshot2', $this->getVar('screenshot2', 'e'));
         $indeximage_select2 -> addOptionArray($graph_array2);
-        $indeximage_select2 -> setExtra("onchange='showImgSelected(\"image2\", \"screenshot2\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . XOOPS_URL . "\")'");
+        $indeximage_select2 -> setExtra("onchange='showImgSelected(\"image2\", \"screenshot2\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . ICMS_URL . "\")'");
         $indeximage_tray2 = new XoopsFormElementTray(_AM_WFD_FILE_SHOTIMAGE, '&nbsp;');
         $indeximage_tray2 -> addElement($indeximage_select2);
         if ($this->getVar('screenshot2') != "")
         {
-            $indeximage_tray2 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot2', 'e') . "' id='image2' alt='' title='screenshot 2' />"));
+            $indeximage_tray2 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot2', 'e') . "' id='image2' alt='' title='screenshot 2' />"));
         }
         else
         {
-            $indeximage_tray2 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' id='image2' alt='' title='' />"));
+            $indeximage_tray2 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' id='image2' alt='' title='' />"));
         }
         $sform -> addElement($indeximage_tray2);
 
-        $graph_array3 = & WfsLists :: getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
+        $graph_array3 = & WfsLists :: getListTypeAsArray(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
         $indeximage_select3 = new XoopsFormSelect('', 'screenshot3', $this->getVar('screenshot3', 'e', true));
         $indeximage_select3 -> addOptionArray($graph_array3);
-        $indeximage_select3 -> setExtra("onchange='showImgSelected(\"image3\", \"screenshot3\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . XOOPS_URL . "\")'");
+        $indeximage_select3 -> setExtra("onchange='showImgSelected(\"image3\", \"screenshot3\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . ICMS_URL . "\")'");
         $indeximage_tray3 = new XoopsFormElementTray(_AM_WFD_FILE_SHOTIMAGE, '&nbsp;');
         $indeximage_tray3 -> addElement($indeximage_select3);
         if ($this->getVar('screenshot3') != "")
         {
-            $indeximage_tray3 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot3', 'e') . "' id='image3' alt='' title='screenshot 3' />"));
+            $indeximage_tray3 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot3', 'e') . "' id='image3' alt='' title='screenshot 3' />"));
         }
         else
         {
-            $indeximage_tray3 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' id='image3' alt='' title='' />"));
+            $indeximage_tray3 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' id='image3' alt='' title='' />"));
         }
         $sform -> addElement($indeximage_tray3);
 
-        $graph_array4 = & WfsLists :: getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
+        $graph_array4 = & WfsLists :: getListTypeAsArray(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'], $type = "images");
         $indeximage_select4 = new XoopsFormSelect('', 'screenshot4', $this->getVar('screenshot4', 'e'));
         $indeximage_select4 -> addOptionArray($graph_array4);
-        $indeximage_select4 -> setExtra("onchange='showImgSelected(\"image4\", \"screenshot4\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . XOOPS_URL . "\")'");
+        $indeximage_select4 -> setExtra("onchange='showImgSelected(\"image4\", \"screenshot4\", \"" . $xoopsModuleConfig['screenshots'] . "\", \"\", \"" . ICMS_URL . "\")'");
         $indeximage_tray4 = new XoopsFormElementTray(_AM_WFD_FILE_SHOTIMAGE, '&nbsp;');
         $indeximage_tray4 -> addElement($indeximage_select4);
         if ($this->getVar('screenshot4') != "")
         {
-            $indeximage_tray4 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot4', 'e') . "' id='image4' alt='' title='screenshot 4' />"));
+            $indeximage_tray4 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $this->getVar('screenshot4', 'e') . "' id='image4' alt='' title='screenshot 4' />"));
         }
         else
         {
-            $indeximage_tray4 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' id='image4' alt='' title='' />"));
+            $indeximage_tray4 -> addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' id='image4' alt='' title='' />"));
         }
         $sform -> addElement($indeximage_tray4);
 
@@ -697,8 +697,8 @@ class WfdownloadsDownload extends XoopsObject {
     // added - start - March 4 2006 - jpc
     function getCategoryForm() {
         global $xoopsModuleConfig;
-        include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-        include_once(XOOPS_ROOT_PATH."/class/tree.php");
+        include ICMS_ROOT_PATH . '/class/xoopsformloader.php';
+        include_once(ICMS_ROOT_PATH."/class/tree.php");
         $sform = new XoopsThemeForm(_MD_WFD_FFS_SUBMITCATEGORYHEAD, "storyform", $_SERVER['REQUEST_URI']);
         $sform->setExtra('enctype="multipart/form-data"');
 
@@ -858,8 +858,8 @@ class WfdownloadsDownloadHandler extends XoopsPersistableObjectHandler {
             xoops_comment_delete(intval($xoopsModule->getVar('mid')), intval($download->getVar('lid')));
 
 		    // added - start - March 4 2006 - jpc
-            if(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php") AND $download->getVar("formulize_idreq") > 0) {
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
+            if(file_exists(ICMS_ROOT_PATH . "/modules/formulize/include/functions.php") AND $download->getVar("formulize_idreq") > 0) {
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/functions.php";
 			$category_handler = xoops_getmodulehandler('category');
 			$category = $category_handler->get($download->getVar('cid'));
 			deleteFormEntries(array($download->getVar("formulize_idreq")), $category->getVar('formulize_fid'));

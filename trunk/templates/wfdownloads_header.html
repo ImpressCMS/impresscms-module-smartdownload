@@ -1,0 +1,38 @@
+<!-- Thank you for keeping this line in the template :-) //-->
+<div style="display: none;"><{$ref_smartfactory}></div>
+<!-- Thank you for keeping this line in the template :-) //-->
+
+<div class="wfd_headertable">
+	<{if $module_home}>
+		<span class="wfd_modulename"><{$module_home}></span>
+	<{/if}>
+	<{if $categoryPath}>
+		<span class="wfd_breadcrumb">
+		<{if $module_home}>
+			&gt;
+		<{/if}>
+	  	<{$categoryPath}></span>
+	<{/if}>
+</div>
+
+<{if $catarray.imageheader != ""}>
+	<br /><div class="wfd_head_catimageheader"><{$catarray.imageheader}></div><br />
+<{/if}>
+
+<{if $down.imageheader != ""}>
+	<br /><div class="wfd_head_downimageheader"><{$down.imageheader}></div><br />
+<{/if}>
+
+<{if $imageheader != ""}>
+	<br /><div class="wfd_head_imageheader" style="text-align:center"><{$imageheader}></div><br />
+<{/if}>
+
+<{if $catarray.indexheader}>
+	<div class="wfd_head_catindexheader" align="center"><p><{$catarray.indexheader}></p></div><br />
+<{/if}>
+<{if $catarray.letters}>
+	<div class="wfd_head_catletters" align="center"><{$catarray.letters}></div><br />
+<{/if}>
+<{if $catarray.toolbar}>
+	<div class="wfd_head_cattoolbar" align="center"><{$catarray.toolbar}></div><br />
+<{/if}>

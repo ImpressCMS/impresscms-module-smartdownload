@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: blocks.php,v 1.1 2005/12/03 16:34:43 malanciault Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004

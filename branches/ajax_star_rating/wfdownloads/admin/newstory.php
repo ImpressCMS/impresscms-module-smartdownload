@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: newstory.php,v 1.1 2005/12/03 16:34:42 malanciault Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -8,7 +8,7 @@
  * Licence: GNU
  */
 
-include_once XOOPS_ROOT_PATH . '/modules/news/class/class.newsstory.php';
+include_once ICMS_ROOT_PATH . '/modules/news/class/class.newsstory.php';
 
 $story = new NewsStory();
 $story -> setUid($xoopsUser -> uid());
@@ -22,7 +22,7 @@ $story -> setTopicId($topicid);
 $story -> setTitle($title);
 
 $_fileid = (isset($lid) && $lid > 0) ? $lid : $newid;
-$_link = $_POST["description"]."<br /><div><a href=".XOOPS_URL."/modules/wfdownloads/singlefile.php?cid=".$cid."&amp;lid=".$_fileid.">".$title."</a></div>";
+$_link = $_POST["description"]."<br /><div><a href=".ICMS_URL."/modules/wfdownloads/singlefile.php?cid=".$cid."&amp;lid=".$_fileid.">".$title."</a></div>";
 
 $description = $myts->addslashes(trim($_link));
 $story -> setHometext($description);
@@ -39,7 +39,7 @@ $tags['STORY_NAME'] = $story -> title();
 $modhandler = & xoops_gethandler('module');
 $newsModule = & $modhandler -> getByDirname("news");
 
-$tags['STORY_URL'] = XOOPS_URL . '/modules/news/article.php?storyid=' . $story -> storyid();
+$tags['STORY_URL'] = ICMS_URL . '/modules/news/article.php?storyid=' . $story -> storyid();
 if (!empty($isnew))
 {
     $notification_handler -> triggerEvent('story', $story -> storyid(), 'approve', $tags);

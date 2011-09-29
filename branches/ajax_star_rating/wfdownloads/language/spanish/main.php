@@ -2,7 +2,7 @@
 //Créditos de la traducción: ver. 3.0 chencho; Francisco Portero ver. 3.1RC1; Riosoft ver. 3.1 final
 //Revisión inicial de la traducción y añadidos para la ver. 3.2 RC1 por debianus para es.impresscms.org
 /**
- * $Id: main.php,v 1.14 2007/06/25 15:57:52 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v3.1
  * Release Date: 26 july 2004

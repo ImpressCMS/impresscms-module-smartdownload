@@ -1,5 +1,5 @@
 <?php
-// $Id: update.php,v 1.15 2007/12/16 01:46:21 m0nty_ Exp $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -24,12 +24,12 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-if (!defined("XOOPS_ROOT_PATH")) {
+if (!defined("ICMS_ROOT_PATH")) {
     die("Xoops root path not defined");
 }
-include_once(XOOPS_ROOT_PATH . "/modules/wfdownloads/class/dbupdater.php");
-include_once(XOOPS_ROOT_PATH . "/modules/wfdownloads/include/functions.php");
-@include_once(XOOPS_ROOT_PATH . "/modules/wfdownloads/language/".$xoopsConfig['language']."/admin.php");
+include_once(ICMS_ROOT_PATH . "/modules/wfdownloads/class/dbupdater.php");
+include_once(ICMS_ROOT_PATH . "/modules/wfdownloads/include/functions.php");
+@include_once(ICMS_ROOT_PATH . "/modules/wfdownloads/language/".$xoopsConfig['language']."/admin.php");
 
 function xoops_module_update_wfdownloads($module) {
     ob_start();

@@ -1,5 +1,5 @@
 <?php
-// $Id: uploader.php,v 1.9 2007/09/27 16:44:12 m0nty_ Exp $
+// $Id$
 // ------------------------------------------------------------------------ //
 // XOOPS - PHP Content Management System                      //
 // Copyright (c) 2000 XOOPS.org                           //

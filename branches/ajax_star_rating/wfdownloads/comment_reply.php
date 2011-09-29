@@ -1,5 +1,5 @@
 <?php
-// $Id: comment_reply.php,v 1.1 2005/12/03 16:34:42 malanciault Exp $
+// $Id$
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
@@ -25,5 +25,5 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 include '../../mainfile.php';
-include XOOPS_ROOT_PATH.'/include/comment_reply.php';
+include ICMS_ROOT_PATH.'/include/comment_reply.php';
 ?>

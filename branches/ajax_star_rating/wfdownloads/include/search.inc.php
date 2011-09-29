@@ -1,5 +1,5 @@
 <?php
-/* $Id: search.inc.php,v 1.8 2007/08/13 18:05:17 m0nty_ Exp $
+/* $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -10,7 +10,7 @@
 function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 {
 	global $xoopsUser;
-    include_once XOOPS_ROOT_PATH.'/modules/wfdownloads/include/functions.php';
+    include_once ICMS_ROOT_PATH.'/modules/wfdownloads/include/functions.php';
 
     $module_handler = xoops_gethandler('module');
     $wfModule = $module_handler->getByDirname("wfdownloads");
@@ -114,7 +114,7 @@ function wfdownloads_search($queryarray, $andor, $limit, $offset, $userid = 0)
 		{
 			if(!isset($formulize_mgr)) { $formulize_mgr =& xoops_getmodulehandler('elements', 'formulize'); } 
 
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/extract.php";
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/extract.php";
 
 			// setup the filter string based on the elements in the form and the current query term
 			$elements =& $formulize_mgr->getObjects2($ele_criteria,$fid);

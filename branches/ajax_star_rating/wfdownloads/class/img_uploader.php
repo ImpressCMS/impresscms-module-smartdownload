@@ -1,5 +1,5 @@
 <?php
-// $Id: img_uploader.php,v 1.4 2007/09/30 13:47:53 m0nty_ Exp $
+// $Id$
 // ------------------------------------------------------------------------ //
 // XOOPS - PHP Content Management System                      //
 // Copyright (c) 2000 XOOPS.org                           //
@@ -81,7 +81,7 @@
  * @copyright (c) 2000-2003 The Xoops Project - www.xoops.org
  */
 mt_srand((double) microtime() * 1000000);
-require_once XOOPS_ROOT_PATH."/modules/wfdownloads/class/uploader.php";
+require_once ICMS_ROOT_PATH."/modules/wfdownloads/class/uploader.php";
 class XoopsMediaImgUploader extends XoopsMediaUploader
 {
     /**

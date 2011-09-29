@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: functions.php,v 1.22 2007/09/30 16:20:28 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,7 +9,7 @@
  */
 
 
-if (!defined("XOOPS_ROOT_PATH")) {
+if (!defined("ICMS_ROOT_PATH")) {
  	die("XOOPS root path not defined");
 }
 if(!defined("_GLOBAL_LEFT")){
@@ -259,7 +259,7 @@ function wfdownloads_userIsAdmin()
 
 function wfdownloads_adminMenu ($currentoption = 0, $breadcrumb = '' ) {
 
-	include_once XOOPS_ROOT_PATH . '/class/template.php';
+	include_once ICMS_ROOT_PATH . '/class/template.php';
 
 	// global $xoopsDB, $xoopsModule, $xoopsConfig, $xoopsModuleConfig;
 	global $xoopsModule, $xoopsConfig;
@@ -293,7 +293,7 @@ function wfdownloads_collapsableBar($tablename = '', $iconname = '', $tabletitle
 
 	global $xoopsModule;
 	echo "<h3 style=\"color: #2F5376; font-weight: bold; font-size: 14px; margin: 6px 0 0 0; \"><a href='javascript:;' onclick=\"toggle('" . $tablename . "'); toggleIcon('" . $iconname . "')\";>";
-	echo "<img id='$iconname' src=" . XOOPS_URL . "/modules/" . $xoopsModule->dirname() . "/images/icon/close12.gif alt='' /></a>&nbsp;" . $tabletitle . "</h3>";
+	echo "<img id='$iconname' src=" . ICMS_URL . "/modules/" . $xoopsModule->dirname() . "/images/icon/close12.gif alt='' /></a>&nbsp;" . $tabletitle . "</h3>";
 	echo "<div id='$tablename'>";
 	if ($tabledsc != '') {
 		echo "<span style=\"color: #567; margin: 3px 0 12px 0; font-size: small; display: block; \">" . $tabledsc . "</span>";
@@ -344,7 +344,7 @@ function wfdownloads_getCookieVar($name, $default='')
 }
 
 function wfdownloads_getCurrentUrls(){
-	$http = ((strpos(XOOPS_URL, "https://")) === false) ? ("http://") : ("https://");
+	$http = ((strpos(ICMS_URL, "https://")) === false) ? ("http://") : ("https://");
 	$phpself = $_SERVER['PHP_SELF'];
 	$httphost = $_SERVER['HTTP_HOST'];
 	$querystring = $_SERVER['QUERY_STRING'];
@@ -459,9 +459,9 @@ function wfdownloads_getUploadDir($local=true, $item=false)
 	}
 
 	If ($local) {
-		return XOOPS_ROOT_PATH . "/uploads/wfdownloads/$item";
+		return ICMS_ROOT_PATH . "/uploads/wfdownloads/$item";
 	} else {
-		return XOOPS_URL . "/uploads/wfdownloads/$item";
+		return ICMS_URL . "/uploads/wfdownloads/$item";
 	}
 }
 
@@ -497,12 +497,12 @@ function wfdownloads_seo_genUrl($op, $id, $title="")
         if (SEO_ENABLED == 'rewrite')
         {
             // generate SEO url using htaccess
-            return XOOPS_URL."/wfdownloads.${op}.${id}/".wfdownloads_seo_title($title);
+            return ICMS_URL."/wfdownloads.${op}.${id}/".wfdownloads_seo_title($title);
         }
         else if (SEO_ENABLED == 'path-info')
         {
             // generate SEO url using path-info
-            return XOOPS_URL."/modules/wfdownloads/seo.php/${op}.${id}/".wfdownloads_seo_title($title);
+            return ICMS_URL."/modules/wfdownloads/seo.php/${op}.${id}/".wfdownloads_seo_title($title);
         }
         else
         {
@@ -514,10 +514,10 @@ function wfdownloads_seo_genUrl($op, $id, $title="")
        // generate classic url
         switch ($op) {
             case 'category':
-               return XOOPS_URL."/modules/wfdownloads/${op}.php?categoryid=${id}";
+               return ICMS_URL."/modules/wfdownloads/${op}.php?categoryid=${id}";
             case 'item':
             case 'print':
-               return XOOPS_URL."/modules/wfdownloads/${op}.php?itemid=${id}";
+               return ICMS_URL."/modules/wfdownloads/${op}.php?itemid=${id}";
             default:
                 die('Unknown SEO operation.');
         }
@@ -656,7 +656,7 @@ function wfd_serverstats()
 	echo "<li>" . _AM_WFD_DOWN_SERVERUPLOADSTATUS . $downloads;
     echo "<li>" . _AM_WFD_DOWN_MAXUPLOADSIZE . " <b><span style=\"color: blue;\">" . ini_get('upload_max_filesize') . "</span></b>\n";
     echo "<li>" . _AM_WFD_DOWN_MAXPOSTSIZE . " <b><span style=\"color: blue;\">" . ini_get('post_max_size') . "</span></b>\n";
-    echo "<li>" . _AM_WFD_DOWN_SERVERPATH . " <b>" . XOOPS_ROOT_PATH . "</b>\n";
+    echo "<li>" . _AM_WFD_DOWN_SERVERPATH . " <b>" . ICMS_ROOT_PATH . "</b>\n";
 	if (empty($xoopsModuleConfig['uploaddir'])) {
     echo "<li>" . _AM_WFD_DOWN_UPLOADPATH . " <b><span style=\"color: red;\">" . _AM_WFD_DOWN_NOTSET . "</span></b>\n";
 	} else {
@@ -693,14 +693,14 @@ function wfd_displayicons($time, $status = 0, $counter = 0)
             if (intval($status) > 1)
             {
                 if ($xoopsModuleConfig['displayicons'] == 1)
-                    $new = "&nbsp;<img src=" . XOOPS_URL . "/modules/wfdownloads/images/icon/update.gif alt='' align ='absmiddle'/>";
+                    $new = "&nbsp;<img src=" . ICMS_URL . "/modules/wfdownloads/images/icon/update.gif alt='' align ='absmiddle'/>";
                 if ($xoopsModuleConfig['displayicons'] == 2)
                     $new = "<i>Updated!</i>";
             }
             else
             {
                 if ($xoopsModuleConfig['displayicons'] == 1)
-                    $new = "&nbsp;<img src=" . XOOPS_URL . "/modules/wfdownloads/images/icon/newred.gif alt='' align ='absmiddle'/>";
+                    $new = "&nbsp;<img src=" . ICMS_URL . "/modules/wfdownloads/images/icon/newred.gif alt='' align ='absmiddle'/>";
                 if ($xoopsModuleConfig['displayicons'] == 2)
                     $new = "<i>New!</i>";
             }
@@ -710,7 +710,7 @@ function wfd_displayicons($time, $status = 0, $counter = 0)
             if ($counter >= $xoopsModuleConfig['popular'])
             {
                 if ($xoopsModuleConfig['displayicons'] == 1)
-                    $pop = "&nbsp;<img src =" . XOOPS_URL . "/modules/wfdownloads/images/icon/pop.gif alt='' align ='absmiddle'/>";
+                    $pop = "&nbsp;<img src =" . ICMS_URL . "/modules/wfdownloads/images/icon/pop.gif alt='' align ='absmiddle'/>";
                 if ($xoopsModuleConfig['displayicons'] == 2)
                     $pop = "<i>Popular</i>";
             }
@@ -929,19 +929,19 @@ function wfd_displayimage($image = '', $path = '', $imgsource = '', $alttext = '
      * checks to see if the file is valid else displays default blank image
      */
 
-    if (!is_dir(XOOPS_ROOT_PATH . "/" . $imgsource . "/" . $image) && file_exists(XOOPS_ROOT_PATH . "/" . $imgsource . "/" . $image))
+    if (!is_dir(ICMS_ROOT_PATH . "/" . $imgsource . "/" . $image) && file_exists(ICMS_ROOT_PATH . "/" . $imgsource . "/" . $image))
     {
-        $showimage .= "<img src='" . XOOPS_URL . "/" . $imgsource . "/" . $image . "' border='0' alt='" . $alttext . "' /></a>";
+        $showimage .= "<img src='" . ICMS_URL . "/" . $imgsource . "/" . $image . "' border='0' alt='" . $alttext . "' /></a>";
     }
     else
     {
         if ($xoopsUser && $xoopsUser -> isAdmin($xoopsModule -> mid()))
         {
-            $showimage .= "<img src='" . XOOPS_URL . "/modules/wfdownloads/images/brokenimg.png' alt='" . _MD_WFD_ISADMINNOTICE . "' /></a>";
+            $showimage .= "<img src='" . ICMS_URL . "/modules/wfdownloads/images/brokenimg.png' alt='" . _MD_WFD_ISADMINNOTICE . "' /></a>";
         }
         else
         {
-            $showimage .= "<img src='" . XOOPS_URL . "/modules/wfdownloads/images/blank.png' alt=" . $alttext . " /></a>";
+            $showimage .= "<img src='" . ICMS_URL . "/modules/wfdownloads/images/blank.png' alt=" . $alttext . " /></a>";
         }
     }
     clearstatcache();
@@ -967,17 +967,17 @@ function down_createthumb($img_name, $img_path, $img_savepath, $width = 100, $he
     // paths
     if ($xoopsModuleConfig['usethumbs'] == 0)
     {
-        $image_path = XOOPS_URL . "/{$img_path}/{$img_name}";
+        $image_path = ICMS_URL . "/{$img_path}/{$img_name}";
         return $image_path;
     }
-    $image_path = XOOPS_ROOT_PATH . "/{$img_path}/{$img_name}";
+    $image_path = ICMS_ROOT_PATH . "/{$img_path}/{$img_name}";
 
     $savefile = $img_path . "/" . $img_savepath . "/" . $width . "x" . $height . "_" . $img_name;
-    $savepath = XOOPS_ROOT_PATH . "/" . $savefile;
+    $savepath = ICMS_ROOT_PATH . "/" . $savefile;
     // Return the image if no update and image exists
     if ($update == 0 && file_exists($savepath))
     {
-        return XOOPS_URL . "/" . $savefile;
+        return ICMS_URL . "/" . $savefile;
     }
 
     list($orig_width, $orig_height, $type, $attr) = getimagesize($image_path, $info);
@@ -1065,7 +1065,7 @@ function down_createthumb($img_name, $img_path, $img_savepath, $width = 100, $he
     }
     imagedestroy($img);
     flush();
-    return XOOPS_URL . "/" . $savefile;
+    return ICMS_URL . "/" . $savefile;
 }
 
 function wfd_letters()
@@ -1079,7 +1079,7 @@ function wfd_letters()
     $counter = 0;
     while (list(, $ltr) = each($alphabet))
     {
-        $letterchoice .= "<a href='" . XOOPS_URL . "/modules/wfdownloads/viewcat.php?list=$ltr'>$ltr</a>";
+        $letterchoice .= "<a href='" . ICMS_URL . "/modules/wfdownloads/viewcat.php?list=$ltr'>$ltr</a>";
         if ($counter == round($num / 2))
             $letterchoice .= " ]<br />[ ";
         elseif ($counter != $num)
@@ -1227,7 +1227,7 @@ function wfd_adminmenu($header = '', $menu = '', $extra = '', $scount = 4)
          * You can change this part to suit your own module. Defining this here will save you form having to do this each time.
          */
         $menu = array(
-            // _AM_GENERALSET => "" . XOOPS_URL . "/modules/system/admin.php?fct=preferences&amp;op=showmod&amp;mod=" . $xoopsModule->getVar('mid') . "",
+            // _AM_GENERALSET => "" . ICMS_URL . "/modules/system/admin.php?fct=preferences&amp;op=showmod&amp;mod=" . $xoopsModule->getVar('mid') . "",
             _AM_WFD_INDEXPAGE => "indexpage.php",
             _AM_WFD_MCATEGORY => "category.php",
             _AM_WFD_MDOWNLOADS => "index.php?op=Download",
@@ -1399,10 +1399,10 @@ function wfd_uploading($filename, $uploaddir = "uploads", $allowed_mimetypes = '
     $maxfileheight = $xoopsModuleConfig['maximgheight'];
 
     if ($onlyimages) {
-        include_once XOOPS_ROOT_PATH . "/modules/wfdownloads/class/img_uploader.php";
+        include_once ICMS_ROOT_PATH . "/modules/wfdownloads/class/img_uploader.php";
         $uploader = new XoopsMediaImgUploader($upload_dir, $allowed_mimetypes, $maxfilesize, $maxfilewidth, $maxfileheight);
     } else {
-        include_once XOOPS_ROOT_PATH . "/modules/wfdownloads/class/uploader.php";
+        include_once ICMS_ROOT_PATH . "/modules/wfdownloads/class/uploader.php";
         $uploader = new XoopsMediaUploader($upload_dir, $allowed_mimetypes, $maxfilesize, $maxfilewidth, $maxfileheight);
     }
     $uploader -> noAdminSizeCheck(1);
@@ -1425,7 +1425,7 @@ function wfd_uploading($filename, $uploaddir = "uploads", $allowed_mimetypes = '
             {
 				if (is_file($uploader->savedDestination))
                 {
-//	                $down['url'] = XOOPS_URL . "/" . $uploaddir . "/";
+//	                $down['url'] = ICMS_URL . "/" . $uploaddir . "/";
 					$down['filename'] = strtolower($uploader->savedFileName);
 					$down['filetype'] = $_FILES['userfile']['type'];
 					$down['size'] = filesize($upload_dir . strtolower($uploader->savedFileName));

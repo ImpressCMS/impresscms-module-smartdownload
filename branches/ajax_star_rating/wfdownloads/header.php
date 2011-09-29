@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: header.php,v 1.3 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -13,8 +13,8 @@
 //define('PROTECTOR_SKIP_FILESCHECKER', true);
 
 include_once '../../mainfile.php';
-include_once XOOPS_ROOT_PATH.'/modules/wfdownloads/include/functions.php';
-include_once XOOPS_ROOT_PATH.'/modules/wfdownloads/include/common.php';
+include_once ICMS_ROOT_PATH.'/modules/wfdownloads/include/functions.php';
+include_once ICMS_ROOT_PATH.'/modules/wfdownloads/include/common.php';
 
 $myts = & MyTextSanitizer :: getInstance(); // MyTextSanitizer object
 ?>

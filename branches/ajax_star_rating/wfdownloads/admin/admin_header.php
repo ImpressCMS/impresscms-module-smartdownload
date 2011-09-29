@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: admin_header.php,v 1.5 2007/08/10 20:59:33 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,10 +9,10 @@
  */
 
 include '../../../include/cp_header.php';
-include_once(XOOPS_ROOT_PATH . '/modules/wfdownloads/include/functions.php');
-include_once(XOOPS_ROOT_PATH . '/modules/wfdownloads/include/common.php');
+include_once(ICMS_ROOT_PATH . '/modules/wfdownloads/include/functions.php');
+include_once(ICMS_ROOT_PATH . '/modules/wfdownloads/include/common.php');
 
-include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsformloader.php';
 
 $myts = &MyTextSanitizer::getInstance();
 

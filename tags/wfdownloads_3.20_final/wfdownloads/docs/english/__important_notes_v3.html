@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Update</title>
+<meta NAME="GENERATOR" CONTENT="WFDownloads 3.2 Important Notes">
+</head>
+<style type="text/css">
+<!--
+ a:link { color:#EE0000; text-decoration:none; font-weight:bold; }
+ a:visited { color:#EE9999; text-decoration:none; font-weight:bold; }
+ a:hover { color:#333333; text-decoration:none; font-weight:bold; }
+ a:active { color:#EE0000; font-weight:bold; }
+ body { font-family:Arial,sans-serif; font-size:12pt; }
+-->
+</style>
+<body>
+<center><p><font FACE="Arial" COLOR="#EE0000" SIZE="+1">IMPORTANT:</font></p><b>If you are updating from WF-Downloads 2.x then please make sure you read and understand the following informations. There were some severe changes introduced in version 3.</b><p>
+<hr></center> 
+<ul>
+<span style="font-size: x-small;">
+<li><p><font FACE="Arial" SIZE="2"><u><b>Change to absolute pathinfo in the upload path:</b></u></font></p>
+You *MUST* make sure to edit the upload directory in module preferences to include the servers absolute path instead of a relative path.<br />
+<br />
+<u>For example:</u><br />
+If your servers absolute path to the root xoops folder is <b>/home/domain/public_html</b> 
+to keep the files in the normal uploads folder you would now set the path in preferences to <b>/home/domain/public_html/uploads</b>  (no trailing slash)<br /><br />
+If you want to have the files stored outside of the web root for security then you would change the path to 
+<b>/home/domain/uploads</b>  (no trailing slash) for example.<br /><br />
+You see above, the uploads folder is now outside of public_html which prevents anyone from gaining access to those files directly. Only files submitted after this upgrade will utilise the new system, existing downloads will still use the URL method and therefore the path will not be hidden.</font></p>
+</li>
+<li><p><font FACE="Arial" SIZE="2"><u><b>File based permissions were removed:</b></u></font></p>
+WF-Downloads no longer has any <i>per file</i> permissions. From now on there will be only category permissions. This means all files within an existing category will be accessible by the groups defined for that category. Please make sure the permissions for all existing categories are properly set after updating the module.<br /></li><br />
+<li><p><font FACE="Arial" SIZE="2"><u><b>Changes in module preferences due to feature changes:</b></u></font></p>
+In WF-Downloads preferences check that the submission and autoapprove settings are correct. Due to the new features (mirror system, review system reworked) those have changed a bit. Make sure you set those to fullfill your needs now.</li>
+</span></ul>
+<br />
+<p><font FACE="Arial" SIZE="2"><u><b>Important information related to WF-Downloads 3.2</b></u></font></p>
+If users upload files with multiple periods (.) in the filename, Protector 3.x will disallow the upload for security reasons, however the script does sanitize,<br />
+If you trust your users (and don't allow anonymous uploads), you can turn of the multiple dot protection of protector module by following the below instructions.<br /><br />
+
+1. Open wfdownloads/header.php in your editor.<br />
+2. uncomment line 13: //define('PROTECTOR_SKIP_FILESCHECKER', true);<br />
+3. save & close.<br /><br />
+
+Be cautious when disabling the protector fileschecker, and only use it if absolutely necessary or if you fully trust your users.<br /><br />
+
+This module tested fine with ImpressCMS 1.x.<br /><br />
+
+XOOPS 2.0.18.1 CMS users will need to add linkexternal.js to their installation, and modify xoops_root/header.php to add the linkexternal.js file to their themes. rel="external" should be available in XOOPS versions newer than 2.0.18.1.
+
+this adds the ability to use rel="external", rel="nofollow", & rel="external nofollow" in your pages instead of using the w3c invalid target="_blank".
+
+Failure to add the relevant linkexternal.js & modification of xoops/header.php or alternatively adding rel="external" javascript to xoops.js will prevent wfdownloads functioning correctly when clicking links within the module.
+
+you can find linkexternal.js aswell as header.php modification instructions for 2.0.18.1 in the XOOPS Extras folder included in this package.
+</BODY>
+</HTML>

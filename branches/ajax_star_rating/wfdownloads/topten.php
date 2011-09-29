@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: topten.php,v 1.5 2007/09/30 12:52:44 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,7 +9,7 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/tree.php';
+include_once ICMS_ROOT_PATH . '/class/tree.php';
 
 global $xoopsDB, $xoopsUser;
 
@@ -19,7 +19,7 @@ $groups = (is_object($xoopsUser)) ? $xoopsUser->getGroups() : array(0=>XOOPS_GRO
 $module_id = intval($xoopsModule->getVar('mid'));
 $gperm_handler = & xoops_gethandler('groupperm');
 
-include XOOPS_ROOT_PATH . '/header.php';
+include ICMS_ROOT_PATH . '/header.php';
 
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');

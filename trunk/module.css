@@ -1,0 +1,179 @@
+/**
+* $Id: module.css,v 1.3 2007/09/30 12:52:44 m0nty_ Exp $
+* Module: WF-Downloads 3.2
+* Author: marcan <marcan@notrevie.ca>
+* Licence: GNU
+*/
+
+
+/*global*/
+.clearit{clear: both;}
+
+.toleft{float: left;}
+.toright{float:right;}
+
+.mtop5{margin: 5px 0 0 0;}
+.mtop10{margin:10px 0 0 0;}
+
+.mbottom5{margin:0 0 5px 0;}
+.mbottom10{margin:0 0 5px 0;}
+
+.wfd_pagenav {
+	text-align: right;
+}
+
+.wfd_copyright {
+	text-align: center;
+}
+
+
+
+/*index.html*/
+
+/*2 colum index.html*/
+.wfd_cats2{
+	border:1px solid #CCCCCC;
+	padding:0 10px 10px;
+	width:46%;
+	}
+
+/*end 2 column*/
+
+.wfd_cats{
+	padding:5px;
+	border:1px solid #CCCCCC;
+	}
+
+.wfd_catsummary{
+	margin-bottom: 3px; 
+	margin-left: 10px; 
+	}
+
+.wfd_catTitle{
+	}
+
+.wfd_catTitle a{
+	}
+
+.wfd_subcattitle{
+	margin-bottom: 3px; 
+	margin-right: 16px; 
+	float: left
+	}
+
+/*viewcat.html*/
+
+.wfd_view_catpath {
+	text-align: left;
+	margin-left: 5px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.wfd_view_sortlist {
+	text-align: center;
+	font-size: small;
+}
+
+/*footer.html*/
+
+.wfd_adminlinks {
+	padding-top: 15px; 
+	padding-bottom: 5px; 
+	font-size: 10px; 
+	text-align: center; 
+	line-height: 18px;}
+	
+.wfd_foot_commentnav {
+	text-align:	center;
+	padding: 3px;
+	margin: 3px;
+}
+
+.wfd_foot_comments {
+	padding: 3px;
+	margin: 3px;
+}
+
+/*header.html*/
+
+.wfd_headertable {padding: 0; margin: 0; border-bottom: 1px solid; margin-bottom: 10px;}
+.wfd_modulename {font-size: 10px; text-align: left; font-weight: bold; padding-right: 0.3em;	line-height: 18px;}
+.wfd_breadcrumb {font-size: 10px; line-height: 18px;}
+
+.wfd_head_catimageheader {
+	text-align: center;
+}
+
+.wfd_head_downimageheader {
+	text-align: center;
+}
+
+.wfd_head_imageheader {
+	text-align: center;
+}
+
+.wfd_head_catindexheader {
+/*	text-align:	center;  do not uncomment (will stop index alignment option working)  */
+}
+
+.wfd_head_catletters {
+	text-align:	center;
+	font-size: 80%;
+}
+
+.wfd_head_cattoolbar {
+	text-align:	center;
+}
+
+/*mirrors.html*/
+
+.wfd_mirrors_found {}
+
+/*newlistindex.html*/
+
+.wfd_newlist_top {
+	text-align: center;
+	width: 100%;
+}
+
+.wfd_newlist_top fieldset {
+	text-align: center;
+	width: 450px;
+}
+
+.wfd_newlist_totallast {
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+	font-size: large;
+}
+
+/*reviews.html*/
+
+.wfd_reviews_found {
+	width: 90%;
+	text-align: center;
+}
+
+.wfd_reviews_revfound {
+	text-align: left;
+}
+
+.wfd_reviews_revlisttitle {
+	padding: 4px;
+	font-weight: bold;
+	color: #0000CC;
+	text-align: left;
+}
+
+
+/*singlefile.html*/
+
+.wfd_downTitle{
+	font-weight: bold;
+}
+
+.wfd_single_main_bottom {
+	text-align: center;
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: indexpage.php,v 1.6 2007/09/30 12:39:13 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -39,7 +39,7 @@ switch ($op)
     default:
 
         include_once WFDOWNLOADS_ROOT_PATH.'class/wfd_lists.php';
-        include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+        include ICMS_ROOT_PATH . '/class/xoopsformloader.php';
 
         global $xoopsModuleConfig, $xoopsDB;
 
@@ -57,19 +57,19 @@ switch ($op)
 
         $sform = new XoopsThemeForm(_AM_WFD_IPAGE_MODIFY, "op", xoops_getenv('PHP_SELF'));
         $sform->addElement(new XoopsFormText(_AM_WFD_IPAGE_CTITLE, 'indexheading', 60, 60, $indexheading), false);
-        $graph_array = &WfsLists::getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['mainimagedir'], $type = "images");
+        $graph_array = &WfsLists::getListTypeAsArray(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['mainimagedir'], $type = "images");
         $indeximage_select = new XoopsFormSelect('', 'indeximage', $indeximage);
         $indeximage_select->addOptionArray($graph_array);
-        $indeximage_select->setExtra("onchange='showImgSelected(\"image\", \"indeximage\", \"" . $xoopsModuleConfig['mainimagedir'] . "\", \"\", \"" . XOOPS_URL . "\")'");
+        $indeximage_select->setExtra("onchange='showImgSelected(\"image\", \"indeximage\", \"" . $xoopsModuleConfig['mainimagedir'] . "\", \"\", \"" . ICMS_URL . "\")'");
         $indeximage_tray = new XoopsFormElementTray(_AM_WFD_IPAGE_CIMAGE, '&nbsp;');
         $indeximage_tray->addElement($indeximage_select);
         if (!empty($indeximage))
         {
-            $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/".$xoopsModuleConfig['mainimagedir']."/" . $indeximage . "' name='image' id='image' alt='' title='image' />"));
+            $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/".$xoopsModuleConfig['mainimagedir']."/" . $indeximage . "' name='image' id='image' alt='' title='image' />"));
         }
         else
         {
-            $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' name='image' id='image' alt='' title='image' />"));
+            $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' name='image' id='image' alt='' title='image' />"));
         }
         $sform->addElement($indeximage_tray);
 

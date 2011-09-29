@@ -1,0 +1,32 @@
+Instructions for adding linkexternal.js to XOOPS 2.0.18.1.
+
+1. copy the contents of the XOOPS_extras folder to your root xoops folder overwriting existing.
+
+2. clean templates_c & cache folders except for index.html.
+
+
+For those that want to add linkexternal.js manually without overwriting header.php
+
+1. copy the linkexternal.js in the XOOPS_extras/include folder to your xoops_root/include folder.
+
+2. Edit your exisiting xoops header.php file as follows >
+
+open header.php
+
+find on line 68:
+
+$xoTheme->addScript( '/include/xoops.js', array( 'type' => 'text/javascript' ) );
+
+add right after:
+
+$xoTheme->addScript('/include/linkexternal.js', array('type' => 'text/javascript')); // added by vaughan for rel="external" & rel="nofollow" etc. (it's better for resources & speed to use a seperate file rather than keep adding to xoops.js
+
+
+save & close.
+
+3. clean templates_c & cache folders except for index.html.
+
+All Done.
+
+now wfdownloads should work correctly on xoops 2.0.18.1, and you will also be able to use rel="external", rel="nofollow" & rel="external nofollow" throughout your XOOPS.
+

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: index.php,v 1.15 2007/09/30 16:14:30 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,12 +9,12 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/tree.php';
+include_once ICMS_ROOT_PATH . '/class/tree.php';
 
 global $xoopsModuleConfig, $xoopsModule, $xoopsUser;
 
 $xoopsOption['template_main'] = 'wfdownloads_index.html';
-include XOOPS_ROOT_PATH . '/header.php';
+include ICMS_ROOT_PATH . '/header.php';
 
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -84,7 +84,7 @@ foreach (array_keys($cats) as $i) {
 		   }
 		}
 		$indicator = wfd_isnewimage($publishdate);
-		if (($cats[$i]->getVar('imgurl') != "") && is_file(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $cats[$i]->getVar('imgurl')))
+		if (($cats[$i]->getVar('imgurl') != "") && is_file(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $cats[$i]->getVar('imgurl')))
         {
             if ($xoopsModuleConfig['usethumbs'] && function_exists('gd_info'))
             {
@@ -94,7 +94,7 @@ foreach (array_keys($cats) as $i) {
             }
             else
             {
-                $imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $cats[$i]->getVar('imgurl');
+                $imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $cats[$i]->getVar('imgurl');
             }
         }
         else
@@ -149,7 +149,7 @@ $xoopsTpl->assign('module_home', wfdownloads_module_home(false));
 
 if($xoopsModuleConfig['enablerss'] == 1)
 {
-	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border=0 alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php", _MD_WFD_LEGENDTEXTRSS, XOOPS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTRSS, _MD_WFD_LEGENDTEXTRSS);
+	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border=0 alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php", _MD_WFD_LEGENDTEXTRSS, ICMS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTRSS, _MD_WFD_LEGENDTEXTRSS);
 	$xoopsTpl->assign('full_rssfeed_link', $rsslink);
 }
 

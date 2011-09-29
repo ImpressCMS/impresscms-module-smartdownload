@@ -1,0 +1,8 @@
+<{foreach item=topcat from=$block.topcats}>
+	<{if $topcat.downloads}>
+		<h1><{$topcat.title}></h1>    
+	  	<{foreach item=download from=$topcat.downloads}>
+			<li><a href="<{$xoops_url}>/modules/<{$download.dirname}>/singlefile.php?cid=<{$download.cid}>&amp;lid=<{$download.id}>"><{$download.title}></a> (<{$download.hits}>)</li>  	
+	  	<{/foreach}>
+	<{/if}>
+<{/foreach}>

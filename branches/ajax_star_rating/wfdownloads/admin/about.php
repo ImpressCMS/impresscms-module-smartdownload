@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: about.php,v 1.6 2007/08/10 20:59:33 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -20,7 +20,7 @@ $versioninfo =& $xoopsModule;
 wfdownloads_adminMenu(-1, _AM_WFD_ABOUT);
 // Left headings...
 	echo "
-		<img src='" . XOOPS_URL . "/modules/wfdownloads/" . $versioninfo -> getInfo('image') . "' alt='' title='' hspace='10' vspace='0' /></a>\n
+		<img src='" . ICMS_URL . "/modules/wfdownloads/" . $versioninfo -> getInfo('image') . "' alt='' title='' hspace='10' vspace='0' /></a>\n
 		<div style='margin-top: 10px; color: #33538e; margin-bottom: 4px; font-size: 18px; line-height: 18px; font-weight: bold; display: block;'>" . $versioninfo -> getInfo('name') . " version " . $versioninfo -> getInfo('version') . "</div>\n
 		<div>\n";
 if ($versioninfo -> getInfo('author_realname') != '')

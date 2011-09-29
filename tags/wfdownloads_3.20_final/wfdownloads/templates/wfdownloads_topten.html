@@ -1,0 +1,33 @@
+<{include file='db:wfdownloads_header.html'}>
+
+<!-- Start ranking loop --> 
+<{foreach item=ranking from=$rankings}> 
+<div class="mbottom5"><b><{$smarty.const._MD_WFD_CATEGORY}>: <{$ranking.title}></b></div>
+
+<div class="head">
+    <div class="toleft" style="width: 6%; margin:1px;"><{$smarty.const._MD_WFD_RANK}></div>
+    <div class="toleft" style="width: 30%; margin:1px;"><{$smarty.const._MD_WFD_TITLE}></div>
+    <div class="toleft" style="width: 28%; margin:1px;"><{$smarty.const._MD_WFD_CATEGORY}></div>
+    <div class="toleft" style="width: 10%; margin:1px; text-align:center;"><{$smarty.const._MD_WFD_HITS}></div>
+    <div class="toleft" style="width: 12%; margin:1px; text-align:center;"><{$smarty.const._MD_WFD_RATING}></div>
+    <div class="toleft" style="width: 11%; margin:1px; text-align:center;"><{$smarty.const._MD_WFD_VOTE}></div>
+    <div class="clearit"></div>
+</div>
+
+<{foreach item=file from=$ranking.file}>
+	<div class="toleft head" style="padding:0 0 2px 0; width: 6%; text-align:center; margin:1px;"><b><{$file.rank}></b></div>
+    <div class="toleft <{cycle values="even, odd"}>" style="padding:0 0 2px 2px; width: 30%; margin:1px;">
+    	<a href="singlefile.php?cid=<{$file.cid}>&amp;lid=<{$file.id}>"><{$file.title}></a>
+    </div>
+    <div class="toleft <{cycle values="even, odd"}>" style="padding:0 0 2px 2px; width: 28%; margin:1px;"><a href="viewcat.php?cid=<{$file.cid}>"><{$file.category}></a></div>
+    <div class="toleft <{cycle values="even,odd"}>" style="padding:0 0 2px 0; width: 10%; text-align:center; margin:1px;"><{$file.hits}></div>
+    <div class="toleft <{cycle values="odd, even"}>" style="padding:0 0 2px 0;  width: 12%; text-align:center; margin:1px;">
+    <{$file.rating}>
+    </div>
+     <div class="toleft <{cycle values="even,odd"}>" style="padding:0 0 2px 0; width: 11%; text-align:center; margin:1px;"><{$file.votes}></div>
+    
+    <div class="clearit"></div>
+<{/foreach}>
+<{/foreach}> 
+<!-- End ranking loop --> 
+<{include file='db:wfdownloads_footer.html'}>

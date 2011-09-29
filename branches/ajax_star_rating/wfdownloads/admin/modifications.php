@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: modifications.php,v 1.9 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -23,7 +23,7 @@ switch ($op)
 {
     case "listModReqshow":
 
-        include XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+        include ICMS_ROOT_PATH . '/class/xoopsformloader.php';
 
         global $xoopsDB, $myts, $mytree, $xoopsModuleConfig, $xoopsUser;
 
@@ -75,25 +75,25 @@ switch ($op)
 
                 case "screenshot":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot2":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot3":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot4":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
@@ -151,25 +151,25 @@ switch ($op)
 
                 case "screenshot":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot2":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot3":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
                 case "screenshot4":
                 if ($content != "") {
-                    $content = "<img src='" . XOOPS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
+                    $content = "<img src='" . ICMS_URL . "/" . $xoopsModuleConfig['screenshots'] . "/" . $content . "' width='" . $xoopsModuleConfig['shotwidth'] . "' alt='' title='' />";
                 }
                 break;
 
@@ -271,7 +271,7 @@ switch ($op)
     case 'main':
     default:
 
-        include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+        include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 
         global $xoopsModuleConfig;
         $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
@@ -321,7 +321,7 @@ switch ($op)
         }
         echo "</table>\n";
 
-        include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+        include_once ICMS_ROOT_PATH . '/class/pagenav.php';
         $page = ($totalmodrequests > $xoopsModuleConfig['admin_perpage']) ? _AM_WFD_MINDEX_PAGE : '';
         $pagenav = new XoopsPageNav($totalmodrequests, $xoopsModuleConfig['admin_perpage'], $start, 'start');
         echo "<div align='"._GLOBAL_RIGHT."' style='padding: 8px;'>" . $page . '' . $pagenav->renderNav() . '</div>';

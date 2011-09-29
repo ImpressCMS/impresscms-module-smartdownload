@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: viewcat.php,v 1.28 2007/09/30 16:15:40 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -22,7 +22,7 @@ $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP
 
 if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
-        redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
+        redirect_header(ICMS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
     }
 } else {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
@@ -31,7 +31,7 @@ if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
 }
 
 $xoopsOption['template_main'] = 'wfdownloads_viewcat.html';
-include XOOPS_ROOT_PATH . '/header.php';
+include ICMS_ROOT_PATH . '/header.php';
 
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -77,7 +77,7 @@ $xoopsTpl->assign('category_id', $cid);
 $criteria = new CriteriaCompo();
 $criteria->setSort("weight ASC, title");
 $categories = $category_handler->getObjects($criteria, true);
-include_once XOOPS_ROOT_PATH."/class/tree.php";
+include_once ICMS_ROOT_PATH."/class/tree.php";
 $mytree = new XoopsObjectTree($categories, "cid", "pid");
 $arr = $mytree->getFirstChild($cid);
 
@@ -103,7 +103,7 @@ if (is_array($arr) > 0 && !isset($_GET['list']) && !isset($_GET['selectdate']))
 		$subcats = $mytree->getAllChild($ele->getVar('cid'));
 
 		// ----- added for subcat images -----
-		if (($ele->getVar('imgurl') != "") && is_file(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $ele->getVar('imgurl')))
+		if (($ele->getVar('imgurl') != "") && is_file(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $ele->getVar('imgurl')))
 		{
 			if ($xoopsModuleConfig['usethumbs'] && function_exists('gd_info'))
 			{
@@ -113,12 +113,12 @@ if (is_array($arr) > 0 && !isset($_GET['list']) && !isset($_GET['selectdate']))
 			}
 			else
 			{
-				$imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $ele->getVar('imgurl');
+				$imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $ele->getVar('imgurl');
 			}
 		}
 		else
 		{
-			$imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/blank.gif";
+			$imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/blank.gif";
 		}
 		// ----- end subcat images -----
 
@@ -147,7 +147,7 @@ if (isset($cid) && $cid > 0 && isset($categories[$cid])) {
     $xoopsTpl->assign('description', $categories[$cid]->getVar('description'));
 
     // Making the category image and title available in the template
-	if (($categories[$cid]->getVar('imgurl') != "") && is_file(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $categories[$cid]->getVar('imgurl')))
+	if (($categories[$cid]->getVar('imgurl') != "") && is_file(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $categories[$cid]->getVar('imgurl')))
 	{
 		if ($xoopsModuleConfig['usethumbs'] && function_exists('gd_info'))
 		{
@@ -157,7 +157,7 @@ if (isset($cid) && $cid > 0 && isset($categories[$cid])) {
 		}
 		else
 		{
-			$imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $categories[$cid]->getVar('imgurl');
+			$imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $categories[$cid]->getVar('imgurl');
 		}
 	}
 	else
@@ -202,7 +202,7 @@ $downloads = $download_handler->getActiveDownloads($criteria);
 if ($total_numrows > 0)
 {
 	foreach (array_keys($downloads) as $i) {
-		include XOOPS_ROOT_PATH.'/modules/wfdownloads/_drawrating.php';
+		include ICMS_ROOT_PATH.'/modules/wfdownloads/_drawrating.php';
 		$down = $downloads[$i]->getDownloadInfo();
 		
 		//$xoopsTpl->assign('rateimg', rating_bar( '1', '5', 'cid' ));
@@ -238,7 +238,7 @@ if ($total_numrows > 0)
     /**
      * Nav page render
      */
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
     if (isset($_GET['selectdate']))
     {
         $pagenav = new XoopsPageNav($total_numrows, $xoopsModuleConfig['perpage'] , $start, 'start', 'list=' . urlencode($_GET['selectdate']));
@@ -259,7 +259,7 @@ if ($total_numrows > 0)
 
 if($xoopsModuleConfig['enablerss'] == 1 && $total_numrows > 0)
 {
-	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border='0' alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php?cid=".intval($cid), _MD_WFD_LEGENDTEXTCATRSS, XOOPS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTCATRSS);
+	$rsslink=sprintf("<a href='%s' title='%s'><img src='%s' border='0' alt='%s' title='%s'></a>",WFDOWNLOADS_URL."rss.php?cid=".intval($cid), _MD_WFD_LEGENDTEXTCATRSS, ICMS_URL."/".$xoopsModuleConfig['mainimagedir']."/icon/rss.gif",_MD_WFD_LEGENDTEXTCATRSS,_MD_WFD_LEGENDTEXTCATRSS);
 	$xoopsTpl->assign('cat_rssfeed_link', $rsslink);
 }
 

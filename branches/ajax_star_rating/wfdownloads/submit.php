@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: submit.php,v 1.31 2007/09/30 15:46:53 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v3.11
  * Release Date: 26 Sept 2006
@@ -9,7 +9,7 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 
 $myts = &MyTextSanitizer::getInstance(); // MyTextSanitizer object
 $mytree = new XoopsTree($xoopsDB->prefix('wfdownloads_cat'), "cid", "pid");
@@ -29,7 +29,7 @@ if (is_object($xoopsUser) && ($xoopsModuleConfig['submissions'] == 2 || $xoopsMo
     {
 		$submissions = 1;
     } else {
-	    redirect_header(XOOPS_URL . '/user.php', 5, _MD_WFD_MUSTREGFIRST);
+	    redirect_header(ICMS_URL . '/user.php', 5, _MD_WFD_MUSTREGFIRST);
 	}
 }
 
@@ -85,7 +85,7 @@ if (isset($_POST['submit']) && !empty($_POST['submit']))
         $maxfilesize = $xoopsModuleConfig['maxfilesize'];
         $maxfilewidth = $xoopsModuleConfig['maximgwidth'];
         $maxfileheight = $xoopsModuleConfig['maximgheight'];
-        $uploaddir = XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
+        $uploaddir = ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
         $screenshot = strtolower($_FILES['screenshot']['name']);
 
         include_once WFDOWNLOADS_ROOT_PATH.'class/img_uploader.php';
@@ -123,7 +123,7 @@ if ($xoopsModuleConfig['max_screenshot'] >= 2)
         $maxfilesize = $xoopsModuleConfig['maxfilesize'];
         $maxfilewidth = $xoopsModuleConfig['maximgwidth'];
         $maxfileheight = $xoopsModuleConfig['maximgheight'];
-        $uploaddir = XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
+        $uploaddir = ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
         $screenshot2 = strtolower($_FILES['screenshot2']['name']);
 
         include_once WFDOWNLOADS_ROOT_PATH.'class/img_uploader.php';
@@ -166,7 +166,7 @@ if ($xoopsModuleConfig['max_screenshot'] >= 3)
         $maxfilesize = $xoopsModuleConfig['maxfilesize'];
         $maxfilewidth = $xoopsModuleConfig['maximgwidth'];
         $maxfileheight = $xoopsModuleConfig['maximgheight'];
-        $uploaddir = XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
+        $uploaddir = ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
         $screenshot3 = strtolower($_FILES['screenshot3']['name']);
 
         include_once WFDOWNLOADS_ROOT_PATH.'class/img_uploader.php';
@@ -209,7 +209,7 @@ if ($xoopsModuleConfig['max_screenshot'] >= 4)
         $maxfilesize = $xoopsModuleConfig['maxfilesize'];
         $maxfilewidth = $xoopsModuleConfig['maximgwidth'];
         $maxfileheight = $xoopsModuleConfig['maximgheight'];
-        $uploaddir = XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
+        $uploaddir = ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['screenshots'] . "/";
         $screenshot4 = strtolower($_FILES['screenshot4']['name']);
 
         include_once WFDOWNLOADS_ROOT_PATH.'class/img_uploader.php';
@@ -283,8 +283,8 @@ else
 	    $fid = $category->getVar('formulize_fid');
 		if($fid) {
 		    global $xoopsUser;
-       	    include_once XOOPS_ROOT_PATH . "/modules/formulize/include/formread.php";
-       	    include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
+       	    include_once ICMS_ROOT_PATH . "/modules/formulize/include/formread.php";
+       	    include_once ICMS_ROOT_PATH . "/modules/formulize/include/functions.php";
 
        	    $formulize_mgr =& xoops_getmodulehandler('elements', 'formulize');
 
@@ -437,7 +437,7 @@ else
             $notification_handler->triggerEvent('category', $cid, 'file_submit', $tags);
             if ($notify)
             {
-                include_once XOOPS_ROOT_PATH . '/include/notification_constants.php';
+                include_once ICMS_ROOT_PATH . '/include/notification_constants.php';
                 $notification_handler->subscribe('file', $newid, 'approve', XOOPS_NOTIFICATION_MODE_SENDONCETHENDELETE);
             }
             redirect_header(WFDOWNLOADS_URL.'index.php', 2, _MD_WFD_THANKSFORINFO);
@@ -492,7 +492,7 @@ else
     if ($xoopsModuleConfig['showdisclaimer'] && !isset($_GET['agree']))
     {
 		$xoopsOption['template_main'] = 'wfdownloads_disclaimer.html';
-	    include XOOPS_ROOT_PATH . '/header.php';
+	    include ICMS_ROOT_PATH . '/header.php';
 		
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -510,11 +510,11 @@ else
 			$xoopsTpl->assign('agree_location', WFDOWNLOADS_URL.'submit.php?agree=1&amp;lid='.$lid);
 		}
 
-        include XOOPS_ROOT_PATH . '/footer.php';
+        include ICMS_ROOT_PATH . '/footer.php';
         exit();
 	}
 
-    include XOOPS_ROOT_PATH . '/header.php';
+    include ICMS_ROOT_PATH . '/header.php';
 
     // changed - start - March 4 2006 - jpc, jwe April 22, 2006
 
@@ -555,8 +555,8 @@ else
 	        if($fid)
 	        {
 			global $xoopsUser;
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/formdisplay.php";
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/formdisplay.php";
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/functions.php";
 			
 			$customArray['fid'] = $fid;
 			$customArray['formulize_mgr'] =& xoops_getmodulehandler('elements', 'formulize');
@@ -574,7 +574,7 @@ else
 	        }
 		$sform = $download->getForm($customArray);
 	}
-	elseif(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php")) 
+	elseif(file_exists(ICMS_ROOT_PATH . "/modules/formulize/include/functions.php")) 
 	{
 	      $sform = $download->getCategoryForm();
 	} 
@@ -587,7 +587,7 @@ else
     // changed - end - March 4 2006 - jpc
 
 
-    include XOOPS_ROOT_PATH . '/footer.php';
+    include ICMS_ROOT_PATH . '/footer.php';
 }
 
 ?>

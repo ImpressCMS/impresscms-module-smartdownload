@@ -1,5 +1,5 @@
 <?php
-// $Id: rss.php,v 1.2 2006/12/03 14:41:01 m0nty_ Exp $
+// $Id$
 ###############################################################################
 ##                    XOOPS - PHP Content Management System                  ##
 ##                       Copyright (c) 2000 XOOPS.org                        ##
@@ -38,7 +38,7 @@ $xoopsOption['template_main'] = 'system_' . $feed_type . '.html';
 //error_reporting(0);
 
 
-include_once(XOOPS_ROOT_PATH."/class/template.php");
+include_once(ICMS_ROOT_PATH."/class/template.php");
 $xoopsTpl = new XoopsTpl();
 
 // Find case
@@ -88,7 +88,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
             $shorthand = "all";
             $title = $xoopsConfig['sitename'] . ' - ' . htmlspecialchars($xoopsModule->getVar('name'), ENT_QUOTES);
             $desc = $xoopsConfig['slogan'] ;
-            $channel_url = XOOPS_URL . '/modules/wfdownloads/rss.php';
+            $channel_url = ICMS_URL . '/modules/wfdownloads/rss.php';
 
             $criteria->add(new Criteria("cid", "(".implode(',', $allowed_cats).")", "IN"));
             $items = $item_handler->getObjects($criteria);
@@ -99,7 +99,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
             $shorthand = "cat";
             $title = $xoopsConfig['sitename'] . ' - ' . htmlspecialchars($category->getVar('title'), ENT_QUOTES);
             $desc = $xoopsConfig['slogan'] . ' - ' . htmlspecialchars($category->getVar('title'), ENT_QUOTES);
-            $channel_url = XOOPS_URL . '/modules/wfdownloads/rss.php?cid='.intval($category->getVar('cid'));
+            $channel_url = ICMS_URL . '/modules/wfdownloads/rss.php?cid='.intval($category->getVar('cid'));
             
             $criteria->add(new Criteria("cid", intval($category->getVar('cid'))));
             $items = $item_handler->getObjects($criteria);
@@ -126,7 +126,7 @@ if( ! $xoopsTpl->is_cached('db:'.$xoopsOption['template_main'], $cache_prefix) )
      * Assign items to template style array
      */
 
-    $url = XOOPS_URL.'/modules/wfdownloads/';
+    $url = ICMS_URL.'/modules/wfdownloads/';
     if(count($items) > 0){
         // Get users for items
         $uids = array();

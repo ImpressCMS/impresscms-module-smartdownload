@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: visit.php,v 1.16 2007/09/30 12:52:44 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -14,7 +14,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 
 	if(!is_object($xoopsUser) && $xoopsModuleConfig['download_minposts'] > 0)
 	{
-		redirect_header(XOOPS_URL . '/user.php', 1, _MD_WFD_MUSTREGFIRST);
+		redirect_header(ICMS_URL . '/user.php', 1, _MD_WFD_MUSTREGFIRST);
 	}
 	elseif(is_object($xoopsUser) && $xoopsUser->getVar('posts') < $xoopsModuleConfig['download_minposts'] && !$xoopsUser->isAdmin())
 	{
@@ -73,7 +73,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 	if($xoopsModuleConfig['showDowndisclaimer'] && $agreed == 0)
 	{
 		$xoopsOption['template_main'] = 'wfdownloads_disclaimer.html';
-		include XOOPS_ROOT_PATH.'/header.php';
+		include ICMS_ROOT_PATH.'/header.php';
 	
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -84,7 +84,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 		$xoopsTpl->assign('agree_location', WFDOWNLOADS_URL.'visit.php?agree=1&amp;lid='.intval($lid).'&amp;cid='.intval($cid));
 		$xoopsTpl->assign('down_disclaimer', true);
 	
-		include XOOPS_ROOT_PATH . '/footer.php';
+		include ICMS_ROOT_PATH . '/footer.php';
 		exit();
 	}
 	else
@@ -103,7 +103,7 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 		$full_name = trim($download->getVar('filename'));
 	if((!$download->getVar('url') == '' && !$download->getVar('url') == 'http://') || $full_name == '')
 	{
-		include XOOPS_ROOT_PATH.'/header.php';
+		include ICMS_ROOT_PATH.'/header.php';
 	
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 		$xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -157,11 +157,11 @@ global $xoopsUser, $xoopsModuleConfig, $myts;
 	}
 	else
 	{
-		include XOOPS_ROOT_PATH.'/header.php';
+		include ICMS_ROOT_PATH.'/header.php';
 		echo "<br /><div align='center'>".wfd_imageheader()."</div>";
 		reportBroken($lid);
 	}
 
-	include XOOPS_ROOT_PATH.'/footer.php';
+	include ICMS_ROOT_PATH.'/footer.php';
 }
 ?>

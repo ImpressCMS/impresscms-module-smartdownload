@@ -1,0 +1,55 @@
+<div style="width: 100%;" class="item mtop5">
+	<div class="odd">
+        <a href="<{$xoops_url}>/modules/wfdownloads/singlefile.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>">
+        <span class="itemTitle"><{$down.title}> </span>
+        </a><{$down.icons}>&nbsp;&nbsp;<{$down.adminlink}>
+    </div>
+    <div class="mtop5">
+    	<small>
+        	<{$smarty.const._MD_WFD_VERSION}>:&nbsp;<{$down.version}>
+            &nbsp;|&nbsp;
+            <img src="<{$xoops_url}>/modules/wfdownloads/images/icon/<{$down.rateimg}>" alt="" title="" align="top" />&nbsp;(<{$down.votes}>)
+            &nbsp;|&nbsp;
+            <{$smarty.const._MD_WFD_DOWNLOADHITS}>:&nbsp;<{$down.hits}>
+            &nbsp;|&nbsp;
+            <{$lang_subdate}>:&nbsp;<{$down.updated}>
+        </small>
+    </div>
+    
+    <div class="mtop5">
+    	<{if $show_screenshot == true}>
+          <{if $down.screenshot_full != ''}>
+              <div>
+                  <a href="<{$xoops_url}>/<{$shots_dir}>/<{$down.screenshot_full}>" rel="facebox" title="<{$down.title}>">
+                  <img src="<{$down.screenshot_thumb}>" alt="<{$down.title}>" title="<{$down.title}>" align="left" 
+                  style='border: 1px solid black; margin: 0 5px 5px 0;' />
+                  </a>
+              </div>
+          <{/if}>
+        <{/if}>
+        <p>
+        <{$down.summary}>
+        </p>
+        <div class="clearit"></div>
+    </div>
+    
+    <div class="mtop5">
+		<a href="<{$xoops_url}>/modules/wfdownloads/singlefile.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>" 
+        title="<{$smarty.const._MD_WFD_VIEWDETAILS}>" >
+        	<{$smarty.const._MD_WFD_VIEWDETAILS}>
+        </a>
+        &nbsp;|&nbsp;
+        <a href="<{$xoops_url}>/modules/wfdownloads/visit.php?cid=<{$down.cid}>&amp;lid=<{$down.id}>">
+            <img src="<{$xoops_url}>/modules/wfdownloads/images/icon/download5.gif" alt="<{$smarty.const._MD_WFD_DOWNLOADNOW}>" 
+            title="<{$smarty.const._MD_WFD_DOWNLOADNOW}>" align="top" />
+        </a>
+    </div>
+    <{if !$custom_form}>
+    	<div class="mtop5">
+    	   	<{$smarty.const._MD_WFD_PRICE}>:&nbsp;<{$down.price}> | 
+            <{$smarty.const._MD_WFD_SUPPORTEDPLAT}>:&nbsp;<{$down.platform}> | 
+            <{$smarty.const._MD_WFD_DOWNLICENSE}>:&nbsp;<{$down.license}> | 
+            <{$smarty.const._MD_WFD_LIMITS}>:&nbsp;<{$down.limitations}>
+    	</div>
+     <{/if}>
+</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: index.php,v 1.23 2007/09/30 12:39:13 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,11 +9,11 @@
  */
 
 include 'admin_header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsformloader.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
 include_once WFDOWNLOADS_ROOT_PATH.'class/wfd_lists.php';
-include_once XOOPS_ROOT_PATH.'/class/tree.php';
-include_once XOOPS_ROOT_PATH.'/class/xoopstree.php';
+include_once ICMS_ROOT_PATH.'/class/tree.php';
+include_once ICMS_ROOT_PATH.'/class/xoopstree.php';
 
 $mytree = new XoopsTree($xoopsDB -> prefix('wfdownloads_cat'), "cid", "pid");
 
@@ -84,8 +84,8 @@ function Download()
 	        if($fid)
 	        {
 			global $xoopsUser;
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/formdisplay.php";
-			include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/formdisplay.php";
+			include_once ICMS_ROOT_PATH . "/modules/formulize/include/functions.php";
 			
 			$customArray['fid'] = $fid;
 			$customArray['formulize_mgr'] =& xoops_getmodulehandler('elements', 'formulize');
@@ -103,7 +103,7 @@ function Download()
 	        }
 		$sform = $download->getAdminForm($title, $customArray);
 	    }
-	    elseif(file_exists(XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php")) 
+	    elseif(file_exists(ICMS_ROOT_PATH . "/modules/formulize/include/functions.php")) 
 	    {
 	        $sform = $download->getCategoryForm();
 	    } 
@@ -464,8 +464,8 @@ function addDownload()
 	    $fid = $category->getVar('formulize_fid');
 		if($fid) {
 		    global $xoopsUser;
-       	    include_once XOOPS_ROOT_PATH . "/modules/formulize/include/formread.php";
-       	    include_once XOOPS_ROOT_PATH . "/modules/formulize/include/functions.php";
+       	    include_once ICMS_ROOT_PATH . "/modules/formulize/include/formread.php";
+       	    include_once ICMS_ROOT_PATH . "/modules/formulize/include/functions.php";
 
        	    $formulize_mgr =& xoops_getmodulehandler('elements', 'formulize');
 
@@ -594,7 +594,7 @@ switch ($op)
     default:
 
     global $xoopsUser, $xoopsDB, $xoopsConfig;
-    include_once XOOPS_ROOT_PATH . '/class/pagenav.php';
+    include_once ICMS_ROOT_PATH . '/class/pagenav.php';
     $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
     $start1 = isset($_GET['start1']) ? intval($_GET['start1']) : 0;
     $start2 = isset($_GET['start2']) ? intval($_GET['start2']) : 0;

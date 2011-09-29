@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: permissions.php,v 1.4 2006/04/07 00:11:36 malanciault Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,7 +9,7 @@
  */
 
 include 'admin_header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsform/grouppermform.php';
 
 wfdownloads_xoops_cp_header();
 

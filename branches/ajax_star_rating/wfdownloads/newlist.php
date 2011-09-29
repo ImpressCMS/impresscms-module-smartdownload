@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: newlist.php,v 1.6 2007/09/30 12:52:44 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,10 +9,10 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 
 $xoopsOption['template_main'] = 'wfdownloads_newlistindex.html';
-include XOOPS_ROOT_PATH . '/header.php';
+include ICMS_ROOT_PATH . '/header.php';
 
 global $xoopsDB, $xoopsModule, $xoopsUser, $xoopsModuleConfig;
 

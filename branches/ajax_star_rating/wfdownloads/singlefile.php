@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: singlefile.php,v 1.17 2007/09/30 12:52:44 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -9,7 +9,7 @@
  */
 
 include 'header.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopstree.php';
+include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 
 $lid = intval($_GET['lid']);
 $xoopsOption['template_main'] = 'wfdownloads_singlefile.html';
@@ -32,7 +32,7 @@ $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : array(0=>XOOPS_GROUP
 
 if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
-        redirect_header(XOOPS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
+        redirect_header(ICMS_URL.'/user.php',3,_MD_WFD_NEEDLOGINVIEW);
     }
 } else {
     if (!$gperm_handler->checkRight("WFDownCatPerm", $cid, $groups, $mid)) {
@@ -40,7 +40,7 @@ if (in_array(XOOPS_GROUP_ANONYMOUS, $groups)) {
     }
 }
 
-include XOOPS_ROOT_PATH . '/header.php';
+include ICMS_ROOT_PATH . '/header.php';
 
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'module'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
 $xoTheme->addStylesheet(WFDOWNLOADS_URL.'thickbox'.(( defined("_ADM_USE_RTL") && _ADM_USE_RTL )?'_rtl':'').'.css');
@@ -50,7 +50,7 @@ $category_handler = xoops_getmodulehandler('category');
 $category = $category_handler->get($cid);
 
 // Making the category image and title available in the template
-if (($category->getVar('imgurl') != "") && is_file(XOOPS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $category->getVar('imgurl')))
+if (($category->getVar('imgurl') != "") && is_file(ICMS_ROOT_PATH . "/" . $xoopsModuleConfig['catimage'] . "/" . $category->getVar('imgurl')))
 {
 	if ($xoopsModuleConfig['usethumbs'] && function_exists('gd_info'))
 	{
@@ -60,12 +60,12 @@ if (($category->getVar('imgurl') != "") && is_file(XOOPS_ROOT_PATH . "/" . $xoop
 	}
 	else
 	{
-		$imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $category->getVar('imgurl');
+		$imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/" . $category->getVar('imgurl');
 	}
 }
 else
 {
-	$imgurl = XOOPS_URL . "/" . $xoopsModuleConfig['catimage'] . "/blank.gif";
+	$imgurl = ICMS_URL . "/" . $xoopsModuleConfig['catimage'] . "/blank.gif";
 }
 $xoopsTpl->assign('category_title', $category->getVar('title'));
 $xoopsTpl->assign('category_image', $imgurl);
@@ -83,7 +83,7 @@ $xoopsTpl->assign('topcategory_cid', $topCategory->getVar('cid'));
 $formulize_idreq = $download->getVar('formulize_idreq');
 if($formulize_idreq) {
 	$xoopsTpl->assign('custom_form', 1);
-      include_once XOOPS_ROOT_PATH . "/modules/formulize/include/extract.php";
+      include_once ICMS_ROOT_PATH . "/modules/formulize/include/extract.php";
       // get the form id and id_req of the user's entry
       global $xoopsDB;
       $module_handler =& xoops_gethandler('module');
@@ -155,7 +155,7 @@ elseif (is_object($xoopsUser) && $use_mirrors == 1 && ($xoopsModuleConfig['submi
 	$add_mirror = 1;
 }
 
-include XOOPS_ROOT_PATH.'/modules/wfdownloads/_drawrating.php';
+include ICMS_ROOT_PATH.'/modules/wfdownloads/_drawrating.php';
 $down = $download->getDownloadInfo();
 $xoopsTpl->assign('categoryPath', $down['path'] . " > " . $down['title']);
 $xoopsTpl->assign('lang_dltimes', sprintf(_MD_WFD_DLTIMES, $down['hits']));
@@ -235,11 +235,11 @@ $xoopsTpl->assign('lang_UserMirrors', sprintf($user_mirrors, $download->getVar('
 
 if (isset($xoopsModuleConfig['copyright']) && $xoopsModuleConfig['copyright'] == 1)
 {
-    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " &copy; " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . XOOPS_URL);
+    $xoopsTpl->assign('lang_copyright', "" . $download->getVar('title') . " &copy; " . _MD_WFD_COPYRIGHT . " " . date("Y") . " " . ICMS_URL);
 }
 $xoopsTpl->assign('down', $down);
 
-include XOOPS_ROOT_PATH . '/include/comment_view.php';
+include ICMS_ROOT_PATH . '/include/comment_view.php';
 
 $xoopsTpl->assign('com_rule', $xoopsModuleConfig['com_rule']);
 $xoopsTpl->assign('module_home', wfdownloads_module_home(true));

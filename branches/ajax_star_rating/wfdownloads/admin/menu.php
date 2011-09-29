@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: menu.php,v 1.6 2006/04/10 18:39:34 malanciault Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.4
  * Release Date: 11 july 2004
@@ -66,7 +66,7 @@ if (isset($xoopsModule) && ($xoopsModule->getVar('dirname') == 'wfdownloads')) {
 	$i++;
 	
 	$headermenu[$i]['title'] = _AM_WFD_UPDATE_MODULE;
-	$headermenu[$i]['link'] = XOOPS_URL . "/modules/system/admin.php?fct=modulesadmin&op=update&module=" . $xoopsModule->getVar('dirname');
+	$headermenu[$i]['link'] = ICMS_URL . "/modules/system/admin.php?fct=modulesadmin&op=update&module=" . $xoopsModule->getVar('dirname');
 	$i++;
 	
 	$headermenu[$i]['title'] = _AM_WFD_DB_IMPORT;

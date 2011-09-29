@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: upload.php,v 1.12 2007/09/30 12:39:14 m0nty_ Exp $
+ * $Id$
  * Module: WF-Downloads
  * Version: v2.0.5a
  * Release Date: 26 july 2004
@@ -10,8 +10,8 @@
 
 include 'admin_header.php';
 
-include_once XOOPS_ROOT_PATH . '/class/tree.php';
-include_once XOOPS_ROOT_PATH."/class/xoopstree.php";
+include_once ICMS_ROOT_PATH . '/class/tree.php';
+include_once ICMS_ROOT_PATH."/class/xoopstree.php";
 
 $op = isset($_REQUEST['op']) ?$_REQUEST['op'] : "default";
 
@@ -25,7 +25,7 @@ switch ($op)
 
         if ($_FILES['uploadfile']['name'] != "")
         {
-            if (file_exists(XOOPS_ROOT_PATH . "/" . $_POST['uploadpath'] . "/" . $_FILES['uploadfile']['name']))
+            if (file_exists(ICMS_ROOT_PATH . "/" . $_POST['uploadpath'] . "/" . $_FILES['uploadfile']['name']))
             {
                 redirect_header(WFDOWNLOADS_URL.'admin/upload.php', 2, _AM_WFD_DOWN_IMAGEEXIST);
             }
@@ -34,9 +34,9 @@ switch ($op)
 	        $maxfilesize = $xoopsModuleConfig['maxfilesize'];
 	        $maxfilewidth = $xoopsModuleConfig['maximgwidth'];
 	        $maxfileheight = $xoopsModuleConfig['maximgheight'];
-	        $uploaddir = XOOPS_ROOT_PATH."/".$_POST['uploadpath'];
+	        $uploaddir = ICMS_ROOT_PATH."/".$_POST['uploadpath'];
 	        $screenshot = strtolower($_FILES['uploadfile']['name']);
-	        wfd_uploading($screenshot, XOOPS_ROOT_PATH."/".$_POST['uploadpath'], $allowed_mimetypes, "upload.php", 1, 0, true);
+	        wfd_uploading($screenshot, ICMS_ROOT_PATH."/".$_POST['uploadpath'], $allowed_mimetypes, "upload.php", 1, 0, true);
 
 	        include_once WFDOWNLOADS_ROOT_PATH.'class/img_uploader.php';
 	        $uploader = new XoopsMediaImgUploader($uploaddir."/", $allowed_mimetypes, $maxfilesize, $maxfilewidth, $maxfileheight);
@@ -56,7 +56,7 @@ switch ($op)
 
         if (isset($_POST['confirm']) && $_POST['confirm'] == 1)
         {
-            $filetodelete = XOOPS_ROOT_PATH . "/" . $_POST['uploadpath'] . "/" . $_POST['downfile'];
+            $filetodelete = ICMS_ROOT_PATH . "/" . $_POST['uploadpath'] . "/" . $_POST['downfile'];
             if (file_exists($filetodelete))
             {
                 chmod($filetodelete, 0666);
@@ -102,8 +102,8 @@ switch ($op)
         if ($rootpath > 0)
         {
             echo "
-<div><b>" . _AM_WFD_DOWN_FUPLOADPATH . "</b> " . XOOPS_ROOT_PATH . "/" . $dirarray[$rootpath] . "</div>\n
-<div><b>" . _AM_WFD_DOWN_FUPLOADURL . "</b> " . XOOPS_URL . "/" . $dirarray[$rootpath] . "</div><br />\n";
+<div><b>" . _AM_WFD_DOWN_FUPLOADPATH . "</b> " . ICMS_ROOT_PATH . "/" . $dirarray[$rootpath] . "</div>\n
+<div><b>" . _AM_WFD_DOWN_FUPLOADURL . "</b> " . ICMS_URL . "/" . $dirarray[$rootpath] . "</div><br />\n";
         }
         $pathlist = (isset($listarray[$rootpath])) ? $namearray[$rootpath] : '';
         $namelist = (isset($listarray[$rootpath])) ? $namearray[$rootpath] : '';
@@ -119,19 +119,19 @@ switch ($op)
 
         if ($rootpath > 0)
         {
-            $graph_array = &WfsLists::getListTypeAsArray(XOOPS_ROOT_PATH . "/" . $dirarray[$rootpath], $type = "images");
+            $graph_array = &WfsLists::getListTypeAsArray(ICMS_ROOT_PATH . "/" . $dirarray[$rootpath], $type = "images");
             $indeximage_select = new XoopsFormSelect('', 'downfile', '');
             $indeximage_select->addOptionArray($graph_array);
-            $indeximage_select->setExtra("onchange='showImgSelected(\"image\", \"downfile\", \"" . $dirarray[$rootpath] . "\", \"\", \"" . XOOPS_URL . "\")'");
+            $indeximage_select->setExtra("onchange='showImgSelected(\"image\", \"downfile\", \"" . $dirarray[$rootpath] . "\", \"\", \"" . ICMS_URL . "\")'");
             $indeximage_tray = new XoopsFormElementTray(_AM_WFD_DOWN_FSHOWSELECTEDIMAGE, '&nbsp;');
             $indeximage_tray->addElement($indeximage_select);
             if (!empty($_REQUEST['downfile']))
             {
-                $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/" . $dirarray[$rootpath] . "/" . $_REQUEST['downfile'] . "' name='image' id='image' alt='' title='image' />"));
+                $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/" . $dirarray[$rootpath] . "/" . $_REQUEST['downfile'] . "' name='image' id='image' alt='' title='image' />"));
             }
             else
             {
-                $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . XOOPS_URL . "/uploads/blank.gif' name='image' id='image' alt='' title='image' />"));
+                $indeximage_tray->addElement(new XoopsFormLabel('', "<br /><br /><img src='" . ICMS_URL . "/uploads/blank.gif' name='image' id='image' alt='' title='image' />"));
             }
             $iform->addElement($indeximage_tray);
 
